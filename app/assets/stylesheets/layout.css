@@ -2,12 +2,13 @@
 /* CSS Document */
 #index{
 	width:auto;
-	height:100%;
+	height:1999px;
 }
 
 .logo-position{
-	margin-left:6.06%;
-	margin-top:1%;
+	position:absolute;
+	left:6.06%;
+	top:5.75%;
 	width:5%;
 	float:left;
 }
@@ -18,8 +19,9 @@
 }
 
 .contect-way{
-	margin-left:75%;
-	margin-top:6%;
+	position: absolute; 
+	left:83.75%;
+	top:4.4%;
 	width:7%;
 	
 }
