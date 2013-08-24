@@ -1,0 +1,239 @@
+
+---
+refinery_page_part_translations:
+  columns:
+  - id
+  - refinery_page_part_id
+  - locale
+  - body
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - en
+    - <p>Welcome to our site. This is just a place holder page while we gather our
+      content.</p>
+    - 2013-08-23 09:27:08.000000000 Z
+    - 2013-08-23 09:27:08.000000000 Z
+  - - 2
+    - 2
+    - en
+    - <p>This is another block of content over here.</p>
+    - 2013-08-23 09:27:08.000000000 Z
+    - 2013-08-23 09:27:08.000000000 Z
+  - - 3
+    - 3
+    - en
+    - <h2>Sorry, there was a problem...</h2><p>The page you requested was not found.</p><p><a
+      href='/'>Return to the home page</a></p>
+    - 2013-08-23 09:27:08.000000000 Z
+    - 2013-08-23 09:27:08.000000000 Z
+  - - 4
+    - 4
+    - en
+    - "<p>This is just a standard text page example. Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Proin metus dolor, hendrerit sit amet, aliquet nec, posuere
+      sed, purus. Nullam et velit iaculis odio sagittis placerat. Duis metus tellus,
+      pellentesque ut, luctus id, egestas a, lorem. Praesent vitae mauris. Aliquam
+      sed nulla. Sed id nunc vitae leo suscipit viverra. Proin at leo ut lacus consequat
+      rhoncus. In hac habitasse platea dictumst. Nunc quis tortor sed libero hendrerit
+      dapibus.\r\n\r\nInteger interdum purus id erat. Duis nec velit vitae dolor mattis
+      euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+      per inceptos himenaeos. Suspendisse pellentesque dignissim lacus. Nulla semper
+      euismod arcu. Suspendisse egestas, erat a consectetur dapibus, felis orci cursus
+      eros, et sollicitudin purus urna et metus. Integer eget est sed nunc euismod
+      vestibulum. Integer nulla dui, tristique in, euismod et, interdum imperdiet,
+      enim. Mauris at lectus. Sed egestas tortor nec mi.</p>"
+    - 2013-08-23 09:27:08.000000000 Z
+    - 2013-08-23 16:21:31.000000000 Z
+  - - 5
+    - 5
+    - en
+    - <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla
+      nisi a elit. Duis ultricies orci ut arcu. Ut ac nibh. Duis blandit rhoncus magna.
+      Pellentesque semper risus ut magna. Etiam pulvinar tellus eget diam. Morbi blandit.
+      Donec pulvinar mauris at ligula. Sed pellentesque, ipsum id congue molestie,
+      lectus risus egestas pede, ac viverra diam lacus ac urna. Aenean elit.</p>
+    - 2013-08-23 09:27:08.000000000 Z
+    - 2013-08-23 09:27:08.000000000 Z
+  - - 6
+    - 6
+    - en
+    - ''
+    - 2013-08-23 16:20:57.000000000 Z
+    - 2013-08-23 16:20:57.000000000 Z
+  - - 7
+    - 7
+    - en
+    - ''
+    - 2013-08-23 16:20:57.000000000 Z
+    - 2013-08-23 16:20:57.000000000 Z
+  - - 8
+    - 8
+    - en
+    - ''
+    - 2013-08-23 16:21:58.000000000 Z
+    - 2013-08-23 16:21:58.000000000 Z
+  - - 9
+    - 9
+    - en
+    - ''
+    - 2013-08-23 16:21:58.000000000 Z
+    - 2013-08-23 16:21:58.000000000 Z
+  - - 10
+    - 10
+    - en
+    - ''
+    - 2013-08-23 16:22:14.000000000 Z
+    - 2013-08-23 16:22:14.000000000 Z
+  - - 11
+    - 11
+    - en
+    - ''
+    - 2013-08-23 16:22:14.000000000 Z
+    - 2013-08-23 16:22:14.000000000 Z
+  - - 12
+    - 12
+    - en
+    - ''
+    - 2013-08-23 16:22:28.000000000 Z
+    - 2013-08-23 16:22:28.000000000 Z
+  - - 13
+    - 13
+    - en
+    - ''
+    - 2013-08-23 16:22:28.000000000 Z
+    - 2013-08-23 16:22:28.000000000 Z
+  - - 14
+    - 14
+    - en
+    - ''
+    - 2013-08-23 16:22:53.000000000 Z
+    - 2013-08-23 16:22:53.000000000 Z
+  - - 15
+    - 15
+    - en
+    - ''
+    - 2013-08-23 16:22:53.000000000 Z
+    - 2013-08-23 16:22:53.000000000 Z
+  - - 16
+    - 16
+    - en
+    - ''
+    - 2013-08-23 16:23:03.000000000 Z
+    - 2013-08-23 16:23:03.000000000 Z
+  - - 17
+    - 17
+    - en
+    - ''
+    - 2013-08-23 16:23:03.000000000 Z
+    - 2013-08-23 16:23:03.000000000 Z
+  - - 18
+    - 18
+    - en
+    - ''
+    - 2013-08-23 18:06:32.000000000 Z
+    - 2013-08-23 18:06:32.000000000 Z
+  - - 19
+    - 19
+    - en
+    - ''
+    - 2013-08-23 18:06:32.000000000 Z
+    - 2013-08-23 18:06:32.000000000 Z
+  - - 20
+    - 20
+    - en
+    - ''
+    - 2013-08-23 18:06:58.000000000 Z
+    - 2013-08-23 18:06:58.000000000 Z
+  - - 21
+    - 21
+    - en
+    - ''
+    - 2013-08-23 18:06:58.000000000 Z
+    - 2013-08-23 18:06:58.000000000 Z
+  - - 22
+    - 22
+    - en
+    - ''
+    - 2013-08-23 18:07:11.000000000 Z
+    - 2013-08-23 18:07:11.000000000 Z
+  - - 23
+    - 23
+    - en
+    - ''
+    - 2013-08-23 18:07:11.000000000 Z
+    - 2013-08-23 18:07:11.000000000 Z
+  - - 24
+    - 24
+    - en
+    - ''
+    - 2013-08-24 07:06:58.000000000 Z
+    - 2013-08-24 07:06:58.000000000 Z
+  - - 25
+    - 25
+    - en
+    - ''
+    - 2013-08-24 07:06:58.000000000 Z
+    - 2013-08-24 07:06:58.000000000 Z
+  - - 26
+    - 26
+    - en
+    - ''
+    - 2013-08-24 07:07:13.000000000 Z
+    - 2013-08-24 07:07:13.000000000 Z
+  - - 27
+    - 27
+    - en
+    - ''
+    - 2013-08-24 07:07:13.000000000 Z
+    - 2013-08-24 07:07:13.000000000 Z
+  - - 28
+    - 28
+    - en
+    - ''
+    - 2013-08-24 07:07:28.000000000 Z
+    - 2013-08-24 07:07:28.000000000 Z
+  - - 29
+    - 29
+    - en
+    - ''
+    - 2013-08-24 07:07:28.000000000 Z
+    - 2013-08-24 07:07:28.000000000 Z
+  - - 30
+    - 30
+    - en
+    - ''
+    - 2013-08-24 07:07:40.000000000 Z
+    - 2013-08-24 07:07:40.000000000 Z
+  - - 31
+    - 31
+    - en
+    - ''
+    - 2013-08-24 07:07:40.000000000 Z
+    - 2013-08-24 07:07:40.000000000 Z
+  - - 32
+    - 32
+    - en
+    - ''
+    - 2013-08-24 07:08:22.000000000 Z
+    - 2013-08-24 07:08:22.000000000 Z
+  - - 33
+    - 33
+    - en
+    - ''
+    - 2013-08-24 07:08:22.000000000 Z
+    - 2013-08-24 07:08:22.000000000 Z
+  - - 34
+    - 34
+    - en
+    - ''
+    - 2013-08-24 07:21:04.000000000 Z
+    - 2013-08-24 07:21:04.000000000 Z
+  - - 35
+    - 35
+    - en
+    - ''
+    - 2013-08-24 07:21:04.000000000 Z
+    - 2013-08-24 07:21:04.000000000 Z
