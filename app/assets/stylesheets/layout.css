@@ -1,5 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
+html{
+	background: url(/assets/backgroud-pic-1366.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
+ 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.backgroud-pic-1366.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='backgroud-pic-1366.png', sizingMethod='scale')";
+}
+
 #index{
 	width:auto;
 }
