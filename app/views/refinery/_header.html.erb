@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<link href="/assets/layout.css" rel="stylesheet" type="text/css" media="screen" />
+<title>气之站</title>
+</head>
+
+<body>
+<div id="index">
+
+<div class="logo-position">
+<img src="/assets/qzz-logo-main.png" class="logo-large">
+</div>
+
+<div class="contect-way">
+<div class="CN-or-EG"><center><img src="/assets/word-for-CN-and-Eg.png" class="CN-or-EG-long"></center></div>
+<img src="/assets/message-yellow.png" class="img-size">
+<img src="/assets/qzz-mail.png" class="img-size">
+<img src="/assets/qzz-weibo.png" class="img-size-last">
+</div>
+ <%= render(:partial => "/refinery/menu", :locals => {
+               :dom_id => 'menu',
+               :css => 'menu'
+          }) %>
+
+</div>
+</body>
+</html>

@@ -4,6 +4,7 @@ body{
         
 }
 
+
 a{
 	text-decoration: none;
 }
@@ -13,8 +14,9 @@ a:hover {
 }
 
 nav{
-	width:100%;
-	top:74.5%;
+	//width:100%;
+	top:73%;
+	left:12%;
 	position:absolute;
 }
 
@@ -25,10 +27,11 @@ nav{
 
 #menu ul li{
 	float:left;
-	list-style:none;	
+	list-style:none;
+	font-size:18px;	
 	color:#FFFFFF;
-	padding-left:3.125%;
-	width:9.0625%;
+	padding-left:50px;
+	width:146px;
 	transform: skew(-24deg); 
      -o-transform: skew(-24deg); 
      -moz-transform: skew(-24deg); 
@@ -47,13 +50,6 @@ nav{
 }
 
 
-#menu ul li:first-child{
-	
-	text-align:right; 
-	padding-right:6.125%;
-	width:9.0625%;
-	//padding-left:0px;
-}
 
 #menu ul li:last-child{
 	background:#000;
@@ -78,14 +74,14 @@ nav{
 
 #menu ul li:hover ul{
     display:block;
-	margin-left: -26%;
-	margin-top:-11%;      
+	margin-left: -50px;
+	margin-top:-20px;      
 }
 
 #menu ul li:hover ul li {
 	float:none;
-	width:180%;
-	padding-left:47%;
+	width:146px;
+	padding-left:50px;
 	background-color:#937145;
 	transform: skew(0deg); 
      -o-transform: skew(0deg); 
@@ -99,7 +95,3 @@ nav{
 	background: -webkit-gradient(linear,  top right, top left, color-stop(0%, #937145), color-stop(88%, #937145),color-stop(100%, #ffffff));
 }
 
-#menu ul li:hover ul li:first-child{
-	padding-right:0%;
-	text-align:left; 
-}

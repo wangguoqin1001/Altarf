@@ -2,7 +2,6 @@
 /* CSS Document */
 #index{
 	width:auto;
-	height:1999px;
 }
 
 .logo-position{
@@ -46,4 +45,12 @@
 .CN-or-EG-long{
 	width:90%;
 	height:5%;
+}
+
+footer{
+	text-align: center;
+	top:90%;
+	position: absolute;
+	width:100%;
+	color:#a68352;
 }
