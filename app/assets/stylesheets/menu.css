@@ -16,7 +16,7 @@ a:hover {
 nav{
 	//width:100%;
 	top:73%;
-	left:4%;
+	left:10%;
 	position:absolute;
 }
 
@@ -30,8 +30,8 @@ nav{
 	list-style:none;
 	font-size:18px;	
 	color:#FFFFFF;
-	padding-left:50px;
-	width:146px;
+	padding-left:43px;
+	width:124px;
 	transform: skew(-24deg); 
      -o-transform: skew(-24deg); 
      -moz-transform: skew(-24deg); 
@@ -74,14 +74,14 @@ nav{
 
 #menu ul li:hover ul{
     display:block;
-	margin-left: -50px;
+	margin-left: -42px;
 	margin-top:-20px;      
 }
 
 #menu ul li:hover ul li {
 	float:none;
-	width:146px;
-	padding-left:50px;
+	width:124px;
+	padding-left:43px;
 	background-color:#937145;
 	transform: skew(0deg); 
      -o-transform: skew(0deg); 
