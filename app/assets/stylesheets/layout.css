@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+#index{
+	width:auto;
+	height:100%;
+}
+
+.logo-position{
+	margin-left:6.06%;
+	margin-top:1%;
+	width:5%;
+	float:left;
+}
+
+.logo-large{
+	width:100%;
+	height:30%;
+}
+
+.contect-way{
+	margin-left:75%;
+	margin-top:6%;
+	width:7%;
+	
+}
+
+.img-size{
+	width:33%;
+	height:3%;
+	float:left;
+}
+.img-size-last{
+	width:27%;
+	height:3%;
+	float:left;
+}
+
+
+.CN-or-EG{
+	width:100%;
+	height:41.8%;
+}
+
+.CN-or-EG-long{
+	width:90%;
+	height:5%;
+}

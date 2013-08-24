@@ -1,0 +1,105 @@
+/* CSS Document */
+body{
+   	
+        
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+nav{
+	width:100%;
+	top:74.5%;
+	position:absolute;
+}
+
+#menu ul {
+  padding-left:0px;
+}
+
+
+#menu ul li{
+	float:left;
+	list-style:none;	
+	color:#FFFFFF;
+	padding-left:3.125%;
+	width:9.0625%;
+	transform: skew(-24deg); 
+     -o-transform: skew(-24deg); 
+     -moz-transform: skew(-24deg); 
+     -webkit-transform: skew(-24deg);
+	background: -moz-linear-gradient(left, #000 0%, #000 88%, #fff 100%);
+	background: -webkit-linear-gradient(left, #000 0%, #000 88%, #fff 100%);
+	background: -o-linear-gradient(left, #000 0%, #000 88%, #fff 100%);
+	background: -ms-linear-gradient(left, #000 0%, #000 88%, #fff 100%);
+	background: linear-gradient(to right, #000 0%, #000 88%, #fff 100%);
+	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #000),color-stop(88%, #000), color-stop(100%, #fff));
+}
+
+#menu ul li a {
+	color: #FFFFFF;
+	
+}
+
+
+#menu ul li:first-child{
+	
+	text-align:right; 
+	padding-right:6.125%;
+	width:9.0625%;
+	//padding-left:0px;
+}
+
+#menu ul li:last-child{
+	background:#000;
+}
+
+#menu ul ul{
+	
+	display:none;
+	z-index:10;
+	position:absolute;
+}
+
+#menu ul li:hover{
+	background-color:#a68352;
+	background: -moz-linear-gradient(right, #a68352 0%,  #a68352 100%);
+	background: -webkit-linear-gradient(right, #a68352 0%,  #a68352 100%);
+	background: -o-linear-gradient(right, #a68352 0%,  #a68352 100%);
+	background: -ms-linear-gradient(right, #a68352 0%, #a68352 100%);
+	background: linear-gradient(to left, #a68352 0%,  #a68352 100%);
+	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a68352), color-stop(100%, #a68352));
+}
+
+#menu ul li:hover ul{
+    display:block;
+	margin-left: -26%;
+	margin-top:-11%;      
+}
+
+#menu ul li:hover ul li {
+	float:none;
+	width:180%;
+	padding-left:47%;
+	background-color:#937145;
+	transform: skew(0deg); 
+     -o-transform: skew(0deg); 
+     -moz-transform: skew(0deg); 
+     -webkit-transform: skew(0deg);
+	 background: -moz-linear-gradient(left, #937145 0%, #937145 88%, #ffffff 100%);
+	background: -webkit-linear-gradient(left, #937145 0%, #937145 88%, #ffffff 100%);
+	background: -o-linear-gradient(left, #937145 0%, #937145 88%, #ffffff 100%);
+	background: -ms-linear-gradient(left, #937145 0%, #937145 88%, #ffffff 100%);
+	background: linear-gradient(to rifht, #937145 0%, #937145 88%, #ffffff 100%);
+	background: -webkit-gradient(linear,  top right, top left, color-stop(0%, #937145), color-stop(88%, #937145),color-stop(100%, #ffffff));
+}
+
+#menu ul li:hover ul li:first-child{
+	padding-right:0%;
+	text-align:left; 
+}
