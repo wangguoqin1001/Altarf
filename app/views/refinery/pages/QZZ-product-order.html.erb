@@ -1,62 +1,131 @@
 <!DOCTYPE html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>QZZ website sign up</title>
+<title>QZZ website product order</title>
 </head>
-
+<link href="QZZ-signup.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+<style>
+.mCSB_scrollTools{
+	margin-top:100px;
+}
+.mCSB_scrollTools .mCSB_draggerContainer .mCSB_draggerRail{
+	background-color:#937145;
+	width:10px;
+	height:254px;
+}
+.mCSB_scrollTools .mCSB_draggerContainer .mCSB_dragger .mCSB_dragger_bar{
+	background-color:#e2c675;
+	width:10px;
+	height:50px;
+}
+</style>
 <body>
 <div class="contentbox">
-<div class="content_top">注册气之站QZZSTORE</div>
-<div class="content">                             
+<div class="order_top">
+     <div class="order_top01">
+       产品预定单
+     </div>
+     <div class="order_top02">
+       <a>我的积分<a> | <a>历史订单</a>
+     </div>
+</div>
+<div class="content"> 
+           <div class="order_left">                           
                 <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="content_txt01">您的用户名：</td>
-                              <td class="content_input01"><input id="username" type="text" class="content_input02"></td>
-                              <td class="content_txt02">（6-12个字母、数字或字符）</td>
+                              <td class="order_txt01">商品名称：</td>
+                              <td class="order_input01"><input id="product_name" type="text" class="content_input02"></td>
                      </tr>
                </table>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="content_txt01">设置密码：</td>
-                              <td class="content_input01"><input id="password" type="password" class="content_input02"></td>
-                              <td class="content_txt02" >（6-12个字母或数字，不区分大小写）</td>
+                              <td class="order_txt01">订购数量：</td>
+                              <td class="order_input01"><input id="num" type="text" class="content_input02"></td>
                      </tr>
                </table>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="content_txt01">确认密码：</td>
-                              <td class="content_input01"><input id="identification" type="password" class="content_input02"></td>
-                              <td class="content_txt02"></td>
+                              <td class="order_txt01">单    价：</td>
+                              <td class="order_input01"><input id="price" type="text" class="content_input02"></td>
                      </tr>
                </table>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="content_txt01">姓    名：</td>
-                              <td class="content_input01"><input id="name" type="text" class="content_input02"></td>
-                              <td class="content_txt02"></td>
+                              <td class="order_txt01">小    计：</td>
+                              <td class="order_input01"><input id="Sub-total" type="text" class="content_input02"></td>
                      </tr>
                </table>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="content_txt01">性    别：</td>
+                              <td class="order_txt01">是否有折扣：</td>
                               <td >
-                              <select class="content_select" id="sex" name="sex"  >
-                              <option value="1">男</option>
-                              <option value="2">女</option>
+                              <select class="order_select" id="discount" name="discount"  >
+                              <option value="1">是</option>
+                              <option value="2">否</option>
                               </select>
                               </td>
-                              <td class="content_txt02">（下拉框设置选择“男/女”）</td>
                      </tr>
               </table>
               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="content_txt01">手机号码:</td>
-                              <td class="content_input01"><input id="mobile" type="text" class="content_input02"></td>
-                              <td class="content_txt02"></td>
+                              <td class="order_txt01">使用优惠券：</td>
+                              <td class="order_input01"><input id="coupon" type="text" class="content_input02"></td>
+                     </tr>
+               </table>
+         </div>
+         <div class="order_right">
+              <img src="/assets/img/product3.png" width="75%" height="75%">
+           </div>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">总    计：</td>
+                              <td class="order_input02"><input id="total" type="text" class="content_input02"></td>
+                              <td  class="order_txt03">（产品单价X数量X折扣或优惠=总价）</td>
+                     </tr>     
+               </table>                
+               <table class="content_tab" border="0" cellpadding="0" cellspacing="0" >
+                      <tr>
+                              <td class="content_txt01" >支付方式：</td>
+                              <td >
+                              <select class="order_select02" id="payment" name="payment"  >
+                              <option value="1">货到付款</option>
+                              <option value="2">支付宝</option>
+                              <option value="3">银行卡</option>
+                              </select>
+                              </td>
+                              
+                     </tr>
+               </table>
+               <div class="order_bottom">
+                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="order_txt04">收货人信息：</td>                              
                      </tr>
                </table>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td  class="content_txt01">固定电话:</td>
+                              <td  class="content_txt01">会员编号：</td>
+                              <td class="content_input01"><input id="member_id" type="text" class="content_input02"></td>
+                              <td  class="content_txt02"></td>
+                     </tr>     
+               </table>
+                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">收货人姓名：</td>
+                              <td class="content_input01"><input id="consignee_name" type="text" class="content_input02"></td>
+                              <td  class="content_txt02"></td>
+                     </tr>     
+               </table>
+                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">手机号码：</td>
+                              <td class="content_input01"><input id="mobile" type="text" class="content_input02"></td>
+                              <td  class="content_txt02"></td>
+                     </tr>     
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">收货人固话:</td>
                               <td  class="content_input03"><input id="telephone01" type="text" class="content_input02"></td>
                               <td  class="content_txt03">—</td>
                               <td  class="content_input03"><input id="telephone02" type="text" class="content_input02"></td>
@@ -64,13 +133,6 @@
                               <td  class="content_input04"><input id="telephone03" type="text" class="content_input02"></td>
                               <td  class="content_txt04">(如86-21-12345678）</td>
                      </tr>     
-               </table>
-               <table class="content_tab" border="0" cellpadding="0" cellspacing="0" >
-                      <tr>
-                              <td class="content_txt01" >邮    箱：</td>
-                              <td class="content_input01" ><input id="email" type="text" class="content_input02"></td>
-                              <td class="content_txt02"></td>
-                     </tr>
                </table>
                 <table class="content_tab" border="0" cellpadding="0" cellspacing="0" >
                       <tr>
@@ -92,44 +154,60 @@
                               <td class="content_txt02"></td>                            
                      </tr>
                </table>
-               <table  class="content_tab" border="0" cellspacing="0" cellpadding="0">
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="content_txt07" >备注：为方便您的购物，所填具体地址会在购物时视为默认收货地址。</td>
-                     </tr>
-               </table>
-               
-                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
-                      <tr>
-                              <td class="content_txt08">验证码：</td>
-                              <td class="content_input08"><input id="telidentification" type="text" class="content_input02"></td>
-                              <td >
-                                     <input  type="button" value="发送至手机" id="send" class="content_txt09">
-                             </td>
+                              <td  class="content_txt01">是否需要发票:</td>
+                              <td  class="order_input02"><input id="invoice" type="text" class="content_input02"></td> 
+                              <td  class="order_txt03"></td>                            
                      </tr>
                </table>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="content_txt10">点击发送至手机，如60秒内仍未收到，请点击</td>
+                              <td class="content_txt01">发票类型：</td>
                               <td >
-                                     <input  type="button" value="重新发送" id="resend" class="content_txt09">
-                             </td>
+                              <select class="order_select02" id="invoice_type" name="invoice_type"  >
+                              <option value="1">个人</option>
+                              <option value="2">单位</option>
+                              </select>
+                              </td>
+                              
                      </tr>
-               </table> 
-               <div class="content_tab"><input  type="button" value="注册" id="sign up" class="content_txt09"></div>         
+              </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">发票抬头:</td>
+                              <td  class="content_input01"><input id="invoice_head" type="text" class="content_input02"></td> 
+                              <td class="content_txt02"></td>                            
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">寄票地址:</td>
+                              <td  class="content_input01"><input id="invoice_address" type="text" class="content_input02"></td> 
+                              <td class="content_txt02"></td>                           
+                     </tr>
+               </table>                           
+               </div> 
+               <div class="content_tab"><input  type="button" value="确认订单" id="sign up" class="order_txt05"></div>         
 </div>
 </div>
 
-<% content_for :javascripts do %>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="jquery.mousewheel.min.js"></script>
+<script src="jquery.mCustomScrollbar.js"></script>
+
 <script>
     (function($){
-		function pageset() {
-            $(".content").mCustomScrollbar();
-        }
-        window.onload = pageset();
+        $(window).load(function(){
+            $(".content").mCustomScrollbar(
+			       {
+					   
+				   }
+				);
+        });
     })(jQuery);
 	
 </script>
-<% end %>
-
 </body>
 </html>
