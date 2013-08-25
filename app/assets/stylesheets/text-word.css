@@ -4,7 +4,8 @@ a {text-transform:none;
 text-decoration:none;
 color:#FFF;
 } 
-a:hover {text-decoration:underline} 
+a:hover {text-decoration:none} 
+
 #body{
 	width:auto;
 	height:100%;
@@ -139,6 +140,12 @@ a:hover {text-decoration:underline}
 	font-size:0.9em;
 	}
 	
+.member-activites{
+	position: absolute;
+	left: 34%;
+	top: 34%;
+}	
+	
 /*元气远景*/
 .para-Y-left{
 	 transform:scale(1) skew(-24deg); 
@@ -196,7 +203,6 @@ a:hover {text-decoration:underline}
 	-o-transform: scale(1.2) skew(-24deg);
 	-moz-transform: scale(1.2)skew(-24deg);
 	-webkit-transform: scale(1.2)skew(-24deg);
-
 	border:solid #000 1px;
 }
 	
