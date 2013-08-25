@@ -11,7 +11,7 @@ html{
 }
 
 body{
-	
+	font-family:Arial, 'MicsoftYahei', 'Simsun';
 	
 }
 
@@ -41,14 +41,17 @@ body{
 }
 
 .img-size{
-	width:33%;
+	width:30%;
 	height:3%;
 	float:left;
+	margin-left:5%
+	
 }
 .img-size-last{
-	width:27%;
+	width:24%;
 	height:3%;
 	float:left;
+	margin-left:4%
 }
 
 

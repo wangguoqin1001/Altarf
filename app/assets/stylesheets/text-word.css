@@ -1,15 +1,21 @@
 @charset "utf-8";
 /* CSS Document */
-
+a {text-transform:none;
+text-decoration:none;
+color:#FFF;
+} 
+a:hover {text-decoration:underline} 
 #body{
 	width:auto;
 	height:100%;
 	/*font-size:44px;*/
 }
 
+/*introdue-qzz*/
 .text-position{
-	margin-top: 18.9%;
-	margin-left:11%;
+	position:absolute;
+	top: 37.7%;
+	left:30.6%;
 	list-style-type: none;
 	float: none;
 	width: 57.3%;
@@ -27,8 +33,51 @@
 	list-style-type:none;
 	font-size:1em;
 	text-align:left;
+	padding-top:0.5%;
 }
 
+.left-para-coffe{
+	transform:scale(0.8) skew(-24deg); 
+     -o-transform:scale(0.8) skew(-24deg); 
+     -moz-transform: scale(0.8)skew(-24deg); 
+     -webkit-transform: scale(0.8)skew(-24deg);
+	
+	width:140px;
+	height:67px;
+	 background-color:#937145;
+	position:absolute;
+	top:35.2%;
+	left:15.4%;
+	float:left;	
+}
+
+.left-para-list{
+	list-style-type:none;
+	font-size:1em;
+	line-height:1.2em;
+	color:#FFF;
+}
+.left-para-ul{
+	margin-top:5px;
+}
+
+.left-over-coffe{
+	font-size:1.5em;
+	position:absolute;
+	top:22%;
+	left:18.4%;
+	color:#a68352;
+	word-spacing:0.3em;
+}
+.left-over-coffe-text-1{
+	list-style-type:none;
+	margin-left:-30px;
+}
+.left-over-coffe-text-2{
+	list-style-type:none;
+	margin-left:20px;
+	
+}
 
 /*news-story*/
 
