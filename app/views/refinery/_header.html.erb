@@ -8,23 +8,25 @@
 </head>
 
 <body>
+<div class="menu-left"></div>
+<div class="menu-right"></div>
 <div id="index">
 
-	<div class="logo-position"><a href="/">
+		<div class="logo-position"><a href="/">
 			<img src="/assets/qzz-logo-main.png" class="logo-large"></a>
-</div>
+		</div>
 
-<div class="contect-way">
-<div class="CN-or-EG"><center><img src="/assets/word-for-CN-and-Eg.png" class="CN-or-EG-long"></center></div>
-<img src="/assets/message-yellow.png" class="img-size">
-<img src="/assets/qzz-mail.png" class="img-size">
-<img src="/assets/qzz-weibo.png" class="img-size-last">
-</div>
- <%= render(:partial => "/refinery/menu", :locals => {
-               :dom_id => 'menu',
-               :css => 'menu'
-          }) %>
-
+	<div class="contect-way">
+		<div class="CN-or-EG"><center><img src="/assets/word-for-CN-and-Eg.png" class="CN-or-EG-long"></center></div>
+					<img src="/assets/message-yellow.png" class="img-size">
+					<img src="/assets/qzz-mail.png" class="img-size">
+					<img src="/assets/qzz-weibo.png" class="img-size-last">
+	</div>
+	 <%= render(:partial => "/refinery/menu", :locals => {
+    	           :dom_id => 'menu',
+    	           :css => 'menu'
+    	      }) %>
+	
 </div>
 </body>
 </html>
