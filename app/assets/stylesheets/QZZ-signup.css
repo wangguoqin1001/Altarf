@@ -1,0 +1,231 @@
+@charset "utf-8";
+/* CSS Document */
+/*body{
+	background-color:#F93;
+	font-size:12px;
+}*/
+.contentbox{
+	height:435px;
+	width:57%;
+	margin:14% auto;
+}
+.content_top{
+	width:53%;
+	height:50px;
+	padding-left:4.5%;
+	padding-top:10px;	
+	background: -webkit-gradient(linear, left top, right top, from(#c3922d), color-stop(2%,#f3df9b), color-stop(5%, #c3922d), color-stop(9%, #916f44),
+	to(#916f44));
+	background:-o-linear-gradient(left,#c3922d 0%, #f3df9b %2,#c3922d 5%,#916f44 %9);		
+	background:-moz-linear-gradient(left,#c3922d 0%, #f3df9b 2%,#c3922d 5%,#916f44 9% );
+	border-radius:25px 0px 0px 0px;
+	color:#ffffff;
+}
+.content{
+	height:400px;
+	width:100%;
+	overflow:auto;
+	margin-top:-25px;	
+	border-radius:25px 0px 0px 0px;
+	z-index:999;
+	position:absoulte;
+	background-image: -webkit-gradient(
+          linear,left  top,left  bottom, from(rgba(255, 255, 255, 1.0)),
+          to(rgba(255, 255, 255, 0))
+        );
+        background-image: -moz-linear-gradient(
+          top center,
+          rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0) 95%
+        );
+
+        /* IE 5.5 - 7 */
+        filter: progid:DXImageTransform.Microsoft.gradient(
+          gradientType=0, startColor=0, endColorStr=#FFFFFF
+        );
+
+        /* IE8 uses -ms-filter for whatever reason... */
+        -ms-filter: progid:DXImageTransform.Microsoft.gradient(
+          gradientType=0, startColor=0, endColoStr=#FFFFFF
+        );
+}
+.mCSB_scrollTools{
+	margin-top:200px;
+}
+.mCSB_scrollTools .mCSB_draggerContainer .mCSB_draggerRail{
+	background-color:#937145;
+	width:10px;
+	height:155px;
+}
+.mCSB_scrollTools .mCSB_draggerContainer .mCSB_dragger .mCSB_dragger_bar{
+	background-color:#e2c675;
+	width:10px;
+	height:50px;;
+}
+.content_tab{
+	padding-top:2.3%;
+	width:100%;
+}
+.content_txt01{
+	width:16%;
+	padding-left:3%;
+}
+.content_input01{
+	width:32%;
+}
+.content_input02{
+	background-color:#cdcfd0;
+	border-style:none;
+	width:100%;
+}
+.content_txt02{
+	width:49%;
+}
+.content_select{
+	background-color:#cdcfd0;
+	width:40%;
+	border-width:0;
+	margin-left:2%;
+}
+.content_input03{
+	width:7.3%;
+}
+.content_txt03{
+	width:3.7%;
+	text-align:center;
+}
+.content_input04{
+	width:17%;
+}
+.content_txt04{
+	width:42%;
+}
+.content_input05{
+	width:10%;
+}
+.content_txt05{
+	width:4%;
+    text-align:center;
+}
+.content_txt06{
+	width:18%;
+	text-align:center;
+}
+.content_input06{
+	width:13%;
+}
+.content_input07{
+	width:31%;
+}
+.content_txt07{
+	padding-left:3%;	
+}
+.content_txt08{
+	padding-left:3%;
+	width:12%;
+}
+.content_input08{
+	width:16%;
+}
+.content_txt09{
+	background-color:#937145;
+	border-radius:10%;
+	border-width:0;
+	color:#ffffff;
+	margin-left:2%;
+}
+.content_txt10{
+	padding-left:3%;
+	width:48%;
+}
+/*QZZ login*/
+.loginbox{
+	height:235px;
+	width:40%;
+	margin:14% auto;
+}
+.login_content{
+	height:200px;
+	width:100%;
+	margin-top:-25px;	
+	border-radius:25px 0px 0px 0px;
+	z-index:999;
+	position:absoulte;
+    background-image: -webkit-gradient(
+          linear,left  top,left  bottom, from(rgba(255, 255, 255, 1.0)),
+          to(rgba(255, 255, 255, 0))
+        );
+        background-image: -moz-linear-gradient(
+          top center,
+          rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0) 95%
+        );
+
+        /* IE 5.5 - 7 */
+        filter: progid:DXImageTransform.Microsoft.gradient(
+          gradientType=0, startColor=0, endColorStr=#FFFFFF
+        );
+
+        /* IE8 uses -ms-filter for whatever reason... */
+        -ms-filter: progid:DXImageTransform.Microsoft.gradient(
+          gradientType=0, startColor=0, endColoStr=#FFFFFF
+        );
+}
+.login_txt01{
+	width:25%;
+	padding-left:3%;	
+}
+.login_input01{
+	width:54%;	
+}
+.login_input02{
+	width:100%;
+	border-width:0;
+}
+.login_txt02{
+	width:15%;
+	padding-left:3%;
+}
+.login_txt03{
+	width:25%;
+	padding-left:3%
+}
+.login_input03{
+	width:21%;
+}
+.login_txt04{
+	/*width:15%;*/
+	width:18%;
+	border-width:0;
+	margin-left:3%;
+	background-color:#bec0c2;
+}
+.login_txt05{
+	width:62%;
+}
+.login_txt06{
+	width:8.5%;
+}
+/*QZZ product-order*/
+.order_left{
+	float:left;
+	width:52%;
+	background-color:#3F6;
+}
+.order_right{
+	float:right;
+	width:35%;
+	padding-left:13%;
+}
+.order_txt01{
+	padding-left:6%;/*10*/
+	width:28%;
+	background-color:#03C;
+}
+.order_input01{
+	width:61%;
+}
+.order_select{
+	background-color:#cdcfd0;
+	width:40%;
+	border-width:0;
+	margin-left:5%;
+}
