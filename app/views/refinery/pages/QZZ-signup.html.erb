@@ -122,13 +122,10 @@
 <% content_for :javascripts do %>
 <script>
     (function($){
-        $(window).load(function(){
-            $(".content").mCustomScrollbar(
-			       {
-					   
-				   }
-				);
-        });
+		function pageset() {
+            $(".content").mCustomScrollbar();
+        }
+        window.onload = pageset();
     })(jQuery);
 	
 </script>
