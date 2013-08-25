@@ -3,8 +3,6 @@
 <title>QZZ website sign up</title>
 </head>
 
-<link href="QZZ-signup.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="screen" />
 <body>
 <div class="contentbox">
 <div class="content_top">注册气之站QZZSTORE</div>
@@ -121,11 +119,7 @@
 </div>
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<script src="jquery.mousewheel.min.js"></script>
-<script src="jquery.mCustomScrollbar.js"></script>
-
+<% content_for :javascripts do %>
 <script>
     (function($){
         $(window).load(function(){
@@ -138,5 +132,7 @@
     })(jQuery);
 	
 </script>
+<% end %>
+
 </body>
 </html>
