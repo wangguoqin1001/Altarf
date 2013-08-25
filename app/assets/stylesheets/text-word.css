@@ -141,42 +141,62 @@ a:hover {text-decoration:underline}
 	
 /*元气远景*/
 .para-Y-left{
-	 transform:scale(1.4) skew(-24deg); 
-     -o-transform:scale(1.4) skew(-24deg); 
-     -moz-transform: scale(1.4)skew(-24deg); 
-     -webkit-transform: scale(1.4)skew(-24deg);
-	 width:3%;
+	 transform:scale(1) skew(-24deg); 
+     -o-transform:scale(1) skew(-24deg); 
+     -moz-transform: scale(1)skew(-24deg); 
+     -webkit-transform: scale(1)skew(-24deg);
+	 width:66px;
+	 height:45px;
 	 color:#FFF;
-	 background-color:#a68352;
-	 margin-top:11%;
-	 margin-left:-65%;
+	 background-color:#937145;
+	 position:absolute;
+	 top:32%;
+	 left:32.3%;
 	 float:left;
 }
-
 .text-para-Y{
 	transform:scale(1) skew(-2deg); 
      -o-transform:scale(1) skew(-2deg); 
      -moz-transform: scale(1)skew(-2deg); 
      -webkit-transform: scale(1)skew(-2deg);
 	font-size:0.6em;
-	margin-top:10%;
-	
+	line-height:1.7em;
+	text-align:center;
+	margin-top:-6px;		
 }
-
 .p-line-high{
-	margin-top:-30%;
+	margin-top:-18px;
 }
-
 .para-W-right{
-	transform:scale(0.8) skew(-24deg); 
-     -o-transform:scale(0.8) skew(-24deg); 
-     -moz-transform: scale(0.8)skew(-24deg); 
-     -webkit-transform: scale(0.8)skew(-24deg);
-	width:35%;
-	 color:#FFF;
-	 background-color:#000;
-	 margin-top:9.5%;
-	 margin-left:-13%;
-
-	 
+	transform: scale(1) skew(-24deg);
+	-o-transform: scale(1) skew(-24deg);
+	-moz-transform: scale(1)skew(-24deg);
+	-webkit-transform: scale(1)skew(-24deg);
+	width: 400px;
+	color: #000;
+	background: rgba(255,255,255,0.5);
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	position: absolute;
+	left:37%;
+	top: 32%;
+	float: left;
+	height: 45px;
+	padding-top:14px;
 }
+.para-W-right-text{
+	
+	font-size:0.8em;
+	margin-left:5px;
+}
+.outside-para{
+	transform: scale(1.2) skew(-24deg);
+	-o-transform: scale(1.2) skew(-24deg);
+	-moz-transform: scale(1.2)skew(-24deg);
+	-webkit-transform: scale(1.2)skew(-24deg);
+
+	border:solid #000 1px;
+}
+	
