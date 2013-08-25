@@ -124,3 +124,6 @@ db/datadump/sessions.yml
 
 # bundle cache
 Gemfile.lock
+
+# jQuery map file
+jquery*.map
