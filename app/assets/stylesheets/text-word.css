@@ -36,39 +36,17 @@ a:hover {text-decoration:underline}
 	padding-top:0.5%;
 }
 
-.left-para-coffe{
-	transform:scale(0.8) skew(-24deg); 
-     -o-transform:scale(0.8) skew(-24deg); 
-     -moz-transform: scale(0.8)skew(-24deg); 
-     -webkit-transform: scale(0.8)skew(-24deg);
-	
-	width:140px;
-	height:67px;
-	 background-color:#937145;
-	position:absolute;
-	top:35.2%;
-	left:15.4%;
-	float:left;	
-}
 
-.left-para-list{
-	list-style-type:none;
-	font-size:1em;
-	line-height:1.2em;
-	color:#FFF;
-}
-.left-para-ul{
-	margin-top:5px;
-}
 
 .left-over-coffe{
 	font-size:1.5em;
 	position:absolute;
-	top:22%;
+	top:25%;
 	left:18.4%;
 	color:#a68352;
-	word-spacing:0.3em;
+	word-spacing:0.5em;
 }
+
 .left-over-coffe-text-1{
 	list-style-type:none;
 	margin-left:-30px;
@@ -76,8 +54,12 @@ a:hover {text-decoration:underline}
 .left-over-coffe-text-2{
 	list-style-type:none;
 	margin-left:20px;
+}
+.left-over-coffe-text-3{
+	list-style-type:none;
 	
 }
+
 
 /*news-story*/
 
@@ -106,28 +88,36 @@ a:hover {text-decoration:underline}
 	 width:42.75%;
 }
 .before-para{
-	width:3%;
+	width:12px;
 	align:left;
 	
 }
 .para-text-1{
 	text-align:left;
 	font-size:1em;
-	margin-left:-18%;
+	position:absolute;
+	left:34%;
+	top:38.4%;
 	}
 
 .img-position{
 	float:left;
 }
+
 .para-text-1-1{
+	position:absolute;
+	left:35%;
+	top:43.3%;
+	width:630px;
 	text-align:left;
 	font-size:1em;
-	margin-left:-9%;
-	}
-	.text-between-lines-3{
-	margin-top:43%;
+	
+}
+
+.text-between-lines-3{
+	
 	font-size:0.9em;
-	margin-left:3%;
+	
 	}
 
 .text-between-lines-2{
