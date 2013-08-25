@@ -133,7 +133,7 @@ refinery_pages:
     - false
     - false
     - 35
-    - 44
+    - 48
     - 0
     - 
     - 
@@ -149,8 +149,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 45
-    - 46
+    - 49
+    - 50
     - 0
     - 
     - 
@@ -166,8 +166,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 47
-    - 48
+    - 51
+    - 52
     - 0
     - 
     - 
@@ -211,7 +211,7 @@ refinery_pages:
     - 6
     - 
     - 我的帐户
-    - true
+    - false
     - ''
     - 
     - true
@@ -223,7 +223,7 @@ refinery_pages:
     - QZZ-login
     - application
     - 2013-08-23 18:07:11.000000000 Z
-    - 2013-08-25 18:19:40.000000000 Z
+    - 2013-08-25 20:04:47.000000000 Z
   - - 13
     - 5
     - 
@@ -262,7 +262,7 @@ refinery_pages:
     - 5
     - 
     - 元气愿景
-    - true
+    - false
     - ''
     - 
     - true
@@ -274,7 +274,7 @@ refinery_pages:
     - future-qzz
     - application
     - 2013-08-24 07:07:28.000000000 Z
-    - 2013-08-25 13:15:49.000000000 Z
+    - 2013-08-25 19:19:57.000000000 Z
   - - 16
     - 5
     - 
@@ -347,7 +347,7 @@ refinery_pages:
     - 5
     - 
     - 新闻文案
-    - false
+    - true
     - ''
     - 
     - true
@@ -359,7 +359,7 @@ refinery_pages:
     - news-qzz-all-words
     - application
     - 2013-08-25 13:24:13.000000000 Z
-    - 2013-08-25 13:25:39.000000000 Z
+    - 2013-08-25 20:05:18.000000000 Z
   - - 21
     - 7
     - 
@@ -370,13 +370,13 @@ refinery_pages:
     - true
     - false
     - false
-    - 38
-    - 39
+    - 40
+    - 41
     - 1
-    - home
+    - product2-qzz
     - application
     - 2013-08-25 16:33:58.000000000 Z
-    - 2013-08-25 16:33:58.000000000 Z
+    - 2013-08-25 20:39:53.000000000 Z
   - - 22
     - 7
     - 
@@ -387,8 +387,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 40
-    - 41
+    - 42
+    - 43
     - 1
     - plzregister
     - application
@@ -404,8 +404,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 42
-    - 43
+    - 44
+    - 45
     - 1
     - mdorder
     - application
@@ -427,4 +427,38 @@ refinery_pages:
     - QZZ-signup
     - application
     - 2013-08-25 18:27:10.000000000 Z
-    - 2013-08-25 18:27:10.000000000 Z
+    - 2013-08-25 20:04:27.000000000 Z
+  - - 25
+    - 7
+    - 
+    - 预订单
+    - false
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 46
+    - 47
+    - 1
+    - QZZ-product-order
+    - application
+    - 2013-08-25 19:23:32.000000000 Z
+    - 2013-08-25 20:17:16.000000000 Z
+  - - 26
+    - 7
+    - 
+    - 在线订购
+    - true
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 38
+    - 39
+    - 1
+    - product1-qzz
+    - application
+    - 2013-08-25 20:03:32.000000000 Z
+    - 2013-08-25 20:39:43.000000000 Z
