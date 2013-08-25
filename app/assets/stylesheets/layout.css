@@ -27,22 +27,25 @@ body{
 	float:left;	
 }
 
-.left-para-list{
-	list-style-type:none;
-	font-size:1.2em;
-	line-height:1.2em;
-	color:#FFF;
-}
-
-.left-para-ul{	
-     transform:scale(0.8) skew(-24deg); 
+.left-para-coffe ul{
+	transform:scale(0.8) skew(-24deg); 
      width:115px;
      -o-transform:scale(0.8) skew(-24deg); 
      -moz-transform: scale(0.8)skew(-24deg); 
      -webkit-transform: scale(0.8)skew(-24deg);
 	 background-color:#937145;
-	margin-top:15px;
+	 margin-top:15px;
 }
+
+.left-para-coffe ul li{
+	list-style-type:none;
+	font-size:1.2em;
+	line-height:1.2em;
+	color:#FFF;}
+
+
+
+
 
 .logo-position{
 	position:absolute;

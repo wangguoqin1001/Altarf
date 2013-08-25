@@ -1,0 +1,18 @@
+/* CSS Document */
+.center-jay{
+	top:30%;
+	left:40%;
+	position:absolute;
+	
+}
+
+.order-success-pic{
+	float:left;
+}
+
+.order-sucess-text{
+	width:400px;
+	margin-top:20px;
+	text-align: left;
+	margin-left:130px;
+}
