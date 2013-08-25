@@ -1,9 +1,15 @@
 var contentSelector = '#page';
+var rootUrl = History.getRootUrl();
 
 $(document).ready (function() {
 	if (window.history && history.pushState) {
 
-		$('#menu a').on ('click', function(event) {
+		$.expr[':'].internal = function(obj, index, meta, stack){
+			var	url = $(obj).attr ('href') || '';
+			return url.substring (0, rootUrl.length) === rootUrl || url.indexOf (':') === -1;
+		};
+
+		$('a:internal').on ('click', function(event) {
 			var url = $(this).attr('href');
 
 			History.pushState (null, null, url);
