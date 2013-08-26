@@ -74,7 +74,7 @@
                </table>
          </div>
          <div class="order_right">
-              <img src="/assets/img/product3.png" width="75%" height="75%">
+              <img src="/assets/product3.png" width="75%" height="75%">
            </div>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
@@ -197,17 +197,16 @@
 <script src="jquery.mousewheel.min.js"></script>
 <script src="jquery.mCustomScrollbar.js"></script>
 
+<% content_for :javascripts do %>
 <script>
     (function($){
-        $(window).load(function(){
-            $(".content").mCustomScrollbar(
-			       {
-					   
-				   }
-				);
-        });
+		function pageset() {
+            $(".content").mCustomScrollbar();
+        }
+        window.onload = pageset();
     })(jQuery);
 	
 </script>
+<% end %>
 </body>
 </html>

@@ -1,7 +1,7 @@
 /* CSS Document */
 .center-jay{
 	top:30%;
-	left:40%;
+	left:35%;
 	position:absolute;
 	font-size: 18px;
 	
@@ -27,7 +27,7 @@
 	padding-left:5px;
 	}
 
-.membertable{
+/*.membertable{
 	top:37%;
 	left:20%;
 	position:absolute;
@@ -39,8 +39,9 @@
 	position:absolute;
 	
 }
-
+*/
 .memberight ul li{
+	width:80%;
 	margin-top:14px;
 	font-size:18px;
 	list-style-image: url("/assets/small-paradize2.png");
