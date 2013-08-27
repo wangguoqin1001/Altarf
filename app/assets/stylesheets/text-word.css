@@ -157,10 +157,108 @@ a:hover {text-decoration:none}
 	 width:66px;
 	 height:45px;
 	 color:#FFF;
-	 background-color:#937145;
+	 background-color:#a68352;
 	 position:absolute;
 	 top:32%;
 	 left:32.3%;
+	 float:left;
+}
+.para-Y-left-bc{
+	 transform:scale(1) skew(-24deg); 
+     -o-transform:scale(1) skew(-24deg); 
+     -moz-transform: scale(1)skew(-24deg); 
+     -webkit-transform: scale(1)skew(-24deg);
+	 width:66px;
+	 height:45px;
+	 color:#FFF;
+	 background-color:#937145;
+	 position:absolute;
+	 top:33%;
+	 left:31.5%;
+	 float:left;
+}
+.para-Y-left-1{
+	 transform:scale(1) skew(-24deg); 
+     -o-transform:scale(1) skew(-24deg); 
+     -moz-transform: scale(1)skew(-24deg); 
+     -webkit-transform: scale(1)skew(-24deg);
+	 width:66px;
+	 height:45px;
+	 color:#FFF;
+	 background-color:#a68352;
+	 position:absolute;
+	 top:41%;
+	 left:65%;
+	 float:left;
+}
+.para-Y-left-1-bc{
+	 transform:scale(1) skew(-24deg); 
+     -o-transform:scale(1) skew(-24deg); 
+     -moz-transform: scale(1)skew(-24deg); 
+     -webkit-transform: scale(1)skew(-24deg);
+	 width:66px;
+	 height:45px;
+	 color:#FFF;
+	 background-color:#937145;
+	 position:absolute;
+	 top:42%;
+	 left:64.2%;
+	 float:left;
+}
+.para-Y-left-2{
+	 transform:scale(1) skew(-24deg); 
+     -o-transform:scale(1) skew(-24deg); 
+     -moz-transform: scale(1)skew(-24deg); 
+     -webkit-transform: scale(1)skew(-24deg);
+	 width:66px;
+	 height:45px;
+	 color:#FFF;
+	 background-color:#a68352;
+	 position:absolute;
+	 top:50%;
+	 left:29%;
+	 float:left;
+}
+.para-Y-left-2-bc{
+	 transform:scale(1) skew(-24deg); 
+     -o-transform:scale(1) skew(-24deg); 
+     -moz-transform: scale(1)skew(-24deg); 
+     -webkit-transform: scale(1)skew(-24deg);
+	 width:66px;
+	 height:45px;
+	 color:#FFF;
+	 background-color:#937145;
+	 position:absolute;
+	 top:51%;
+	 left:28.1%;
+	 float:left;
+}
+.para-Y-left-3{
+	 transform:scale(1) skew(-24deg); 
+     -o-transform:scale(1) skew(-24deg); 
+     -moz-transform: scale(1)skew(-24deg); 
+     -webkit-transform: scale(1)skew(-24deg);
+	 width:66px;
+	 height:45px;
+	 color:#FFF;
+	 background-color:#a68352;
+	 position:absolute;
+	 top: 59.5%;
+	 left:61%;
+	 float:left;
+}
+.para-Y-left-3-bc{
+	 transform:scale(1) skew(-24deg); 
+     -o-transform:scale(1) skew(-24deg); 
+     -moz-transform: scale(1)skew(-24deg); 
+     -webkit-transform: scale(1)skew(-24deg);
+	 width:66px;
+	 height:45px;
+	 color:#FFF;
+	 background-color:#937145;
+	 position:absolute;
+	 top: 60.5%;
+	 left:60.3%;
 	 float:left;
 }
 .text-para-Y{
@@ -195,8 +293,80 @@ a:hover {text-decoration:none}
 	height: 33px;
 	padding-top:14px;
 }
+.para-W-right-1{
+	transform: scale(1) skew(-24deg);
+	-o-transform: scale(1) skew(-24deg);
+	-moz-transform: scale(1)skew(-24deg);
+	-webkit-transform: scale(1)skew(-24deg);
+	width: 400px;
+	color: #000;
+	background: rgba(255,255,255,0.5);
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	position: absolute;
+	left:26%;
+	top: 41%;
+	float: left;
+	height:40px;
+	padding-top: 5px;
+	margin-left:10%;
+}
+.para-W-right-2{
+	transform: scale(1) skew(-24deg);
+	-o-transform: scale(1) skew(-24deg);
+	-moz-transform: scale(1)skew(-24deg);
+	-webkit-transform: scale(1)skew(-24deg);
+	width: 400px;
+	background-color:#fff;
+	color: #000;
+	background: rgba(255,255,255,0.5);
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	position: absolute;
+	left:32.8%;
+	top: 50%;
+	float: left;
+	height: 44px;
+	padding-top:5px;
+	margin-left:1%;
+}
+.para-W-right-3{
+	transform: scale(1) skew(-24deg);
+	-o-transform: scale(1) skew(-24deg);
+	-moz-transform: scale(1)skew(-24deg);
+	-webkit-transform: scale(1)skew(-24deg);
+	width: 400px;
+	color: #000;
+	background: rgba(255,255,255,0.5);
+	background-color:#FFF;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	position: absolute;
+	left:30%;
+	top: 59.5%;
+	height: 33px;
+	width:31%;
+	padding-top:14px;
+}
 .para-W-right-text{
-	
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
+	font-size:0.8em;
+	margin-left:3%;
+}
+.para-W-right-text-1{
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
 	font-size:0.8em;
 	margin-left:5px;
 }
@@ -207,7 +377,6 @@ a:hover {text-decoration:none}
 	-webkit-transform: scale(1.2)skew(-24deg);
 	border:solid #000 1px;
 }
-
 /*product1*/
 .left-over-coffe-only-one-black{
 	font-size:1.5em;
