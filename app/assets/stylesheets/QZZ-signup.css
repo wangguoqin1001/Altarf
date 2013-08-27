@@ -3,7 +3,7 @@
 .contentbox{
 	height:435px;
 	width:57%;
-	margin:5% auto;
+	margin:-450px auto;
 }
 .content_top{
 	//width:58%;
@@ -17,7 +17,7 @@
 	background:-moz-linear-gradient(left,#c3922d 0%, #f3df9b 2%,#c3922d 5%,#916f44 9% );
 	background: -webkit-linear-gradient(left,#c3922d 0%, #f3df9b %2,#c3922d 5%,#916f44 %9);
 	background: -ms-linear-gradient(left,#c3922d 0%, #f3df9b %2,#c3922d 5%,#916f44 %9);
-	background: linear-gradient(to #c3922d 0%, #f3df9b %2,#c3922d 5%,#916f44 %9);
+	background: linear-gradient(to right,#c3922d 0%, #f3df9b %2,#c3922d 5%,#916f44 %9);
 	border-radius:25px 0px 0px 0px;
 	color:#ffffff;
 }
@@ -46,6 +46,7 @@
         -ms-filter: progid:DXImageTransform.Microsoft.gradient(
           gradientType=0, startColor=0, endColoStr=#FFFFFF
         );
+	 background: -ms-linear-gradient(top,  rgba(255, 255, 255, 1.0) 0%,rgba(255, 255, 255, 0) 100%); 
 }
 .content_tab{
 	padding-top:2.3%;
@@ -127,7 +128,7 @@
 .loginbox{
 	height:235px;
 	width:40%;
-	margin:14% auto;
+	margin:-350px auto;
 }
 .login_content{
 	height:200px;
@@ -155,6 +156,7 @@
         -ms-filter: progid:DXImageTransform.Microsoft.gradient(
           gradientType=0, startColor=0, endColoStr=#FFFFFF
         );
+	 background: -ms-linear-gradient(top,  rgba(255, 255, 255, 1.0) 0%,rgba(255, 255, 255, 0) 100%); 
 }
 .login_txt01{
 	width:25%;
@@ -259,7 +261,7 @@
 	background:-moz-linear-gradient(left,#c3922d 0%, #f3df9b 2%, #c3922d 5%,#916f44 9% );
 	background: -webkit-linear-gradient(left,#c3922d 0%, #f3df9b %2,#c3922d 5%,#916f44 %9);
 	background: -ms-linear-gradient(left,#c3922d 0%, #f3df9b %2,#c3922d 5%,#916f44 %9);
-	background: linear-gradient(to #c3922d 0%, #f3df9b %2,#c3922d 5%,#916f44 %9);
+	background: linear-gradient(to right,#c3922d 0%, #f3df9b %2,#c3922d 5%,#916f44 %9);
 	border-radius:25px 0px 0px 0px;
 	color:#ffffff;
 }
