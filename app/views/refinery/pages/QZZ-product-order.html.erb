@@ -2,8 +2,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>QZZ website product order</title>
 </head>
-<link href="QZZ-signup.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+
+<% content_for :stylesheets do %>
 <style>
 .mCSB_scrollTools{
 	margin-top:100px;
@@ -19,6 +19,8 @@
 	height:50px;
 }
 </style>
+<% end %>
+
 <body>
 <div class="contentbox">
 <div class="order_top">
@@ -191,11 +193,6 @@
                <div class="content_tab"><input  type="button" value="确认订单" id="sign up" class="order_txt05"></div>         
 </div>
 </div>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<script src="jquery.mousewheel.min.js"></script>
-<script src="jquery.mCustomScrollbar.js"></script>
 
 <% content_for :javascripts do %>
 <script>
