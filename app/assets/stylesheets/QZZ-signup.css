@@ -29,7 +29,7 @@
 	border-radius:25px 0px 0px 0px;
 	z-index:999;
 	position:absoulte;
-	background:#ffffff;
+//	background:#ffffff;
 	background-image: -webkit-gradient(
           linear,left  top,left  bottom, from(rgba(255, 255, 255, 1.0)),
           to(rgba(255, 255, 255, 0))
@@ -136,7 +136,7 @@
 	border-radius:25px 0px 0px 0px;
 	z-index:999;
 	position:absoulte;
-	background:#ffffff;
+//	background:#ffffff;
     background-image: -webkit-gradient(
           linear,left  top,left  bottom, from(rgba(255, 255, 255, 1.0)),
           to(rgba(255, 255, 255, 0))
