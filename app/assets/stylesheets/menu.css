@@ -32,6 +32,7 @@ nav{
 	color:#FFFFFF;
 	padding-left:43px;
 	width:124px;
+	background-color:#000;
 	transform: skew(-24deg); 
      -o-transform: skew(-24deg); 
      -moz-transform: skew(-24deg); 
@@ -42,6 +43,7 @@ nav{
 	background: -ms-linear-gradient(left, #000 0%, #000 88%, #fff 100%);
 	background: linear-gradient(to right, #000 0%, #000 88%, #fff 100%);
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #000),color-stop(88%, #000), color-stop(100%, #fff));
+//	filter:	progid:dximagetransform.microsoft.gradient(startColorstr='#000000', endColorstr='#000', GradientType=0)
 }
 
 #menu ul li a {
@@ -70,6 +72,7 @@ nav{
 	background: -ms-linear-gradient(right, #a68352 0%, #a68352 100%);
 	background: linear-gradient(to left, #a68352 0%,  #a68352 100%);
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a68352), color-stop(100%, #a68352));
+//	filter:	progid:dximagetransform.microsoft.gradient(startColorstr='#000000', endColorstr='#000', GradientType=0)
 }
 
 #menu ul li:hover ul{
@@ -93,5 +96,6 @@ nav{
 	background: -ms-linear-gradient(left, #937145 0%, #937145 88%, #ffffff 100%);
 	background: linear-gradient(to rifht, #937145 0%, #937145 88%, #ffffff 100%);
 	background: -webkit-gradient(linear,  top right, top left, color-stop(0%, #937145), color-stop(88%, #937145),color-stop(100%, #ffffff));
+//	filter:	progid:dximagetransform.microsoft.gradient(startColorstr='#937145', endColorstr='#937145', GradientType=0);
 }
 
