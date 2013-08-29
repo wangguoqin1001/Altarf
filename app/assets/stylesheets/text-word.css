@@ -56,7 +56,18 @@ a:hover {text-decoration:none}
 	color:#a68352;
 	word-spacing:0.5em;
 }
-
+.left-over-coffe-only-one-1{
+	font-size:1.2em;
+	position:absolute;
+	top:21%;
+	left:-10%;
+	color:#000;
+	transform:scale(1) skew(24deg); 
+     -o-transform:scale(1) skew(24deg); 
+     -moz-transform: scale(1)skew(24deg); 
+     -webkit-transform: scale(1)skew(24deg);
+	
+}
 
 
 .left-over-coffe-text-1{
@@ -483,7 +494,7 @@ a:hover {text-decoration:none}
 	word-spacing:1.4em;
 	color:#fff;
 	width:87%;
-	font-size:0.9em;
+	font-size:1em;
 }
 
 .coffe-blank-pro1-over ul li{
@@ -573,3 +584,240 @@ a:hover {text-decoration:none}
 	 font-size:1em;
 	 margin-left:-6%;
 	}
+/*现代养生*/
+.large-background{
+	background-color: #FFF;
+	transform: scale(1) skew(-24deg);
+	-o-transform: scale(1) skew(-24deg);
+	-moz-transform: scale(1)skew(-24deg);
+	-webkit-transform: scale(1)skew(-24deg);
+	
+	
+	background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: -ms-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
+	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
+	
+	width:55%;
+	height:100%;
+	position:absolute;
+	left:29%;
+	top:0%;
+}
+.large-inside-text{	
+	width:78%;
+	height:50%;
+	margin-top:23%;
+	margin-left:8.7%;
+}
+.large-inside-text ul{
+	
+	list-style-type:none;
+	color:#fff;
+	font-size:1.5em;
+	padding-left:16.7%;
+}
+.large-inside-text ul li{
+	margin-top:3%;
+	line-height:1.5em;
+	font-size:0.5em;
+	font-style:normal;
+}
+
+.large-inside-img{
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
+	position:absolute;
+	left:-23%;
+	top:33%;
+	width:38%;
+}
+.little-text-double{
+	transform: scale(0.8) skew(-24deg);
+	-o-transform: scale(0.8) skew(-24deg);
+	-moz-transform: scale(0.8)skew(-24deg);
+	-webkit-transform: scale(0.8)skew(-24deg);
+	
+	position:absolute;
+	width:29%;
+	height:5%;
+	left:84%;
+	top:23%;
+	background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: -ms-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
+	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
+}
+.little-text-double ul li{
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
+	list-style-type:none;
+	color:#fff;
+	font-size:1em;
+	margin-top:-7%;
+}
+.little-text-double-2{
+	transform: scale(0.8) skew(-24deg);
+	-o-transform: scale(0.8) skew(-24deg);
+	-moz-transform: scale(0.8)skew(-24deg);
+	-webkit-transform: scale(0.8)skew(-24deg);
+	
+	position:absolute;
+	width:29%;
+	height:5%;
+	left:84%;
+	top:29%;
+	background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: -ms-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
+	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
+}
+.little-text-double-2 ul li{
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
+	list-style-type:none;
+	color:#fff;
+	font-size:1em;
+	margin-top:-7%;
+	text-align: center;
+}
+/*现代养生*/
+.large-background-now{
+	background-color: #FFF;
+	transform: scale(1) skew(-24deg);
+	-o-transform: scale(1) skew(-24deg);
+	-moz-transform: scale(1)skew(-24deg);
+	-webkit-transform: scale(1)skew(-24deg);
+	
+	
+	background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: -ms-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+	background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
+	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
+	
+	width:45%;
+	height:100%;
+	position:absolute;
+	left:40%;
+	top:0%;
+}
+.large-inside-text-1{	
+	width:94%;
+	height:50%;
+	margin-top:30%;
+	margin-left:-5%;
+}
+.large-inside-text-1 ul{
+	
+	list-style-type:none;
+	color:#fff;
+	font-size:1.5em;
+	padding-left:16.7%;
+}
+.large-inside-text-1 ul li{
+	margin-top:0%;
+	line-height:2em;
+	font-size:0.5em;
+	font-style:normal;
+}
+/*公司信息*/
+.large-background-now-com{
+	background-color: #FFF;
+	transform: scale(1) skew(-24deg);
+	-o-transform: scale(1) skew(-24deg);
+	-moz-transform: scale(1)skew(-24deg);
+	-webkit-transform: scale(1)skew(-24deg);
+	background: -moz-linear-gradient(left, #d2a93b 1%, #966532 100%);
+	background: -webkit-linear-gradient(left, #d2a93b 1%, #966532 100%);
+	background: -o-linear-gradient(left, #d2a93b 1%, #966532 100%);
+	background: -ms-linear-gradient(left, #d2a93b 1%, #966532 100%);
+	background: linear-gradient(to right, #d2a93b 1%, #966532 100%);
+	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #d2a93b), color-stop(100%, #966532));
+	
+	width:74%;
+	height:100%;
+	position:absolute;
+	left:15%;
+	top:0%;
+}
+
+.large-img-inside{
+	height:40%;
+	width:70%;
+	position:absolute;
+	left:12%;
+	top:24%;
+}
+.large-img-inside-2{
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
+	height:40%;
+	width:70%;
+	position:absolute;
+	left:12%;
+	top:24%;
+}
+.large-inside-text-3{
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
+	position:absolute;
+	left:35%;
+	top:20%;
+	width:30%;
+	color:#fff;
+	font-size:1.3em;
+	margin-left:19%;
+}
+.large-inside-text-small{
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
+	font-size:0.9em;
+	color:#FFF;
+	position:absolute;
+	left:16%;
+	top:66%;
+}
+.large-inside-text-small-2{
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
+	font-size: 0.9em;
+	margin-left:7%;
+	color: #000;
+	position: absolute;
+	left: 12%;
+	top: 66%;
+	width: 55%;
+}
+.large-img-inside-map{
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
+	height:40%;
+	width:70%;
+	position:absolute;
+	left:12%;
+	top:24%;
+}

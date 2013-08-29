@@ -43,6 +43,32 @@ body{
 	line-height:1.2em;
 	color:#FFF;}
 
+.left-para-coffe-com{
+	
+	position:absolute;
+	left:-13%;
+	top:25%;
+	width:17%;
+	transform:scale(0.8) skew(-24deg); 
+     -o-transform:scale(0.8) skew(-24deg); 
+     -moz-transform: scale(0.8)skew(-24deg); 
+     -webkit-transform: scale(0.8)skew(-24deg);
+}
+
+.left-para-coffe-com ul{
+	 background-color:#946f39;
+	 margin-left:3%;
+}
+
+.left-para-coffe-com ul li{
+	transform:scale(0.8) skew(24deg); 
+     -o-transform:scale(0.8) skew(24deg); 
+     -moz-transform: scale(0.8)skew(24deg); 
+     -webkit-transform: scale(0.8)skew(24deg);
+	list-style-type:none;
+	font-size:1.1em;
+	line-height:1.2em;
+	color:#FFF;}
 
 
 
