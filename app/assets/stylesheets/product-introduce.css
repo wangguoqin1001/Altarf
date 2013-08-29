@@ -1,0 +1,248 @@
+@charset "utf-8";
+/* CSS Document */
+
+.content{
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.6);
+  zoom: 1;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff, endColorstr=#99ffffff);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff, endColorstr=#99ffffff)";
+}
+/*QZZ-lingzhi*/
+.product_top{
+	width:10px;
+	height:160px;
+	margin-left:63%;
+	background-color:#937145;
+	-webkit-transform: skew(-25deg); 
+	-moz-transform: skew(-25deg); 
+	-o-transform: skew(-25deg); 
+	transform: skew(-25deg);
+}
+.product-txt01{
+	margin-left:54%;
+}
+.product-txt01 ul{
+	list-style:none;
+}
+.product-txt01 ul li{
+	color:#221e1f;
+}
+.product-txt02{
+	margin-left:5.5%;
+}
+.product_bottom{
+	float:left;
+	width:10px;
+	height:420px;
+	margin-left:54%;
+	background-color:#937145;
+	-webkit-transform: skew(-25deg); 
+	-moz-transform: skew(-25deg); 
+	-o-transform: skew(-25deg); 
+	transform: skew(-25deg);
+}
+.product-txt03{
+	margin-left:61%;
+}
+.product-txt03 ul{
+	list-style-image:url(/assets/img/small-paradize2.png);
+}
+.product-txt03 ul li{
+	padding-top:2%;
+	color:#77787b;
+}
+.product-txt04{
+	margin-left:-1.7%;
+}
+.product-txt05{
+	margin-left:-3.5%;
+}
+/*QZZ-lingzhi-introduce*/
+.product01_content_01{
+	height:80px;
+	width:58%;
+	margin:auto;	
+	border-bottom-style:solid;
+	border-color:#937145;
+	border-width:1px;
+}
+.lingzhi_txt01{
+	color:#221e1f;
+	margin-bottom:1%;
+	padding-left:2%;
+}
+.lingzhi_txt02{
+	color:#947145;
+	padding-left:2%;
+}
+.product01_content_02{
+	width:58%;
+	margin:auto;
+	height:200px;
+	margin-top:1.5%;
+}
+.lingzhi-pic{
+	float:right;
+	margin-right:2%;
+}
+.lingzhi_txt03{
+	float:left;
+	padding-left:0.5%;
+	color:#221e1f;
+	padding-bottom:0.5%;
+}
+.lingzhi_txt04{
+	color:#947145;
+	padding-bottom:0.5%;
+}
+.lingzhi_txt05{
+	padding-left:2%;
+	color:#312f30;
+	line-height:150%;
+}
+/*QZZ-lingzhi-buy*/
+.product01_content_03{
+	width:75%;
+	margin:auto;
+	height:250px;
+}
+.product01_content_03 ul{
+	list-style-image:url(/assets/img/small-paradize2.png);
+}
+.product01_content_03 ul li{
+	padding-bottom:1.5%;
+	color:#312f30;
+}
+.product_content_03_top{
+	height:200px;
+}
+.product01_content_03 ul li{
+	color:#312f30;
+}
+.lingzhi-txt07{
+	padding:0.5%;
+	background-color:#937145;;
+	border-radius:10%;
+	border-width:0;
+	color:#ffffff;
+	margin-left:3%;
+}
+/*QZZ-lingzhi-making*/
+.lingzhi-txt06{
+	padding-left:1%;
+	color:#312f30;
+	line-height:150%;
+}
+.product01_content_04{
+	width:50%;
+	margin:auto;
+	height:330px;
+}
+.product01_content_04 ul{
+	list-style-image:url(/assets/img/small-paradize2.png);
+}
+.lingzhi_txt08{
+	padding-top:2%;
+	color:#221e1f;
+}
+.lingzhi_txt09{
+	line-height:200%;
+	color:#947145;
+	font-style:italic;
+}
+.product01-pic01{
+	float:left;
+	padding-left:6%;
+}
+.lingzhi-txt10{
+	width:8%;
+	border-top-style:solid;
+	border-color:#937145;
+	float:left;
+	border-width:2px;
+	margin-top:7%;
+}
+.product01-pic02{
+	float:left;
+}
+.product01-pic03{
+	margin-left:3%;
+	margin-right:3%;
+	margin-top:1%;
+	border-radius: 50%;
+	float:left;
+	float:left;
+}
+.product01-pic04{
+	margin-top:2%;
+}
+/*QZZ-lingzhi-reputation*/
+.product01_content_05{
+	width:59%;
+	margin:auto;
+	height:330px;
+}
+.lingzhi-txt11{
+	color:#221e1f;
+	padding-bottom:1%;
+}
+.lingzhi-txt12{
+	color:#312f30;
+}
+.product01-pic05{
+	float:right;
+	padding-top:2%;
+}
+/*QZZ-Q10-introduce*/
+.product02_content_01{
+	width:60%;
+	margin:auto;
+	height:100px;
+	border-bottom-style:solid;
+	border-color:#937145;
+	border-width:1px;
+}
+.Q10-txt01{
+	width:70%;
+}
+.product02_content_02{
+	width:62.5%;
+	margin:auto;
+	height:250px;
+	margin-top:1.5%;
+}
+.product02_content_02_right{
+	float:right;
+	margin-right:3%;
+}
+.Q10-txt02{
+	padding-left:2%;
+	color:#221e1f;
+	padding-bottom:0.5%;
+}
+.Q10_txt05{
+	padding-left:2%;
+	color:#312f30;
+	line-height:150%;
+}
+/*QZZ-Q10-buy*/
+.product02_content_03{
+	width:30%;
+	margin:auto;
+	height:300px;
+	margin-top:1.5%;
+}
+.product02_content_03_top{
+	height:260px;	 
+}
+.Q10-txt03{
+	padding-left:5%;
+	color:#221e1f;
+	padding-bottom:1.5%;
+}
+.Q10-txt04{
+	padding-left:5%;
+	color:#312f30;
+	line-height:150%;
+}
