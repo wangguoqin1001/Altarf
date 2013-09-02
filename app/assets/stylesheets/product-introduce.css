@@ -1,13 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-.content{
-  background: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, 0.6);
-  zoom: 1;
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff, endColorstr=#99ffffff);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff, endColorstr=#99ffffff)";
-}
 /*QZZ-lingzhi*/
 .product_top{
 	width:10px;
@@ -193,6 +186,9 @@
 .product01-pic05{
 	float:right;
 	padding-top:2%;
+}
+.product01_content_05 input{
+	margin-top:23%;
 }
 /*QZZ-Q10-introduce*/
 .product02_content_01{
