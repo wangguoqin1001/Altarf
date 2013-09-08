@@ -757,7 +757,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	background: -ms-linear-gradient(left, #d2a93b 1%, #966532 100%);
 	background: linear-gradient(to right, #d2a93b 1%, #966532 100%);
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #d2a93b), color-stop(100%, #966532));
-	
+	z-index:-99;
 	width:74%;
 	height:100%;
 	position:absolute;

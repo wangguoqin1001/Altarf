@@ -2,6 +2,12 @@
 /* CSS Document */
 
 /*QZZ-lingzhi*/
+.content{
+//	position:absolute;
+//	top:0px;
+	margin-top:-488px;
+}
+
 .product_top{
 	width:10px;
 	height:160px;
@@ -27,7 +33,7 @@
 .product_bottom{
 	float:left;
 	width:10px;
-	height:420px;
+	height:435px;
 	margin-left:54%;
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
