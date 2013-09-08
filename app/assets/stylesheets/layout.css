@@ -140,6 +140,7 @@ footer{
 	text-align: center;
 	top:90%;
 	position: absolute;
+	z-index:-80;
 	width:100%;
 	color:#a68352;
 }

@@ -3,10 +3,18 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta charset="utf-8">
-
-<link href="layout.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="text-word.css" rel="stylesheet" type="text/css" media="screen" />
 <title>气之站</title>
+<% content_for :javascripts do %>
+<script type="text/javascript">
+$(function(){
+	$(".white-blank-pro1").hover(function(){
+		
+		$(this).children(".pop").fadeToggle('fast')
+
+	})
+})
+</script>
+<% end %>
 </head>
 
 <body>
@@ -19,6 +27,7 @@
     </ul>
 </div>
 <div class="white-blank-pro1">
+<!--		<div class="pop" style="position: absolute;z-index: 999;display: none;">我是弹出层</div> -->
 	<div class="coffe-blank-pro1-over">
     	<ul>
    		 	<li>日纯牌灵芝片</li>
@@ -35,7 +44,9 @@
     <div class="button-product2">
                      <input id="saveinformation"   type="submit" value="添加到购物车"  >
      </div>
+     
 </div>
+
 <div class="left-over-coffe-only-one-black">
     <ul>
     <li class="left-over-coffe-text-3">在线订购

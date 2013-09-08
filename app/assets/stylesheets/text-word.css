@@ -403,13 +403,24 @@ a:hover {text-decoration:none}
 	-o-transform: scale(1) skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
-	
 	position: absolute;
 	top: 209px;
 	left: 22%;
 	width: 23%;
 	height: 34.5%;
 }
+.white-blank-pro1 span{
+	background-color: #fff;
+	background:rgba(0,0,0,0.5) !important; /*实现FF背景透明，文字不透明*/
+background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/ 
+	position: absolute;
+	top: 209px;
+	left: 22%;
+	width: 23%;
+	height: 34.5%;
+}
+
+
 .white-blank-pro2{
 	background-color: #FFF;
 	transform: scale(1) skew(-24deg);

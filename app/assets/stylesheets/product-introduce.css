@@ -38,6 +38,11 @@
 .product-txt03{
 	margin-left:61%;
 }
+
+.product-txt03 ul li a{
+	color:#77787b;
+}
+
 .product-txt03 ul{
 	
 	list-style-image:url(/assets/small-paradize2.png);
@@ -86,6 +91,7 @@
 	color:#221e1f;
 	padding-bottom:0.5%;
 }
+
 .lingzhi_txt04{
 	color:#947145;
 	padding-bottom:0.5%;
@@ -102,7 +108,7 @@
 	height:250px;
 }
 .product01_content_03 ul{
-	list-style-image:url(/assets/img/small-paradize2.png);
+	list-style-image:url(/assets/small-paradize2.png);
 }
 .product01_content_03 ul li{
 	padding-bottom:1.5%;
@@ -134,7 +140,7 @@
 	height:330px;
 }
 .product01_content_04 ul{
-	list-style-image:url(/assets/img/small-paradize2.png);
+	list-style-image:url(/assets/small-paradize2.png);
 }
 .lingzhi_txt08{
 	padding-top:2%;
