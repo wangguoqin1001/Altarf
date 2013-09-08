@@ -39,7 +39,8 @@
 	margin-left:61%;
 }
 .product-txt03 ul{
-	list-style-image:url(/assets/img/small-paradize2.png);
+	
+	list-style-image:url(/assets/small-paradize2.png);
 }
 .product-txt03 ul li{
 	padding-top:2%;
