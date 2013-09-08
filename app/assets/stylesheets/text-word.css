@@ -403,7 +403,7 @@ a:hover {text-decoration:none}
 	-o-transform: scale(1) skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
-	border: solid #000 1px;
+	
 	position: absolute;
 	top: 209px;
 	left: 22%;
@@ -416,7 +416,7 @@ a:hover {text-decoration:none}
 	-o-transform: scale(1) skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
-	border: solid #000 1px;
+	
 	position: absolute;
 	top: 209px;
 	left: 49%;
@@ -482,18 +482,18 @@ a:hover {text-decoration:none}
 	-moz-transform: scale(1)skew(0deg);
 	-webkit-transform: scale(1)skew(0deg);
 	background-color:#937145;
-	background: -moz-linear-gradient(left, #b99b65 6%, #937145 9%, #937145 100%);
-	background: -webkit-linear-gradient(left, #b99b65 6%, #937145 9%, #937145 100%);
-	background: -o-linear-gradient(left, #b99b65 6%, #937145 9%, #937145 100%);
-	background: -ms-linear-gradient(left, #b99b65 6%, #937145 9%, #937145 100%);
-	background: linear-gradient(to right, #b99b65 6%, #937145 9%, #937145 100%);
+	background: -moz-linear-gradient(left, #b99b65 6%, #937145 20%, #937145 100%);
+	background: -webkit-linear-gradient(left, #b99b65 6%, #937145 20%, #937145 100%);
+	background: -o-linear-gradient(left, #b99b65 6%, #937145 20%, #937145 100%);
+	background: -ms-linear-gradient(left, #b99b65 6%, #937145 20%, #937145 100%);
+	background: linear-gradient(to right, #b99b65 6%, #937145 20%, #937145 100%);
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #000),color-stop(88%, #000), color-stop(100%, #fff));
 	margin-top:-14%;
 	margin-left:-0.5%;
 	padding-left:9%;
 	word-spacing:1.4em;
 	color:#fff;
-	width:87%;
+	width:260px;
 	font-size:0.9em;
 }
 
@@ -512,8 +512,8 @@ a:hover {text-decoration:none}
 }
 
 .number-text-1{
-	margin-top:-19%;
-	margin-left:3%;
+	margin-top:-10%;
+	margin-left:5%;
 }
 .number-text-1 ul li:first-child{
 	transform: scale(1) skew(24deg);
@@ -536,8 +536,8 @@ a:hover {text-decoration:none}
 }
 
 .number-text-2{
-	margin-top:-14%;
-	margin-left:4%;
+	margin-top:-10%;
+	margin-left:5%;
 }
 .number-text-2 ul li:first-child{
 	transform: scale(1) skew(24deg);
@@ -575,14 +575,14 @@ a:hover {text-decoration:none}
 	background-color:#937145;
 	position:absolute;
 	left:65.6%;
-	top:82.6%;
+	top:80%;
 	 border-width: 0px;
-	 width:35%;
-	 height:12%;
+	 width:137px;
+	 height:30px;
    	 color:#FFF;
 	 border-radius: 8px;
 	 font-size:1em;
-	 margin-left:-6%;
+	 margin-left:-14%;
 	}
 /*现代养生*/
 .large-background{
@@ -591,14 +591,13 @@ a:hover {text-decoration:none}
 	-o-transform: scale(1) skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
-	
-	
 	background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
 	background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
 	background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
 	background: -ms-linear-gradient(left, #a1753f 1%, #c59a47 100%);
 	background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
+	z-index:-99;
 	
 	width:55%;
 	height:100%;
@@ -700,7 +699,7 @@ a:hover {text-decoration:none}
 	-o-transform: scale(1) skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
-	
+	z-index:-99;
 	
 	background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
 	background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
