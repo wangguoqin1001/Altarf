@@ -18,9 +18,13 @@
 	margin-left:130px;
 }
 
-.memberfirstline{
+.membertable table tr:first-child{
 	background:rgba(147,113,69,1);
 	color:#ffffff;
+}
+
+.membertable table tr{
+	background:rgba(255,255,255,0.5);
 }
 
 .membertable table tr td{
