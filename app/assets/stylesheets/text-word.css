@@ -409,6 +409,19 @@ a:hover {text-decoration:none}
 	width: 23%;
 	height: 34.5%;
 }
+.coffe-slim-blank-pro1{
+	background-color: #937145;
+	transform: scale(1) skew(-24deg);
+	-o-transform: scale(1) skew(-24deg);
+	-moz-transform: scale(1)skew(-24deg);
+	-webkit-transform: scale(1)skew(-24deg);
+	position: absolute;
+	top:225px;
+	left: 25.5%;
+	width:20%;
+	height: 32%;
+	z-index:-1;
+}
 .white-blank-pro1 span{
 	background-color: #fff;
 	background:rgba(0,0,0,0.5) !important; /*实现FF背景透明，文字不透明*/
@@ -433,6 +446,19 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	left: 49%;
 	width: 23%;
 	height: 34.5%;
+}
+.coffe-slim-blank-pro2{
+	background-color: #937145;
+	transform: scale(1) skew(-24deg);
+	-o-transform: scale(1) skew(-24deg);
+	-moz-transform: scale(1)skew(-24deg);
+	-webkit-transform: scale(1)skew(-24deg);
+	position: absolute;
+	top:225px;
+	left: 52.5%;
+	width:20%;
+	height: 32%;
+	z-index:-1;
 }
 .coffe-blank-pro1-top{
 	transform: scale(1) skew(0deg);
