@@ -7,10 +7,12 @@
 <% content_for :javascripts do %>
 <script type="text/javascript">
 $(function(){
-	$(".white-blank-pro1").hover(function(){
+	$(".img-blank-pro1-inside-1").mouseover(function(){		
+		$(".pop").fadeToggle('fast');	
 		
-		$(this).children(".pop").fadeToggle('fast')
-
+	})
+	$(".pop").mouseout(function(){
+		$(".pop").hide();
 	})
 })
 </script>
@@ -27,14 +29,38 @@ $(function(){
     </ul>
 </div>
 <div class="white-blank-pro1">
-<!--		<div class="pop" style="position: absolute;z-index: 999;display: none;">我是弹出层</div> -->
+		<div class="pop" style="">
+			
+				<p>
+				配料：蔗糖、淀粉、碳酸钙、灵芝提取物、麦芽糖醇、羟丙甲
+          纤维素、二氧化硅、阿拉伯胶、羧甲纤维素钙、蔗糖脂 
+           肪酸脂、鱼明胶、聚乙二醇6000、虫胶、巴西棕榈蜡、     
+            焦糖色素、胭脂红色素
+				</p>
+				<p>
+				保健功能：增强免疫力
+				</p>
+				<p>
+				适宜人群：免疫力低下者
+				</p>
+				<p>
+				贮藏方法：常温保存
+				</p>
+				<p>
+				食用方法及食用量：每日2次，每次4片，早/午饭前空腹服食
+				</p>
+				<p>
+				生产国：日本
+				</p>
+			
+		</div>
 	<div class="coffe-blank-pro1-over">
     	<ul>
    		 	<li>日纯牌灵芝片</li>
             <li>一盒日纯牌灵芝片=6600毫克灵芝精粉！</li>
     	</ul>
     </div> 
-    <img src="/assets/product3.png" class="img-blank-pro1-inside-1">
+    <img src="/assets/product3.png" class="img-blank-pro1-inside-1" >
     <div class="number-text-1">
     	<ul>
    			 <li>60袋/120片</li>

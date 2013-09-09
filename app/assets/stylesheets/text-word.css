@@ -104,7 +104,7 @@ a:hover {text-decoration:none}
 	margin-top:-18px;
 	text-indent: 2em;}
 
-/*新闻站*/
+/*新闻站**/
 	
 .paradize-div{
 	 margin-left:3%;
@@ -476,6 +476,27 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	margin-top:10%;
 	margin-left:10%;
 }
+.pop{
+	position: absolute;
+	top:0px;
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.5) !important;
+	background:#000; filter:Alpha(opacity=50);
+	background-color:#000;
+	z-index: 99;
+	display: none;
+}
+.pop p{
+	text-indent:-33px;
+	color:#fff;
+	list-style-type:none;
+	font-size:12px;
+	width:80%;
+	margin-left:15%;
+	margin-top:1px;
+	line-height:1.2em;
+}
 .img-blank-pro1-inside-2{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
@@ -506,6 +527,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	color:#fff;
 	width:260px;
 	font-size:0.9em;
+	z-index:999;
 }
 
 .coffe-blank-pro1-over ul li{
