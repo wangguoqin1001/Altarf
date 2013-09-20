@@ -7,7 +7,10 @@
 //	top:0px;
 	margin-top:-488px;
 }
-
+.content2{
+	position:absolute;
+	margin-top:-488px;
+}
 .product_top{
 	width:10px;
 	height:160px;
@@ -205,9 +208,9 @@
 }
 /*QZZ-Q10-introduce*/
 .product02_content_01{
-	width:60%;
-	margin:auto;
-	height:100px;
+	width:85%;
+	margin-left:24%;
+	padding-bottom: 1.5%;
 	border-bottom-style:solid;
 	border-color:#937145;
 	border-width:1px;
@@ -216,8 +219,8 @@
 	width:70%;
 }
 .product02_content_02{
-	width:62.5%;
-	margin:auto;
+	width:85%;
+	margin-left:22%;
 	height:250px;
 	margin-top:1.5%;
 }
