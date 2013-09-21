@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+.left-bar{
+	width:10px;
+	height:650px;
+	margin-left:130px;
+	background-color:#937145;
+	-webkit-transform: skew(-24deg); 
+	-moz-transform: skew(-24deg); 
+	-o-transform: skew(-24deg); 
+	transform: skew(-24deg);
+	position:absolute;
+}
+.left-top1{
+	transform: scale(0.8) skew(-24deg);
+    -o-transform: scale(0.8) skew(-24deg);
+    -moz-transform: scale(0.8)skew(-24deg);
+    -webkit-transform: scale(0.8)skew(-24deg);
+    position: absolute;
+    width: 12%;
+    height: 4%;
+    left: 17%;
+    top: 14%;
+    background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: -ms-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
+    background: -webkit-gradient(linear, top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
+}
+.left-top1 p{
+	font-size:1em;
+	color:#ffffff;	
+	/*transform: scale(1) skew(24deg);*/
+    color: rgb(255, 255, 255);
+    margin-top: 0%;
+	text-align:center;
+}
+.left-top2{
+	transform: scale(0.8) skew(-24deg);
+    -o-transform: scale(0.8) skew(-24deg);
+    -moz-transform: scale(0.8)skew(-24deg);
+    -webkit-transform: scale(0.8)skew(-24deg);
+    position: absolute;
+    width: 12%;
+    height: 4%;
+    left: 16%;
+    top: 18%;
+    background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: -ms-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
+    background: -webkit-gradient(linear, top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
+}
+.left-top2 p{
+	font-size:1em;
+	color:#ffffff;	
+	/*transform: scale(1) skew(24deg);*/
+    color: rgb(255, 255, 255);
+	margin-top:0%;
+	text-align:center;
+}
+.left-bottom{
+	transform: scale(0.8) skew(-24deg);
+    -o-transform: scale(0.8) skew(-24deg);
+    -moz-transform: scale(0.8)skew(-24deg);
+    -webkit-transform: scale(0.8)skew(-24deg);
+    position: absolute;
+    width: 22%;
+    height:44%;
+    left: 5.8%;
+    top: 40%;
+    background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: -ms-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
+    background: -webkit-gradient(linear, top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
+}
+.content-txt01{
+	font-size:1.5em;
+	color:#ffffff;	
+    /*transform: scale(1) skew(24deg);*/
+    color: rgb(255, 255, 255);
+	margin-left:5%;
+	text-indent:10px;
+}
+.content-txt02{
+	line-height: 1.5em;
+    font-size: 0.9em;
+    font-style: normal;
+	/*transform: scale(1) skew(24deg);*/
+    color: rgb(255, 255, 255);
+	margin-left:5%;	
+	margin-right:9%;
+}
+.right-bar{
+	width:10px;
+	height:650px;
+	margin-left:45%;
+	background-color:#937145;
+	-webkit-transform: skew(-24deg); 
+	-moz-transform: skew(-24deg); 
+	-o-transform: skew(-24deg); 
+	transform: skew(-24deg);
+	position:absolute;
+}
+.right-conent{
+	transform: scale(0.8) skew(-24deg);
+    -o-transform: scale(0.8) skew(-24deg);
+    -moz-transform: scale(0.8)skew(-24deg);
+    -webkit-transform: scale(0.8)skew(-24deg);
+    position: absolute;
+    width: 22%;
+    height:43%;
+    left: 60%;
+    top: 17%;
+    background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: -ms-linear-gradient(left, #a1753f 1%, #c59a47 100%);
+    background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
+    background: -webkit-gradient(linear, top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
+}
