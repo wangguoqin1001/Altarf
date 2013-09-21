@@ -3,13 +3,15 @@
 
 /*QZZ-lingzhi*/
 .content{
-//	position:absolute;
+	position:absolute;
+	width:100%;
+	z-index:-1;
 //	top:0px;
 	margin-top:-488px;
 }
 .content2{
 	position:absolute;
-	margin-top:-488px;
+	margin-top:-368px;
 }
 .product_top{
 	width:10px;
