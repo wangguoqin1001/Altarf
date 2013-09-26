@@ -160,6 +160,17 @@ a:hover {text-decoration:none}
 }	
 	
 /*元气远景*/
+#future-top{
+	width:100%;
+	height:470px;
+	position: absolute;
+}
+.future-middle{
+	height: 470px;
+    width: 800px;
+    position: absolute;
+    margin-left: 380px;
+}
 .para-Y-left{
 	 transform:scale(1) skew(-24deg); 
      -o-transform:scale(1) skew(-24deg); 
@@ -171,7 +182,7 @@ a:hover {text-decoration:none}
 	 background-color:#a68352;
 	 position:absolute;
 	 top:32%;
-	 left:32.3%;
+	 left:4.3%;
 	 float:left;
 }
 .para-Y-left-bc{
@@ -185,7 +196,7 @@ a:hover {text-decoration:none}
 	 background-color:#937145;
 	 position:absolute;
 	 top:33%;
-	 left:31.5%;
+	 left:3.5%;
 	 float:left;
 }
 .para-Y-left-1{
@@ -198,8 +209,8 @@ a:hover {text-decoration:none}
 	 color:#FFF;
 	 background-color:#a68352;
 	 position:absolute;
-	 top:41%;
-	 left:65%;
+	 top:44%;
+	 left:60%;
 	 float:left;
 }
 .para-Y-left-1-bc{
@@ -212,8 +223,8 @@ a:hover {text-decoration:none}
 	 color:#FFF;
 	 background-color:#937145;
 	 position:absolute;
-	 top:42%;
-	 left:64.2%;
+	 top:45%;
+	 left:59.2%;
 	 float:left;
 }
 .para-Y-left-2{
@@ -226,8 +237,8 @@ a:hover {text-decoration:none}
 	 color:#FFF;
 	 background-color:#a68352;
 	 position:absolute;
-	 top:50%;
-	 left:29%;
+	 top:55%;
+	 left:1.8%;
 	 float:left;
 }
 .para-Y-left-2-bc{
@@ -240,8 +251,8 @@ a:hover {text-decoration:none}
 	 color:#FFF;
 	 background-color:#937145;
 	 position:absolute;
-	 top:51%;
-	 left:28.1%;
+	 top:56%;
+	 left:1%;
 	 float:left;
 }
 .para-Y-left-3{
@@ -254,8 +265,8 @@ a:hover {text-decoration:none}
 	 color:#FFF;
 	 background-color:#a68352;
 	 position:absolute;
-	 top: 59.5%;
-	 left:61%;
+	 top: 67.5%;
+	 left:57%;
 	 float:left;
 }
 .para-Y-left-3-bc{
@@ -268,8 +279,8 @@ a:hover {text-decoration:none}
 	 color:#FFF;
 	 background-color:#937145;
 	 position:absolute;
-	 top: 60.5%;
-	 left:60.3%;
+	 top: 68.5%;
+	 left:56.3%;
 	 float:left;
 }
 .text-para-Y{
@@ -298,7 +309,7 @@ a:hover {text-decoration:none}
 	-khtml-opacity: 0.5;
 	opacity: 0.5;
 	position: absolute;
-	left:37%;
+	left:12.5%;
 	top: 32%;
 	float: left;
 	height: 33px;
@@ -317,8 +328,8 @@ a:hover {text-decoration:none}
 	-khtml-opacity: 0.5;
 	opacity: 0.5;
 	position: absolute;
-	left:26%;
-	top: 41%;
+	left:0%;
+	top: 44%;
 	float: left;
 	height:40px;
 	padding-top: 5px;
@@ -338,8 +349,8 @@ a:hover {text-decoration:none}
 	-khtml-opacity: 0.5;
 	opacity: 0.5;
 	position: absolute;
-	left:32.8%;
-	top: 50%;
+	left:8.9%;
+	top: 55%;
 	float: left;
 	height: 44px;
 	padding-top:5px;
@@ -359,10 +370,10 @@ a:hover {text-decoration:none}
 	-khtml-opacity: 0.5;
 	opacity: 0.5;
 	position: absolute;
-	left:30%;
-	top: 59.5%;
+	left:4%;
+	top: 67.5%;
 	height: 33px;
-	width:31%;
+	width:425px;
 	padding-top:14px;
 }
 .para-W-right-text{
