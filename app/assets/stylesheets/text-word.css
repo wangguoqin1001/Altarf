@@ -775,10 +775,10 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
 	
-	width:45%;
-	height:100%;
+	width:600px;
+	height:600%;
 	position:absolute;
-	left:40%;
+	left:400px;
 	top:0%;
 }
 .large-inside-text-1{	
