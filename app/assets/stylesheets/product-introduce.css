@@ -17,7 +17,7 @@
 .product_top{
 	width:10px;
 	height:160px;
-	margin-left:63%;
+	margin-left:845px;
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
 	-moz-transform: skew(-25deg); 
@@ -25,7 +25,7 @@
 	transform: skew(-25deg);
 }
 .product-txt01{
-	margin-left:54%;
+	margin-left:724px;
 }
 .product-txt01 ul{
 	list-style:none;
@@ -34,13 +34,13 @@
 	color:#221e1f;
 }
 .product-txt02{
-	margin-left:5.5%;
+	margin-left:50px;
 }
 .product_bottom{
 	float:left;
 	width:10px;
 	height:435px;
-	margin-left:54%;
+	margin-left:730px;
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
 	-moz-transform: skew(-25deg); 
@@ -48,7 +48,7 @@
 	transform: skew(-25deg);
 }
 .product-txt03{
-	margin-left:61%;
+	margin-left:830px;
 }
 
 .product-txt03 ul li a{
@@ -60,20 +60,20 @@
 	list-style-image:url(/assets/small-paradize2.png);
 }
 .product-txt03 ul li{
-	padding-top:2%;
+	padding-top:10px;
 	color:#77787b;
 }
 .product-txt04{
-	margin-left:-1.7%;
+	margin-left:-8px;
 }
 .product-txt05{
-	margin-left:-3.5%;
+	margin-left:-18px;
 }
 /*QZZ-lingzhi-introduce*/
 .product01_content_01{
 	height:80px;
-	width:58%;
-	margin:auto;	
+	width:800px;
+	margin-left:280px;	
 	border-bottom-style:solid;
 	border-color:#937145;
 	border-width:1px;
@@ -88,8 +88,8 @@
 	padding-left:2%;
 }
 .product01_content_02{
-	width:58%;
-	margin:auto;
+	width:800px;
+	margin-left:280px;	
 	height:200px;
 	margin-top:1.5%;
 }
@@ -139,6 +139,7 @@
 	border-width:0;
 	color:#ffffff;
 	margin-left:3%;
+	margin-top: 30px;
 }
 /*QZZ-lingzhi-making*/
 .lingzhi-txt06{

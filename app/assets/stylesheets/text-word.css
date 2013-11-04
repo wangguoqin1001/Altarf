@@ -160,16 +160,13 @@ a:hover {text-decoration:none}
 }	
 	
 /*元气远景*/
-.future-top{
-	width:100%;
-	height:470px;
-	position: absolute;
-}
+
 .future-middle{
 	height: 470px;
     width: 800px;
     position: absolute;
     margin-left: 380px;
+    top:10%;
 }
 .para-Y-left{
 	 transform:scale(1) skew(-24deg); 
@@ -669,10 +666,10 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
 	z-index:-99;
 	
-	width:55%;
-	height:100%;
+	width:750px;
+	height:625px;
 	position:absolute;
-	left:29%;
+	left:400px;
 	top:0%;
 }
 .large-inside-text{	
@@ -712,8 +709,8 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-webkit-transform: scale(0.8)skew(-24deg);
 	
 	position:absolute;
-	width:29%;
-	height:5%;
+	width:220px;
+	height:30px;
 	left:84%;
 	top:23%;
 	background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
@@ -740,8 +737,8 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-webkit-transform: scale(0.8)skew(-24deg);
 	
 	position:absolute;
-	width:29%;
-	height:5%;
+	width:220px;
+	height:30px;
 	left:84%;
 	top:29%;
 	background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
@@ -778,10 +775,10 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
 	
-	width:45%;
-	height:100%;
+	width:600px;
+	height:640px;
 	position:absolute;
-	left:40%;
+	left:400px;
 	top:0%;
 }
 .large-inside-text-1{	

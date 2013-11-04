@@ -42,7 +42,9 @@ body{
 	font-size:1.2em;
 	line-height:1.2em;
 	color:#FFF;}
-
+.left-para-coffe ul li a:hover{
+	color:#bfbfbf;
+}
 .left-para-coffe-com{
 	
 	position:absolute;
