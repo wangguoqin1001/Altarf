@@ -115,7 +115,7 @@
 }
 /*QZZ-lingzhi-buy*/
 .product01_content_03{
-	width:75%;
+	width:50%;
 	margin:auto;
 	height:250px;
 }
@@ -244,13 +244,13 @@
 }
 /*QZZ-Q10-buy*/
 .product02_content_03{
-	width:30%;
+	width:50%;
 	margin:auto;
 	height:300px;
 	margin-top:1.5%;
 }
 .product02_content_03_top{
-	height:260px;	 
+//	height:260px;	 
 }
 .Q10-txt03{
 	padding-left:5%;
