@@ -29,32 +29,38 @@ body{
 
 .left-para-coffe ul{
 	transform:scale(0.8) skew(-24deg); 
-     width:115px;
      -o-transform:scale(0.8) skew(-24deg); 
      -moz-transform: scale(0.8)skew(-24deg); 
      -webkit-transform: scale(0.8)skew(-24deg);
 	 background-color:#937145;
 	 margin-top:15px;
+	 width:115px;
 }
 
 .left-para-coffe ul li{
+	transform:scale(0.8) skew(24deg); 
+     -o-transform:scale(0.8) skew(24deg); 
+     -moz-transform: scale(0.8)skew(24deg); 
+     -webkit-transform: scale(0.8)skew(24deg);
 	list-style-type:none;
 	font-size:1.2em;
 	line-height:1.2em;
-	color:#FFF;}
+	color:#FFF;
+}
+	
 .left-para-coffe ul li a:hover{
 	color:#bfbfbf;
 }
-.left-para-coffe-com{
-	
+
+.left-para-coffe-com{	
 	position:absolute;
 	left:-13%;
 	top:25%;
 	width:17%;
-	transform:scale(0.8) skew(-24deg); 
-     -o-transform:scale(0.8) skew(-24deg); 
-     -moz-transform: scale(0.8)skew(-24deg); 
-     -webkit-transform: scale(0.8)skew(-24deg);
+	transform:scale(0.8) skew(0deg); 
+     -o-transform:scale(0.8) skew(0deg); 
+     -moz-transform: scale(0.8)skew(0deg); 
+     -webkit-transform: scale(0.8)skew(0deg);
 }
 
 .left-para-coffe-com ul{

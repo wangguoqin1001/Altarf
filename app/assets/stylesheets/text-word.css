@@ -1,10 +1,13 @@
 @charset "utf-8";
-/* CSS Document */
-a {text-transform:none;
-text-decoration:none;
-color:#FFF;
-} 
-a:hover {text-decoration:none} 
+a{
+	text-transform:none;
+	color:#fff;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
 
 #body{
 	width:auto;
@@ -664,8 +667,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	background: -ms-linear-gradient(left, #a1753f 1%, #c59a47 100%);
 	background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
-	z-index:-99;
-	
+	z-index:-99;	
 	width:750px;
 	height:625px;
 	position:absolute;
@@ -678,18 +680,31 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	margin-top:23%;
 	margin-left:8.7%;
 }
-.large-inside-text ul{
-	
+
+.large-inside-text ul{	
 	list-style-type:none;
-	color:#fff;
-	font-size:1.5em;
+	color:#fff;	
 	padding-left:16.7%;
+//	background-color: #FFF;
+	transform: scale(1) skew(0deg);
+	-o-transform: scale(1) skew(0deg);
+	-moz-transform: scale(1)skew(0deg);
+	-webkit-transform: scale(1)skew(0deg);
 }
+
+.large-inside-text ul li:first-child{
+	font-size:1.5em;
+}
+
 .large-inside-text ul li{
-	margin-top:3%;
-	line-height:1.5em;
+	margin-top:1%;
+//	line-height:1.5em;
 	font-size:0.5em;
 	font-style:normal;
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
 }
 
 .large-inside-img{
@@ -703,11 +718,11 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	width:38%;
 }
 .little-text-double{
-	transform: scale(0.8) skew(-24deg);
-	-o-transform: scale(0.8) skew(-24deg);
-	-moz-transform: scale(0.8)skew(-24deg);
-	-webkit-transform: scale(0.8)skew(-24deg);
-	
+
+	transform: scale(0.8) skew(0deg);
+	-o-transform: scale(0.8) skew(0deg);
+	-moz-transform: scale(0.8)skew(0deg);
+	-webkit-transform: scale(0.8)skew(0deg);	
 	position:absolute;
 	width:220px;
 	height:30px;
@@ -731,10 +746,10 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	margin-top:-7%;
 }
 .little-text-double-2{
-	transform: scale(0.8) skew(-24deg);
-	-o-transform: scale(0.8) skew(-24deg);
-	-moz-transform: scale(0.8)skew(-24deg);
-	-webkit-transform: scale(0.8)skew(-24deg);
+	transform: scale(0.8) skew(0deg);
+	-o-transform: scale(0.8) skew(0deg);
+	-moz-transform: scale(0.8)skew(0deg);
+	-webkit-transform: scale(0.8)skew(0deg);
 	
 	position:absolute;
 	width:220px;
@@ -787,18 +802,29 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	margin-top:30%;
 	margin-left:-5%;
 }
-.large-inside-text-1 ul{
-	
+.large-inside-text-1 ul{	
 	list-style-type:none;
-	color:#fff;
-	font-size:1.5em;
+	color:#fff;	
 	padding-left:16.7%;
+	transform: scale(1) skew(0deg);
+	-o-transform: scale(1) skew(0deg);
+	-moz-transform: scale(1)skew(0deg);
+	-webkit-transform: scale(1)skew(0deg);
 }
+
+.large-inside-text-1 ul li:first-child{
+	font-size:1.5em;
+}
+
 .large-inside-text-1 ul li{
 	margin-top:0%;
 	line-height:2em;
 	font-size:0.5em;
 	font-style:normal;
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
 }
 /*公司信息*/
 .large-background-now-com{
