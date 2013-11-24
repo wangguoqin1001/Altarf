@@ -963,17 +963,4 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
     -o-transform: skew(-25deg);
     transform: skew(-25deg);
 }
-/*新闻站*/
 
-.news-bottombar{
-	margin-top: 37px;
-    float: left;
-    width: 10px;
-    height: 435px;
-    margin-left: -260px;
-    background-color: #937145;
-    -webkit-transform: skew(-25deg);
-    -moz-transform: skew(-25deg);
-    -o-transform: skew(-25deg);
-    transform: skew(-25deg);
-}
