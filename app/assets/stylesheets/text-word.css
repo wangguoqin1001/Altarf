@@ -92,7 +92,7 @@ a:hover{
 .text-story-about-qzz{
 	position:absolute;
 	left:30.2%;
-	top:39.6%;
+	top:33.6%;
 	width:56.4%;
 	text-align:left;
 }
@@ -523,6 +523,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	background-color:#000;
 	z-index: 99;
 	display: none;
+	
 }
 .pop p{
 	text-indent:-33px;
@@ -533,7 +534,38 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	margin-left:15%;
 	margin-top:1px;
 	line-height:1.2em;
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
 }
+
+.pop2{
+	position: absolute;
+	top:0px;
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.5) !important;
+	background:#000; filter:Alpha(opacity=50);
+	background-color:#000;
+	z-index: 99;
+	display: none;
+}
+.pop2 p{
+	text-indent:-33px;
+	color:#fff;
+	list-style-type:none;
+	font-size:12px;
+	width:80%;
+	margin-left:15%;
+	margin-top:1px;
+	line-height:1.2em;
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
+}
+
 .img-blank-pro1-inside-2{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
@@ -570,6 +602,10 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 .coffe-blank-pro1-over ul li{
 	list-style-type:none;
 	margin-left:-23%;
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
 	}
 .img-blank-pro1-inside-1{
 	transform: scale(1) skew(24deg);
@@ -772,7 +808,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	color:#fff;
 	font-size:1em;
 	margin-top:-7%;
-	text-align: center;
+	//text-align: center;
 }
 /*现代养生*/
 .large-background-now{
@@ -928,10 +964,12 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	transform: skew(-25deg);
 }
 .bottom-brown-bar{
-	margin-top:135px;
+	margin-top:150px;
 	float:left;
 	width:10px;
 	height:435px;
+	position:absolute;
+	z-index:-99;
 	margin-left:200px;
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
@@ -952,10 +990,12 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
     transform: skew(-25deg);
 }
 .story-bottombar{
-	margin-top: 118px;
+    margin-top: 128px;
     float: left;
     width: 10px;
     height: 435px;
+    position:absolute;
+    z-index:-99;
     margin-left: 200px;
     background-color: #937145;
     -webkit-transform: skew(-25deg);
