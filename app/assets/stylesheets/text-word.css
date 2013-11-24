@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 a{
 	text-transform:none;
 	color:#fff;
@@ -912,4 +912,28 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	position:absolute;
 	left:12%;
 	top:24%;
+}
+
+
+/*气之站介绍*/
+.top-brown-bar{
+	width:10px;
+	height:160px;
+	margin-left:80px;
+	background-color:#937145;
+	-webkit-transform: skew(-25deg); 
+	-moz-transform: skew(-25deg); 
+	-o-transform: skew(-25deg); 
+	transform: skew(-25deg);
+}
+.bottom-brown-bar{
+	float:left;
+	width:10px;
+	height:435px;
+	margin-left:70px;
+	background-color:#937145;
+	-webkit-transform: skew(-25deg); 
+	-moz-transform: skew(-25deg); 
+	-o-transform: skew(-25deg); 
+	transform: skew(-25deg);
 }
