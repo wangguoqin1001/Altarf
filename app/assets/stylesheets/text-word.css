@@ -939,3 +939,27 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-o-transform: skew(-25deg); 
 	transform: skew(-25deg);
 }
+/*品牌故事*/
+.story-topbar{
+	margin-top: -500px;
+    width: 10px;
+    height: 150px;
+    margin-left: 280px;
+    background-color: #937145;
+    -webkit-transform: skew(-25deg);
+    -moz-transform: skew(-25deg);
+    -o-transform: skew(-25deg);
+    transform: skew(-25deg);
+}
+.story-bottombar{
+	margin-top: 118px;
+    float: left;
+    width: 10px;
+    height: 435px;
+    margin-left: 200px;
+    background-color: #937145;
+    -webkit-transform: skew(-25deg);
+    -moz-transform: skew(-25deg);
+    -o-transform: skew(-25deg);
+    transform: skew(-25deg);
+}
