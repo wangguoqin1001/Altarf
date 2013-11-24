@@ -917,9 +917,10 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 
 /*气之站介绍*/
 .top-brown-bar{
+	margin-top:-500px;
 	width:10px;
-	height:160px;
-	margin-left:80px;
+	height:130px;
+	margin-left:300px;
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
 	-moz-transform: skew(-25deg); 
@@ -927,10 +928,11 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	transform: skew(-25deg);
 }
 .bottom-brown-bar{
+	margin-top:135px;
 	float:left;
 	width:10px;
 	height:435px;
-	margin-left:70px;
+	margin-left:200px;
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
 	-moz-transform: skew(-25deg); 
