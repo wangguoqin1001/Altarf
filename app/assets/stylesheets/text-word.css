@@ -1018,3 +1018,27 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
         -o-transform: skew(-25deg);
 	transform: skew(-25deg);
 }
+.left-2{
+	transform:scale(1) skew(-24deg);
+	-o-transform:scale(1) skew(-24deg);
+        -moz-transform: scale(1)skew(-24deg);
+    	-webkit-transform: scale(1)skew(-24deg);
+        width:10px;
+       	height:45px;
+        color:#FFF;
+        background-color:#937145;
+        position:absolute;							        top:44%;								        left:8.5%;
+	float:left;
+
+}
+.left-4{
+        transform:scale(1) skew(-24deg);
+        -o-transform:scale(1) skew(-24deg);
+        -moz-transform: scale(1)skew(-24deg);
+        -webkit-transform: scale(1)skew(-24deg);
+        width:10px;
+        height:47px;
+        color:#FFF;
+        background-color:#937145;						        position:absolute; top:67.5%;						        left:2.7%;
+	float:left;			
+}
