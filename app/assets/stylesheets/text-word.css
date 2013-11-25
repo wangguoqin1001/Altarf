@@ -955,7 +955,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 .top-brown-bar{
 	margin-top:-500px;
 	width:10px;
-	height:130px;
+	height:180px;
 	margin-left:300px;
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
@@ -964,7 +964,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	transform: skew(-25deg);
 }
 .bottom-brown-bar{
-	margin-top:150px;
+	margin-top:120px;
 	float:left;
 	width:10px;
 	height:435px;
@@ -981,7 +981,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 .story-topbar{
 	margin-top: -500px;
     width: 10px;
-    height: 150px;
+    height: 180px;
     margin-left: 280px;
     background-color: #937145;
     -webkit-transform: skew(-25deg);
