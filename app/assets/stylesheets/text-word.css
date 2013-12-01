@@ -735,7 +735,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 .large-inside-text ul li{
 	margin-top:1%;
 //	line-height:1.5em;
-	font-size:0.5em;
+	font-size:0.7em;
 	font-style:normal;
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
@@ -855,7 +855,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 .large-inside-text-1 ul li{
 	margin-top:0%;
 	line-height:2em;
-	font-size:0.5em;
+	font-size:0.8em;
 	font-style:normal;
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
