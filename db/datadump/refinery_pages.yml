@@ -150,7 +150,7 @@ refinery_pages:
     - false
     - false
     - 69
-    - 76
+    - 78
     - 0
     - 
     - 
@@ -166,8 +166,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 77
-    - 84
+    - 79
+    - 86
     - 0
     - home
     - application
@@ -506,8 +506,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 80
-    - 81
+    - 82
+    - 83
     - 1
     - company-info
     - application
@@ -523,8 +523,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 82
-    - 83
+    - 84
+    - 85
     - 1
     - company-info-people
     - application
@@ -540,8 +540,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 78
-    - 79
+    - 80
+    - 81
     - 1
     - home
     - application
@@ -734,3 +734,20 @@ refinery_pages:
     - application
     - 2013-09-08 14:12:40.000000000 Z
     - 2013-09-08 14:12:40.000000000 Z
+  - - 45
+    - 8
+    - 
+    - 谨遵医嘱
+    - true
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 76
+    - 77
+    - 1
+    - tips
+    - application
+    - 2013-12-02 14:50:17.000000000 Z
+    - 2013-12-02 14:50:51.000000000 Z
