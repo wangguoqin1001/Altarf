@@ -4,6 +4,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta charset="utf-8">
 <title>气之站</title>
+
+<link rel="stylesheet" href="flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="jquery.flexslider.js"></script>
+
+<style type="text/css">
+	.flexslider ul li {
+		list-style: none;
+	}
+	.flexslider ul li img {
+		transform: scale(1) skew(24deg);
+		-o-transform: scale(1) skew(24deg);
+		-moz-transform: scale(1)skew(24deg);
+		-webkit-transform: scale(1)skew(24deg);
+	}
+</style>
+
 <% content_for :javascripts do %>
 <script type="text/javascript">
 $(function(){
@@ -26,6 +43,18 @@ $(function(){
 	})
 })
 </script>
+
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+  $('.flexslider').flexslider({
+  		slideshow: true, 
+  		slideshowSpeed: 5000,
+ 		animationLoop: true,
+ 		pauseOnAction: false, 
+  });
+});
+</script>
+
 <% end %>
 </head>
 
@@ -70,7 +99,26 @@ $(function(){
             <li>一盒日纯牌灵芝片=6600毫克灵芝精粉！</li>
     	</ul>
     </div> 
-    <img src="/assets/product3.png" class="img-blank-pro1-inside-1" >
+
+    <div class="flexslider" style="width:204px;height:179px;margin-left:70px;">
+        <ul class="slides">
+            <li>
+                <img src="/assets/product3.png" width="204" height="179">
+            </li>
+            <li>
+                <img src="/assets/product3.png" width="204" height="179">
+            </li>
+            <li>
+                <img src="/assets/product3.png" width="204" height="179">
+            </li>
+            <li>
+                <img src="/assets/product3.png" width="204" height="179">
+            </li>
+
+        </ul>
+    </div>
+    <!--<img src="/assets/product3.png" class="img-blank-pro1-inside-1" >-->
+
     <div class="number-text-1">
     	<ul>
    			 <li>60袋/120片</li>
@@ -111,7 +159,24 @@ $(function(){
 				</p>
 			
 		</div>
-    <img src="/assets/product4.png" class="img-blank-pro1-inside-3">
+	<div class="flexslider" style="width:188px;height:184px;margin-left:70px;">
+        <ul class="slides">
+            <li>
+                <img src="/assets/product4.png" width="188" height="184">
+            </li>
+            <li>
+                <img src="/assets/product4.png" width="188" height="184">
+            </li>
+            <li>
+                <img src="/assets/product4.png" width="188" height="184">
+            </li>
+            <li>
+                <img src="/assets/product4.png" width="188" height="184">
+            </li>
+
+        </ul>
+    </div>	
+    <!--<img src="/assets/product4.png" class="img-blank-pro1-inside-3">-->
     <div class="number-text-2">
     	<ul>
    			 <li>2盒装/120袋/240片 </li>
