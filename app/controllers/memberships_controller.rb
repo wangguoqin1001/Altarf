@@ -67,6 +67,8 @@ class MembershipsController < ApplicationController
 
 		@membership = Membership.new params[:membership]
 		@membership.save
+
+		@membership[:status] = 1
 		respond_with @membership
 	end
 

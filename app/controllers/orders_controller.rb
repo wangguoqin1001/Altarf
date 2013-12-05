@@ -69,6 +69,7 @@ class OrdersController < ApplicationController
 		end
 
 		@order.save
+		@order[:status] = 1
 		respond_with @order
 	end
 
