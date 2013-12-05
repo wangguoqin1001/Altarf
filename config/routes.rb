@@ -3,7 +3,11 @@ Altarf::Application.routes.draw do
   resources :orders
 
 
-  resources :memberships
+  resources :memberships do
+    collection do
+      post :login
+    end
+  end
 
 
   get '/robots.txt' => 'application#robots'
