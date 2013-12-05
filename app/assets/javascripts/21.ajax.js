@@ -15,7 +15,7 @@ function login() {
 		type:		"POST",
 		dataType:	"json",
 		data:		{
-			username:		$('#account').val(),
+			nickname:		$('#account').val(),
 			password:		$.sha256 (
 								$.sha256 ($('#account').val() + $('#password').val()).slice (0, 23)
 								+ $('#captcha').val()),
@@ -27,10 +27,10 @@ function login() {
 			//location.reload();
 			location.href = "/气之购/在线订购";
 		else if (parseInt (resp.status) == 2) {
-			$(".authenticationtd").load ('/home/login-page .simple_captcha');
+	//		$(".authenticationtd").load ('/home/login-page .simple_captcha');
 			$('#loginerr').html ("验证码错误");
 		} else {
-			$(".authenticationtd").load ('/home/login-page .simple_captcha');
+	//		$(".authenticationtd").load ('/home/login-page .simple_captcha');
 			$('#loginerr').html ("登录信息错误");
 		}
 	}).fail (function() {
