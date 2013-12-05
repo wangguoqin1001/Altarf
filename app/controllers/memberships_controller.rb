@@ -91,6 +91,8 @@ class MembershipsController < ApplicationController
 
 		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
 		@membership.update_attributes params[:membership]
+
+		session[:nickname] = params[:nickname]
 		respond_with @membership
 	end
 
@@ -126,7 +128,7 @@ class MembershipsController < ApplicationController
 
 			hash = Digest::SHA256.new
 			hash.update clearpswd
-			hash.update captcha
+			hash.update params[:captcha]
 
 		rescue
 			Rails.logger.error $!.backtrace

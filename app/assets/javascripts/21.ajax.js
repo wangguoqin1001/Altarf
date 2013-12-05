@@ -17,7 +17,7 @@ function login() {
 		data:		{
 			nickname:		$('#account').val(),
 			password:		$.sha256 (
-								$.sha256 ($('#account').val() + $('#password').val()).slice (0, 23)
+								$.sha256 ($('#account').val() + $('#password').val())
 								+ $('#captcha').val()),
 			captcha:		$('#captcha').val(),
 			captcha_key:	$('#captcha_key').val()
@@ -91,7 +91,7 @@ function register() {
 		"gender" : $('#sex option:selected').val(),
 		"mobile" : $('#mobile').val(),
 		"nickname" : $('#username').val(),
-		"password" : $('#password').val(),
+		"password" : $.sha256 ($('#username').val() + $('#password').val()),
 		"phone" : $('#telephone01').val() + '-' + $('#telephone02').val() + '-' + $('#telephone03').val(),
 		"postal" : $('#postalcode').val(),
 		"province" : $('#province').val(),
