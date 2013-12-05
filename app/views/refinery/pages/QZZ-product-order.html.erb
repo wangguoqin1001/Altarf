@@ -1,4 +1,14 @@
-<!DOCTYPE html><head>
+<!DOCTYPE html>
+<% content_for :javascripts do %>
+	<script>
+		<% if session[:nickname] %>
+
+		<% else %>
+			location.href = "/气之家/我的帐户";
+		<% end %>
+	</script>
+<% end %>
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>QZZ website product order</title>
 </head>
@@ -196,7 +206,7 @@
                      </tr>
                </table> 
                </div> 
-               <div class="content_tab"><input  type="button" value="确认订单" id="sign up" class="order_txt05"></div>         
+               <div class="content_tab"><input  type="button" value="确认订单" id="sign up" class="order_txt05" onclick="order();"></div>         
 </div>
 </div>
 
