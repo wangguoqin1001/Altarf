@@ -7,7 +7,12 @@ class OrdersController < ApplicationController
 
 	# GET /orders
 	def index
-		@orders = Order.find :all, :conditions => { :nickname => session[:nickname] }
+		if refinery_user?
+			@orders = Order.all
+		else
+			@orders = Order.find :all, :conditions => { :nickname => session[:nickname] }
+		end
+
 		respond_with @orders
 	end
 
@@ -15,6 +20,15 @@ class OrdersController < ApplicationController
 	# GET /orders/1
 	def show
 		@order = Order.find params[:id]
+
+		if not refinery_user?
+			if not session[:nickname] or not session[:nickname] == @order[:nickname]
+				respond_with ret = nil, :location => nil do |format|
+					format.html { redirect_to "/" }
+				end and return
+			end
+		end
+
 		respond_with @order
 	end
 
@@ -29,6 +43,15 @@ class OrdersController < ApplicationController
 	# GET /orders/1/edit
 	def edit
 		@order = Order.find params[:id]
+
+		if not refinery_user?
+			if not session[:nickname] or not session[:nickname] == @order[:nickname]
+				respond_with ret = nil, :location => nil do |format|
+					format.html { redirect_to "/" }
+				end and return
+			end
+		end
+
 		respond_with @order
 	end
 
@@ -36,6 +59,15 @@ class OrdersController < ApplicationController
 	# POST /orders
 	def create
 		@order = Order.new params[:order]
+
+		if session[:nickname]
+			@order[:nickname] = session[:nickname]
+		else
+			respond_with ret = nil, :location => nil do |format|
+				format.html { redirect_to "/" }
+			end and return
+		end
+
 		@order.save
 		respond_with @order
 	end
@@ -44,6 +76,15 @@ class OrdersController < ApplicationController
 	# PUT /orders/1
 	def update
 		@order = Order.find params[:id]
+
+		if not refinery_user?
+			if not session[:nickname] or not session[:nickname] == @order[:nickname]
+				respond_with ret = nil, :location => nil do |format|
+					format.html { redirect_to "/" }
+				end and return
+			end
+		end
+
 		@order.update_attributes params[:order]
 		respond_with @order
 	end
@@ -52,7 +93,26 @@ class OrdersController < ApplicationController
 	# DELETE /orders/1
 	def destroy
 		@order = Order.find params[:id]
+
+		if not refinery_user?
+			if not session[:nickname] or not session[:nickname] == @order[:nickname]
+				respond_with ret = nil, :location => nil do |format|
+					format.html { redirect_to "/" }
+				end and return
+			end
+		end
+
 		@order.destroy
 		respond_with @order
 	end
+
+
+	private
+
+	def checkcaptcha
+		if not simple_captcha_valid?
+			respond_with ret = { :status => 2 }, :location => nil and return
+		end
+	end
+
 end
