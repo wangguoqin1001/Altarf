@@ -188,7 +188,13 @@
                               <td  class="content_input01"><input id="invoice_address" type="text" class="content_input02"></td> 
                               <td class="content_txt02"></td>                           
                      </tr>
-               </table>                           
+               </table> 
+			   <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="content_txt08">验证码：</td>
+                              <td class="authenticationtd"><%= show_simple_captcha(:label => "human authentication", :placeholder => "input the characters") %></td>                           
+                     </tr>
+               </table> 
                </div> 
                <div class="content_tab"><input  type="button" value="确认订单" id="sign up" class="order_txt05"></div>         
 </div>

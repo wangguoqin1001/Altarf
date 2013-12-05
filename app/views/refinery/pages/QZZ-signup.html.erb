@@ -119,20 +119,9 @@
                 <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td class="content_txt08">验证码：</td>
-                              <td class="content_input08"><input id="telidentification" type="text" class="content_input02"></td>
-                              <td >
-                                     <input  type="button" value="发送至手机" id="send" class="content_txt09">
-                             </td>
+                              <td class="authenticationtd content_input08"><%= show_simple_captcha(:label => "human authentication", :placeholder => "input the characters") %></td>
                      </tr>
                </table>
-               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
-                      <tr>
-                              <td class="content_txt10">点击发送至手机，如60秒内仍未收到，请点击</td>
-                              <td >
-                                     <input  type="button" value="重新发送" id="resend" class="content_txt09">
-                             </td>
-                     </tr>
-               </table> 
                <div class="content_tab"><input  type="button" value="注册" id="sign up" class="content_txt09"></div>         
 </div>
 </div>
