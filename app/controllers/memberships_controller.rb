@@ -105,7 +105,7 @@ class MembershipsController < ApplicationController
 
 	# POST /memberships/login
 	def login
-		@membership = Membersip.find :first, :conditions => { :nickname => params[:nickname] }
+		@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
 		if not @membership
 			respond_with ret = { :status => 0, :description => "No such user" }, :location => nil and return
 		end
