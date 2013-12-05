@@ -48,7 +48,7 @@ class MembershipsController < ApplicationController
 	def create
 		@membership = Membership.find :first, :conditions => { :nickname => params[:membership][:nickname] }
 		if @membership
-			return { :status => 0, :description => "User exist" }
+			respond_with :status => 0, :description => "User exist", :location => nil and return
 		end
 
 		cipher = OpenSSL::Cipher::Cipher.new 'DES3'
@@ -105,7 +105,7 @@ class MembershipsController < ApplicationController
 	def login
 		@membership = Membersip.find :first, :conditions => { :nickname => params[:nickname] }
 		if not @membership
-			return { :status => 0, :description => "No such user" }
+			respond_with :status => 0, :description => "No such user", :location => nil and return
 		end
 
 		begin
@@ -133,10 +133,10 @@ class MembershipsController < ApplicationController
 
 		if hash.hexdigest == params[:password]
 			session[:nickname] = params[:nickname]
-			return { :status => 1 }
+			respond_with :status => 1, :location => nil and return
 		else
 			session[:nickname] = nil
-			return { :status => 0, :description => "Wrong password" }
+			respond_with :status => 0, :description => "Wrong password", :location => nil and return
 		end
 	end
 
