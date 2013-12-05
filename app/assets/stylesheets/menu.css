@@ -91,7 +91,7 @@ nav{
 	float:none;
 	width:134px;
 	padding-left:43px;
-	background-color:#937145;
+	background-color:rgba(0,0,0,0);
 	transform: skew(24deg); 
      -o-transform: skew(24deg); 
      -moz-transform: skew(24deg); 
