@@ -216,3 +216,7 @@ function order() {
 		alert ("请求发送失败，请稍候再试");
 	});
 }
+
+function gotobuy(){
+	location.href = "/气之购/预订单"
+}

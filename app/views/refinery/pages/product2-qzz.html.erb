@@ -23,9 +23,6 @@
 
 <% content_for :javascripts do %>
 <script type="text/javascript">
-function gotobuy(){
-	location.href = "/气之购/预订单";
-}
 
 $(function(){
 	$(".img-blank-pro1-inside-1").mouseover(function(){		
@@ -130,7 +127,7 @@ $(function(){
     	</ul> 
     </div>
     <div class="button-product2">
-                     <input id="saveinformation"   type="submit" value="添加到购物车"  onclick="gotobuy()">
+                     <input id="saveinformation"   type="button" value="添加到购物车" onclick="gotobuy()">
      </div>
      
 </div>
