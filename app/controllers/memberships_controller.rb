@@ -46,7 +46,7 @@ class MembershipsController < ApplicationController
 
 	# POST /memberships
 	def create
-		@membership = Membersip.find :first, :conditions => { :nickname => params[:membership][:nickname] }
+		@membership = Membership.find :first, :conditions => { :nickname => params[:membership][:nickname] }
 		if @membership
 			return { :status => 0, :description => "User exist" }
 		end
