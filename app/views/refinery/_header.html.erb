@@ -7,26 +7,28 @@
 
 <body>
 
+<div id="spinner"></div>
 <!--<div class="menu-left"></div>
-<div class="menu-right"></div> -->
-<div id="index">
+	<div class="menu-right"></div> -->
+		<div id="index">
 
-		<div class="logo-position"><a href="/">
-			<img src="/assets/qzz-logo-main.png" class="logo-large"></a>
-		</div>
+			<div class="logo-position"><a href="/">
+				<img src="/assets/qzz-logo-main.png" class="logo-large"></a>
+			</div>
 
-	<div class="contect-way">
-		<div class="CN-or-EG"><center><img src="/assets/word-for-CN-and-Eg.png" class="CN-or-EG-long"></center></div>
+		<div class="contect-way">
+			<div class="CN-or-EG"><center><img src="/assets/word-for-CN-and-Eg.png" class="CN-or-EG-long"></center></div>
 					<img src="/assets/message-yellow.png" class="img-size">
 					<img src="/assets/qzz-mail.png" class="img-size">
 					<img src="/assets/qzz-weibo.png" class="img-size-last">
+			</div>
+			<div style="width: 100%;background: #222222;height:18px;">
+				 <%= render(:partial => "/refinery/menu", :locals => {
+	    	           :dom_id => 'menu',
+	    	           :css => 'menu'
+	    	      }) %>
+			</div>
+		</div>
 	</div>
-<div style="width: 100%;background: #222222;height:18px;">
-	 <%= render(:partial => "/refinery/menu", :locals => {
-    	           :dom_id => 'menu',
-    	           :css => 'menu'
-    	      }) %>
-</div>
-</div>
 </body>
 </html>
