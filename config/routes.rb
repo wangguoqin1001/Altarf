@@ -1,5 +1,11 @@
 Altarf::Application.routes.draw do
 
+  resources :orders
+
+
+  resources :memberships
+
+
   get '/robots.txt' => 'application#robots'
 
   get 'admin', :to => redirect('/refinery')

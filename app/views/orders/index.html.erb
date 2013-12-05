@@ -1,0 +1,51 @@
+<h1>Listing orders</h1>
+
+<table>
+  <tr>
+    <th>Productid</th>
+    <th>Quantity</th>
+    <th>Coupon</th>
+    <th>Payment</th>
+    <th>Nickname</th>
+    <th>Mobile</th>
+    <th>Phone</th>
+    <th>Province</th>
+    <th>City</th>
+    <th>District</th>
+    <th>Postal</th>
+    <th>Addr</th>
+    <th>Need invoice</th>
+    <th>Invoice title</th>
+    <th>Billing</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.productid %></td>
+    <td><%= order.quantity %></td>
+    <td><%= order.coupon %></td>
+    <td><%= order.payment %></td>
+    <td><%= order.nickname %></td>
+    <td><%= order.mobile %></td>
+    <td><%= order.phone %></td>
+    <td><%= order.province %></td>
+    <td><%= order.city %></td>
+    <td><%= order.district %></td>
+    <td><%= order.postal %></td>
+    <td><%= order.addr %></td>
+    <td><%= order.need_invoice %></td>
+    <td><%= order.invoice_title %></td>
+    <td><%= order.billing %></td>
+    <td><%= link_to 'Show', order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order', new_order_path %>

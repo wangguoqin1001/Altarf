@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Productid:</b>
+  <%= @order.productid %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @order.quantity %>
+</p>
+
+<p>
+  <b>Coupon:</b>
+  <%= @order.coupon %>
+</p>
+
+<p>
+  <b>Payment:</b>
+  <%= @order.payment %>
+</p>
+
+<p>
+  <b>Nickname:</b>
+  <%= @order.nickname %>
+</p>
+
+<p>
+  <b>Mobile:</b>
+  <%= @order.mobile %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @order.phone %>
+</p>
+
+<p>
+  <b>Province:</b>
+  <%= @order.province %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @order.city %>
+</p>
+
+<p>
+  <b>District:</b>
+  <%= @order.district %>
+</p>
+
+<p>
+  <b>Postal:</b>
+  <%= @order.postal %>
+</p>
+
+<p>
+  <b>Addr:</b>
+  <%= @order.addr %>
+</p>
+
+<p>
+  <b>Need invoice:</b>
+  <%= @order.need_invoice %>
+</p>
+
+<p>
+  <b>Invoice title:</b>
+  <%= @order.invoice_title %>
+</p>
+
+<p>
+  <b>Billing:</b>
+  <%= @order.billing %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

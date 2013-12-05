@@ -1,0 +1,45 @@
+<h1>Listing memberships</h1>
+
+<table>
+  <tr>
+    <th>Nickname</th>
+    <th>Password</th>
+    <th>Username</th>
+    <th>Gender</th>
+    <th>Mobile</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Province</th>
+    <th>City</th>
+    <th>District</th>
+    <th>Postal</th>
+    <th>Addr</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @memberships.each do |membership| %>
+  <tr>
+    <td><%= membership.nickname %></td>
+    <td><%= membership.password %></td>
+    <td><%= membership.username %></td>
+    <td><%= membership.gender %></td>
+    <td><%= membership.mobile %></td>
+    <td><%= membership.phone %></td>
+    <td><%= membership.email %></td>
+    <td><%= membership.province %></td>
+    <td><%= membership.city %></td>
+    <td><%= membership.district %></td>
+    <td><%= membership.postal %></td>
+    <td><%= membership.addr %></td>
+    <td><%= link_to 'Show', membership %></td>
+    <td><%= link_to 'Edit', edit_membership_path(membership) %></td>
+    <td><%= link_to 'Destroy', membership, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Membership', new_membership_path %>

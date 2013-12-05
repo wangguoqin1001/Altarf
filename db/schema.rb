@@ -11,7 +11,44 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130723084718) do
+ActiveRecord::Schema.define(:version => 20131205065733) do
+
+  create_table "memberships", :force => true do |t|
+    t.string   "nickname"
+    t.string   "password"
+    t.string   "username"
+    t.integer  "gender"
+    t.string   "mobile"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "province"
+    t.string   "city"
+    t.string   "district"
+    t.integer  "postal"
+    t.string   "addr"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "orders", :force => true do |t|
+    t.integer  "productid"
+    t.integer  "quantity"
+    t.string   "coupon"
+    t.integer  "payment"
+    t.string   "nickname"
+    t.string   "mobile"
+    t.string   "phone"
+    t.string   "province"
+    t.string   "city"
+    t.string   "district"
+    t.integer  "postal"
+    t.string   "addr"
+    t.integer  "need_invoice"
+    t.string   "invoice_title"
+    t.string   "billing"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
