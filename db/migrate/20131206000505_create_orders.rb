@@ -16,6 +16,7 @@ class CreateOrders < ActiveRecord::Migration
       t.integer :need_invoice
       t.string :invoice_title
       t.string :billing
+      t.string :username
 
       t.timestamps
     end

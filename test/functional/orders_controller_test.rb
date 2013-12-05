@@ -18,7 +18,7 @@ class OrdersControllerTest < ActionController::TestCase
 
   test "should create order" do
     assert_difference('Order.count') do
-      post :create, order: { addr: @order.addr, billing: @order.billing, city: @order.city, coupon: @order.coupon, district: @order.district, invoice_title: @order.invoice_title, mobile: @order.mobile, need_invoice: @order.need_invoice, nickname: @order.nickname, payment: @order.payment, phone: @order.phone, postal: @order.postal, productid: @order.productid, province: @order.province, quantity: @order.quantity }
+      post :create, order: { addr: @order.addr, billing: @order.billing, city: @order.city, coupon: @order.coupon, district: @order.district, invoice_title: @order.invoice_title, mobile: @order.mobile, need_invoice: @order.need_invoice, nickname: @order.nickname, payment: @order.payment, phone: @order.phone, postal: @order.postal, productid: @order.productid, province: @order.province, quantity: @order.quantity, username: @order.username }
     end
 
     assert_redirected_to order_path(assigns(:order))
@@ -35,7 +35,7 @@ class OrdersControllerTest < ActionController::TestCase
   end
 
   test "should update order" do
-    put :update, id: @order, order: { addr: @order.addr, billing: @order.billing, city: @order.city, coupon: @order.coupon, district: @order.district, invoice_title: @order.invoice_title, mobile: @order.mobile, need_invoice: @order.need_invoice, nickname: @order.nickname, payment: @order.payment, phone: @order.phone, postal: @order.postal, productid: @order.productid, province: @order.province, quantity: @order.quantity }
+    put :update, id: @order, order: { addr: @order.addr, billing: @order.billing, city: @order.city, coupon: @order.coupon, district: @order.district, invoice_title: @order.invoice_title, mobile: @order.mobile, need_invoice: @order.need_invoice, nickname: @order.nickname, payment: @order.payment, phone: @order.phone, postal: @order.postal, productid: @order.productid, province: @order.province, quantity: @order.quantity, username: @order.username }
     assert_redirected_to order_path(assigns(:order))
   end
 

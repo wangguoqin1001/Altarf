@@ -17,6 +17,7 @@
     <th>Need invoice</th>
     <th>Invoice title</th>
     <th>Billing</th>
+    <th>Username</th>
     <th></th>
     <th></th>
     <th></th>
@@ -39,6 +40,7 @@
     <td><%= order.need_invoice %></td>
     <td><%= order.invoice_title %></td>
     <td><%= order.billing %></td>
+    <td><%= order.username %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>

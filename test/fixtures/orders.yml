@@ -16,6 +16,7 @@ one:
   need_invoice: 1
   invoice_title: MyString
   billing: MyString
+  username: MyString
 
 two:
   productid: 1
@@ -33,3 +34,4 @@ two:
   need_invoice: 1
   invoice_title: MyString
   billing: MyString
+  username: MyString
