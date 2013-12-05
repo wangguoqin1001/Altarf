@@ -59,7 +59,7 @@ class MembershipsController < ApplicationController
 		iv.update params[:membership][:nickname]
 		cipher.iv = iv.hexdigest
 
-		result = cipher.update params[:membership][:password].slice(0, 23)
+		result = cipher.update params[:membership][:password]
 		result << cipher.final
 		pswd = Base64.strict_encode64 result
 
@@ -83,7 +83,7 @@ class MembershipsController < ApplicationController
 		iv.update params[:membership][:nickname]
 		cipher.iv = iv.hexdigest
 
-		result = cipher.update params[:membership][:password].slice(0, 23)
+		result = cipher.update params[:membership][:password]
 		result << cipher.final
 		pswd = Base64.strict_encode64 result
 
