@@ -169,7 +169,7 @@ a:hover{
     width: 800px;
     position: absolute;
     margin-left: 380px;
-    top:10%;
+    top:1%;
 }
 .para-Y-left{
 	 transform:scale(1) skew(-24deg); 
@@ -284,10 +284,10 @@ a:hover{
 	 float:left;
 }
 .text-para-Y{
-	transform:scale(1) skew(-2deg); 
-     -o-transform:scale(1) skew(-2deg); 
-     -moz-transform: scale(1)skew(-2deg); 
-     -webkit-transform: scale(1)skew(-2deg);
+	transform:scale(1) skew(24deg); 
+     -o-transform:scale(1) skew(24deg); 
+     -moz-transform: scale(1)skew(24deg); 
+     -webkit-transform: scale(1)skew(24deg);
 	font-size:0.8em;
 	line-height:1.7em;
 	text-align:center;

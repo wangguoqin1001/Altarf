@@ -31,7 +31,10 @@
 .left-top1 p{
 	font-size:1em;
 	color:#ffffff;	
-	/*transform: scale(1) skew(24deg);*/
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(0.8) skew(24deg);
+    -moz-transform: scale(0.8)skew(24deg);
+    -webkit-transform: scale(0.8)skew(24deg);
     color: rgb(255, 255, 255);
     margin-top: 0%;
 	text-align:center;
@@ -56,7 +59,10 @@
 .left-top2 p{
 	font-size:1em;
 	color:#ffffff;	
-	/*transform: scale(1) skew(24deg);*/
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(0.8) skew(24deg);
+    -moz-transform: scale(0.8)skew(24deg);
+    -webkit-transform: scale(0.8)skew(24deg);
     color: rgb(255, 255, 255);
 	margin-top:0%;
 	text-align:center;
@@ -81,7 +87,10 @@
 .content-txt01{
 	font-size:1.5em;
 	color:#ffffff;	
-    /*transform: scale(1) skew(24deg);*/
+    transform: scale(1) skew(24deg);
+    -o-transform: scale(0.8) skew(24deg);
+    -moz-transform: scale(0.8)skew(24deg);
+    -webkit-transform: scale(0.8)skew(24deg);
     color: rgb(255, 255, 255);
 	margin-left:5%;
 	text-indent:10px;
@@ -90,11 +99,22 @@
 	line-height: 1.5em;
     font-size: 0.9em;
     font-style: normal;
-	/*transform: scale(1) skew(24deg);*/
+	transform: scale(1) skew(0deg);
+	-o-transform: scale(0.8) skew(0deg);
+    -moz-transform: scale(0.8)skew(0deg);
+    -webkit-transform: scale(0.8)skew(0deg);
     color: rgb(255, 255, 255);
 	margin-left:5%;	
 	margin-right:9%;
 }
+
+.content-txt02 ul li{
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(0.8) skew(24deg);
+    -moz-transform: scale(0.8)skew(24deg);
+    -webkit-transform: scale(0.8)skew(24deg);
+}
+
 .right-bar{
 	width:10px;
 	height:650px;
