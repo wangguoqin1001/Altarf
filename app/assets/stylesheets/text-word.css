@@ -612,9 +612,11 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-o-transform: scale(1) skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
-	width:65%;
+	width:204px;
+	height:160px;
+	/*width:65%;
 	margin-top:-2%;
-	margin-left:15%;
+	margin-left:15%;*/
 }
 
 .number-text-1{
@@ -669,9 +671,11 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-o-transform: scale(1) skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
-	width:60%;
+	width:160px;
+	height:150px;
+	/*width:60%;
 	margin-top:0.5%;
-	margin-left:13%;
+	margin-left:13%;*/
 }
 .button-product2 input{
 	transform: scale(1) skew(24deg);

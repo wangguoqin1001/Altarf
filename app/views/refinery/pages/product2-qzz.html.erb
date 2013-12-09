@@ -5,21 +5,11 @@
 <meta charset="utf-8">
 <title>气之站</title>
 
-<link rel="stylesheet" href="flexslider.css" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="jquery.flexslider.js"></script>
+<link rel="stylesheet" href="flexslider1.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="flexslider2.css" type="text/css" media="screen" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="jquery.flexslider-min.js"></script>
 
-<style type="text/css">
-	.flexslider ul li {
-		list-style: none;
-	}
-	.flexslider ul li img {
-		transform: scale(1) skew(24deg);
-		-o-transform: scale(1) skew(24deg);
-		-moz-transform: scale(1)skew(24deg);
-		-webkit-transform: scale(1)skew(24deg);
-	}
-</style>
 
 <% content_for :javascripts do %>
 <script type="text/javascript">
@@ -45,13 +35,23 @@ $(function(){
 })
 </script>
 
-<script type="text/javascript" charset="utf-8">
-  $(window).load(function() {
-  $('.flexslider').flexslider({
-  		slideshow: true, 
-  		slideshowSpeed: 5000,
- 		animationLoop: true,
- 		pauseOnAction: false, 
+<script type="text/javascript">
+$(window).load(function() {
+  $('.flexslider1').flexslider({
+    animation: "fade",
+    controlNav: false,
+    animationLoop: true, 
+    slideshowSpeed: 4000,
+  });
+});
+</script>
+<script type="text/javascript">
+$(window).load(function() {
+  $('.flexslider2').flexslider({
+    animation: "fade",
+    controlNav: false,
+    animationLoop: true,
+    slideshowSpeed: 4000, 
   });
 });
 </script>
@@ -101,24 +101,24 @@ $(function(){
     	</ul>
     </div> 
 
-  <!--  <div class="flexslider" style="width:204px;height:179px;margin-left:70px;">
+    <div class="flexslider1" style="width:204px;height:179px;margin-left:70px;">
         <ul class="slides">
             <li>
-                <img src="/assets/product3.png" width="204" height="179">
+                <img src="/assets/product3-1.jpg" class="img-blank-pro1-inside-1">
             </li>
             <li>
-                <img src="/assets/product3.png" width="204" height="179">
+                <img src="/assets/product3-2.jpg" class="img-blank-pro1-inside-1">
             </li>
             <li>
-                <img src="/assets/product3.png" width="204" height="179">
+                <img src="/assets/product3-3.jpg" class="img-blank-pro1-inside-1">
             </li>
             <li>
-                <img src="/assets/product3.png" width="204" height="179">
+                <img src="/assets/product3-4.jpg" class="img-blank-pro1-inside-1">
             </li>
 
         </ul>
-   </div> -->
-    <img src="/assets/product3.png" class="img-blank-pro1-inside-1" >
+   </div> 
+    
 
     <div class="number-text-1">
     	<ul>
@@ -160,24 +160,24 @@ $(function(){
 				</p>
 			
 		</div>
-<!--	<div class="flexslider" style="width:188px;height:184px;margin-left:70px;">
+    	<div class="flexslider2" style="width:188px;height:184px;margin-left:70px;margin-top:10px;">
         <ul class="slides">
             <li>
-                <img src="/assets/product4.png" width="188" height="184">
+                <img src="/assets/product4-1.jpg" class="img-blank-pro1-inside-3">
             </li>
             <li>
-                <img src="/assets/product4.png" width="188" height="184">
+                <img src="/assets/product4-2.jpg" class="img-blank-pro1-inside-3">
             </li>
             <li>
-                <img src="/assets/product4.png" width="188" height="184">
+                <img src="/assets/product4-3.jpg" class="img-blank-pro1-inside-3">
             </li>
             <li>
-                <img src="/assets/product4.png" width="188" height="184">
+                <img src="/assets/product4-4.jpg" class="img-blank-pro1-inside-3">
             </li>
 
         </ul>
-    </div>	-->
-    <img src="/assets/product4.png" class="img-blank-pro1-inside-3">
+    </div>
+    
     <div class="number-text-2">
     	<ul>
    			 <li>2盒装/120袋/240片 </li>
