@@ -10,6 +10,7 @@
 	-o-transform: skew(-24deg); 
 	transform: skew(-24deg);
 	position:absolute;
+    top:0;
 }
 .left-top1{
 	transform: scale(0.8) skew(-24deg);
@@ -17,10 +18,11 @@
     -moz-transform: scale(0.8)skew(-24deg);
     -webkit-transform: scale(0.8)skew(-24deg);
     position: absolute;
-    width: 12%;
-    height: 4%;
-    left: 17%;
-    top: 14%;
+    width: 180px;
+    height: 28px;
+    line-height: 28px;
+    left: 220px;
+    top: 85px;
     background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
     background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
     background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
@@ -32,9 +34,9 @@
 	font-size:1em;
 	color:#ffffff;	
 	transform: scale(1) skew(24deg);
-	-o-transform: scale(0.8) skew(24deg);
-    -moz-transform: scale(0.8)skew(24deg);
-    -webkit-transform: scale(0.8)skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+    -moz-transform: scale(1)skew(24deg);
+    -webkit-transform: scale(1)skew(24deg);
     color: rgb(255, 255, 255);
     margin-top: 0%;
 	text-align:center;
@@ -45,10 +47,11 @@
     -moz-transform: scale(0.8)skew(-24deg);
     -webkit-transform: scale(0.8)skew(-24deg);
     position: absolute;
-    width: 12%;
-    height: 4%;
-    left: 16%;
-    top: 18%;
+    width: 180px;
+    height: 28px;
+    left: 208px;
+    line-height: 28px;
+    top: 115px;
     background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
     background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
     background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
@@ -60,9 +63,9 @@
 	font-size:1em;
 	color:#ffffff;	
 	transform: scale(1) skew(24deg);
-	-o-transform: scale(0.8) skew(24deg);
-    -moz-transform: scale(0.8)skew(24deg);
-    -webkit-transform: scale(0.8)skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+    -moz-transform: scale(1)skew(24deg);
+    -webkit-transform: scale(1)skew(24deg);
     color: rgb(255, 255, 255);
 	margin-top:0%;
 	text-align:center;
@@ -73,10 +76,10 @@
     -moz-transform: scale(0.8)skew(-24deg);
     -webkit-transform: scale(0.8)skew(-24deg);
     position: absolute;
-    width: 22%;
-    height:44%;
-    left: 5.8%;
-    top: 40%;
+    width: 320px;
+    height: 300px;
+    left: 95px;
+    top: 190px;
     background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
     background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
     background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
@@ -87,7 +90,7 @@
 .content-txt01{
 	font-size:1.5em;
 	color:#ffffff;	
-    transform: scale(1) skew(24deg);
+    transform: scale(0.8) skew(24deg);
     -o-transform: scale(0.8) skew(24deg);
     -moz-transform: scale(0.8)skew(24deg);
     -webkit-transform: scale(0.8)skew(24deg);
@@ -100,31 +103,33 @@
     font-size: 0.9em;
     font-style: normal;
 	transform: scale(1) skew(0deg);
-	-o-transform: scale(0.8) skew(0deg);
-    -moz-transform: scale(0.8)skew(0deg);
-    -webkit-transform: scale(0.8)skew(0deg);
+	-o-transform: scale(1) skew(0deg);
+    -moz-transform: scale(1)skew(0deg);
+    -webkit-transform: scale(1)skew(0deg);
     color: rgb(255, 255, 255);
-	margin-left:5%;	
-	margin-right:9%;
+    width: 320px;
+    height: 280px;
 }
 
 .content-txt02 ul li{
 	transform: scale(1) skew(24deg);
-	-o-transform: scale(0.8) skew(24deg);
-    -moz-transform: scale(0.8)skew(24deg);
-    -webkit-transform: scale(0.8)skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+    -moz-transform: scale(1)skew(24deg);
+    -webkit-transform: scale(1)skew(24deg);
+    list-style: none;
 }
 
 .right-bar{
 	width:10px;
 	height:650px;
-	margin-left:45%;
+	margin-left:600px;
 	background-color:#937145;
 	-webkit-transform: skew(-24deg); 
 	-moz-transform: skew(-24deg); 
 	-o-transform: skew(-24deg); 
 	transform: skew(-24deg);
 	position:absolute;
+    top:0;
 }
 .right-conent{
 	transform: scale(0.8) skew(-24deg);
@@ -132,10 +137,10 @@
     -moz-transform: scale(0.8)skew(-24deg);
     -webkit-transform: scale(0.8)skew(-24deg);
     position: absolute;
-    width: 22%;
-    height:43%;
-    left: 60%;
-    top: 17%;
+    width: 320px;
+    height:300px;
+    left:750px;
+    top: 80px;
     background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
     background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
     background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
