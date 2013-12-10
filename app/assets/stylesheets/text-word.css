@@ -295,6 +295,7 @@ a:hover{
 }
 .p-line-high{
 	margin-top:-18px;
+	margin-left:-18px;
 }
 .para-W-right{
 	transform: scale(1) skew(-24deg);
@@ -509,9 +510,9 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-o-transform: scale(1) skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
-	width:70%;
-	margin-top:10%;
-	margin-left:10%;
+	width:58%;
+	margin-top:5%;
+	margin-left:25%;
 }
 .pop{
 	position: absolute;
@@ -784,6 +785,8 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	color:#fff;
 	font-size:1em;
 	margin-top:-7%;
+	margin-right:30px;
+	text-align:right;
 }
 .little-text-double-2{
 	transform: scale(0.8) skew(0deg);
@@ -812,7 +815,8 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	color:#fff;
 	font-size:1em;
 	margin-top:-7%;
-	//text-align: center;
+	text-align:right;
+	margin-right:30px;
 }
 /*现代养生*/
 .large-background-now{
