@@ -110,3 +110,7 @@ nav{
 //	filter:	progid:dximagetransform.microsoft.gradient(startColorstr='#937145', endColorstr='#937145', GradientType=0);
 }
 
+#menu ul li:hover ul li a:hover{
+	color:#bfbfbf;
+}
+
