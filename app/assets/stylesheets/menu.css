@@ -47,6 +47,11 @@ nav{
 //	filter:	progid:dximagetransform.microsoft.gradient(startColorstr='#000000', endColorstr='#000', GradientType=0)
 }
 
+//@media screen and (-webkit-min-device-pixel-ratio:0){ #menu ul li {font-size:15px;} }  /*chrome and safari*/
+@-moz-document url-prefix(){
+  #menu ul li {font-size: 12px;}
+}
+
 #menu ul li a {
 	color: #FFFFFF;
 	

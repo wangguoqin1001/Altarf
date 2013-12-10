@@ -17,7 +17,7 @@
 .product_top{
 	width:10px;
 	height:160px;
-	margin-left:845px;
+	margin-left:785px;
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
 	-moz-transform: skew(-25deg); 
@@ -25,7 +25,7 @@
 	transform: skew(-25deg);
 }
 .product-txt01{
-	margin-left:724px;
+	margin-left:664px;
 }
 .product-txt01 ul{
 	list-style:none;
@@ -40,7 +40,7 @@
 	float:left;
 	width:10px;
 	height:435px;
-	margin-left:730px;
+	margin-left:670px;
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
 	-moz-transform: skew(-25deg); 
@@ -48,27 +48,36 @@
 	transform: skew(-25deg);
 }
 .product-txt03{
-	margin-left:830px;
+	margin-left:770px;
+	-webkit-transform: skew(-25deg); 
+	-moz-transform: skew(-25deg); 
+	-o-transform: skew(-25deg); 
+	transform: skew(-25deg);
 }
+
+
 
 .product-txt03 ul li a{
 	color:#77787b;
 }
 
 .product-txt03 ul{
-	
+	-webkit-transform: skew(0deg); 
+	-moz-transform: skew(0deg); 
+	-o-transform: skew(0deg); 
+	transform: skew(0deg);
 	list-style-image:url(/assets/small-paradize2.png);
 }
+
 .product-txt03 ul li{
+	-webkit-transform: skew(25deg); 
+	-moz-transform: skew(25deg); 
+	-o-transform: skew(25deg); 
+	transform: skew(25deg);
 	padding-top:10px;
 	color:#77787b;
 }
-.product-txt04{
-	margin-left:-8px;
-}
-.product-txt05{
-	margin-left:-18px;
-}
+
 /*QZZ-lingzhi-introduce*/
 .product01_content_01{
 	height:80px;

@@ -526,6 +526,8 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	display: none;
 	
 }
+
+
 .pop p{
 	text-indent:-33px;
 	color:#fff;
@@ -540,6 +542,12 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 }
+
+@-moz-document url-prefix(){
+  .pop p {line-height:1em;}
+}
+
+
 
 .pop2{
 	position: absolute;
@@ -566,6 +574,11 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 }
+
+@-moz-document url-prefix(){
+  .pop2 p {line-height:1em;}
+}
+
 
 .img-blank-pro1-inside-2{
 	transform: scale(1) skew(24deg);
@@ -599,6 +612,11 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	font-size:0.9em;
 	z-index:999;
 }
+
+@-moz-document url-prefix(){
+  .coffe-blank-pro1-over {margin-top:-17%;}
+}
+
 
 .coffe-blank-pro1-over ul li{
 	list-style-type:none;
