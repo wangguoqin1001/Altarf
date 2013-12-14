@@ -18,12 +18,11 @@ a:hover{
 /*introdue-qzz*/
 .text-position{
 	position:absolute;
-	top: 37.7%;
-	left:30.6%;
+	top: 230px;
+	left:380px;
 	list-style-type: none;
 	float: none;
-	width: 57.3%;
-	height:12.3%;
+	width: 760px;
 	text-align:right;
 }
 
@@ -45,8 +44,8 @@ a:hover{
 .left-over-coffe{
 	font-size:1.5em;
 	position:absolute;
-	top:25%;
-	left:18.4%;
+	top:160px;
+	left:240px;
 	color:#a68352;
 	word-spacing:0.5em;
 }
@@ -54,16 +53,16 @@ a:hover{
 .left-over-coffe-only-one{
 	font-size:1.5em;
 	position:absolute;
-	top:27%;
-	left:14.4%;
+	top:180px;
+	left:200px;
 	color:#a68352;
 	word-spacing:0.5em;
 }
 .left-over-coffe-only-one-1{
 	font-size:1.2em;
 	position:absolute;
-	top:21%;
-	left:-10%;
+	top:135px;
+	left:-100px;
 	color:#000;
 	transform:scale(1) skew(24deg); 
      -o-transform:scale(1) skew(24deg); 
@@ -91,9 +90,9 @@ a:hover{
 
 .text-story-about-qzz{
 	position:absolute;
-	left:30.2%;
-	top:26.6%;
-	width:56.4%;
+	left:400px;
+	top:170px;
+	width:750px;
 	text-align:left;
 }
 
@@ -404,8 +403,8 @@ a:hover{
 .left-over-coffe-only-one-black{
 	font-size:1.5em;
 	position:absolute;
-	top:21.3%;
-	left:15.3%;
+	top:130px;
+	left:210px;
 	color:#000;
 	word-spacing:0.5em;
 }
@@ -417,7 +416,7 @@ a:hover{
 	-webkit-transform: scale(1)skew(-24deg);
 	position: absolute;
 	top: 209px;
-	left: 22%;
+	left: 300px;
 	width: 310px;
 	//height: 34.5%;
 }
@@ -429,9 +428,9 @@ a:hover{
 	-webkit-transform: scale(1)skew(-24deg);
 	position: absolute;
 	top:225px;
-	left: 25.5%;
-	width:20%;
-	height: 32%;
+	left: 350px;
+	width:274px;
+	height: 205px;
 	z-index:-1;
 }
 .white-blank-pro1 span{
@@ -455,7 +454,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	
 	position: absolute;
 	top: 209px;
-	left: 55%;
+	left:750px;
 	width: 310px;
 	//height: 34.5%;
 }
@@ -467,9 +466,9 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-webkit-transform: scale(1)skew(-24deg);
 	position: absolute;
 	top:225px;
-	left: 58.5%;
-	width:20%;
-	height: 32%;
+	left:800px;
+	width:273px;
+	height:205px;
 	z-index:-1;
 }
 .coffe-blank-pro1-top{
@@ -902,10 +901,10 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	background: linear-gradient(to right, #d2a93b 1%, #966532 100%);
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #d2a93b), color-stop(100%, #966532));
 	z-index:-99;
-	width:74%;
-	height:100%;
+	width:950px;
+	height:650px;
 	position:absolute;
-	left:15%;
+	left:220px;
 	top:0%;
 }
 
