@@ -94,6 +94,7 @@ a:hover{
 	top:170px;
 	width:750px;
 	text-align:left;
+	line-height: 1.5em;
 }
 
 .text-story-about-qzz-word{
@@ -957,7 +958,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-webkit-transform: scale(1)skew(24deg);
 	font-size: 0.9em;
 	margin-left:7%;
-	color: #000;
+	color: #fff;
 	position: absolute;
 	left: 12%;
 	top: 66%;
