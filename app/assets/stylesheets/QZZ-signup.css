@@ -1,9 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 .contentbox{
-	height:435px;
+	height:400px;
 	width:760px;
-	margin:-450px auto;
+	margin:-475px auto;
 }
 .content_top{
 	//width:58%;
@@ -271,4 +271,60 @@
 .order_top02{
 	float:right;
 	padding-right:4%;
+}
+
+/*搭配购买*/
+.box{
+	height:70px;
+	width:760px;
+	margin: 460px auto;
+	background-image: -webkit-gradient(
+          linear,left  top,left  bottom, from(rgba(255, 255, 255, 1.0)),
+          to(rgba(255, 255, 255, 0))
+        );
+        background-image: -moz-linear-gradient(
+          top center,
+          rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0) 95%
+        );
+
+        filter: progid:DXImageTransform.Microsoft.gradient(
+          gradientType=0, startColor=0, endColorStr=#FFFFFF
+        );
+
+        -ms-filter: progid:DXImageTransform.Microsoft.gradient(
+          gradientType=0, startColor=0, endColoStr=#FFFFFF
+        );
+	background: -ms-linear-gradient(top,  rgba(255, 255, 255, 1.0) 0%,rgba(255, 255, 255, 0) 100%); 
+}
+.box-lefttop{
+	background-color: #937145;
+	position: absolute;
+	border-width: 0px;
+	width: 137px;
+	height: 30px;
+	color: #FFF;
+	border-radius: 4px;
+	font-size: 1em;
+	text-align: center;
+	line-height: 30px;
+}
+.box-txt{
+	font-size: 0.8em;
+	margin-left: 300px;
+	padding-top: 40px;
+    letter-spacing: 0.2em;
+}
+.box-button input{
+	background-color: #937145;
+	position: absolute;
+	border-width: 0px;
+	width: 137px;
+	height: 30px;
+	color: #FFF;
+	border-radius: 4px;
+	font-size: 1em;
+	text-align: center;
+	line-height: 30px;
+	margin-left:480px;
+	margin-top:-40px;
 }

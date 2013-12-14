@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <% content_for :javascripts do %>
-	<script>
+	<<script>
 		<% if session[:nickname] %>
 
 		<% else %>
@@ -11,6 +11,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>QZZ website product order</title>
+
+<link rel="stylesheet" href="flexslider.css" type="text/css" media="screen" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "fade",
+    controlNav: false,
+    animationLoop: true, 
+    slideshowSpeed: 4000,
+  });
+});
+</script>
+
 </head>
 
 <% content_for :stylesheets do %>
@@ -209,6 +224,36 @@
                <div class="content_tab"><input  type="button" value="确认订单" id="sign up" class="order_txt05" onclick="order();"></div>         
 </div>
 </div>
+
+<div class="box">
+      <div class="box-lefttop">
+            搭配购买
+        </div>
+        <div class="flexslider" style="width:100px;height:60px;left:160px;top:0px;float:left">
+          <ul class="slides">
+              <li>
+                  <img src="/assets/box-1.jpg" width="100" height="60">
+              </li>
+              <li>
+                  <img src="/assets/box-2.jpg" width="100" height="60">
+              </li>
+              <li>
+                  <img src="/assets/box-3.jpg" width="100" height="60">
+              </li>
+              <li>
+                  <img src="/assets/box-4.jpg" width="100" height="60">
+              </li>
+
+          </ul>
+        </div> 
+        <div class="box-txt">
+          精美礼盒-200元
+        </div>
+        <div class="box-button">
+            <input id="add" type="submit" value="添加到购物车">
+        </div>
+  </div>
+
 
 <% content_for :javascripts do %>
 <script>
