@@ -736,7 +736,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 .large-inside-text{	
 	width:78%;
 	height:50%;
-	margin-top:23%;
+	margin-top:150px;
 	margin-left:8.7%;
 }
 
@@ -783,7 +783,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-moz-transform: scale(0.8)skew(0deg);
 	-webkit-transform: scale(0.8)skew(0deg);	
 	position:absolute;
-	width:220px;
+	width:200px;
 	height:30px;
 	left:84%;
 	top:23%;
@@ -803,7 +803,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	color:#fff;
 	font-size:1em;
 	margin-top:-7%;
-	margin-right:30px;
+	margin-right:40px;
 	text-align:right;
 }
 .little-text-double-2{
@@ -813,7 +813,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-webkit-transform: scale(0.8)skew(0deg);
 	
 	position:absolute;
-	width:220px;
+	width:200px;
 	height:30px;
 	left:84%;
 	top:29%;
@@ -834,7 +834,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	font-size:1em;
 	margin-top:-7%;
 	text-align:right;
-	margin-right:30px;
+	margin-right:40px;
 }
 /*现代养生*/
 .large-background-now{
@@ -852,7 +852,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
 	
-	width:600px;
+	width:700px;
 	height:100%;
 	position:absolute;
 	left:400px;
@@ -861,7 +861,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 .large-inside-text-1{	
 	width:94%;
 	height:50%;
-	margin-top:30%;
+	margin-top:170px;
 	margin-left:-5%;
 }
 .large-inside-text-1 ul{	
