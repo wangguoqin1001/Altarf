@@ -5,6 +5,7 @@ Altarf::Application.routes.draw do
 
   resources :memberships do
     collection do
+      get :login
       post :login
     end
   end
