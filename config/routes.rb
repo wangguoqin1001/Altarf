@@ -7,6 +7,7 @@ Altarf::Application.routes.draw do
     collection do
       get :login
       post :login
+      get :api_login
     end
   end
 
