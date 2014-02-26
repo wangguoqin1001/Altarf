@@ -175,12 +175,23 @@ class MembershipsController < ApplicationController
 
 		begin
 			pswd = Base64.strict_decode64 @membership[:password]
+
+			cipher = OpenSSL::Cipher::Cipher.new 'DES3'
+			cipher.decrypt
+			cipher.key = Altarf::Application.config.membership_secret_token
+
+			iv = Digest::SHA256.new
+			iv.update params[:nickname]
+			cipher.iv = iv.hexdigest
+
+			clearpswd = cipher.update pswd
+			clearpswd << cipher.final
 		rescue
 			Rails.logger.error $!.backtrace
 			respond_with ret = { :status => 0, :description => "Wrong password" }, :location => nil and return
 		end
 
-		if pswd == params[:password]
+		if clearpswd == params[:password]
 			session[:nickname] = "admin"
 			respond_with ret = { :status => 1 }, :location => nil and return
 		else
