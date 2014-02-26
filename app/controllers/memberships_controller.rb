@@ -173,7 +173,14 @@ class MembershipsController < ApplicationController
 			respond_with ret = { :status => 0, :description => "No such user" }, :location => nil and return
 		end
 
-		if @membership[:password] == params[:password]
+		begin
+			pswd = Base64.strict_decode64 @membership[:password]
+		rescue
+			Rails.logger.error $!.backtrace
+			respond_with ret = { :status => 0, :description => "Wrong password" }, :location => nil and return
+		end
+
+		if pswd == params[:password]
 			session[:nickname] = "admin"
 			respond_with ret = { :status => 1 }, :location => nil and return
 		else
