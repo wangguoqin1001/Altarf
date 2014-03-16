@@ -3,21 +3,19 @@ require 'digest/sha2'
 require 'openssl/cipher'
 require 'base64'
 
-class MembershipsController < ApplicationController
+class ApiMembershipsController < ApplicationController
 
 	respond_to :json, :xml, :html
 
-	before_filter :checkcaptcha, :only => [:create, :login]
+	before_filter :checkadmin, :except => [:login]
+
+	skip_before_filter :verify_authenticity_token
+
+	Admins = ["admin", "zombiesir"]
 
 
 	# GET /memberships
 	def index
-		if not refinery_user?
-			respond_with ret = nil, :location => nil do |format|
-				format.html { redirect_to "/" }
-			end and return
-		end
-
 		@memberships = Membership.all
 		respond_with @memberships
 	end
@@ -25,7 +23,7 @@ class MembershipsController < ApplicationController
 
 	# GET /memberships/1
 	def show
-		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
+		@membership = Membership.find params[:id]
 		respond_with @membership
 	end
 
@@ -39,7 +37,7 @@ class MembershipsController < ApplicationController
 
 	# GET /memberships/1/edit
 	def edit
-		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
+		@membership = Membership.find params[:id]
 		respond_with @membership
 	end
 
@@ -89,7 +87,7 @@ class MembershipsController < ApplicationController
 
 		params[:membership][:password] = pswd.to_s
 
-		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
+		@membership = Membership.find params[:id]
 		@membership.update_attributes params[:membership]
 
 		session[:nickname] = params[:nickname]
@@ -99,7 +97,7 @@ class MembershipsController < ApplicationController
 
 	# DELETE /memberships/1
 	def destroy
-		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
+		@membership = Membership.find params[:id]
 		@membership.destroy
 		respond_with @membership
 	end
@@ -107,6 +105,10 @@ class MembershipsController < ApplicationController
 
 	# POST /memberships/login
 	def login
+		if not Admins.include? params[:nickname]
+			respond_with ret = { :status => 0, :description => "Not permitted" }, :location => nil and return
+		end
+
 		@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
 		if not @membership
 			respond_with ret = { :status => 0, :description => "No such user" }, :location => nil and return
@@ -125,18 +127,13 @@ class MembershipsController < ApplicationController
 
 			clearpswd = cipher.update pswd
 			clearpswd << cipher.final
-
-			hash = Digest::SHA256.new
-			hash.update clearpswd
-			hash.update params[:captcha]
-
 		rescue
 			Rails.logger.error $!.backtrace
-			hash = Digest::SHA256.new
+			respond_with ret = { :status => 0, :description => "Wrong password" }, :location => nil and return
 		end
 
-		if hash.hexdigest == params[:password]
-			session[:nickname] = params[:nickname]
+		if clearpswd == params[:password]
+			session[:nickname] = "admin"
 			respond_with ret = { :status => 1 }, :location => nil and return
 		else
 			session[:nickname] = nil
@@ -147,8 +144,8 @@ class MembershipsController < ApplicationController
 
 	private
 
-	def checkcaptcha
-		if not simple_captcha_valid?
+	def checkadmin
+		if not session[:nickname] == "admin"
 			respond_with ret = { :status => 2 }, :location => nil and return
 		end
 	end

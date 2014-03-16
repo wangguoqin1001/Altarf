@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
 
 	# GET /orders
 	def index
-		if refinery_user? or session[:nickname] == "admin"
+		if refinery_user?
 			@orders = Order.all
 		else
 			@orders = Order.find :all, :conditions => { :nickname => session[:nickname] }
@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
 	def show
 		@order = Order.find params[:id]
 
-		if not refinery_user? and not session[:nickname] == "admin"
+		if not refinery_user?
 			if not session[:nickname] or not session[:nickname] == @order[:nickname]
 				respond_with ret = nil, :location => nil do |format|
 					format.html { redirect_to "/" }
@@ -44,7 +44,7 @@ class OrdersController < ApplicationController
 	def edit
 		@order = Order.find params[:id]
 
-		if not refinery_user? and not session[:nickname] == "admin"
+		if not refinery_user?
 			if not session[:nickname] or not session[:nickname] == @order[:nickname]
 				respond_with ret = nil, :location => nil do |format|
 					format.html { redirect_to "/" }
@@ -61,9 +61,7 @@ class OrdersController < ApplicationController
 		@order = Order.new params[:order]
 
 		if session[:nickname]
-			if not session[:nickname] == "admin"
-				@order[:nickname] = session[:nickname]
-			end
+			@order[:nickname] = session[:nickname]
 		else
 			respond_with ret = nil, :location => nil do |format|
 				format.html { redirect_to "/" }
@@ -80,7 +78,7 @@ class OrdersController < ApplicationController
 	def update
 		@order = Order.find params[:id]
 
-		if not refinery_user? and not session[:nickname] == "admin"
+		if not refinery_user?
 			if not session[:nickname] or not session[:nickname] == @order[:nickname]
 				respond_with ret = nil, :location => nil do |format|
 					format.html { redirect_to "/" }
@@ -97,7 +95,7 @@ class OrdersController < ApplicationController
 	def destroy
 		@order = Order.find params[:id]
 
-		if not refinery_user? and not session[:nickname] == "admin"
+		if not refinery_user?
 			if not session[:nickname] or not session[:nickname] == @order[:nickname]
 				respond_with ret = nil, :location => nil do |format|
 					format.html { redirect_to "/" }
@@ -113,7 +111,7 @@ class OrdersController < ApplicationController
 	private
 
 	def checkcaptcha
-		if not simple_captcha_valid? and not session[:nickname] == "admin"
+		if not simple_captcha_valid?
 			respond_with ret = { :status => 2 }, :location => nil and return
 		end
 	end
