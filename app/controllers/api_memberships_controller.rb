@@ -46,7 +46,7 @@ class ApiMembershipsController < ApplicationController
 	def create
 		@membership = Membership.find :first, :conditions => { :nickname => params[:membership][:nickname] }
 		if @membership
-			respond_with ret = { :status => 0, :description => "User exist" }, :location => nil and return
+			respond_with ret = { :status => 0, :description => "User exist" }, :location => nil, :status => :forbidden and return
 		end
 
 		cipher = OpenSSL::Cipher::Cipher.new 'DES3'
@@ -106,12 +106,12 @@ class ApiMembershipsController < ApplicationController
 	# POST /memberships/login
 	def login
 		if not Admins.include? params[:nickname]
-			respond_with ret = { :status => 0, :description => "Not permitted" }, :location => nil and return
+			respond_with ret = { :status => 0, :description => "Not permitted" }, :location => nil, :status => :forbidden and return
 		end
 
 		@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
 		if not @membership
-			respond_with ret = { :status => 0, :description => "No such user" }, :location => nil and return
+			respond_with ret = { :status => 0, :description => "No such user" }, :location => nil, :status => :unauthorized and return
 		end
 
 		begin
@@ -129,15 +129,15 @@ class ApiMembershipsController < ApplicationController
 			clearpswd << cipher.final
 		rescue
 			Rails.logger.error $!.backtrace
-			respond_with ret = { :status => 0, :description => "Wrong password" }, :location => nil and return
+			respond_with ret = { :status => 0, :description => "Wrong password" }, :location => nil, :status => :unauthorized and return
 		end
 
 		if clearpswd == params[:password]
 			session[:nickname] = "admin"
-			respond_with ret = { :status => 1 }, :location => nil and return
+			respond_with ret = { :status => 1 }, :location => nil, :status => :accepted and return
 		else
 			session[:nickname] = nil
-			respond_with ret = { :status => 0, :description => "Wrong password" }, :location => nil and return
+			respond_with ret = { :status => 0, :description => "Wrong password" }, :location => nil, :status => :unauthorized and return
 		end
 	end
 
@@ -146,7 +146,7 @@ class ApiMembershipsController < ApplicationController
 
 	def checkadmin
 		if not session[:nickname] == "admin"
-			respond_with ret = { :status => 2 }, :location => nil and return
+			respond_with ret = { :status => 2 }, :location => nil, :status => :forbidden and return
 		end
 	end
 

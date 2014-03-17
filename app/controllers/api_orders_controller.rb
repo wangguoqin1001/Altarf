@@ -64,7 +64,7 @@ class ApiOrdersController < ApplicationController
 
 	def checkadmin
 		if not session[:nickname] == "admin"
-			respond_with ret = { :status => 2 }, :location => nil and return
+			respond_with ret = { :status => 2 }, :location => nil, :status => :forbidden and return
 		end
 	end
 

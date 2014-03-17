@@ -112,7 +112,7 @@ class OrdersController < ApplicationController
 
 	def checkcaptcha
 		if not simple_captcha_valid?
-			respond_with ret = { :status => 2 }, :location => nil and return
+			respond_with ret = { :status => 2 }, :location => nil, :status => :forbidden and return
 		end
 	end
 
