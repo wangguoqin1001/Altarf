@@ -63,9 +63,8 @@ class MembershipsController < ApplicationController
 		result << cipher.final
 		pswd = Base64.strict_encode64 result
 
-		params[:membership][:password] = pswd.to_s
-
 		@membership = Membership.new params[:membership]
+		@membership.password = pswd.to_s
 		@membership.save
 
 		@membership[:status] = 1
@@ -87,10 +86,9 @@ class MembershipsController < ApplicationController
 		result << cipher.final
 		pswd = Base64.strict_encode64 result
 
-		params[:membership][:password] = pswd.to_s
-
 		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
 		@membership.update_attributes params[:membership]
+		@membership.password = pswd.to_s
 
 		session[:nickname] = params[:nickname]
 		respond_with @membership
