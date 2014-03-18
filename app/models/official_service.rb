@@ -11,10 +11,20 @@ class OfficialService
 		:del_member_info, :get_customer_list, :up_data_member_info, :test
 
 
-	def self.addmemberinfo(customer)
-		self.query_official_service(:add_member_info, {
-			"customerStr" => customer.to_s
+	def self.addmemberinfo(membership)
+		customer = {
+			:customer_i_d => membership[:nickname].to_s,
+			:mobile_phone => membership[:mobile].to_s,
+			:sex => membership[:gender].to_s,
+			:customer_name => membership[:username].to_s,
+			:tel_phone => membership[:phone].to_s,
+			:email => membership[:email].to_s,
+			:post_address => membership[:province].to_s + membership[:city].to_s + membership[:district].to_s + membership[:addr].to_s
+		}
+		ret = self.query_official_service(:add_member_info, {
+			"customerStr" => customer.to_xml(skip_instruct: true, skip_types: true, camelize: true, root: "QZZCustomer")
 		})
+		return Hash.from_xml(ret)
 	end
 
 
@@ -48,9 +58,19 @@ class OfficialService
 
 
 	def self.updatememberinfo(customer)
-		self.query_official_service(:up_data_member_info, {
-			"customerStr" => customer.to_s
+		customer = {
+			:customer_i_d => membership[:nickname].to_s,
+			:mobile_phone => membership[:mobile].to_s,
+			:sex => membership[:gender].to_s,
+			:customer_name => membership[:username].to_s,
+			:tel_phone => membership[:phone].to_s,
+			:email => membership[:email].to_s,
+			:post_address => membership[:province].to_s + membership[:city].to_s + membership[:district].to_s + membership[:addr].to_s
+		}
+		ret = self.query_official_service(:up_data_member_info, {
+			"customerStr" => customer.to_xml(skip_instruct: true, skip_types: true, camelize: true, root: "QZZCustomer")
 		})
+		return Hash.from_xml(ret)
 	end
 
 

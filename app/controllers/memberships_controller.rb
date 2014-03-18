@@ -62,10 +62,16 @@ class MembershipsController < ApplicationController
 		result = cipher.update params[:membership][:password]
 		result << cipher.final
 		pswd = Base64.strict_encode64 result
+		params[:membership].delete :password
 
 		@membership = Membership.new params[:membership]
 		@membership.password = pswd.to_s
 		@membership.save
+
+		ret = OfficialService.addmemberinfo(params[:membership])
+		if not ret["item"]["is_success"] == "True"
+			Rails.logger.info ret.to_json
+		end
 
 		@membership[:status] = 1
 		respond_with @membership
@@ -89,6 +95,11 @@ class MembershipsController < ApplicationController
 		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
 		@membership.update_attributes params[:membership]
 		@membership.password = pswd.to_s
+
+		ret = OfficialService.updatememberinfo(params[:membership])
+		if not ret["item"]["is_success"] == "True"
+			Rails.logger.info ret.to_json
+		end
 
 		session[:nickname] = params[:nickname]
 		respond_with @membership
