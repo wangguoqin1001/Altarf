@@ -39,11 +39,11 @@ function login() {
 }
 
 function register() {
-	 if ($('#username').val().length == 0) {
-		alert ("请输入您的用户名");
+	 if ($('#username').val().length <6 || $('#username').val().length >12) {
+		alert ("请输入6-12位的用户名");
 		return;
-	 }else if ($('#password').val().length == 0) {
-		alert ("请输入您的密码");
+	 }else if ($('#password').val().length <6 || $('#password').val().length >12) {
+		alert ("请输入6-12位的密码");
 		return;
 	 } else if ($('#identification').val().length == 0) {
 		alert ("请再次输入您的密码");
@@ -57,7 +57,10 @@ function register() {
 	 } else if ($('#mobile').val().length == 0){
 	 	alert ("请输入您的手机号码");
 		return;
-	 } else if ($('#telephone03').val().length == 0){
+	 }else if ($('#mobile').val().length != 11){
+	 	alert ("请输入您的手机号码");
+		return;
+	 }else if ($('#telephone03').val().length == 0){
 	 	alert ("请输入您的电话号码");
 		return;
 	 } else if ($('#email').val().length == 0){

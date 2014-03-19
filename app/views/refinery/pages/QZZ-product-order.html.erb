@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <% content_for :javascripts do %>
-	<<script>
+	<script>
 		<% if session[:nickname] %>
 
 		<% else %>
-			location.href = "/气之家/我的帐户";
+		//	location.href = "/气之家/我的帐户";
 		<% end %>
 	</script>
 <% end %>
@@ -181,6 +181,31 @@ $(window).load(function() {
                               <td class="content_txt02"></td>                            
                      </tr>
                </table>
+		<p style="padding-left:3%">已保存的有效地址:</p>
+		   <table id="existedAddressTab">
+		<thead>
+			<tr>
+				<th>收货人</th>
+				<th>所在地区</th>
+				<th>具体地址</th>
+				<th>邮编</th>
+				<th>电话/手机</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tfoot>
+		</tfoot>
+		<tbody>
+			</tr>
+				<td></td>
+				<td>省/市/区/县</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>选择</td>
+			</tr>
+		</tbody>
+		</table>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td  class="content_txt01">是否需要发票:</td>
