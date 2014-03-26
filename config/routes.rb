@@ -1,12 +1,10 @@
 Altarf::Application.routes.draw do
 
-  resources :membership_addresses
-
-
   resources :orders
 
 
   resources :memberships do
+    resources :addresses
     collection do
       get :login
       post :login

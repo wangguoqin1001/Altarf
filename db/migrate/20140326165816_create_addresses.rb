@@ -1,6 +1,6 @@
-class CreateMembershipAddresses < ActiveRecord::Migration
+class CreateAddresses < ActiveRecord::Migration
   def change
-    create_table :membership_addresses do |t|
+    create_table :addresses do |t|
       t.integer :membership_id
       t.string :username
       t.string :mobile

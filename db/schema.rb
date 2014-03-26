@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140326161552) do
+ActiveRecord::Schema.define(:version => 20140326165816) do
 
-  create_table "membership_addresses", :force => true do |t|
+  create_table "addresses", :force => true do |t|
     t.integer  "membership_id"
     t.string   "username"
     t.string   "mobile"
