@@ -19,14 +19,18 @@ class MembershipsController < ApplicationController
 		end
 
 		@memberships = Membership.all
-		respond_with @memberships
+		respond_with @memberships do |format|
+			format.json { render :json => @memberships.to_json(:include => :addresses) }
+		end
 	end
 
 
 	# GET /memberships/1
 	def show
 		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
-		respond_with @membership
+		respond_with @membership do |format|
+			format.json { render :json => @membership.to_json(:include => :addresses) }
+		end
 	end
 
 
