@@ -1,0 +1,2 @@
+module MembershipAddressesHelper
+end

@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131206000505) do
+ActiveRecord::Schema.define(:version => 20140326161552) do
+
+  create_table "membership_addresses", :force => true do |t|
+    t.integer  "membership_id"
+    t.string   "username"
+    t.string   "mobile"
+    t.string   "phone"
+    t.string   "province"
+    t.string   "city"
+    t.string   "district"
+    t.integer  "postal"
+    t.string   "addr"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "memberships", :force => true do |t|
     t.string   "nickname"

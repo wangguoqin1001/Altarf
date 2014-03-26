@@ -1,0 +1,53 @@
+<%= form_for(@membership_address) do |f| %>
+  <% if @membership_address.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@membership_address.errors.count, "error") %> prohibited this membership_address from being saved:</h2>
+
+      <ul>
+      <% @membership_address.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :membership_id %><br />
+    <%= f.number_field :membership_id %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile %><br />
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :province %><br />
+    <%= f.text_field :province %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :district %><br />
+    <%= f.text_field :district %>
+  </div>
+  <div class="field">
+    <%= f.label :postal %><br />
+    <%= f.number_field :postal %>
+  </div>
+  <div class="field">
+    <%= f.label :addr %><br />
+    <%= f.text_field :addr %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

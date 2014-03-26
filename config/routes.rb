@@ -1,5 +1,8 @@
 Altarf::Application.routes.draw do
 
+  resources :membership_addresses
+
+
   resources :orders
 
 
