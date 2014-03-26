@@ -21,6 +21,7 @@ class MembershipsController < ApplicationController
 		@memberships = Membership.all
 		respond_with @memberships do |format|
 			format.json { render :json => @memberships.to_json(:include => :addresses) }
+			format.xml { render :xml => @memberships.to_xml(:include => :addresses) }
 		end
 	end
 
@@ -30,6 +31,7 @@ class MembershipsController < ApplicationController
 		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
 		respond_with @membership do |format|
 			format.json { render :json => @membership.to_json(:include => :addresses) }
+			format.xml { render :xml => @membership.to_xml(:include => :addresses) }
 		end
 	end
 
