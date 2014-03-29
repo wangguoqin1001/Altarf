@@ -27,10 +27,10 @@ function login() {
 			//location.reload();
 			location.href = "/气之购/在线订购";
 		else if (parseInt (resp.status) == 2) {
-	//		$(".authenticationtd").load ('/home/login-page .simple_captcha');
+			$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E6%88%91%E7%9A%84%E5%B8%90%E6%88%B7 .simple_captcha');
 			$('#loginerr').html ("验证码错误");
 		} else {
-	//		$(".authenticationtd").load ('/home/login-page .simple_captcha');
+			$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E6%88%91%E7%9A%84%E5%B8%90%E6%88%B7 .simple_captcha');
 			$('#loginerr').html ("登录信息错误");
 		}
 	}).fail (function() {
