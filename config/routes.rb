@@ -8,6 +8,7 @@ Altarf::Application.routes.draw do
     collection do
       get :login
       post :login
+      get :getcode
     end
   end
 

@@ -28,7 +28,12 @@ class MembershipsController < ApplicationController
 
 	# GET /memberships/1
 	def show
-		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
+		if refinery_user?
+			@membership = Membership.find params[:id]
+		else
+			@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
+		end
+
 		respond_with @membership do |format|
 			format.json { render :json => @membership.to_json(:include => :addresses) }
 			format.xml { render :xml => @membership.to_xml(:include => :addresses) }
@@ -45,7 +50,12 @@ class MembershipsController < ApplicationController
 
 	# GET /memberships/1/edit
 	def edit
-		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
+		if refinery_user?
+			@membership = Membership.find params[:id]
+		else
+			@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
+		end
+
 		respond_with @membership
 	end
 
@@ -98,11 +108,16 @@ class MembershipsController < ApplicationController
 		result << cipher.final
 		pswd = Base64.strict_encode64 result
 
-		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
+		if refinery_user?
+			@membership = Membership.find params[:id]
+		else
+			@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
+		end
+
 		@membership.update_attributes params[:membership]
 		@membership.password = pswd.to_s
 
-		ret = OfficialService.updatememberinfo(params[:membership])
+		ret = OfficialService.updatememberinfo params[:membership]
 		if not ret["item"]["is_success"] == "True"
 			Rails.logger.info ret.to_json
 		end
@@ -114,12 +129,18 @@ class MembershipsController < ApplicationController
 
 	# DELETE /memberships/1
 	def destroy
-		@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
+		if refinery_user?
+			@membership = Membership.find params[:id]
+		else
+			@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
+		end
+
 		@membership.destroy
 		respond_with @membership
 	end
 
 
+	# GET /memberships/login
 	# POST /memberships/login
 	def login
 		@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
@@ -160,12 +181,33 @@ class MembershipsController < ApplicationController
 	end
 
 
+	# GET /memberships/getcode
+	def getcode
+		ret = OfficialService.createdynamiccheckcode params[:mobile]
+		if not ret["item"]["is_success"] == "True"
+			Rails.logger.info ret.to_json
+		end
+
+		respond_with ret, :location => nil and return
+	end
+
+
 	private
 
 	def checkcaptcha
 		if not simple_captcha_valid?
 			respond_with ret = { :status => 2 }, :location => nil, :status => :forbidden and return
 		end
+	end
+
+
+	def checkcode(mobile, code)
+		ret = OfficialService.checkcheckcode mobile, code
+		if not ret["item"]["is_success"] == "True"
+			Rails.logger.info ret.to_json
+		end
+
+		return ret["item"]["return"]
 	end
 
 end

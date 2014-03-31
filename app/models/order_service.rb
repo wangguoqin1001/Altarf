@@ -18,9 +18,33 @@ class OrderService
 
 
 	def self.getsingleorder(order)
-		self.query_order_service(:get_singe_order, {
-			"orderStr" => order.to_s,
+		order = {
+			:order_i_d => order[:id].to_s,
+			:pay_type => order[:payment].to_s,
+			:customer_code => order[:nickname].to_s,
+			:receiver => order[:username].to_s,
+			:mobile_phone => order[:mobile].to_s,
+			:tel_phone => order[:phone].to_s,
+			:province => order[:province].to_s,
+			:city => order[:city].to_s,
+			:district => order[:district].to_s,
+			:post_code => order[:postal].to_s,
+			:address_detail => order[:addr].to_s,
+			:is_ask_invoice => order[:need_invoice].to_s,
+			:invoice_header => order[:invoice_title].to_s,
+			:invoice_address => order[:billing].to_s,
+			:p_l_u => order[:productid].to_s,
+			:product_name => "",
+			:product_price => 0,
+			:product_numbers => order[:quantity].to_s,
+			:discount => order[:coupon].to_s,
+			:subtotal => 0,
+			:total => 0
+		}
+		ret = self.query_order_service(:get_singe_order, {
+			"orderStr" => order.to_xml(skip_instruct: true, skip_types: true, camelize: true, root: "order")
 		})
+		return Hash.from_xml(ret)
 	end
 
 

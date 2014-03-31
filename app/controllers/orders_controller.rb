@@ -69,6 +69,12 @@ class OrdersController < ApplicationController
 		end
 
 		@order.save
+
+		ret = OrderService.getsingleorder @order
+		if not ret["item"]["is_success"] == "True"
+			Rails.logger.info ret.to_json
+		end
+
 		@order[:status] = 1
 		respond_with @order
 	end

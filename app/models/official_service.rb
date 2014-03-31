@@ -36,8 +36,8 @@ class OfficialService
 	end
 
 
-	def self.checkdynamiccheckcode(mobile)
-		self.query_official_service(:check_dynamic_check_code, {
+	def self.createdynamiccheckcode(mobile)
+		self.query_official_service(:create_dynamic_check_code, {
 			"mobilephone" => mobile.to_s
 		})
 	end

@@ -103,7 +103,7 @@ class ApiMembershipsController < ApplicationController
 	end
 
 
-	# POST /memberships/login
+	# GET /memberships/login
 	def login
 		if not Admins.include? params[:nickname]
 			respond_with ret = { :status => 0, :description => "Not permitted" }, :location => nil, :status => :forbidden and return
