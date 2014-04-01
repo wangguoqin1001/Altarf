@@ -1,4 +1,31 @@
 // JavaScript Document
+function sendmobile() {
+	if ($('#mobile').val().length != 11) {
+		alert ("请输入您的手机号码");
+		return;
+	}
+	$.ajax ({
+		url:		"/membership/verifymobile.json",
+		xhrFields: { withCredentials: true },
+		type:		"POST",
+		dataType:	"json",
+		data:		{ mobile: $('#mobile').val() }
+	}).done (function (resp) {
+		if (parseInt (resp.status) == 1) {
+			if (resp.return_value != null)
+				$('#telidentification').val (resp.return_value);
+			else
+				alert ("验证码已发到您的手机，请注意查收");
+		} else {
+			if (resp.description != null)
+				alert (resp.description);
+			else
+				alert ("请求失败，请再检查一遍您的输入并稍候再试");
+		}
+	}).fail (function() {
+		alert ("请求发送失败，请稍候再试");
+	});
+}
 function login() {
 	if ($('#account').val().length == 0) {
 		alert ("请输入您的用户名");
@@ -124,6 +151,26 @@ function register() {
 	});
 }
 
+function loadUserData(){
+	$.ajax ({
+			url: "/memberships/1.json",
+			type: "GET",
+			dataType: "json",
+		}).done (function (resp) {
+			$('#address').val(resp.addr);
+			$('#city').val(resp.city);
+			$('#district').val(resp.district);
+			$('#mobile').val(resp.mobile);
+			$('#member_id').val(resp.id);
+			var telephone = resp.phone.split("-");
+			$('#telephone01').val(telephone[0]);
+			$('#telephone02').val(telephone[1]);
+			$('#telephone03').val(telephone[2]);
+			$('#postalcode').val(resp.postal);
+			$('#province').val(resp.province);
+			$('#consignee_name').val(resp.username);
+		});
+}
 
 function order() {
 	 if ($('#product_name').val().length == 0) {
@@ -177,7 +224,7 @@ function order() {
 	 } else if ($('#captcha').val().length == 0) {
 		alert ("请输入您的验证码");
 		return;
-	} 
+	}
 	
 	var order = { 
 		"addr" : $('#address').val(),

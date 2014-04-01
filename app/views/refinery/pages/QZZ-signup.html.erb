@@ -118,8 +118,9 @@
                
                 <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="content_txt08">验证码：</td>
-                              <td class="authenticationtd content_input08"><%= show_simple_captcha(:label => "human authentication", :placeholder => "input the characters") %></td>
+                              <td class="content_txt01">手机验证码：</td>
+                              <td id="phoneVerificatInputTd"><input type="text" id="phoneVerificatInput" class="content_select"></td>
+							  <td id="phoneVerificatBtnTd"><input type="button" id="phoneVerificatBtn" value="发送短信" onclick="sendmobile()"></td>
                      </tr>
                </table>
                <div class="content_tab"><input  type="button" value="注册" id="sign up" class="content_txt09" onclick="register();"></div>         

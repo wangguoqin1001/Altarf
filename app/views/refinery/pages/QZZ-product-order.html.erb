@@ -6,6 +6,7 @@
 		<% else %>
 		//	location.href = "/气之家/我的帐户";
 		<% end %>
+		$(document).ready (loadUserData);
 	</script>
 <% end %>
 <head>
@@ -15,6 +16,7 @@
 <link rel="stylesheet" href="flexslider.css" type="text/css" media="screen" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="jquery.flexslider-min.js"></script>
+<script src="/assets/21.ajax.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(window).load(function() {
   $('.flexslider').flexslider({
@@ -42,6 +44,30 @@ $(window).load(function() {
 	background-color:#e2c675;
 	width:10px;
 	height:50px;
+}
+#existedAddressTab th{
+	font-weight:100;
+}
+#existedAddressTab td{
+	text-align:center;
+}
+#receiverTh{
+	width:80px;
+}
+#districtTh{
+	width:160px;
+}
+#detailAddrTh{
+	width:160px;
+}
+#postalTh{
+	width:70px;
+}
+#phoneTh{
+	width:80px;
+}
+#chooseTh{
+	width:40px;
 }
 </style>
 <% end %>
@@ -185,12 +211,12 @@ $(window).load(function() {
 		   <table id="existedAddressTab">
 		<thead>
 			<tr>
-				<th>收货人</th>
-				<th>所在地区</th>
-				<th>具体地址</th>
-				<th>邮编</th>
-				<th>电话/手机</th>
-				<th>操作</th>
+				<th id="receiverTh">收货人</th>
+				<th id="districtTh">所在地区</th>
+				<th id="detailAddrTh">具体地址</th>
+				<th id="postalTh">邮编</th>
+				<th id="phoneTh">电话/手机</th>
+				<th id="chooseTh">操作</th>
 			</tr>
 		</thead>
 		<tfoot>
@@ -202,7 +228,7 @@ $(window).load(function() {
 				<td></td>
 				<td></td>
 				<td></td>
-				<td>选择</td>
+				<td><label style="cursor:pointer;">选择</label></td>
 			</tr>
 		</tbody>
 		</table>
