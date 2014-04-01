@@ -4,6 +4,7 @@ class AddressesController < ApplicationController
 
 	before_filter :load_membership
 
+
 	# GET /addresses
 	def index
 		@addresses = @membership.addresses.all
@@ -56,7 +57,7 @@ class AddressesController < ApplicationController
 		if refinery_user?
 			@membership = Membership.find params[:membership_id]
 		else
-			@membership = Membership.find :first, :conditions => { :nickname => params[:membership][:nickname] }
+			@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
 		end
 	end
 end
