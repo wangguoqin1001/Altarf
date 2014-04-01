@@ -49,20 +49,6 @@ class ApiMembershipsController < ApplicationController
 			respond_with ret = { :status => 0, :description => "User exist" }, :location => nil, :status => :forbidden and return
 		end
 
-		cipher = OpenSSL::Cipher::Cipher.new 'DES3'
-		cipher.encrypt
-		cipher.key = Altarf::Application.config.membership_secret_token
-
-		iv = Digest::SHA256.new
-		iv.update params[:membership][:nickname]
-		cipher.iv = iv.hexdigest
-
-		result = cipher.update params[:membership][:password]
-		result << cipher.final
-		pswd = Base64.strict_encode64 result
-
-		params[:membership][:password] = pswd.to_s
-
 		@membership = Membership.new params[:membership]
 		@membership.save
 
@@ -73,20 +59,6 @@ class ApiMembershipsController < ApplicationController
 
 	# PUT /memberships/1
 	def update
-		cipher = OpenSSL::Cipher::Cipher.new 'DES3'
-		cipher.encrypt
-		cipher.key = Altarf::Application.config.membership_secret_token
-
-		iv = Digest::SHA256.new
-		iv.update params[:membership][:nickname]
-		cipher.iv = iv.hexdigest
-
-		result = cipher.update params[:membership][:password]
-		result << cipher.final
-		pswd = Base64.strict_encode64 result
-
-		params[:membership][:password] = pswd.to_s
-
 		@membership = Membership.find params[:id]
 		@membership.update_attributes params[:membership]
 
