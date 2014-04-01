@@ -2,6 +2,7 @@ class OrderService
 	extend Savon::Model
 
 	client wsdl: "http://210.13.83.247/ECLQzzWSTest/QZZOrderService.asmx?WSDL",
+#	client wsdl: "http://eclinkapi.800ts.com.cn/QZZOrderService.asmx?WSDL",
 		namespace: "http://tempuri.org/",
 		convert_request_keys_to: :camelcase,
 		soap_version: 2,
@@ -20,28 +21,37 @@ class OrderService
 	def self.getsingleorder(order)
 		self.query_order_service :get_singe_order, {
 			"orderStr" => {
-				:order_i_d => order[:id].to_s,
-				:pay_type => order[:payment].to_s,
-				:customer_code => order[:nickname].to_s,
-				:receiver => order[:username].to_s,
-				:mobile_phone => order[:mobile].to_s,
-				:tel_phone => order[:phone].to_s,
-				:province => order[:province].to_s,
-				:city => order[:city].to_s,
-				:district => order[:district].to_s,
-				:post_code => order[:postal].to_s,
-				:address_detail => order[:addr].to_s,
-				:is_ask_invoice => order[:need_invoice].to_s,
-				:invoice_header => order[:invoice_title].to_s,
-				:invoice_address => order[:billing].to_s,
-				:p_l_u => "03010005",#order[:productid].to_s,
-				:product_name => "product",
-				:product_price => 500,
-				:product_numbers => order[:quantity].to_s,
-				:discount => order[:coupon].to_s,
-				:subtotal => 500,
-				:total => 500
-			}.to_xml(skip_instruct: true, skip_types: true, camelize: true, root: "order")
+				"OrderID" => order[:id].to_s,
+				"PayType" => order[:payment].to_s,
+				"Ship" => 0,
+				"CustomerCode" => order[:nickname].to_s,
+				"Receiver" => order[:username].to_s,
+				"MobilePhone" => order[:mobile].to_s,
+				"TelPhone" => order[:phone].to_s,
+				"Province" => order[:province].to_s,
+				"City" => order[:city].to_s,
+				"District" => order[:district].to_s,
+				"PostCode" => order[:postal].to_s,
+				"AddressDetail" => order[:addr].to_s,
+				"IsAskInvoice" => !order[:need_invoice].zero?,
+				"InvoiceHeader" => order[:invoice_title].to_s,
+				"InvoiceAddress" => order[:billing].to_s,
+				"PLU" => "03010005",#order[:productid].to_s,
+				"ProductName" => "product",
+				"ProductPrice" => 50,
+				"ProductNumbers" => order[:quantity].to_s,
+				"Discount" => order[:coupon].to_s,
+				"Subtotal" => 500,
+				"Total" => 500
+#				"OrderFrom" => nil,
+#				"OrderWay" => nil,
+#				"TransCompany" => nil,
+#				"SendTime" => nil,
+#				"BuyerRemark" => nil,
+#				"SellerRemark" => nil,
+#				"CustomerLevel" => nil,
+#				"InvoiceType" => nil,
+			}.to_json
 		}
 	end
 
