@@ -36,7 +36,7 @@ class MemberDiscount
 		method_result = (remote_method.to_s + "_result").to_sym
 
 		ret = send remote_method, message: remote_data
-		ret.body[method_response][method_result]
+		Hash.from_xml ret.body[method_response][method_result]
 	end
 
 end
