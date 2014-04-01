@@ -11,11 +11,13 @@ class AddressesController < ApplicationController
 		respond_with @addresses
 	end
 
+
 	# GET /addresses/1
 	def show
 		@address = @membership.addresses.find params[:id]
 		respond_with @address
 	end
+
 
 	# GET /addresses/new
 	def new
@@ -23,31 +25,35 @@ class AddressesController < ApplicationController
 		respond_with @address
 	end
 
+
 	# GET /addresses/1/edit
 	def edit
 		@address = @membership.addresses.find params[:id]
 		respond_with @address
 	end
 
+
 	# POST /addresses
 	def create
 		@address = @membership.addresses.new params[:address]
 		@address.save
-		respond_with @address
+		respond_with [@membership, @address]
 	end
+
 
 	# PUT /addresses/1
 	def update
 		@address = @membership.addresses.find params[:id]
 		@address.update_attributes params[:address]
-		respond_with @address
+		respond_with [@membership, @address]
 	end
+
 
 	# DELETE /addresses/1
 	def destroy
 		@address = @membership.addresses.find params[:id]
 		@address.destroy
-		respond_with @address
+		respond_with [@membership, @address]
 	end
 
 
