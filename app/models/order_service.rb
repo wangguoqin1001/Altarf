@@ -19,6 +19,8 @@ class OrderService
 
 
 	def self.getsingleorder(order)
+		@product = Product.find order[:productid].to_s
+
 		self.query_order_service :get_singe_order, {
 			"orderStr" => {
 				"OrderID" => order[:id].to_s,
@@ -36,13 +38,13 @@ class OrderService
 				"IsAskInvoice" => !order[:need_invoice].zero?,
 				"InvoiceHeader" => order[:invoice_title].to_s,
 				"InvoiceAddress" => order[:billing].to_s,
-				"PLU" => "03010005",#order[:productid].to_s,
-				"ProductName" => "product",
-				"ProductPrice" => 50,
+				"PLU" => order[:productid].to_s,
+				"ProductName" => @product["name"],
+				"ProductPrice" => @product["price"],
 				"ProductNumbers" => order[:quantity].to_s,
 				"Discount" => order[:coupon].to_s,
-				"Subtotal" => 500,
-				"Total" => 500
+				"Subtotal" => @product["price"].to_f * order[:quantity],
+				"Total" => @product["price"].to_f * order[:quantity]
 #				"OrderFrom" => nil,
 #				"OrderWay" => nil,
 #				"TransCompany" => nil,
