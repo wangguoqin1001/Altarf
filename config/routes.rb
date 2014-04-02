@@ -23,6 +23,9 @@ Altarf::Application.routes.draw do
   end
 
 
+  resources :products
+
+
   get '/robots.txt' => 'application#robots'
 
   get 'admin', :to => redirect('/refinery')
