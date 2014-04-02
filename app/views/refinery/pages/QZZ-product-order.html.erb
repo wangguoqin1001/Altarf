@@ -204,7 +204,7 @@ $(window).load(function() {
                       <tr>
                               <td  class="content_txt01">具体地址:</td>
                               <td  class="content_input01"><input id="address" type="text" class="content_input02"></td> 
-                              <td class="content_txt02"></td>                            
+                              <td class="content_txt02"><input type="checkbox" id="useNewAddrChk" name="useNewAddrChk" onclick="enableAddrInput()"></input><label for="useNewAddrChk">使用新地址</label></td>                            
                      </tr>
                </table>
 		<p style="padding-left:3%">已保存的有效地址:</p>
@@ -223,12 +223,12 @@ $(window).load(function() {
 		</tfoot>
 		<tbody>
 			</tr>
-				<td></td>
-				<td>省/市/区/县</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><label style="cursor:pointer;">选择</label></td>
+				<td id="receiverTd"></td>
+				<td id="districtTd">省/市/区/县</td>
+				<td id="detailAddrTd"></td>
+				<td id="postalTd"></td>
+				<td id="phoneTd"></td>
+				<td id="chooseTd"><label style="cursor:pointer;">选择</label></td>
 			</tr>
 		</tbody>
 		</table>
@@ -272,7 +272,7 @@ $(window).load(function() {
                      </tr>
                </table> 
                </div> 
-               <div class="content_tab"><input  type="button" value="确认订单" id="sign up" class="order_txt05" onclick="order();"></div>         
+               <div class="content_tab"><input  type="button" value="确认订单" id="sign up" class="order_txt05" onclick="createNewAddress();"></div>         
 </div>
 </div>
 

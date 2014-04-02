@@ -151,6 +151,48 @@ function register() {
 	});
 }
 
+function disableAddrInput(){
+	$('#address').prop('disabled', true);
+	$('#city').prop('disabled', true);
+	$('#district').prop('disabled', true);
+	$('#mobile').prop('disabled', true);
+	$('#member_id').prop('disabled', true);
+	$('#telephone01').prop('disabled', true);
+	$('#telephone02').prop('disabled', true);
+	$('#telephone03').prop('disabled', true);
+	$('#postalcode').prop('disabled', true);
+	$('#province').prop('disabled', true);
+	$('#consignee_name').prop('disabled', true);
+	
+}
+
+function enableAddrInput(){
+
+	$('#address').val("");
+	$('#city').val("");
+	$('#district').val("");
+	$('#mobile').val("");
+	$('#member_id').val("");
+	$('#telephone01').val("");
+	$('#telephone02').val("");
+	$('#telephone03').val("");
+	$('#postalcode').val("");
+	$('#province').val("");
+	$('#consignee_name').val("");
+	
+	$('#address').prop('disabled', false);
+	$('#city').prop('disabled', false);
+	$('#district').prop('disabled', false);
+	$('#mobile').prop('disabled', false);
+	$('#member_id').prop('disabled', false);
+	$('#telephone01').prop('disabled', false);
+	$('#telephone02').prop('disabled', false);
+	$('#telephone03').prop('disabled', false);
+	$('#postalcode').prop('disabled', false);
+	$('#province').prop('disabled', false);
+	$('#consignee_name').prop('disabled', false);
+}
+
 function loadUserData(){
 	$.ajax ({
 			url: "/memberships/1.json",
@@ -169,6 +211,56 @@ function loadUserData(){
 			$('#postalcode').val(resp.postal);
 			$('#province').val(resp.province);
 			$('#consignee_name').val(resp.username);
+			disableAddrInput();
+			
+			var n = resp.addresses.length;
+			
+			if ( typeof resp.addresses.length == "undefined"){
+				var address = resp.addresses.addr == null ? "" : resp.addresses.addr;
+				var province = resp.addresses.province == null ? "" : resp.addresses.province;	
+				var city = resp.addresses.city == null ? "" : resp.addresses.city;
+				var district = resp.addresses.district == null ? "" : resp.addresses.district;
+				var postal = resp.addresses.postal == null ? "" : resp.addresses.postal;
+				var username = resp.addresses.username == null ? "" : resp.addresses.username;				
+				var mobile = resp.addresses.mobile == null ? "" : resp.addresses.mobile;
+				if ($('#existedAddressTab tbody tr:first-child #receiverTd').length)
+					$('#existedAddressTab tbody tr:first-child #receiverTd').html (username);
+				if ($('#existedAddressTab tbody tr:first-child #districtTd').length)
+					$('#existedAddressTab tbody tr:first-child #districtTd').html (province+"/"+city+"/"+district);
+				if ($('#existedAddressTab tbody tr:first-child #detailAddrTd').length)
+					$('#existedAddressTab tbody tr:first-child #detailAddrTd').html (address);
+				if ($('#existedAddressTab tbody tr:first-child #postalTd').length)
+					$('#existedAddressTab tbody tr:first-child #postalTd').html (postal);
+				if ($('#existedAddressTab tbody tr:first-child #phoneTd').length)
+					$('#existedAddressTab tbody tr:first-child #phoneTd').html (mobile);
+				return;			
+			}
+			
+			for(var i=0;i<n;i++){
+				
+				if(i != 0 )
+					$( "#existedAddressTab tbody tr:first-child").clone(true).prependTo( "#existedAddressTab" );
+					
+					var address = resp.addresses[i].addr == null ? "" : resp.addresses[i].addr;
+					var province = resp.addresses[i].province == null ? "" : resp.addresses[i].province;	
+					var city = resp.addresses[i].city == null ? "" : resp.addresses[i].city;
+					var district = resp.addresses[i].district == null ? "" : resp.addresses[i].district;
+					var postal = resp.addresses[i].postal == null ? "" : resp.addresses[i].postal;
+					var username = resp.addresses[i].username == null ? "" : resp.addresses[i].username;				
+					var mobile = resp.addresses[i].mobile == null ? "" : resp.addresses[i].mobile;
+					
+					if ($('#existedAddressTab tbody tr:first-child #receiverTd').length)
+						$('#existedAddressTab tbody tr:first-child #receiverTd').html (username);
+					if ($('#existedAddressTab tbody tr:first-child #districtTd').length)
+						$('#existedAddressTab tbody tr:first-child #districtTd').html (province+"/"+city+"/"+district);
+					if ($('#existedAddressTab tbody tr:first-child #detailAddrTd').length)
+						$('#existedAddressTab tbody tr:first-child #detailAddrTd').html (address);
+					if ($('#existedAddressTab tbody tr:first-child #postalTd').length)
+						$('#existedAddressTab tbody tr:first-child #postalTd').html (postal);
+					if ($('#existedAddressTab tbody tr:first-child #phoneTd').length)
+						$('#existedAddressTab tbody tr:first-child #phoneTd').html (mobile);	
+			}
+		
 		});
 }
 
@@ -225,7 +317,10 @@ function order() {
 		alert ("请输入您的验证码");
 		return;
 	}
-	
+	if($('useNewAddrChk').attr('checked')==true)
+	{
+		createNewAddress();
+	}
 	var order = { 
 		"addr" : $('#address').val(),
 		"billing" : $('#invoice_address').val(),
@@ -242,7 +337,7 @@ function order() {
 		"province" : $('#province').val(),
 		"quantity" : $('#num').val(),
 		"username" : $('#consignee_name').val()
-	}
+	};
 	
 	$.ajax ({
 		url:		"/orders.json",
@@ -265,6 +360,29 @@ function order() {
 	}).fail (function() {
 		alert ("请求发送失败，请稍候再试");
 	});
+}
+function createNewAddress(){
+	var addrDetails = {
+			"addr" : $('#address').val(),
+			"city" : $('#city').val(),
+			"district" : $('#district').val(),
+			"mobile" : $('#mobile').val(),
+			"phone" : $('#telephone01').val() + '-' + $('#telephone02').val() + '-' + $('#telephone03').val(),
+			"postal" :  $('#postalcode').val(),
+			"province" : $('#province').val(),
+			"username" : $('#consignee_name').val()
+		};
+		$.ajax ({
+		url:		"/memberships/1/addresses.json",
+		type:		"POST",
+		dataType:	"json",
+		data:		{
+			address : addrDetails,
+		}
+		}).done (function (resp) {
+			//alert(addrDetails);
+		
+		});
 }
 
 function gotobuy(){
