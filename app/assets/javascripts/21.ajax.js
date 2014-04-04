@@ -172,7 +172,6 @@ function enableAddrInput(){
 	$('#city').val("");
 	$('#district').val("");
 	$('#mobile').val("");
-	$('#member_id').val("");
 	$('#telephone01').val("");
 	$('#telephone02').val("");
 	$('#telephone03').val("");
@@ -184,16 +183,20 @@ function enableAddrInput(){
 	$('#city').prop('disabled', false);
 	$('#district').prop('disabled', false);
 	$('#mobile').prop('disabled', false);
-	$('#member_id').prop('disabled', false);
 	$('#telephone01').prop('disabled', false);
 	$('#telephone02').prop('disabled', false);
 	$('#telephone03').prop('disabled', false);
 	$('#postalcode').prop('disabled', false);
 	$('#province').prop('disabled', false);
 	$('#consignee_name').prop('disabled', false);
+	
+	$('#saveNewAddressDiv').css("display","block"); 
 }
 
 function loadUserData(){
+	//TODO
+	var productid = window.location.search.split('=');
+	alert(productid[1]);
 	$.ajax ({
 			url: "/memberships/1.json",
 			type: "GET",
@@ -260,7 +263,29 @@ function loadUserData(){
 					if ($('#existedAddressTab tbody tr:first-child #phoneTd').length)
 						$('#existedAddressTab tbody tr:first-child #phoneTd').html (mobile);	
 			}
-		
+			$('.selectLabel').click(function(){
+				var par = $(this).parent().parent();
+				var consignee = par.find ('#receiverTd').html();
+				var mobile = par.find ('#phoneTd').html();
+				var district = par.find ('#districtTd').html();
+				var address = par.find ('#detailAddrTd').html();
+				var postal = par.find ('#postalTd').html();
+				
+				var districtArray=district.split('/');
+				$('#address').val(address);
+				$('#province').val(districtArray[0]);
+				$('#city').val(districtArray[1]);
+				$('#district').val(districtArray[2]);
+				$('#mobile').val(mobile);
+				$('#postalcode').val(postal);
+				$('#consignee_name').val(consignee);
+				
+				$('#telephone01').val("");
+				$('#telephone02').val("");
+				$('#telephone03').val("");
+				disableAddrInput();
+			});
+			
 		});
 }
 
@@ -317,10 +342,7 @@ function order() {
 		alert ("请输入您的验证码");
 		return;
 	}
-	if($('useNewAddrChk').attr('checked')==true)
-	{
-		createNewAddress();
-	}
+	
 	var order = { 
 		"addr" : $('#address').val(),
 		"billing" : $('#invoice_address').val(),
@@ -362,6 +384,7 @@ function order() {
 	});
 }
 function createNewAddress(){
+
 	var addrDetails = {
 			"addr" : $('#address').val(),
 			"city" : $('#city').val(),
@@ -380,11 +403,10 @@ function createNewAddress(){
 			address : addrDetails,
 		}
 		}).done (function (resp) {
-			//alert(addrDetails);
-		
+			alert("保存地址成功");
+			$('#saveNewAddressDiv').css("display","none");
+		}).fail (function() {
+		alert ("请求发送失败，请稍候再试");
 		});
-}
-
-function gotobuy(){
-	location.href = "/气之购/预订单"
+		
 }
