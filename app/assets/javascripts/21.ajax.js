@@ -194,9 +194,6 @@ function enableAddrInput(){
 }
 
 function loadUserData(){
-	//TODO
-	var productid = window.location.search.split('=');
-	alert(productid[1]);
 	$.ajax ({
 			url: "/memberships/1.json",
 			type: "GET",
@@ -384,7 +381,7 @@ function order() {
 	});
 }
 function createNewAddress(){
-
+	//TODO check input
 	var addrDetails = {
 			"addr" : $('#address').val(),
 			"city" : $('#city').val(),
@@ -409,4 +406,11 @@ function createNewAddress(){
 		alert ("请求发送失败，请稍候再试");
 		});
 		
+}
+function gotoby(){
+	$("#saveinformation").click (function(){
+	var sku = $(this).parent().find ('#productid').val();
+	location.href = "/气之购/预订单?sku="+sku;
+	}
+);
 }

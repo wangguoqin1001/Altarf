@@ -17,12 +17,7 @@ $(function(){
 		$(".pop").hide();
 	})
 })
-$(document).ready ($("#saveinformation").click (function(){
-	var sku = $(this).parent().find ('#productid').val();
-	alert(sku);
-	location.href = "/气之购/预订单?productid="+sku;
-	}
-));
+$(document).ready (gotoby);
 $(function(){
 	$(".img-blank-pro1-inside-3").mouseover(function(){		
 		$(".pop2").fadeToggle('fast');	
@@ -127,7 +122,7 @@ $(window).load(function() {
     </div>
     <div class="button-product2">
                      <input id="saveinformation"   type="button" value="添加到购物车">
-					 <input id="productid" type="hidden" value="0011">
+					 <input id="productid" type="hidden" value="0001">
      </div>
      
 </div>
@@ -186,6 +181,7 @@ $(window).load(function() {
     </div>
     <div class="button-product2">
                      <input id="saveinformation"   type="submit" value="添加到购物车"  >
+					 <input id="productid" type="hidden" value="0002">
      </div>
 </div>
 <div class="coffe-slim-blank-pro2">
