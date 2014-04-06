@@ -1,31 +1,4 @@
 // JavaScript Document
-function sendmobile() {
-	if ($('#mobile').val().length != 11) {
-		alert ("请输入您的手机号码");
-		return;
-	}
-	$.ajax ({
-		url:		"/membership/verifymobile.json",
-		xhrFields: { withCredentials: true },
-		type:		"POST",
-		dataType:	"json",
-		data:		{ mobile: $('#mobile').val() }
-	}).done (function (resp) {
-		if (parseInt (resp.status) == 1) {
-			if (resp.return_value != null)
-				$('#telidentification').val (resp.return_value);
-			else
-				alert ("验证码已发到您的手机，请注意查收");
-		} else {
-			if (resp.description != null)
-				alert (resp.description);
-			else
-				alert ("请求失败，请再检查一遍您的输入并稍候再试");
-		}
-	}).fail (function() {
-		alert ("请求发送失败，请稍候再试");
-	});
-}
 function login() {
 	if ($('#account').val().length == 0) {
 		alert ("请输入您的用户名");
@@ -413,4 +386,68 @@ function gotoby(){
 	location.href = "/气之购/预订单?sku="+sku;
 	}
 );
+}
+
+function displayTotalPrice()
+{
+	if($("#num").val()!=""){
+		var totalPrice = $('#price').val()*$("#num").val();
+		//alert(totalPrice);
+		$("#Sub-total").val(totalPrice);
+		$('#total').val('');
+	}
+}
+
+function whetherUseDiscount()
+{
+var discountSelecter = document.getElementById("discount"); //selectid
+var index = discountSelecter.selectedIndex; // 选中索引
+	if(index==1)
+	{
+		$('#coupon').prop('disabled', true);
+		if($("#Sub-total").val()!="")
+		{
+			$("#total").val($("#Sub-total").val());
+		}
+		else
+		{
+			$("#total").val("");
+		}
+	}
+	else
+	{
+		$('#coupon').prop('disabled', false);
+		$("#total").val("");
+	}
+}
+
+function whetherNeedInvoice()
+{
+	var invoiceSelecter = document.getElementById("invoice"); //selectid
+	var index = invoiceSelecter.selectedIndex; // 选中索引
+	if(index==1)
+	{
+		$('#invoice_type').prop('disabled', true);
+		$('#invoice_head').prop('disabled', true);
+		$('#invoice_address').prop('disabled', true);
+	}
+	else
+	{
+		$('#invoice_type').prop('disabled', false);
+		$('#invoice_head').prop('disabled', false);
+		$('#invoice_address').prop('disabled', false);
+	}
+}
+function personalOrCompany()
+{
+	var invoiceTypeSelecter = document.getElementById("invoice_type"); //selectid
+	var index = invoiceTypeSelecter.selectedIndex; // 选中索引
+	if(index==0)
+	{
+		$('#invoice_head').prop('disabled', true);
+	}
+	else
+	{
+		$('#invoice_head').prop('disabled', false);
+	}
 }

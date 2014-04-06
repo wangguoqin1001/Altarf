@@ -18,12 +18,14 @@
 			if( sku[1] == ret.products[i].variants[0].sku)
 			{
 				var name = ret.products[i].name == null ? "" : ret.products[i].name;
-				alert(name);
+				//alert(name);
 				$('#product_name').val(name);
 				$('#product_name').prop('disabled', true);
 				var price = ret.products[i].variants[0].price == null ? "" : ret.products[i].variants[0].price;
 				$('#price').val(price);
 				$('#price').prop('disabled', true);
+				$('#Sub-total').prop('disabled', true);
+				$('#total').prop('disabled', true);
 				return;
 			}
 		}
@@ -115,7 +117,7 @@ $(window).load(function() {
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td class="order_txt01">订购数量：</td>
-                              <td class="order_input01"><input id="num" type="text" class="content_input02"></td>
+                              <td class="order_input01"><input id="num" type="number" class="content_input02" onblur="displayTotalPrice()"></td>
                      </tr>
                </table>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
@@ -134,7 +136,7 @@ $(window).load(function() {
                       <tr>
                               <td class="order_txt01">是否有折扣：</td>
                               <td >
-                              <select class="order_select" id="discount" name="discount"  >
+                              <select class="order_select" id="discount" name="discount" onchange="whetherUseDiscount()">
                               <option value="1">是</option>
                               <option value="2">否</option>
                               </select>
@@ -250,7 +252,7 @@ $(window).load(function() {
 		<tbody>
 			</tr>
 				<td id="receiverTd"></td>
-				<td id="districtTd">省/市/区/县</td>
+				<td id="districtTd"></td>
 				<td id="detailAddrTd"></td>
 				<td id="postalTd"></td>
 				<td id="phoneTd"></td>
@@ -261,7 +263,9 @@ $(window).load(function() {
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td  class="content_txt01">是否需要发票:</td>
-                              <td  class="order_input02"><input id="invoice" type="text" class="content_input02"></td> 
+                              <td><select class="order_select" id="invoice" name="invoice" onchange="whetherNeedInvoice()">
+                              <option value="1">是</option>
+                              <option value="2">否</option></select></td> 
                               <td  class="order_txt03"></td>                            
                      </tr>
                </table>
@@ -269,7 +273,7 @@ $(window).load(function() {
                       <tr>
                               <td class="content_txt01">发票类型：</td>
                               <td >
-                              <select class="order_select02" id="invoice_type" name="invoice_type"  >
+                              <select class="order_select02" id="invoice_type" name="invoice_type" onchange="personalOrCompany()">
                               <option value="1">个人</option>
                               <option value="2">单位</option>
                               </select>
@@ -280,7 +284,7 @@ $(window).load(function() {
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td  class="content_txt01">发票抬头:</td>
-                              <td  class="content_input01"><input id="invoice_head" type="text" class="content_input02"></td> 
+                              <td  class="content_input01"><input id="invoice_head" type="text" disabled="disabled" class="content_input02"></td> 
                               <td class="content_txt02"></td>                            
                      </tr>
                </table>
