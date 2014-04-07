@@ -186,8 +186,10 @@ function loadUserData(){
 			$('#consignee_name').val(resp.username);
 			disableAddrInput();
 			
+			if($("#existedAddressTab tbody").find("tr").length>1){
+			$("#existedAddressTab tbody tr:not(:eq(0))").remove(); //保留table表的第一行
+			}
 			var n = resp.addresses.length;
-			
 			if ( typeof resp.addresses.length == "undefined"){
 				var address = resp.addresses.addr == null ? "" : resp.addresses.addr;
 				var province = resp.addresses.province == null ? "" : resp.addresses.province;	
@@ -233,6 +235,7 @@ function loadUserData(){
 					if ($('#existedAddressTab tbody tr:first-child #phoneTd').length)
 						$('#existedAddressTab tbody tr:first-child #phoneTd').html (mobile);	
 			}
+			
 			$('.selectLabel').click(function(){
 				var par = $(this).parent().parent();
 				var consignee = par.find ('#receiverTd').html();
@@ -260,20 +263,15 @@ function loadUserData(){
 }
 
 function order() {
-	 if ($('#product_name').val().length == 0) {
-		alert ("请输入商品名称");
-		return;
-	 }else if ($('#num').val().length == 0) {
+	if ($('#num').val().length == 0) {
 		alert ("请输入您的订购数量");
 		return;
 	 } else if ($('#price').val().length == 0) {
 		alert ("请输入单价");
 		return;
-	 } else if ($('#coupon').val().length == 0) {
+	 } else if ($('#coupon').val().length == 0&&document.getElementById("discount").selectedIndex==0)
+	 {
 		alert ("请输入优惠折扣");
-		return;
-	 } else if ($('#member_id').val().length == 0) {
-		alert ("请输入您的会员编号");
 		return;
 	 } else if ($('#consignee_name').val().length == 0) {
 		alert ("请输入收件人姓名");
@@ -281,10 +279,11 @@ function order() {
 	 } else if ($('#mobile').val().length == 0) {
 		alert ("请输入收件人手机号码");
 		return;
-	 } else if ($('#telephone03').val().length == 0) {
+	 } /*else if ($('#telephone03').val().length == 0) {
 		alert ("请输入收件人固话号码");
 		return;
-	 } else if ($('#province').val().length == 0){
+	 }*/
+	else if ($('#province').val().length == 0){
 	 	alert ("请输入收件人的省");
 		return;
 	 } else if ($('#city').val().length == 0){
@@ -299,20 +298,20 @@ function order() {
 	 } else if ($('#address').val().length == 0){
 	 	alert ("请输入收件人的具体地址");
 		return;
-	 } else if ($('#invoice').val().length == 0){
-	 	alert ("请输入是否需要发票");
-		return;
-	 } else if ($('#invoice_head').val().length == 0){
+	 }else if(document.getElementById("invoice").selectedIndex==0){
+	 if ($('#invoice_head').val().length == 0&& document.getElementById("invoice_type").selectedIndex==1){
 	 	alert ("请输入发票抬头");
 		return;
-	 } else if ($('#invoice_address').val().length == 0){
+		}
+	  if ($('#invoice_address').val().length == 0){
 	 	alert ("请输入发票地址");
 		return;
-	 } else if ($('#captcha').val().length == 0) {
+		} 
+	 }else if ($('#captcha').val().length == 0) {
 		alert ("请输入您的验证码");
 		return;
 	}
-	
+	alert($('#invoice').val());
 	var order = { 
 		"addr" : $('#address').val(),
 		"billing" : $('#invoice_address').val(),
@@ -354,7 +353,28 @@ function order() {
 	});
 }
 function createNewAddress(){
-	//TODO check input
+	if ($('#consignee_name').val().length == 0) {
+		alert ("请输入收件人姓名");
+		return;
+	 } else if ($('#mobile').val().length == 0) {
+		alert ("请输入收件人手机号码");
+		return;
+	}else if ($('#province').val().length == 0){
+	 	alert ("请输入收件人的省");
+		return;
+	 } else if ($('#city').val().length == 0){
+	 	alert ("请输入收件人的市");
+		return;
+	 } else if ($('#district').val().length == 0){
+	 	alert ("请输入收件人的县/区");
+		return;
+	}else if ($('#postalcode').val().length == 0){
+	 	alert ("请输入收件人的邮编");
+		return;
+	 } else if ($('#address').val().length == 0){
+	 	alert ("请输入收件人的具体地址");
+		return;
+	 }
 	var addrDetails = {
 			"addr" : $('#address').val(),
 			"city" : $('#city').val(),
@@ -374,7 +394,9 @@ function createNewAddress(){
 		}
 		}).done (function (resp) {
 			alert("保存地址成功");
+			$('#useNewAddrChk').attr("checked",false);
 			$('#saveNewAddressDiv').css("display","none");
+			loadUserData();
 		}).fail (function() {
 		alert ("请求发送失败，请稍候再试");
 		});
@@ -384,8 +406,7 @@ function gotoby(){
 	$(".saveinformation").click (function(){
 	var sku = $(this).parent().find ('#productid').val();
 	location.href = "/气之购/预订单?sku="+sku;
-	}
-);
+	});
 }
 
 function displayTotalPrice()
@@ -436,6 +457,19 @@ function whetherNeedInvoice()
 		$('#invoice_type').prop('disabled', false);
 		$('#invoice_head').prop('disabled', false);
 		$('#invoice_address').prop('disabled', false);
+	}
+}
+function checkDiscount()
+{
+	if(document.getElementById("discount").selectedIndex==0)
+	{
+		if($('#coupon').val()!='')
+		{
+			$('#total').val($('#Sub-total').val());
+		}else
+		{
+			$('#total').val('');
+		}
 	}
 }
 function personalOrCompany()

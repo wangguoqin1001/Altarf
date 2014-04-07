@@ -17,7 +17,7 @@ $(function(){
 		$(".pop").hide();
 	})
 })
-
+$(document).ready (gotoby);
 $(function(){
 	$(".img-blank-pro1-inside-3").mouseover(function(){		
 		$(".pop2").fadeToggle('fast');	
@@ -48,13 +48,6 @@ $(window).load(function() {
     slideshowSpeed: 5003, 
   });
 });
-</script>
-<script type="text/javascript">
-	$(".saveinformation").click (function()
-	{
-		var sku = $(this).parent().find ('#productid').val();
-		location.href = "/气之购/预订单?sku="+sku;
-	});
 </script>
 <% end %>
 </head>
@@ -106,7 +99,8 @@ $(window).load(function() {
             <li>
                 <img src="/assets/product3-1.png" class="img-blank-pro1-inside-1">
             </li>
-            <li>
+            <!--
+			<li>
                 <img src="/assets/product3-2.png" class="img-blank-pro1-inside-1">
             </li>
             <li>
@@ -115,6 +109,7 @@ $(window).load(function() {
             <li>
                 <img src="/assets/product3-4.png" class="img-blank-pro1-inside-1">
             </li>
+			-->
 
         </ul>
    </div> 
@@ -123,7 +118,7 @@ $(window).load(function() {
     <div class="number-text-1">
     	<ul>
    			 <li>60袋/120片</li>
-             <li>2688元</li>
+             <li>2,580.00元</li>
     	</ul> 
     </div>
     <div class="button-product2">
@@ -164,17 +159,17 @@ $(window).load(function() {
     	<div class="flexslider2" style="width:188px;height:184px;margin-left:70px;margin-top:10px;">
         <ul class="slides">
             <li>
-                <img src="/assets/product4-1.jpg" class="img-blank-pro1-inside-3">
+                <img src="/assets/product4-1.png" class="img-blank-pro1-inside-3">
+            </li>
+            <!--<li>
+                <img src="/assets/product4-2.png" class="img-blank-pro1-inside-3">
             </li>
             <li>
-                <img src="/assets/product4-2.jpg" class="img-blank-pro1-inside-3">
+                <img src="/assets/product4-3.png" class="img-blank-pro1-inside-3">
             </li>
             <li>
-                <img src="/assets/product4-3.jpg" class="img-blank-pro1-inside-3">
-            </li>
-            <li>
-                <img src="/assets/product4-4.jpg" class="img-blank-pro1-inside-3">
-            </li>
+                <img src="/assets/product4-4.png" class="img-blank-pro1-inside-3">
+            </li>-->
 
         </ul>
     </div>
@@ -182,7 +177,7 @@ $(window).load(function() {
     <div class="number-text-2">
     	<ul>
    			 <li>2盒装/120袋/240片 </li>
-             <li>5576元</li>
+             <li>5,260.00元</li>
     	</ul> 
     </div>
     <div class="button-product2">
