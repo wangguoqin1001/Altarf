@@ -17,7 +17,7 @@ $(function(){
 		$(".pop").hide();
 	})
 })
-$(document).ready (gotoby);
+
 $(function(){
 	$(".img-blank-pro1-inside-3").mouseover(function(){		
 		$(".pop2").fadeToggle('fast');	
@@ -49,7 +49,13 @@ $(window).load(function() {
   });
 });
 </script>
-
+<script type="text/javascript">
+	$(".saveinformation").click (function()
+	{
+		var sku = $(this).parent().find ('#productid').val();
+		location.href = "/气之购/预订单?sku="+sku;
+	});
+</script>
 <% end %>
 </head>
 
@@ -121,7 +127,7 @@ $(window).load(function() {
     	</ul> 
     </div>
     <div class="button-product2">
-                     <input id="saveinformation"   type="button" value="添加到购物车">
+                     <input class="saveinformation"   type="button" value="添加到购物车">
 					 <input id="productid" type="hidden" value="0001">
      </div>
      
@@ -180,7 +186,7 @@ $(window).load(function() {
     	</ul> 
     </div>
     <div class="button-product2">
-                     <input id="saveinformation"   type="submit" value="添加到购物车"  >
+                     <input class="saveinformation"   type="submit" value="添加到购物车"  >
 					 <input id="productid" type="hidden" value="0002">
      </div>
 </div>

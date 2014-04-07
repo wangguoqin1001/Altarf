@@ -381,7 +381,7 @@ function createNewAddress(){
 		
 }
 function gotoby(){
-	$("#saveinformation").click (function(){
+	$(".saveinformation").click (function(){
 	var sku = $(this).parent().find ('#productid').val();
 	location.href = "/气之购/预订单?sku="+sku;
 	}

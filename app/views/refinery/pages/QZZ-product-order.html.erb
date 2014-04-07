@@ -17,6 +17,9 @@
 		{
 			if( sku[1] == ret.products[i].variants[0].sku)
 			{
+				var product_url = ret.products[i].variants[0].images[0] == null? "" :ret.products[i].variants[0].images[0].product_url
+				if ($('#product_pic').length)
+					$('#product_pic').prop ('src','https://libra.qzzstore.com'+product_url); 
 				var name = ret.products[i].name == null ? "" : ret.products[i].name;
 				//alert(name);
 				$('#product_name').val(name);
@@ -151,7 +154,7 @@ $(window).load(function() {
                </table>
          </div>
          <div class="order_right">
-              <img src="/assets/product3.png" width="75%" height="75%">
+              <img id="product_pic" src="/assets/product3.png" width="75%" height="75%">
            </div>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
@@ -305,7 +308,7 @@ $(window).load(function() {
                <div class="content_tab"><input  type="button" value="确认订单" id="sign up" class="order_txt05" onclick="order();"></div>         
 </div>
 </div>
-
+<!--
 <div class="box">
       <div class="box-lefttop">
             搭配购买
@@ -331,7 +334,7 @@ $(window).load(function() {
             <input id="add" type="submit" value="添加到购物车">
         </div>
   </div>
-
+-->
 
 <% content_for :javascripts do %>
 <script>
