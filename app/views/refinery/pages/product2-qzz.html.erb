@@ -17,7 +17,6 @@ $(function(){
 		$(".pop").hide();
 	})
 })
-$(document).ready (gotoby);
 $(function(){
 	$(".img-blank-pro1-inside-3").mouseover(function(){		
 		$(".pop2").fadeToggle('fast');	
@@ -27,6 +26,13 @@ $(function(){
 		$(".pop2").hide();
 	})
 })
+</script>
+
+<script type="text/javascript">
+	$(".saveinformation").click (function(){
+	var sku = $(this).parent().find ('#productid').val();
+	location.href = "/气之购/预订单?sku="+sku;
+	});
 </script>
 
 <script type="text/javascript">

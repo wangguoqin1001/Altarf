@@ -186,9 +186,9 @@ function loadUserData(){
 			$('#consignee_name').val(resp.username);
 			disableAddrInput();
 			
-			if($("#existedAddressTab tbody").find("tr").length>1){
+			/*if($("#existedAddressTab tbody").find("tr").length>1){
 			$("#existedAddressTab tbody tr:not(:eq(0))").remove(); //保留table表的第一行
-			}
+			}*/
 			var n = resp.addresses.length;
 			if ( typeof resp.addresses.length == "undefined"){
 				var address = resp.addresses.addr == null ? "" : resp.addresses.addr;
@@ -311,7 +311,6 @@ function order() {
 		alert ("请输入您的验证码");
 		return;
 	}
-	alert($('#invoice').val());
 	var order = { 
 		"addr" : $('#address').val(),
 		"billing" : $('#invoice_address').val(),
@@ -396,7 +395,25 @@ function createNewAddress(){
 			alert("保存地址成功");
 			$('#useNewAddrChk').attr("checked",false);
 			$('#saveNewAddressDiv').css("display","none");
-			loadUserData();
+			//数据插到表格中
+			if($('#existedAddressTab tbody tr:first-child #receiverTd').html()=='')
+			{
+				$('#existedAddressTab tbody tr:first-child #receiverTd').html ($('#consignee_name').val());
+				$('#existedAddressTab tbody tr:first-child #districtTd').html ($('#province').val()+'/'+$('#city').val()+'/'+$('#district').val());
+				$('#existedAddressTab tbody tr:first-child #detailAddrTd').html ($('#address').val());
+				$('#existedAddressTab tbody tr:first-child #postalTd').html ($('#postalcode').val());
+				$('#existedAddressTab tbody tr:first-child #phoneTd').html ($('#mobile').val());
+			}
+			else
+			{
+				$( "#existedAddressTab tbody tr:first-child").clone(true).prependTo( "#existedAddressTab" );
+				$('#existedAddressTab tbody tr:first-child #receiverTd').html ($('#consignee_name').val());
+				$('#existedAddressTab tbody tr:first-child #districtTd').html ($('#province').val()+'/'+$('#city').val()+'/'+$('#district').val());
+				$('#existedAddressTab tbody tr:first-child #detailAddrTd').html ($('#address').val());
+				$('#existedAddressTab tbody tr:first-child #postalTd').html ($('#postalcode').val());
+				$('#existedAddressTab tbody tr:first-child #phoneTd').html ($('#mobile').val());
+			}
+		//	loadUserData();
 		}).fail (function() {
 		alert ("请求发送失败，请稍候再试");
 		});
