@@ -42,7 +42,7 @@ class OrderService
 				"ProductName" => @product["name"],
 				"ProductPrice" => @product["price"],
 				"ProductNumbers" => order[:quantity].to_s,
-				"Discount" => order[:coupon].to_s,
+				"Discount" => "0", #order[:coupon].to_s,
 				"Subtotal" => @product["price"].to_f * order[:quantity],
 				"Total" => @product["price"].to_f * order[:quantity]
 #				"OrderFrom" => nil,

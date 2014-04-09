@@ -1,0 +1,19 @@
+/* CSS Document */
+
+html{
+	background: url(/assets/backgroud-pic-1366.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
+ 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.backgroud-pic-1366.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='backgroud-pic-1366.png', sizingMethod='scale')";
+}
+
+#logo{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+

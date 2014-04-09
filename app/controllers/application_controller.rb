@@ -8,4 +8,9 @@ class ApplicationController < ActionController::Base
       render :text => robots, :layout => false, :content_type => "text/plain"
   end
 
+
+  def homepage
+      render "homepage.html", :layout => false
+  end
+
 end

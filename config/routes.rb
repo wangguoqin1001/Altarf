@@ -28,6 +28,8 @@ Altarf::Application.routes.draw do
 
   get '/robots.txt' => 'application#robots'
 
+  get '/' => 'application#homepage'
+
   get 'admin', :to => redirect('/refinery')
 
   # This line mounts Refinery's routes at the root of your application.
