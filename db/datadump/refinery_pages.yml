@@ -25,7 +25,7 @@ refinery_pages:
     - 
     - home
     - false
-    - /
+    - ''
     - ^/$
     - false
     - false
@@ -36,7 +36,7 @@ refinery_pages:
     - home
     - application
     - 2013-08-23 09:27:08.000000000 Z
-    - 2013-08-24 16:30:42.000000000 Z
+    - 2014-04-08 14:52:07.000000000 Z
   - - 2
     - 1
     - 
