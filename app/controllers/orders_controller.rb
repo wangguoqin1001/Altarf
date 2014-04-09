@@ -58,7 +58,7 @@ class OrdersController < ApplicationController
 
 	# POST /orders
 	def create
-		@order = Order.new params[:order]
+		@order = Order.new params[:order].except(:discount)
 
 		if session[:nickname]
 			@order[:nickname] = session[:nickname]
@@ -69,6 +69,8 @@ class OrdersController < ApplicationController
 		end
 
 		@order.save
+
+		@order[:discount] = params[:order][:discount]
 
 		ret = OrderService.getsingleorder @order
 		if not ret["item"]["is_success"] == "True"

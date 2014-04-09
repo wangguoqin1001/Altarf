@@ -317,6 +317,7 @@ function order() {
 		"city" : $('#city').val(),
 		"coupon" : $('#coupon').val(),
 		"district" : $('#district').val(),
+		"discount" : $('#discount').val(),
 		"invoice_title" : $('#invoice_head').val(),
 		"mobile" : $('#mobile').val(),
 		"need_invoice" : $('#invoice').val(),

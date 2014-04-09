@@ -11,6 +11,9 @@ class OrderService
 	operations :get_order_list, :get_singe_order, :updata_order
 
 
+	Payments = { 1 => "CASH_ON_DELIVERY", 2 => "ALIPAY", 3 => "UNIONPAY" }
+
+
 	def self.getorderlist(orders)
 		self.query_order_service :get_order_list, {
 			"ordersStr" => orders.to_s
@@ -24,7 +27,7 @@ class OrderService
 		self.query_order_service :get_singe_order, {
 			"orderStr" => {
 				"OrderID" => order[:id].to_s,
-				"PayType" => order[:payment].to_s,
+				"PayType" => Payments[order[:payment].to_i],
 				"Ship" => 0,
 				"CustomerCode" => order[:nickname].to_s,
 				"Receiver" => order[:username].to_s,
@@ -35,7 +38,8 @@ class OrderService
 				"District" => order[:district].to_s,
 				"PostCode" => order[:postal].to_s,
 				"AddressDetail" => order[:addr].to_s,
-				"IsAskInvoice" => !order[:need_invoice].zero?,
+				"IsAskInvoice" => !order[:need_invoice].to_i.zero?,
+				"IsDiscount" => !order[:discount].to_i.zero?,
 				"InvoiceHeader" => order[:invoice_title].to_s,
 				"InvoiceAddress" => order[:billing].to_s,
 				"PLU" => order[:productid].to_s,
@@ -43,8 +47,8 @@ class OrderService
 				"ProductPrice" => @product["price"],
 				"ProductNumbers" => order[:quantity].to_s,
 				"Discount" => "0", #order[:coupon].to_s,
-				"Subtotal" => @product["price"].to_f * order[:quantity],
-				"Total" => @product["price"].to_f * order[:quantity]
+				"Subtotal" => @product["price"].to_f * order[:quantity].to_i,
+				"Total" => @product["price"].to_f * order[:quantity].to_i
 #				"OrderFrom" => nil,
 #				"OrderWay" => nil,
 #				"TransCompany" => nil,
