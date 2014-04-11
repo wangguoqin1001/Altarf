@@ -27,7 +27,7 @@ $(document).ready (function() {
 //			}).done (function (resp) {
 
 //				var $html = $(String(resp));
-//				var new_content =  $html.find (contentSelector).html();
+//				var new_content = $html.find (contentSelector).html();
 
 //				$(contentSelector).html (new_content);
 //				$(contentSelector).animate ({opacity: 1, visibility: "visible"});
@@ -49,6 +49,7 @@ $(document).ready (function() {
 					$(contentSelector).animate ({opacity: 1, visibility: "visible"});
 					document.title = $html.filter ('title').text();
 				}
+
 			});
 
 			return false;
