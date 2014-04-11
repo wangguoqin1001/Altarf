@@ -29,13 +29,6 @@ $(function(){
 </script>
 
 <script type="text/javascript">
-	$(".saveinformation").click (function(){
-	var sku = $(this).parent().find ('#productid').val();
-	location.href = "/气之购/预订单?sku="+sku;
-	});
-</script>
-
-<script type="text/javascript">
 $(window).load(function() {
   $('.flexslider1').flexslider({
     animation: "fade",
@@ -55,6 +48,16 @@ $(window).load(function() {
   });
 });
 </script>
+
+<!--<script type="text/javascript">
+	//$(document).ready(gotoby);
+	$(document).ready(function() {
+	$(".saveinformation").click (function(){
+	var sku = $(this).parent().find ('#productid').val();
+	location.href = "/气之购/预订单?sku="+sku;
+	});
+	});
+</script>-->
 <% end %>
 </head>
 
@@ -128,11 +131,12 @@ $(window).load(function() {
     	</ul> 
     </div>
     <div class="button-product2">
-                     <input class="saveinformation"   type="button" value="添加到购物车">
+                     <input class="saveinformation"   type="button" value="下预订单">
 					 <input id="productid" type="hidden" value="0001">
      </div>
      
 </div>
+
 <div class="coffe-slim-blank-pro1">
 </div>
 
@@ -187,7 +191,7 @@ $(window).load(function() {
     	</ul> 
     </div>
     <div class="button-product2">
-                     <input class="saveinformation"   type="submit" value="添加到购物车"  >
+                     <input class="saveinformation"   type="button" value="下预订单"  >
 					 <input id="productid" type="hidden" value="0002">
      </div>
 </div>

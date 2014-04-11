@@ -7,7 +7,7 @@
 			location.href = "/气之家/我的帐户";
 		<% end %>
 	</script>
-	<script type="text/javascript">
+	<!--<script type="text/javascript">
 	function spreeproduct(data){
 		var ret = JSON.parse(data);
 		var sku = window.location.search.split('=');
@@ -32,10 +32,12 @@
 			}
 		}
 	}
-	</script>
-	<script type="text/javascript" src="https://libra.qzzstore.com/api/products.json?token=82d3b3abd87deefaa99f2dbd8d46df7f5d2cc5a01bde47d0&callback=spreeproduct"></script>
+	</script>-->
+	<!--<script type="text/javascript" src="https://libra.qzzstore.com/api/products.json?token=82d3b3abd87deefaa99f2dbd8d46df7f5d2cc5a01bde47d0&callback=spreeproduct"></script>-->
 	<script type="text/javascript">
-		$(document).ready (loadUserData);
+	$(document).ready(function(){
+		loadUserData();
+		getProductData();});
 	</script>
 <% end %>
 <head>

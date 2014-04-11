@@ -165,7 +165,30 @@ function enableAddrInput(){
 	
 	$('#saveNewAddressDiv').css("display","block"); 
 }
-
+function getProductData(){
+	$.ajax ({
+			url: "/products/"+window.location.search.split('=')[1]+".json",
+			type: "GET",
+			dataType: "json",
+	}).done (function (resp)
+	{
+	var product_url = resp.images[0] == null? "" :resp.images[0].urls.product;
+				if ($('#product_pic').length)
+					$('#product_pic').prop ('src','https://libra.qzzstore.com'+product_url); 
+				var name = resp.name == null ? "" : resp.name;
+				$('#product_name').val(name);
+				$('#product_name').prop('disabled', true);
+				var price = resp.price == null ? "" : resp.price;
+				$('#price').val(price);
+				$('#price').prop('disabled', true);
+				$('#Sub-total').prop('disabled', true);
+				$('#total').prop('disabled', true);
+				$("#num").val('1');
+				displayTotalPrice();
+	}).fail (function() {
+		alert ("产品信息获取失败，请稍候再试");
+	});
+}
 function loadUserData(){
 	$.ajax ({
 			url: "/memberships/1.json",
@@ -259,7 +282,9 @@ function loadUserData(){
 				disableAddrInput();
 			});
 			
-		});
+		}).fail (function() {
+		alert ("用户信息获取失败，请稍候再试");
+	});;
 }
 
 function order() {
@@ -324,7 +349,7 @@ function order() {
 		"payment" : $('#payment option:selected').val(),
 		"phone" : $('#telephone01').val() + '-' + $('#telephone02').val() + '-' + $('#telephone03').val(),
 		"postal" : $('#postalcode').val(),
-		"productid" : $('#product_name').val(),
+		"productid" : window.location.search.split('=')[1],
 		"province" : $('#province').val(),
 		"quantity" : $('#num').val(),
 		"username" : $('#consignee_name').val()
@@ -414,18 +439,18 @@ function createNewAddress(){
 				$('#existedAddressTab tbody tr:first-child #postalTd').html ($('#postalcode').val());
 				$('#existedAddressTab tbody tr:first-child #phoneTd').html ($('#mobile').val());
 			}
-		//	loadUserData();
 		}).fail (function() {
 		alert ("请求发送失败，请稍候再试");
 		});
 		
 }
-function gotoby(){
+
+//function gotoby(){
 	$(".saveinformation").click (function(){
-	var sku = $(this).parent().find ('#productid').val();
-	location.href = "/气之购/预订单?sku="+sku;
+		var sku = $(this).parent().find ('#productid').val();
+		location.href = "/气之购/预订单?sku="+sku;
 	});
-}
+//}
 
 function displayTotalPrice()
 {
