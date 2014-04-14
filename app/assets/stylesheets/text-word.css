@@ -737,7 +737,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	width:78%;
 	height:50%;
 	margin-top:150px;
-	margin-left:8.7%;
+	margin-left:5%;
 }
 
 .large-inside-text ul{	
@@ -773,8 +773,19 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-webkit-transform: scale(1)skew(24deg);
 	position:absolute;
 	left:-23%;
-	top:33%;
+	top:30%;
 	width:38%;
+}
+.large-inside-img1{
+	transform: scale(1) skew(24deg);
+	-o-transform: scale(1) skew(24deg);
+	-moz-transform: scale(1)skew(24deg);
+	-webkit-transform: scale(1)skew(24deg);
+	position:absolute;
+	left:-23%;
+	top:24%;
+	width:38%;
+	height:40%;
 }
 .little-text-double{
 
@@ -862,7 +873,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	width:94%;
 	height:50%;
 	margin-top:170px;
-	margin-left:-5%;
+	margin-left:0%;
 }
 .large-inside-text-1 ul{	
 	list-style-type:none;
