@@ -783,9 +783,9 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-webkit-transform: scale(1)skew(24deg);
 	position:absolute;
 	left:-23%;
-	top:24%;
+	top:25%;
 	width:38%;
-	height:40%;
+	height:33%;
 }
 .little-text-double{
 
@@ -797,7 +797,7 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	width:200px;
 	height:30px;
 	left:84%;
-	top:23%;
+	top:24%;
 	background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
 	background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
 	background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
