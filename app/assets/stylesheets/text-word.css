@@ -776,17 +776,6 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	top:30%;
 	width:38%;
 }
-.large-inside-img1{
-	transform: scale(1) skew(24deg);
-	-o-transform: scale(1) skew(24deg);
-	-moz-transform: scale(1)skew(24deg);
-	-webkit-transform: scale(1)skew(24deg);
-	position:absolute;
-	left:-23%;
-	top:25%;
-	width:38%;
-	height:33%;
-}
 .little-text-double{
 
 	transform: scale(0.8) skew(0deg);
