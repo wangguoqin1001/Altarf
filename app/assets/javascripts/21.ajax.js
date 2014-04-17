@@ -35,6 +35,7 @@ function login() {
 		}
 	}).fail (function() {
 		$('#loginerr').html ("请求发送失败，请稍候再试");
+		$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E6%88%91%E7%9A%84%E5%B8%90%E6%88%B7 .simple_captcha');
 	});
 }
 
@@ -372,9 +373,11 @@ function order() {
 				alert (resp.description);
 			else
 				alert ("请求失败，请再检查一遍您的输入并稍候再试");
+			$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E9%A2%84%E8%AE%A2%E5%8D%95 .simple_captcha');
 		}
 	}).fail (function() {
 		alert ("请求发送失败，请稍候再试");
+		$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E9%A2%84%E8%AE%A2%E5%8D%95 .simple_captcha');
 	});
 }
 function createNewAddress(){
