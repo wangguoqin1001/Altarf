@@ -23,7 +23,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails', '~> 2.0.0'
+gem 'jquery-rails', '~> 2.3.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -41,10 +41,10 @@ gem 'jquery-rails', '~> 2.0.0'
 # gem 'debugger'
 
 # Refinery CMS
-gem 'refinerycms', '~> 2.0.0', :git => 'git://github.com/refinery/refinerycms.git', :branch => '2-0-stable'
+gem 'refinerycms', '~> 2.1.0'
 
 # Specify additional Refinery CMS Extensions here (all optional):
-gem 'refinerycms-i18n', '~> 2.0.0'
+gem 'refinerycms-i18n', '~> 2.1.0'
 #  gem 'refinerycms-blog', '~> 2.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'

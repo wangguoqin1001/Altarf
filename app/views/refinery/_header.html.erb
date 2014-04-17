@@ -31,10 +31,7 @@ $(function(){
 							<img src="/assets/two-dimension.jpg" id="wechatimg" style="margin-top:10px;display: none;"/>
 				</div>
 				<div style="width: 100%;background: #222222;height:18px;">
-						 <%= render(:partial => "/refinery/menu", :locals => {
-			    	           :dom_id => 'menu',
-			    	           :css => 'menu'
-			    	      }) %>
+					<%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
 				</div>
 		</div>
 	</div>
