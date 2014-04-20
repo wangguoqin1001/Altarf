@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
 
 	# GET /products/picture
 	def picture
-		@picture = Product.picture URI.escape(params[:uri])
+		@picture = Product.picture URI.escape(params.delete(:uri) + "?#{params.except(:action, :controller).to_query}")
 		send_data @picture, :type => 'image/png', :filename => 'picture.png', :disposition => 'inline'
 	end
 end
