@@ -19,4 +19,9 @@ class Product
 			}
 		})["variants"][0]
 	end
+
+
+	def self.picture(uri)
+		get("/spree/products/" + uri, { :verify => false})
+	end
 end

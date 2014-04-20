@@ -1,3 +1,5 @@
+require 'uri'
+
 class ProductsController < ApplicationController
 
 	respond_to :json, :xml, :html
@@ -14,5 +16,12 @@ class ProductsController < ApplicationController
 	def show
 		@product = Product.find params[:id]
 		respond_with @product
+	end
+
+
+	# GET /products/picture
+	def picture
+		@picture = Product.picture URI.escape(params[:uri])
+		send_data @picture, :type => 'image/png', :filename => 'picture.png', :disposition => 'inline'
 	end
 end

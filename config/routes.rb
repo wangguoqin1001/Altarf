@@ -25,7 +25,11 @@ Altarf::Application.routes.draw do
   end
 
 
-  resources :products
+  resources :products do
+    collection do
+      get :picture
+    end
+  end
 
 
   get '/robots.txt' => 'application#robots'
