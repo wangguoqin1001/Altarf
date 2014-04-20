@@ -27,7 +27,7 @@ Altarf::Application.routes.draw do
 
   resources :products do
     collection do
-      get :picture
+      get 'picture/*uri', :to => 'products#picture', :uri => /.*/
     end
   end
 
