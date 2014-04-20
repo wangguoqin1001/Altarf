@@ -175,7 +175,7 @@ function getProductData(){
 	{
 	var product_url = resp.images[0] == null? "" :resp.images[0].urls.product;
 				if ($('#product_pic').length)
-					$('#product_pic').prop ('src','https://libra.qzzstore.com'+product_url); 
+					$('#product_pic').prop ('src',product_url.replace('/spree/products/','/products/picture?uri='));
 				var name = resp.name == null ? "" : resp.name;
 				$('#product_name').val(name);
 				$('#product_name').prop('disabled', true);
