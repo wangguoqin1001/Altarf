@@ -84,7 +84,7 @@ class MembershipsController < ApplicationController
 		@membership.password = pswd.to_s
 		@membership.save
 
-		ret = OfficialService.addmemberinfo(params[:membership])
+		ret = OfficialService.addmemberinfo @membership
 		if not ret["item"]["is_success"] == "True"
 			Rails.logger.info ret.to_json
 		end
@@ -184,6 +184,30 @@ class MembershipsController < ApplicationController
 	# GET /memberships/getcode
 	def getcode
 		ret = OfficialService.createdynamiccheckcode params[:mobile]
+		if not ret["item"]["is_success"] == "True"
+			Rails.logger.info ret.to_json
+		end
+
+		respond_with ret, :location => nil and return
+	end
+
+
+	# GET /memberships/memberlevel
+	def memberlevel
+		ret = MemberDiscount.memberlevel params[:user]
+		respond_with ret, :location => nil and return
+		if not ret["item"]["is_success"] == "True"
+			Rails.logger.info ret.to_json
+		end
+
+		respond_with ret, :location => nil and return
+	end
+
+
+	# GET /memberships/memberdiscount
+	def memberdiscount
+		ret = MemberDiscount.memberdiscount params[:user]
+		respond_with ret, :location => nil and return
 		if not ret["item"]["is_success"] == "True"
 			Rails.logger.info ret.to_json
 		end
