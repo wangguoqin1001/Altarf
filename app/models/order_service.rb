@@ -6,7 +6,8 @@ class OrderService
 		namespace: "http://tempuri.org/",
 		convert_request_keys_to: :camelcase,
 		soap_version: 2,
-		logger: Rails.logger
+		logger: Rails.logger,
+		log: true
 
 	operations :get_order_list, :get_singe_order, :updata_order
 

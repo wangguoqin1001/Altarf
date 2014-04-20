@@ -9,6 +9,8 @@ Altarf::Application.routes.draw do
       get :login
       post :login
       get :getcode
+      get :memberlevel
+      get :memberdiscount
     end
   end
 
