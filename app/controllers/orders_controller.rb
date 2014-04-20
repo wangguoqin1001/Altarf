@@ -77,6 +77,8 @@ class OrdersController < ApplicationController
 			Rails.logger.info ret.to_json
 		end
 
+		session[:orderid] = @order[:id]
+
 		@order[:status] = 1
 		respond_with @order
 	end
