@@ -17,7 +17,7 @@ class OfficialService
 		self.query_official_service :add_member_info, {
 			"customerStr" => {
 				"CustomerID" => membership[:nickname].to_s,
-				"CustomerCode" => membership[:id].to_s,
+				"CustomerCode" => membership[:nickname].to_s,
 				"MobilePhone" => membership[:mobile].to_s,
 				"Sex" => membership[:gender].to_s,
 				"CustomerName" => membership[:username].to_s,
