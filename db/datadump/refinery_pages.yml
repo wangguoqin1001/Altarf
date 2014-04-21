@@ -26,7 +26,7 @@ refinery_pages:
     - home
     - false
     - ''
-    - ^/$
+    - "^/$"
     - false
     - false
     - false
@@ -43,7 +43,7 @@ refinery_pages:
     - page-not-found
     - false
     - 
-    - ^/404$
+    - "^/404$"
     - false
     - false
     - false
@@ -74,15 +74,15 @@ refinery_pages:
   - - 4
     - 
     - 
-    - 气之品
+    - "气之品"
     - true
     - ''
     - 
     - true
     - false
     - false
-    - 21
-    - 48
+    - 23
+    - 50
     - 0
     - QZZ-Q10
     - application
@@ -91,7 +91,7 @@ refinery_pages:
   - - 5
     - 
     - 
-    - 气之源
+    - "气之源"
     - true
     - ''
     - 
@@ -99,7 +99,7 @@ refinery_pages:
     - false
     - false
     - 7
-    - 20
+    - 22
     - 0
     - 
     - 
@@ -108,15 +108,15 @@ refinery_pages:
   - - 6
     - 
     - 
-    - 气之家
+    - "气之家"
     - true
     - ''
     - 
     - true
     - false
     - false
-    - 49
-    - 60
+    - 51
+    - 62
     - 0
     - 
     - 
@@ -125,15 +125,15 @@ refinery_pages:
   - - 7
     - 
     - 
-    - 气之购
+    - "气之购"
     - true
     - ''
     - 
     - true
     - false
     - false
-    - 61
-    - 74
+    - 63
+    - 78
     - 0
     - 
     - 
@@ -142,15 +142,15 @@ refinery_pages:
   - - 8
     - 
     - 
-    - 气之道
+    - "气之道"
     - true
     - ''
     - 
     - true
     - false
     - false
-    - 75
-    - 84
+    - 79
+    - 88
     - 0
     - 
     - 
@@ -159,15 +159,15 @@ refinery_pages:
   - - 9
     - 
     - 
-    - 气之达
+    - "气之达"
     - true
     - ''
     - 
     - true
     - false
     - false
-    - 85
-    - 92
+    - 89
+    - 96
     - 0
     - home
     - application
@@ -176,15 +176,15 @@ refinery_pages:
   - - 10
     - 6
     - 
-    - 会员须知
+    - "会员须知"
     - true
-    - /%E6%B0%94%E4%B9%8B%E5%AE%B6/%E4%BC%9A%E5%91%98%E6%9D%83%E7%9B%8A
+    - "/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E4%BC%9A%E5%91%98%E6%9D%83%E7%9B%8A"
     - 
     - true
     - false
     - false
-    - 50
-    - 51
+    - 52
+    - 53
     - 1
     - home
     - application
@@ -193,24 +193,7 @@ refinery_pages:
   - - 11
     - 6
     - 
-    - 会员权益
-    - true
-    - ''
-    - 
-    - true
-    - false
-    - false
-    - 52
-    - 53
-    - 1
-    - member-right
-    - application
-    - 2013-08-23 18:06:58.000000000 Z
-    - 2013-08-25 15:44:31.000000000 Z
-  - - 12
-    - 6
-    - 
-    - 我的帐户
+    - "会员权益"
     - true
     - ''
     - 
@@ -220,6 +203,23 @@ refinery_pages:
     - 54
     - 55
     - 1
+    - member-right
+    - application
+    - 2013-08-23 18:06:58.000000000 Z
+    - 2013-08-25 15:44:31.000000000 Z
+  - - 12
+    - 6
+    - 
+    - "我的帐户"
+    - true
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 56
+    - 57
+    - 1
     - QZZ-login
     - application
     - 2013-08-23 18:07:11.000000000 Z
@@ -227,9 +227,9 @@ refinery_pages:
   - - 13
     - 5
     - 
-    - 关于气之站
+    - "关于气之站"
     - true
-    - /%E6%B0%94%E4%B9%8B%E6%BA%90/%E6%B0%94%E4%B9%8B%E7%AB%99%E4%BB%8B%E7%BB%8D
+    - "/%E6%B0%94%E4%B9%8B%E6%BA%90/%E6%B0%94%E4%B9%8B%E7%AB%99%E4%BB%8B%E7%BB%8D"
     - 
     - true
     - false
@@ -244,7 +244,7 @@ refinery_pages:
   - - 14
     - 5
     - 
-    - 气之站介绍
+    - "气之站介绍"
     - true
     - ''
     - 
@@ -261,7 +261,7 @@ refinery_pages:
   - - 15
     - 5
     - 
-    - 元气愿景
+    - "元气愿景"
     - true
     - ''
     - 
@@ -278,7 +278,7 @@ refinery_pages:
   - - 17
     - 5
     - 
-    - 新闻站
+    - "新闻站"
     - true
     - ''
     - 
@@ -295,15 +295,15 @@ refinery_pages:
   - - 18
     - 7
     - 
-    - 在线购买
+    - "在线购买"
     - true
-    - /%E6%B0%94%E4%B9%8B%E8%B4%AD/%E5%9C%A8%E7%BA%BF%E8%AE%A2%E8%B4%AD
+    - "/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E5%9C%A8%E7%BA%BF%E8%AE%A2%E8%B4%AD"
     - 
     - true
     - false
     - false
-    - 62
-    - 63
+    - 64
+    - 65
     - 1
     - home
     - application
@@ -312,15 +312,15 @@ refinery_pages:
   - - 19
     - 6
     - 
-    - 注册成功
+    - "注册成功"
     - false
     - ''
     - 
     - true
     - false
     - false
-    - 56
-    - 57
+    - 58
+    - 59
     - 1
     - order-success
     - application
@@ -329,7 +329,7 @@ refinery_pages:
   - - 20
     - 5
     - 
-    - 新闻文案
+    - "新闻文案"
     - false
     - ''
     - 
@@ -346,25 +346,8 @@ refinery_pages:
   - - 21
     - 7
     - 
-    - 日纯牌灵芝片
+    - "日纯牌灵芝片"
     - true
-    - ''
-    - 
-    - true
-    - false
-    - false
-    - 66
-    - 67
-    - 1
-    - product2-qzz
-    - application
-    - 2013-08-25 16:33:58.000000000 Z
-    - 2013-11-21 07:04:16.000000000 Z
-  - - 22
-    - 7
-    - 
-    - 立即注册
-    - false
     - ''
     - 
     - true
@@ -373,14 +356,14 @@ refinery_pages:
     - 68
     - 69
     - 1
-    - plzregister
+    - product2-qzz
     - application
-    - 2013-08-25 16:53:24.000000000 Z
-    - 2013-11-14 14:13:23.000000000 Z
-  - - 23
+    - 2013-08-25 16:33:58.000000000 Z
+    - 2013-11-21 07:04:16.000000000 Z
+  - - 22
     - 7
     - 
-    - 订单生成
+    - "立即注册"
     - false
     - ''
     - 
@@ -390,31 +373,14 @@ refinery_pages:
     - 70
     - 71
     - 1
-    - mdorder
+    - plzregister
     - application
-    - 2013-08-25 17:21:47.000000000 Z
-    - 2013-11-14 14:14:21.000000000 Z
-  - - 24
-    - 6
-    - 
-    - 初次登录
-    - false
-    - ''
-    - 
-    - true
-    - false
-    - false
-    - 58
-    - 59
-    - 1
-    - QZZ-signup
-    - application
-    - 2013-08-25 18:27:10.000000000 Z
-    - 2013-11-14 14:17:30.000000000 Z
-  - - 25
+    - 2013-08-25 16:53:24.000000000 Z
+    - 2013-11-14 14:13:23.000000000 Z
+  - - 23
     - 7
     - 
-    - 预订单
+    - "订单生成"
     - false
     - ''
     - 
@@ -424,6 +390,40 @@ refinery_pages:
     - 72
     - 73
     - 1
+    - mdorder
+    - application
+    - 2013-08-25 17:21:47.000000000 Z
+    - 2013-11-14 14:14:21.000000000 Z
+  - - 24
+    - 6
+    - 
+    - "初次登录"
+    - false
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 60
+    - 61
+    - 1
+    - QZZ-signup
+    - application
+    - 2013-08-25 18:27:10.000000000 Z
+    - 2013-11-14 14:17:30.000000000 Z
+  - - 25
+    - 7
+    - 
+    - "预订单"
+    - false
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 74
+    - 75
+    - 1
     - QZZ-product-order
     - application
     - 2013-08-25 19:23:32.000000000 Z
@@ -431,15 +431,15 @@ refinery_pages:
   - - 26
     - 7
     - 
-    - 在线订购
+    - "在线订购"
     - true
     - ''
     - 
     - true
     - false
     - false
-    - 64
-    - 65
+    - 66
+    - 67
     - 1
     - product1-qzz
     - application
@@ -448,15 +448,15 @@ refinery_pages:
   - - 27
     - 8
     - 
-    - 什么是现代养生
+    - "什么是现代养生"
     - true
     - ''
     - 
     - true
     - false
     - false
-    - 78
-    - 79
+    - 82
+    - 83
     - 1
     - life-better
     - application
@@ -465,15 +465,15 @@ refinery_pages:
   - - 28
     - 8
     - 
-    - 现代养生的新趋势
+    - "现代养生的新趋势"
     - true
     - ''
     - 
     - true
     - false
     - false
-    - 80
-    - 81
+    - 84
+    - 85
     - 1
     - life-better-now
     - application
@@ -482,15 +482,15 @@ refinery_pages:
   - - 29
     - 8
     - 
-    - 现代养生
+    - "现代养生"
     - true
-    - /%E6%B0%94%E4%B9%8B%E9%81%93/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%B0%E4%BB%A3%E5%85%BB%E7%94%9F
+    - "/%E6%B0%94%E4%B9%8B%E9%81%93/%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%B0%E4%BB%A3%E5%85%BB%E7%94%9F"
     - 
     - true
     - false
     - false
-    - 76
-    - 77
+    - 80
+    - 81
     - 1
     - home
     - application
@@ -499,15 +499,15 @@ refinery_pages:
   - - 30
     - 9
     - 
-    - 公司信息
+    - "公司信息"
     - true
     - ''
     - 
     - true
     - false
     - false
-    - 88
-    - 89
+    - 92
+    - 93
     - 1
     - company-info
     - application
@@ -516,15 +516,15 @@ refinery_pages:
   - - 31
     - 9
     - 
-    - 工作机会
+    - "工作机会"
     - true
     - ''
     - 
     - true
     - false
     - false
-    - 90
-    - 91
+    - 94
+    - 95
     - 1
     - company-info-people
     - application
@@ -533,15 +533,15 @@ refinery_pages:
   - - 32
     - 9
     - 
-    - 联系我们
+    - "联系我们"
     - true
-    - /%E6%B0%94%E4%B9%8B%E8%BE%BE/%E5%85%AC%E5%8F%B8%E4%BF%A1%E6%81%AF
+    - "/%E6%B0%94%E4%B9%8B%E8%BE%BE/%E5%85%AC%E5%8F%B8%E4%BF%A1%E6%81%AF"
     - 
     - true
     - false
     - false
-    - 86
-    - 87
+    - 90
+    - 91
     - 1
     - home
     - application
@@ -550,15 +550,15 @@ refinery_pages:
   - - 33
     - 4
     - 
-    - 产品介绍
+    - "产品介绍"
     - true
-    - /%E6%B0%94%E4%B9%8B%E5%93%81/%E6%97%A5%E7%BA%AF%E7%89%8C%E7%81%B5%E8%8A%9D%E7%89%87
+    - "/%E6%B0%94%E4%B9%8B%E5%93%81/%E6%97%A5%E7%BA%AF%E7%89%8C%E7%81%B5%E8%8A%9D%E7%89%87"
     - 
     - true
     - false
     - false
-    - 22
-    - 23
+    - 24
+    - 25
     - 1
     - home
     - application
@@ -567,25 +567,8 @@ refinery_pages:
   - - 34
     - 4
     - 
-    - 日纯牌灵芝片
+    - "日纯牌灵芝片"
     - true
-    - ''
-    - 
-    - true
-    - false
-    - false
-    - 24
-    - 25
-    - 1
-    - QZZ-lingzhi
-    - application
-    - 2013-08-30 07:47:23.000000000 Z
-    - 2013-11-18 09:43:22.000000000 Z
-  - - 35
-    - 4
-    - 
-    - 诺惠牌辅酶q10
-    - false
     - ''
     - 
     - true
@@ -594,6 +577,23 @@ refinery_pages:
     - 26
     - 27
     - 1
+    - QZZ-lingzhi
+    - application
+    - 2013-08-30 07:47:23.000000000 Z
+    - 2013-11-18 09:43:22.000000000 Z
+  - - 35
+    - 4
+    - 
+    - "诺惠牌辅酶q10"
+    - false
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 28
+    - 29
+    - 1
     - QZZ-Q10
     - application
     - 2013-08-30 07:56:42.000000000 Z
@@ -601,7 +601,7 @@ refinery_pages:
   - - 37
     - 5
     - 
-    - 品牌故事
+    - "品牌故事"
     - true
     - ''
     - 
@@ -625,8 +625,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 28
-    - 29
+    - 30
+    - 31
     - 1
     - QZZ-lignzhi-buy
     - application
@@ -642,8 +642,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 30
-    - 31
+    - 32
+    - 33
     - 1
     - QZZ-lingzhi-introduce
     - application
@@ -659,8 +659,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 32
-    - 33
+    - 34
+    - 35
     - 1
     - QZZ-lingzhi-making
     - application
@@ -676,8 +676,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 34
-    - 35
+    - 36
+    - 37
     - 1
     - QZZ-Q10-AQUANOVA
     - application
@@ -693,8 +693,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 36
-    - 37
+    - 38
+    - 39
     - 1
     - QZZ-Q10-buy
     - application
@@ -710,8 +710,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 38
-    - 39
+    - 40
+    - 41
     - 1
     - QZZ-Q10-introduce
     - application
@@ -727,8 +727,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 40
-    - 41
+    - 42
+    - 43
     - 1
     - QZZ-lingzhi-reputation
     - application
@@ -737,15 +737,15 @@ refinery_pages:
   - - 45
     - 8
     - 
-    - 特别医嘱
+    - "特别医嘱"
     - false
     - ''
     - 
     - true
     - false
     - false
-    - 82
-    - 83
+    - 86
+    - 87
     - 1
     - tips
     - application
@@ -761,8 +761,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 42
-    - 43
+    - 44
+    - 45
     - 1
     - QZZ-Q10-introduce
     - application
@@ -778,8 +778,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 44
-    - 45
+    - 46
+    - 47
     - 1
     - QZZ-Q10-introduce
     - application
@@ -795,10 +795,44 @@ refinery_pages:
     - true
     - false
     - false
-    - 46
-    - 47
+    - 48
+    - 49
     - 1
     - QZZ-Q10-introduce
     - application
     - 2013-12-02 15:55:28.000000000 Z
     - 2013-12-02 15:56:42.000000000 Z
+  - - 49
+    - 7
+    - 
+    - "历史订单"
+    - false
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 76
+    - 77
+    - 1
+    - QZZ-history
+    - application
+    - 2014-04-21 14:44:16.000000000 Z
+    - 2014-04-21 14:44:16.000000000 Z
+  - - 50
+    - 5
+    - 
+    - qzzvideo
+    - false
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 20
+    - 21
+    - 1
+    - QZZ-video
+    - application
+    - 2014-04-21 14:47:24.000000000 Z
+    - 2014-04-21 14:59:11.000000000 Z
