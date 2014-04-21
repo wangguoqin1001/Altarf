@@ -11,9 +11,10 @@ class MemberDiscount
 	operations :member_discount, :membr_level
 
 
-	def self.memberdiscount(usercode)
+	def self.memberdiscount(usercode, amount)
 		self.query_member_discount(:member_discount, {
-			"userCode" => usercode.to_s
+			"userCode" => usercode.to_s,
+			"totalAmount" => amount.to_s
 		})
 	end
 
@@ -32,7 +33,7 @@ class MemberDiscount
 		method_result = (remote_method.to_s + "_result").to_sym
 
 		ret = send remote_method, message: remote_data
-		Hash.from_xml ret.body[method_response][method_result]
+		ret.body[method_response][method_result]
 	end
 
 end
