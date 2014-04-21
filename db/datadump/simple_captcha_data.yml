@@ -1,0 +1,15 @@
+
+---
+simple_captcha_data:
+  columns:
+  - id
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - 53
+    - 7efc0d198828e35b29dedb047c98c95427361a4d
+    - QYJFC
+    - 2014-04-21 17:25:37.000000000 Z
+    - 2014-04-21 18:47:19.000000000 Z
