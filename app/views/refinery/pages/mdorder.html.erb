@@ -13,8 +13,8 @@
 	<div class="plzregister">
 			<div style="font-size:24px">恭喜！订单已经生成！</div>
 			<div style="font-size:24px；margin-top:10px;">订单编号为：<%= session[:orderid] %></div>
-			<input id="imregister" type="button" value="查看订单" class="buttonclass"/>
-			<input id="buyprocess" type="button" value="继续购物" style="margin-left:15px" class="buttonclass"/>		
+			<input id="imregister" type="button" value="查看订单" onclick='location.href = "/气之购/历史订单";' class="buttonclass"/>
+			<input id="buyprocess" type="button" value="继续购物" onclick='location.href = "/气之购/在线订购";' style="margin-left:15px" class="buttonclass"/>		
 	</div>
 </div>
 </body>
