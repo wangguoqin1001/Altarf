@@ -20,15 +20,14 @@
 <body>
 <div class="contentbox">
 <div class="content_top">我的气之站MY QZZSTORE</div>
-<div class="content">
+<div class="content" style="margin-top:0px;width:800px;">
    <div class="content-in">
                 <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td class="history_txt01">我的购买历史及积分查询</td>
-                             
                      </tr>
                </table>
-               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+               <table id="orderHistoryTab" class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td class="history_txt02">订单XXXXXXXXXXX</td>
                               <td class="history_txt03">XXXX-XX-XX </td>
@@ -42,8 +41,12 @@
 <% content_for :javascripts do %>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" ></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-
 <script>
+	$(document).ready(function(){
+		getOrderHistory();
+	});
+</script>
+<!--<script>
     (function($){
         $(window).load(function(){
             $(".content").mCustomScrollbar(
@@ -54,7 +57,7 @@
         });
     })(jQuery);
 	
-</script>
+</script>-->
 <% end %>
 
 </body>

@@ -173,7 +173,7 @@ function getProductData(){
 			dataType: "json",
 	}).done (function (resp)
 	{
-	var product_url = resp.images[0] == null? "" :resp.images[0].urls.product;
+		var product_url = resp.images[0] == null? "" :resp.images[0].urls.product;
 				if ($('#product_pic').length)
 					$('#product_pic').prop ('src',product_url.replace('/spree/products/','/products/picture/'));
 				var name = resp.name == null ? "" : resp.name;
@@ -379,6 +379,79 @@ function order() {
 		alert ("请求发送失败，请稍候再试");
 		$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E9%A2%84%E8%AE%A2%E5%8D%95 .simple_captcha');
 	});
+}
+function getOrderHistory()
+{
+	window.productList=null;
+	$.ajax ({
+			url: "/products.json",
+			type: "GET",
+			dataType: "json",
+	}).done (function (resp){
+		window.productList=resp;
+		$.ajax ({
+			url: "/orders.json",
+			type: "GET",
+			dataType: "json",
+		}).done (function (resp) {
+		
+			if ( typeof resp.length == "undefined"){
+				var orderId = resp.id == null ? "" : resp.id;
+				var orderDate = new Date(resp.created_at).toLocaleString();
+				var sku = resp.productid == null ? "" : resp.productid;
+				var productName="";
+				var quantity = resp.quantity;
+				for(var i=0;i<window.productList.length;i++)
+				{
+					if(window.productList[i].sku==sku)
+					{
+						productName = window.productList[i].name;
+					}
+				}
+				if ($('#orderHistoryTab tbody tr:first-child .history_txt02').length)
+					$('#orderHistoryTab tbody tr:first-child .history_txt02').html("订单："+orderId);
+				if ($('#orderHistoryTab tbody tr:first-child .history_txt03').length)
+					$('#orderHistoryTab tbody tr:first-child .history_txt03').html(orderDate);
+				if ($('#orderHistoryTab tbody tr:first-child .history_txt04').length)
+					$('#orderHistoryTab tbody tr:first-child .history_txt04').html ("购入"+productName+quantity+"盒");
+				return;			
+			}
+			
+			var rowCount = resp.length;
+			for(var i=0;i<rowCount;i++){
+				if(i != 0 )
+				{
+					$( "#orderHistoryTab tbody tr:first-child").clone(true).prependTo("#orderHistoryTab");
+				}
+				var orderId = resp[i].id == null ? "" : resp[i].id;
+				var orderDate = new Date(resp[i].created_at).toLocaleString();
+				var sku = resp[i].productid == null ? "" : resp[i].productid;
+				var productName="";
+				var quantity = resp[i].quantity;
+				
+				for(var j=0;j<window.productList.length;j++)
+				{
+					if(window.productList[j].sku==sku)
+					{
+						productName = window.productList[j].name;
+					}
+				}
+				if ($('#orderHistoryTab tbody tr:first-child .history_txt02').length)
+					$('#orderHistoryTab tbody tr:first-child .history_txt02').html("订单："+orderId);
+				if ($('#orderHistoryTab tbody tr:first-child .history_txt03').length)
+					$('#orderHistoryTab tbody tr:first-child .history_txt03').html(orderDate);
+				if ($('#orderHistoryTab tbody tr:first-child .history_txt04').length)
+					$('#orderHistoryTab tbody tr:first-child .history_txt04').html ("购入"+productName+quantity+"盒");
+				
+			}
+		}).fail (function() {
+		alert ("请求发送失败，请稍候再试");
+	});
+	}).fail (function() {
+		alert ("请求发送失败，请稍候再试");
+		return;
+	});
+	
 }
 function createNewAddress(){
 	if ($('#consignee_name').val().length == 0) {
