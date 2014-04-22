@@ -43,6 +43,7 @@ class OrderService
 				"IsDiscount" => !order[:discount].to_i.zero?,
 				"InvoiceHeader" => order[:invoice_title].to_s,
 				"InvoiceAddress" => order[:billing].to_s,
+				"OrderStatus" => "ORDER_STATUS_PAY_WAIT",
 				"PLU" => order[:productid].to_s,
 				"ProductName" => @product["name"],
 				"ProductPrice" => @product["price"],
