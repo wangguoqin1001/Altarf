@@ -208,8 +208,8 @@ function loadUserData(){
 			$('#postalcode').val(resp.postal);
 			$('#province').val(resp.province);
 			$('#consignee_name').val(resp.username);
+			$("#invoice_address").val(resp.addr);
 			disableAddrInput();
-			
 			/*if($("#existedAddressTab tbody").find("tr").length>1){
 			$("#existedAddressTab tbody tr:not(:eq(0))").remove(); //保留table表的第一行
 			}*/
