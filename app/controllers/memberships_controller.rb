@@ -194,19 +194,14 @@ class MembershipsController < ApplicationController
 
 	# GET /memberships/memberlevel
 	def memberlevel
-		ret = MemberDiscount.memberlevel params[:user]
+		ret = MemberDiscount.memberlevel session[:nickname]
 		respond_with ret, :location => nil and return
 	end
 
 
 	# GET /memberships/memberdiscount
 	def memberdiscount
-		ret = MemberDiscount.memberdiscount params[:user], params[:amount]
-		respond_with ret, :location => nil and return
-		if not ret["item"]["is_success"] == "True"
-			Rails.logger.info ret.to_json
-		end
-
+		ret = MemberDiscount.memberdiscount session[:nickname], 100
 		respond_with ret, :location => nil and return
 	end
 
