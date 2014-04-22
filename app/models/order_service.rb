@@ -24,6 +24,7 @@ class OrderService
 
 	def self.getsingleorder(order)
 		@product = Product.find order[:productid].to_s
+		discount = MemberDiscount.memberdiscount order[:nickname], 100
 
 		self.query_order_service :get_singe_order, {
 			"orderStr" => {
@@ -43,13 +44,14 @@ class OrderService
 				"IsDiscount" => !order[:discount].to_i.zero?,
 				"InvoiceHeader" => order[:invoice_title].to_s,
 				"InvoiceAddress" => order[:billing].to_s,
+				"OrderStatus" => "ORDER_STATUS_PAY_WAIT",
 				"PLU" => order[:productid].to_s,
 				"ProductName" => @product["name"],
 				"ProductPrice" => @product["price"],
 				"ProductNumbers" => order[:quantity].to_s,
 				"Discount" => "0", #order[:coupon].to_s,
 				"Subtotal" => @product["price"].to_f * order[:quantity].to_i,
-				"Total" => @product["price"].to_f * order[:quantity].to_i
+				"Total" => @product["price"].to_f * order[:quantity].to_i * discount.to_f
 #				"OrderFrom" => nil,
 #				"OrderWay" => nil,
 #				"TransCompany" => nil,
