@@ -103,7 +103,7 @@ class MembershipsController < ApplicationController
 		end
 
 		@membership[:status] = 1
-		session[:nickname] = params[:nickname]
+		session[:nickname] = @membership[:nickname]
 		respond_with @membership
 	end
 
