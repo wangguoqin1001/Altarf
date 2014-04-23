@@ -192,24 +192,28 @@ function getProductData(){
 			dataType: "json",
 	}).done (function (resp)
 	{
-		var product_url = resp.images[0] == null? "" :resp.images[0].urls.product;
-				if ($('#product_pic').length)
-					$('#product_pic').prop ('src',product_url.replace('/spree/products/','/products/picture/'));
-				var name = resp.name == null ? "" : resp.name;
-				$('#product_name').val(name);
-				$('#product_name').prop('disabled', true);
-				productPrice = resp.price == null ? "" : resp.price;
-				$('#price').val(productPrice);
-				$('#price').prop('disabled', true);
-				$('#Sub-total').prop('disabled', true);
-				$('#total').prop('disabled', true);
-				$("#num").val('1');
-				
-				displayTotalPrice();
+		displayProductData(resp);
+		displayTotalPrice();
 	}).fail (function() {
 		alert ("产品信息获取失败，请稍候再试");
 	});
 }
+function displayProductData(product)
+{
+	var product_url = product.images[0] == null? "" :product.images[0].urls.product;
+		if ($('#product_pic').length)
+			$('#product_pic').prop ('src',product_url.replace('/spree/products/','/products/picture/'));
+		var name = product.name == null ? "" : product.name;
+		$('#product_name').val(name);
+		$('#product_name').prop('disabled', true);
+		productPrice = product.price == null ? "" : product.price;
+		$('#price').val(productPrice);
+		$('#price').prop('disabled', true);
+		$('#Sub-total').prop('disabled', true);
+		$('#total').prop('disabled', true);
+		$("#num").val('1');
+}
+
 function saveChangesInfo(){
 	//TODO
 	var membership = { 
@@ -269,99 +273,106 @@ function memberCenterLoad(){
 			alert ("用户信息获取失败，请稍候再试");
 		});
 }
+function displayUserInfo(resp){
+	$('#address').val(resp.addr);
+	$('#city').val(resp.city);
+	$('#district').val(resp.district);
+	$('#mobile').val(resp.mobile);
+	$('#member_id').val(resp.id);
+	var telephone = resp.phone.split("-");
+	$('#telephone01').val(telephone[0]);
+	$('#telephone02').val(telephone[1]);
+	$('#telephone03').val(telephone[2]);
+	$('#postalcode').val(resp.postal);
+	$('#province').val(resp.province);
+	$('#consignee_name').val(resp.username);
+	$("#invoice_address").val(resp.addr);
+	disableAddrInput();
+	/*if($("#existedAddressTab tbody").find("tr").length>1){
+	$("#existedAddressTab tbody tr:not(:eq(0))").remove(); //保留table表的第一行
+	}*/
+	
+}
+function displayAddressesData(addresses)
+{
+	var n = addresses.length;
+	if ( typeof addresses.length == "undefined"){
+		var address = addresses.addr == null ? "" : addresses.addr;
+		var province = addresses.province == null ? "" : addresses.province;	
+		var city = addresses.city == null ? "" : addresses.city;
+		var district = addresses.district == null ? "" : addresses.district;
+		var postal = addresses.postal == null ? "" : resp.addresses.postal;
+		var username = addresses.username == null ? "" : addresses.username;				
+		var mobile = addresses.mobile == null ? "" : addresses.mobile;
+		if ($('#existedAddressTab tbody tr:first-child #receiverTd').length)
+			$('#existedAddressTab tbody tr:first-child #receiverTd').html (username);
+		if ($('#existedAddressTab tbody tr:first-child #districtTd').length)
+			$('#existedAddressTab tbody tr:first-child #districtTd').html (province+"/"+city+"/"+district);
+		if ($('#existedAddressTab tbody tr:first-child #detailAddrTd').length)
+			$('#existedAddressTab tbody tr:first-child #detailAddrTd').html (address);
+		if ($('#existedAddressTab tbody tr:first-child #postalTd').length)
+			$('#existedAddressTab tbody tr:first-child #postalTd').html (postal);
+		if ($('#existedAddressTab tbody tr:first-child #phoneTd').length)
+			$('#existedAddressTab tbody tr:first-child #phoneTd').html (mobile);
+		return;			
+	}
+	
+	for(var i=0;i<n;i++){
+		
+		if(i != 0 )
+			$( "#existedAddressTab tbody tr:first-child").clone(true).prependTo( "#existedAddressTab" );
+			
+			var address = addresses[i].addr == null ? "" : addresses[i].addr;
+			var province = addresses[i].province == null ? "" : addresses[i].province;	
+			var city = addresses[i].city == null ? "" : addresses[i].city;
+			var district = addresses[i].district == null ? "" : addresses[i].district;
+			var postal = addresses[i].postal == null ? "" : addresses[i].postal;
+			var username = addresses[i].username == null ? "" : addresses[i].username;				
+			var mobile = addresses[i].mobile == null ? "" : addresses[i].mobile;
+			
+			if ($('#existedAddressTab tbody tr:first-child #receiverTd').length)
+				$('#existedAddressTab tbody tr:first-child #receiverTd').html (username);
+			if ($('#existedAddressTab tbody tr:first-child #districtTd').length)
+				$('#existedAddressTab tbody tr:first-child #districtTd').html (province+"/"+city+"/"+district);
+			if ($('#existedAddressTab tbody tr:first-child #detailAddrTd').length)
+				$('#existedAddressTab tbody tr:first-child #detailAddrTd').html (address);
+			if ($('#existedAddressTab tbody tr:first-child #postalTd').length)
+				$('#existedAddressTab tbody tr:first-child #postalTd').html (postal);
+			if ($('#existedAddressTab tbody tr:first-child #phoneTd').length)
+				$('#existedAddressTab tbody tr:first-child #phoneTd').html (mobile);	
+	}
+
+	$('.selectLabel').click(function(){
+		var par = $(this).parent().parent();
+		var consignee = par.find ('#receiverTd').html();
+		var mobile = par.find ('#phoneTd').html();
+		var district = par.find ('#districtTd').html();
+		var address = par.find ('#detailAddrTd').html();
+		var postal = par.find ('#postalTd').html();
+		
+		var districtArray=district.split('/');
+		$('#address').val(address);
+		$('#province').val(districtArray[0]);
+		$('#city').val(districtArray[1]);
+		$('#district').val(districtArray[2]);
+		$('#mobile').val(mobile);
+		$('#postalcode').val(postal);
+		$('#consignee_name').val(consignee);
+		
+		$('#telephone01').val("");
+		$('#telephone02').val("");
+		$('#telephone03').val("");
+		disableAddrInput();
+	});
+}
 function loadUserData(){
 	$.ajax ({
 			url: "/memberships/1.json",
 			type: "GET",
 			dataType: "json",
 		}).done (function (resp) {
-			$('#address').val(resp.addr);
-			$('#city').val(resp.city);
-			$('#district').val(resp.district);
-			$('#mobile').val(resp.mobile);
-			$('#member_id').val(resp.id);
-			var telephone = resp.phone.split("-");
-			$('#telephone01').val(telephone[0]);
-			$('#telephone02').val(telephone[1]);
-			$('#telephone03').val(telephone[2]);
-			$('#postalcode').val(resp.postal);
-			$('#province').val(resp.province);
-			$('#consignee_name').val(resp.username);
-			$("#invoice_address").val(resp.addr);
-			disableAddrInput();
-			/*if($("#existedAddressTab tbody").find("tr").length>1){
-			$("#existedAddressTab tbody tr:not(:eq(0))").remove(); //保留table表的第一行
-			}*/
-			var n = resp.addresses.length;
-			if ( typeof resp.addresses.length == "undefined"){
-				var address = resp.addresses.addr == null ? "" : resp.addresses.addr;
-				var province = resp.addresses.province == null ? "" : resp.addresses.province;	
-				var city = resp.addresses.city == null ? "" : resp.addresses.city;
-				var district = resp.addresses.district == null ? "" : resp.addresses.district;
-				var postal = resp.addresses.postal == null ? "" : resp.addresses.postal;
-				var username = resp.addresses.username == null ? "" : resp.addresses.username;				
-				var mobile = resp.addresses.mobile == null ? "" : resp.addresses.mobile;
-				if ($('#existedAddressTab tbody tr:first-child #receiverTd').length)
-					$('#existedAddressTab tbody tr:first-child #receiverTd').html (username);
-				if ($('#existedAddressTab tbody tr:first-child #districtTd').length)
-					$('#existedAddressTab tbody tr:first-child #districtTd').html (province+"/"+city+"/"+district);
-				if ($('#existedAddressTab tbody tr:first-child #detailAddrTd').length)
-					$('#existedAddressTab tbody tr:first-child #detailAddrTd').html (address);
-				if ($('#existedAddressTab tbody tr:first-child #postalTd').length)
-					$('#existedAddressTab tbody tr:first-child #postalTd').html (postal);
-				if ($('#existedAddressTab tbody tr:first-child #phoneTd').length)
-					$('#existedAddressTab tbody tr:first-child #phoneTd').html (mobile);
-				return;			
-			}
-			
-			for(var i=0;i<n;i++){
-				
-				if(i != 0 )
-					$( "#existedAddressTab tbody tr:first-child").clone(true).prependTo( "#existedAddressTab" );
-					
-					var address = resp.addresses[i].addr == null ? "" : resp.addresses[i].addr;
-					var province = resp.addresses[i].province == null ? "" : resp.addresses[i].province;	
-					var city = resp.addresses[i].city == null ? "" : resp.addresses[i].city;
-					var district = resp.addresses[i].district == null ? "" : resp.addresses[i].district;
-					var postal = resp.addresses[i].postal == null ? "" : resp.addresses[i].postal;
-					var username = resp.addresses[i].username == null ? "" : resp.addresses[i].username;				
-					var mobile = resp.addresses[i].mobile == null ? "" : resp.addresses[i].mobile;
-					
-					if ($('#existedAddressTab tbody tr:first-child #receiverTd').length)
-						$('#existedAddressTab tbody tr:first-child #receiverTd').html (username);
-					if ($('#existedAddressTab tbody tr:first-child #districtTd').length)
-						$('#existedAddressTab tbody tr:first-child #districtTd').html (province+"/"+city+"/"+district);
-					if ($('#existedAddressTab tbody tr:first-child #detailAddrTd').length)
-						$('#existedAddressTab tbody tr:first-child #detailAddrTd').html (address);
-					if ($('#existedAddressTab tbody tr:first-child #postalTd').length)
-						$('#existedAddressTab tbody tr:first-child #postalTd').html (postal);
-					if ($('#existedAddressTab tbody tr:first-child #phoneTd').length)
-						$('#existedAddressTab tbody tr:first-child #phoneTd').html (mobile);	
-			}
-			
-			$('.selectLabel').click(function(){
-				var par = $(this).parent().parent();
-				var consignee = par.find ('#receiverTd').html();
-				var mobile = par.find ('#phoneTd').html();
-				var district = par.find ('#districtTd').html();
-				var address = par.find ('#detailAddrTd').html();
-				var postal = par.find ('#postalTd').html();
-				
-				var districtArray=district.split('/');
-				$('#address').val(address);
-				$('#province').val(districtArray[0]);
-				$('#city').val(districtArray[1]);
-				$('#district').val(districtArray[2]);
-				$('#mobile').val(mobile);
-				$('#postalcode').val(postal);
-				$('#consignee_name').val(consignee);
-				
-				$('#telephone01').val("");
-				$('#telephone02').val("");
-				$('#telephone03').val("");
-				disableAddrInput();
-			});
-			
+			displayUserInfo(resp);
+			displayAddressesData(resp.addresses);
 		}).fail (function() {
 		alert ("用户信息获取失败，请稍候再试");
 	});
@@ -495,7 +506,8 @@ function loadOrderInfo()
 				break;
 			}
 		}
-		
+		displayUserInfo(targetOrder);
+		displayProductData(targetProduct);
 	}).fail (function() {
 		alert ("请求发送失败，请稍候再试");
 	});
