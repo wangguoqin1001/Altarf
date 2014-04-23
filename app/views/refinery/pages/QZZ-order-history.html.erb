@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<% content_for :javascripts do %>
+	<script>
+		<% if session[:nickname] %>
+
+		<% else %>
+			location.href = "/气之家/我的帐户";
+		<% end %>
+	</script>
+	<!--<script type="text/javascript">
+	function spreeproduct(data){
+		var ret = JSON.parse(data);
+		var sku = window.location.search.split('=');
+		n=ret.products.length;
+		for(var i=0;i<n;i++)
+		{
+			if( sku[1] == ret.products[i].variants[0].sku)
+			{
+				var product_url = ret.products[i].variants[0].images[0] == null? "" :ret.products[i].variants[0].images[0].product_url
+				if ($('#product_pic').length)
+					$('#product_pic').prop ('src',product_url.replace('/spree/products/','/products/picture/'));
+				var name = ret.products[i].name == null ? "" : ret.products[i].name;
+				//alert(name);
+				$('#product_name').val(name);
+				$('#product_name').prop('disabled', true);
+				var price = ret.products[i].variants[0].price == null ? "" : ret.products[i].variants[0].price;
+				$('#price').val(price);
+				$('#price').prop('disabled', true);
+				$('#Sub-total').prop('disabled', true);
+				$('#total').prop('disabled', true);
+				return;
+			}
+		}
+	}
+	</script>-->
+	<!--<script type="text/javascript" src="https://libra.qzzstore.com/api/products.json?token=82d3b3abd87deefaa99f2dbd8d46df7f5d2cc5a01bde47d0&callback=spreeproduct"></script>-->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		loadUserData();
+		getProductData();});
+	</script>
+<% end %>
+<head>
+<!--<script type="text/javascript">
+$(window).load (function() {
+  $('.flexslider').flexslider({
+    animation: "fade",
+    controlNav: false,
+    animationLoop: true, 
+    slideshowSpeed: 4000,
+  });
+});
+</script>-->
+
+
+</head>
+
+<% content_for :stylesheets do %>
+<style>
+.mCSB_scrollTools{
+	margin-top:100px;
+}
+.mCSB_scrollTools .mCSB_draggerContainer .mCSB_draggerRail{
+	background-color:#937145;
+	width:10px;
+	height:254px;
+}
+.mCSB_scrollTools .mCSB_draggerContainer .mCSB_dragger .mCSB_dragger_bar{
+	background-color:#e2c675;
+	width:10px;
+	height:50px;
+}
+#existedAddressTab th{
+	font-weight:100;
+}
+#existedAddressTab td{
+	text-align:center;
+}
+#receiverTh{
+	width:80px;
+}
+#districtTh{
+	width:160px;
+}
+#detailAddrTh{
+	width:160px;
+}
+#postalTh{
+	width:70px;
+}
+#phoneTh{
+	width:80px;
+}
+#chooseTh{
+	width:40px;
+}
+</style>
+<% end %>
+
+<body>
+<div class="contentbox">
+<div class="order_top">
+     <div class="order_top01">
+       产品预定单
+     </div>
+     <div class="order_top02">
+       <a>我的积分<a> | <a href="/气之购/历史订单">历史订单</a>
+     </div>
+</div>
+<div class="content-info"> 
+           <div class="order_left">                           
+                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="order_txt01">商品名称：</td>
+                              <td class="order_input01"><input id="product_name" type="text" class="content_input02"></td>
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="order_txt01">订购数量：</td>
+                              <td class="order_input01"><input id="num" type="number" class="content_input02" onblur="displayTotalPrice()"></td>
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="order_txt01">单    价：</td>
+                              <td class="order_input01"><input id="price" type="text" class="content_input02"></td>
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="order_txt01">小    计：</td>
+                              <td class="order_input01"><input id="Sub-total" type="text" class="content_input02"></td>
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="order_txt01">是否有折扣：</td>
+                              <td >
+                              <select class="order_select" id="discount" name="discount" onchange="whetherUseDiscount()">
+                              <option value="1">是</option>
+                              <option value="0">否</option>
+                              </select>
+                              </td>
+                     </tr>
+              </table>
+              <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="order_txt01">使用优惠券：</td>
+                              <td class="order_input01"><input id="coupon" type="text" class="content_input02" onblur="checkDiscount()"></td>
+								<td><div id="waitingImgDiv" style="margin-left:10px;margin-top:3px;display:none;"><img src="/assets/spinner.gif"></div></td>
+					 </tr>
+               </table>
+         </div>
+         <div class="order_right">
+              <img id="product_pic" width="75%" height="75%">
+           </div>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">总    计：</td>
+                              <td class="order_input02"><input id="total" type="text" class="content_input02"></td>
+                              <td  class="order_txt03">（产品单价X数量X折扣或优惠=总价）</td>
+                     </tr>     
+               </table>                
+               <table class="content_tab" border="0" cellpadding="0" cellspacing="0" >
+                      <tr>
+                              <td class="content_txt01" >支付方式：</td>
+                              <td >
+                              <select class="order_select02" id="payment" name="payment"  >
+                              <option value="1">货到付款</option>
+                              <option value="2">支付宝</option>
+                              <option value="3">银行卡</option>
+                              </select>
+                              </td>
+                              
+                     </tr>
+               </table>
+               <div class="order_bottom">
+                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="order_txt04">收货人信息：</td>                              
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">会员编号：</td>
+                              <td class="content_input01"><input id="member_id" type="text" class="content_input02"></td>
+                              <td  class="content_txt02"></td>
+                     </tr>     
+               </table>
+                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">收货人姓名：</td>
+                              <td class="content_input01"><input id="consignee_name" type="text" class="content_input02"></td>
+                              <td  class="content_txt02"></td>
+                     </tr>     
+               </table>
+                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">手机号码：</td>
+                              <td class="content_input01"><input id="mobile" type="text" class="content_input02"></td>
+                              <td  class="content_txt02"></td>
+                     </tr>     
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">收货人固话:</td>
+                              <td  class="content_input03"><input id="telephone01" type="text" class="content_input02"></td>
+                              <td  class="content_txt03">—</td>
+                              <td  class="content_input03"><input id="telephone02" type="text" class="content_input02"></td>
+                              <td  class="content_txt03">—</td>
+                              <td  class="content_input04"><input id="telephone03" type="text" class="content_input02"></td>
+                              <td  class="content_txt04">(如86-21-12345678）</td>
+                     </tr>     
+               </table>
+                <table class="content_tab" border="0" cellpadding="0" cellspacing="0" >
+                      <tr>
+                              <td class="content_txt01" >邮寄地址:</td>
+                              <td class="content_input05" ><input id="province" type="text" class="content_input02"></td>
+                              <td class="content_txt05">省</td>
+                              <td class="content_input05" ><input id="city" type="text" class="content_input02"></td>
+                              <td class="content_txt05" >市</td>
+                              <td class="content_input05" ><input id="district" type="text" class="content_input02"></td>
+                              <td class="content_txt06" >县/区，邮编</td>
+                              <td class="content_input06" ><input id="postalcode" type="text" class="content_input02"></td>
+                              <td class="content_input07" ></td>
+                      </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">具体地址:</td>
+                              <td  class="content_input01"><input id="address" type="text" class="content_input02"></td> 
+                              <td class="content_txt02"><input type="checkbox" id="useNewAddrChk" name="useNewAddrChk" onclick="enableAddrInput()"></input><label for="useNewAddrChk">创建新地址</label></td>                            
+							
+					 </tr>
+					 <tr>
+						<td><div id="saveNewAddressDiv" style="display:none"><input type="button" id='saveNewAddressBtn' class="order_txt05" onclick="createNewAddress()" value="保存地址"/></div></td>
+					 </tr>
+               </table>
+		<p style="padding-left:3%">已保存的有效地址:</p>
+		   <table id="existedAddressTab">
+		<thead>
+			<tr>
+				<th id="receiverTh">收货人</th>
+				<th id="districtTh">所在地区</th>
+				<th id="detailAddrTh">具体地址</th>
+				<th id="postalTh">邮编</th>
+				<th id="phoneTh">电话/手机</th>
+				<th id="chooseTh">操作</th>
+			</tr>
+		</thead>
+		<tfoot>
+		</tfoot>
+		<tbody>
+			</tr>
+				<td id="receiverTd"></td>
+				<td id="districtTd"></td>
+				<td id="detailAddrTd"></td>
+				<td id="postalTd"></td>
+				<td id="phoneTd"></td>
+				<td id="chooseTd"><label class="selectLabel" style="cursor:pointer;">选择</label></td>
+			</tr>
+		</tbody>
+		</table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">是否需要发票:</td>
+                              <td><select class="order_select" id="invoice" name="invoice" onchange="whetherNeedInvoice()">
+                              <option value="1">是</option>
+                              <option value="0">否</option></select></td> 
+                              <td  class="order_txt03"></td>                            
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="content_txt01">发票类型：</td>
+                              <td >
+                              <select class="order_select02" id="invoice_type" name="invoice_type" onchange="personalOrCompany()">
+                              <option value="1">个人</option>
+                              <option value="2">单位</option>
+                              </select>
+                              </td>
+                              
+                     </tr>
+              </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">发票抬头:</td>
+                              <td  class="content_input01"><input id="invoice_head" type="text" disabled="disabled" class="content_input02"></td> 
+                              <td class="content_txt02"></td>                            
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">寄票地址:</td>
+                              <td  class="content_input01"><input id="invoice_address" type="text" class="content_input02"></td> 
+                              <td class="content_txt02"></td>                           
+                     </tr>
+               </table> 
+			   <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="content_txt08">验证码：</td>
+                              <td class="authenticationtd"><%= show_simple_captcha(:label => "human authentication", :placeholder => "input the characters") %></td>                           
+                     </tr>
+               </table> 
+               </div> 
+               <div class="content_tab"><input  type="button" value="确认订单" id="sign up" class="order_txt05" onclick="order();"></div>         
+</div>
+</div>
+<!--
+<div class="box">
+      <div class="box-lefttop">
+            搭配购买
+        </div>
+        <div class="flexslider" style="width:100px;height:60px;left:160px;top:0px;float:left">
+          <ul class="slides">
+              <li>
+                  <img src="/assets/box-1.png" width="100" height="60">
+              </li>
+              <li>
+                  <img src="/assets/box-2.png" width="100" height="60">
+              </li>
+              <li>
+                  <img src="/assets/box-3.png" width="100" height="60">
+              </li>
+
+          </ul>
+        </div> 
+        <div class="box-txt">
+          精美礼盒-200元
+        </div>
+        <div class="box-button">
+            <input id="add" type="submit" value="添加到购物车">
+        </div>
+  </div>
+-->
+
+<% content_for :javascripts do %>
+<script>
+/*    (function($){
+		function pageset() {
+            $(".content-info").mCustomScrollbar();
+        }
+        window.onload = pageset();
+    })(jQuery);
+	*/
+</script>
+<% end %> 
+</body>
+</html>
