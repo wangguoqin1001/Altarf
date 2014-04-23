@@ -61,14 +61,15 @@ class OfficialService
 	def self.updatememberinfo(membership)
 		self.query_official_service :up_data_member_info, {
 			"customerStr" => {
-				:customer_i_d => membership[:nickname].to_s,
-				:mobile_phone => membership[:mobile].to_s,
-				:sex => membership[:gender].to_s,
-				:customer_name => membership[:username].to_s,
-				:tel_phone => membership[:phone].to_s,
-				:email => membership[:email].to_s,
-				:post_address => membership[:province].to_s + membership[:city].to_s + membership[:district].to_s + membership[:addr].to_s
-			}.to_xml(skip_instruct: true, skip_types: true, camelize: true, root: "QZZCustomer")
+				"CustomerID" => membership[:nickname].to_s,
+				"CustomerCode" => membership[:nickname].to_s,
+				"MobilePhone" => membership[:mobile].to_s,
+				"Sex" => membership[:gender].to_s,
+				"CustomerName" => membership[:username].to_s,
+				"TelPhone" => membership[:phone].to_s,
+				"Email" => membership[:email].to_s,
+				"PostAddress" => membership[:province].to_s + membership[:city].to_s + membership[:district].to_s + membership[:addr].to_s
+			}.to_json
 		}
 	end
 

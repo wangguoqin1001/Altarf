@@ -20,7 +20,7 @@
 <body>
 <div class="contentbox">
 <div class="content_top">我的气之站MY QZZSTORE</div>
-<div class="content" style="margin-top:0px;width:800px;">
+<div class="content" style="margin-top:0px;width:800px;z-index:1;">
    <div class="content-in">
                 <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
@@ -29,7 +29,7 @@
                </table>
                <table id="orderHistoryTab" class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="history_txt02"> </td>
+                              <td class="history_txt02" style="cursor:pointer;"> </td>
                               <td class="history_txt03"> </td>
                               <td class="history_txt04"> </td>                             
                      </tr>
@@ -44,6 +44,11 @@
 <script>
 	$(document).ready(function(){
 		getOrderHistory();
+	});
+</script>
+<script>
+	$('.history_txt02').click(function(){
+		location.href="/气之购/订单详情"+$(this).html().replace('订单：','?orderId=');
 	});
 </script>
 <!--<script>

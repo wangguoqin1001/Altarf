@@ -7,7 +7,7 @@ class MembershipsController < ApplicationController
 
 	respond_to :json, :xml, :html
 
-	before_filter :checkcaptcha, :only => [:create, :login]
+	before_filter :checkcaptcha, :only => [:create, :login, :update]
 
 
 	# GET /memberships
@@ -110,33 +110,53 @@ class MembershipsController < ApplicationController
 
 	# PUT /memberships/1
 	def update
-		cipher = OpenSSL::Cipher::Cipher.new 'DES3'
-		cipher.encrypt
-		cipher.key = Altarf::Application.config.membership_secret_token
-
-		iv = Digest::SHA256.new
-		iv.update params[:membership][:nickname]
-		cipher.iv = iv.hexdigest
-
-		result = cipher.update params[:membership][:password]
-		result << cipher.final
-		pswd = Base64.strict_encode64 result
-
 		if refinery_user?
 			@membership = Membership.find params[:id]
 		else
 			@membership = Membership.find :first, :conditions => { :nickname => session[:nickname] }
 		end
 
-		@membership.update_attributes params[:membership]
-		@membership.password = pswd.to_s
+		if params[:membership][:password]
+			cipher = OpenSSL::Cipher::Cipher.new 'DES3'
+			cipher.encrypt
+			cipher.key = Altarf::Application.config.membership_secret_token
 
-		ret = OfficialService.updatememberinfo params[:membership]
-		if not ret["item"]["is_success"] == "True"
-			Rails.logger.info ret.to_json
+			iv = Digest::SHA256.new
+			iv.update params[:membership][:nickname]
+			cipher.iv = iv.hexdigest
+
+			result = cipher.update params[:membership][:password]
+			result << cipher.final
+			pswd = Base64.strict_encode64 result
+
+			@membership.password = pswd.to_s
+			@membership.save
 		end
 
-		session[:nickname] = params[:nickname]
+		params[:membership].delete :id
+		params[:membership].delete :nickname
+		params[:membership].delete :password
+
+		@membership.update_attributes params[:membership]
+
+		address = {
+			:addr => params[:membership][:addr],
+			:city => params[:membership][:city],
+			:district => params[:membership][:district],
+			:mobile => params[:membership][:mobile],
+			:phone => params[:membership][:phone],
+			:postal => params[:membership][:postal],
+			:province => params[:membership][:province],
+			:username => params[:membership][:username]
+		}
+		@address = @membership.addresses.first!
+		@address.update_attributes address
+
+#		ret = OfficialService.updatememberinfo params[:membership]
+#		if not ret["item"]["is_success"] == "True"
+#			Rails.logger.info ret.to_json
+#		end
+
 		respond_with @membership
 	end
 
