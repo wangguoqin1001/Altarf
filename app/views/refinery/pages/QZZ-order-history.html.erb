@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <% content_for :javascripts do %>
 	<script>
-		<% if not session[:nickname] %>
+		<% if session[:nickname] %>
+
+		<% else %>
 			location.href = "/气之家/我的帐户";
 		<% end %>
 	</script>
@@ -133,22 +135,19 @@ $(window).load (function() {
                </table>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="order_txt01">会员折扣：</td>
-                              <td class="order_input01">
-									<input id="memberDiscountTxt" type="text" class="content_input02" disabled="disabled">
+                              <td class="order_txt01">是否有折扣：</td>
+                              <td >
+                              <select class="order_select" id="discount" name="discount" onchange="whetherUseDiscount()">
+                              <option value="1">是</option>
+                              <option value="0">否</option>
+                              </select>
                               </td>
                      </tr>
               </table>
               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="order_txt01" style="width: 100px;">使用优惠券：</td>
-							  <td style="width:50px">
-                              <select class="order_select" id="discount" name="discount" style="width:40px" onchange="whetherUseDiscount()">
-                              <option value="1">是</option>
-                              <option value="0">否</option>
-                              </select>
-                              </td>
-                              <td class="order_input01" style="width:200px"><input id="coupon" type="text" class="content_input02" onblur="checkDiscount()"></td>
+                              <td class="order_txt01">使用优惠券：</td>
+                              <td class="order_input01"><input id="coupon" type="text" class="content_input02" onblur="checkDiscount()"></td>
 								<td><div id="waitingImgDiv" style="margin-left:10px;margin-top:3px;display:none;"><img src="/assets/spinner.gif"></div></td>
 					 </tr>
                </table>
@@ -159,7 +158,7 @@ $(window).load (function() {
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td  class="content_txt01">总    计：</td>
-                              <td class="order_input02"><input id="total" type="text" class="content_input02" style="margin-left:7px;"></td>
+                              <td class="order_input02"><input id="total" type="text" class="content_input02"></td>
                               <td  class="order_txt03">（产品单价X数量X折扣或优惠=总价）</td>
                      </tr>     
                </table>                

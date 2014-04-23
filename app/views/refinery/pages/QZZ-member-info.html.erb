@@ -1,0 +1,142 @@
+<!DOCTYPE html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>QZZ website sign up</title>
+</head>
+
+<% content_for :stylesheets do %>
+<style>
+.mCSB_scrollTools{
+	margin-top:160px;
+}
+.mCSB_scrollTools .mCSB_draggerContainer .mCSB_draggerRail{
+	background-color:#937145;
+	width:10px;
+	height:155px;
+}
+.mCSB_scrollTools .mCSB_draggerContainer .mCSB_dragger .mCSB_dragger_bar{
+	background-color:#e2c675;
+	width:10px;
+	height:50px;
+}
+</style>
+<% end %>
+
+<body>
+<div class="contentbox">
+<div class="content_top">注册气之站QZZSTORE</div>
+<div class="content-info">                             
+                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="content_txt01">您的用户名：</td>
+                              <td class="content_input01"><input id="username" type="text" class="content_input02"></td>
+                              <td class="content_txt02">（6-12个字母、数字或字符）</td>
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="content_txt01">设置密码：</td>
+                              <td class="content_input01"><input id="password" type="password" class="content_input02"></td>
+                              <td class="content_txt02" >（6-12个字母或数字，不区分大小写）</td>
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="content_txt01">确认密码：</td>
+                              <td class="content_input01"><input id="identification" type="password" class="content_input02"></td>
+                              <td class="content_txt02"></td>
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="content_txt01">姓    名：</td>
+                              <td class="content_input01"><input id="name" type="text" class="content_input02"></td>
+                              <td class="content_txt02"></td>
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="content_txt01">性    别：</td>
+                              <td >
+                              <select class="content_select" id="sex" name="sex"  >
+                              <option value="1">男</option>
+                              <option value="2">女</option>
+                              </select>
+                              </td>
+                              <td class="content_txt02">（下拉框设置选择“男/女”）</td>
+                     </tr>
+              </table>
+              <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="content_txt01">手机号码:</td>
+                              <td class="content_input01"><input id="mobile" type="text" class="content_input02"></td>
+                              <td class="content_txt02"></td>
+                     </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">固定电话:</td>
+                              <td  class="content_input03"><input id="telephone01" type="text" class="content_input02"></td>
+                              <td  class="content_txt03">—</td>
+                              <td  class="content_input03"><input id="telephone02" type="text" class="content_input02"></td>
+                              <td  class="content_txt03">—</td>
+                              <td  class="content_input04"><input id="telephone03" type="text" class="content_input02"></td>
+                              <td  class="content_txt04">（如86-21-12345678）</td>
+                     </tr>     
+               </table>
+               <table class="content_tab" border="0" cellpadding="0" cellspacing="0" >
+                      <tr>
+                              <td class="content_txt01" >邮    箱：</td>
+                              <td class="content_input01" ><input id="email" type="text" class="content_input02"></td>
+                              <td class="content_txt02"></td>
+                     </tr>
+               </table>
+                <table class="content_tab" border="0" cellpadding="0" cellspacing="0" >
+                      <tr>
+                              <td class="content_txt01" >邮寄地址:</td>
+                              <td class="content_input05" ><input id="province" type="text" class="content_input02"></td>
+                              <td class="content_txt05">省</td>
+                              <td class="content_input05" ><input id="city" type="text" class="content_input02"></td>
+                              <td class="content_txt05" >市</td>
+                              <td class="content_input05" ><input id="district" type="text" class="content_input02"></td>
+                              <td class="content_txt06" >县/区，邮编</td>
+                              <td class="content_input06" ><input id="postalcode" type="text" class="content_input02"></td>
+                              <td class="content_input07" ></td>
+                      </tr>
+               </table>
+               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td  class="content_txt01">具体地址:</td>
+                              <td  class="content_input01"><input id="address" type="text" class="content_input02"></td> 
+                              <td class="content_txt02"></td>                            
+                     </tr>
+               </table>
+               <table  class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                              <td class="content_txt07" >备注：为方便您的购物，所填具体地址会在购物时视为默认收货地址。</td>
+                     </tr>
+               </table>
+               
+                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                               <td class="content_txt08">验证码：</td>
+							   <td class="authenticationtd"><%= show_simple_captcha(:label => "human authentication", :placeholder => "input the characters") %></td>  
+                     </tr>
+               </table>
+               <div class="content_tab"><input  type="button" value="注册" id="sign up" class="content_txt09" onclick="register();"></div>         
+</div>
+</div>
+
+<% content_for :javascripts do %>
+<script>
+/*    (function($){
+		function pageset() {
+            $(".content-info").mCustomScrollbar();
+        }
+        window.onload = pageset();
+    })(jQuery);
+	*/
+</script>
+<% end %>
+
+</body>
+</html>
