@@ -1,48 +1,16 @@
 <!DOCTYPE html>
 <% content_for :javascripts do %>
-	<script>
-		<% if session[:nickname] %>
-
-		<% else %>
-			location.href = "/气之家/我的帐户";
-		<% end %>
-	</script>
-	<!--<script type="text/javascript">
-	function spreeproduct(data){
-		var ret = JSON.parse(data);
-		var sku = window.location.search.split('=');
-		n=ret.products.length;
-		for(var i=0;i<n;i++)
-		{
-			if( sku[1] == ret.products[i].variants[0].sku)
-			{
-				var product_url = ret.products[i].variants[0].images[0] == null? "" :ret.products[i].variants[0].images[0].product_url
-				if ($('#product_pic').length)
-					$('#product_pic').prop ('src',product_url.replace('/spree/products/','/products/picture/'));
-				var name = ret.products[i].name == null ? "" : ret.products[i].name;
-				//alert(name);
-				$('#product_name').val(name);
-				$('#product_name').prop('disabled', true);
-				var price = ret.products[i].variants[0].price == null ? "" : ret.products[i].variants[0].price;
-				$('#price').val(price);
-				$('#price').prop('disabled', true);
-				$('#Sub-total').prop('disabled', true);
-				$('#total').prop('disabled', true);
-				return;
-			}
-		}
-	}
-	</script>-->
 	<!--<script type="text/javascript" src="https://libra.qzzstore.com/api/products.json?token=82d3b3abd87deefaa99f2dbd8d46df7f5d2cc5a01bde47d0&callback=spreeproduct"></script>-->
 	<script type="text/javascript">
 	$(document).ready(function(){
-		loadUserData();
-		getProductData();});
+		loadOrderInfo();
+		//getProductData();
+		});
 	</script>
 <% end %>
 <head>
 <!--<script type="text/javascript">
-$(window).load (function() {
+$(window).load (function(){
   $('.flexslider').flexslider({
     animation: "fade",
     controlNav: false,
@@ -51,7 +19,6 @@ $(window).load (function() {
   });
 });
 </script>-->
-
 
 </head>
 
@@ -101,7 +68,7 @@ $(window).load (function() {
 <div class="contentbox">
 <div class="order_top">
      <div class="order_top01">
-       产品预定单
+       订单详情
      </div>
      <div class="order_top02">
        <a>我的积分<a> | <a href="/气之购/历史订单">历史订单</a>
@@ -297,14 +264,14 @@ $(window).load (function() {
                               <td class="content_txt02"></td>                           
                      </tr>
                </table> 
-			   <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
+			   <!--<table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td class="content_txt08">验证码：</td>
                               <td class="authenticationtd"><%= show_simple_captcha(:label => "human authentication", :placeholder => "input the characters") %></td>                           
                      </tr>
-               </table> 
+               </table> -->
                </div> 
-               <div class="content_tab"><input  type="button" value="确认订单" id="sign up" class="order_txt05" onclick="order();"></div>         
+               <!--<div class="content_tab" ><input  type="button" value="确认订单" id="sign up" class="order_txt05" onclick="order();"></div>-->         
 </div>
 </div>
 <!--
