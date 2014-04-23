@@ -1,4 +1,7 @@
 // JavaScript Document
+var memberDiscount=null;
+var couponDiscount=null;
+var productPrice=null;
 function login() {
 	if ($('#account').val().length == 0) {
 		alert ("请输入您的用户名");
@@ -167,6 +170,22 @@ function enableAddrInput(){
 	$('#saveNewAddressDiv').css("display","block"); 
 }
 function getProductData(){
+	$.when(
+		$.ajax ({
+				url: "/memberships/memberlevel.json",
+				type: "GET",
+				dataType: "Text",
+			}),
+		$.ajax ({
+				url: "/memberships/memberdiscount.json",
+				type: "GET",
+				dataType: "Text",
+		})).done (function (resp1,resp2) {
+			memberDiscount=resp2[0];
+			$('#memberDiscountTxt').val(resp1[0]+" "+resp2[0]*100+"%");
+		}).fail (function() {
+			alert ("会员等级获取失败，请稍候再试");
+		});
 	$.ajax ({
 			url: "/products/"+window.location.search.split('=')[1]+".json",
 			type: "GET",
@@ -179,18 +198,20 @@ function getProductData(){
 				var name = resp.name == null ? "" : resp.name;
 				$('#product_name').val(name);
 				$('#product_name').prop('disabled', true);
-				var price = resp.price == null ? "" : resp.price;
-				$('#price').val(price);
+				productPrice = resp.price == null ? "" : resp.price;
+				$('#price').val(productPrice);
 				$('#price').prop('disabled', true);
 				$('#Sub-total').prop('disabled', true);
 				$('#total').prop('disabled', true);
 				$("#num").val('1');
+				
 				displayTotalPrice();
 	}).fail (function() {
 		alert ("产品信息获取失败，请稍候再试");
 	});
 }
 function loadUserData(){
+	
 	$.ajax ({
 			url: "/memberships/1.json",
 			type: "GET",
@@ -285,7 +306,7 @@ function loadUserData(){
 			
 		}).fail (function() {
 		alert ("用户信息获取失败，请稍候再试");
-	});;
+	});
 }
 
 function order() {
@@ -489,9 +510,9 @@ function createNewAddress(){
 			address : addrDetails,
 		}
 		}).done (function (resp) {
-			alert("保存地址成功");
 			$('#useNewAddrChk').attr("checked",false);
 			$('#saveNewAddressDiv').css("display","none");
+			disableAddrInput();
 			//数据插到表格中
 			if($('#existedAddressTab tbody tr:first-child #receiverTd').html()=='')
 			{
@@ -526,10 +547,11 @@ function createNewAddress(){
 function displayTotalPrice()
 {
 	if($("#num").val()!=""){
-		var totalPrice = $('#price').val()*$("#num").val();
+		var totalPrice = productPrice*$("#num").val();
 		//alert(totalPrice);
 		$("#Sub-total").val(totalPrice);
-		$('#total').val('');
+		if(memberDiscount!=null)
+			$('#total').val(totalPrice*memberDiscount);
 	}
 }
 
@@ -540,9 +562,9 @@ var index = discountSelecter.selectedIndex; // 选中索引
 	if(index==1)
 	{
 		$('#coupon').prop('disabled', true);
-		if($("#Sub-total").val()!="")
+		if($("#Sub-total").val()!=""&&memberDiscount!=null)
 		{
-			$("#total").val($("#Sub-total").val());
+			$("#total").val(productPrice*$("#num").val()*memberDiscount);////
 		}
 		else
 		{
@@ -552,7 +574,6 @@ var index = discountSelecter.selectedIndex; // 选中索引
 	else
 	{
 		$('#coupon').prop('disabled', false);
-		$("#total").val("");
 	}
 }
 
@@ -575,15 +596,11 @@ function whetherNeedInvoice()
 }
 function checkDiscount()
 {
-	if(document.getElementById("discount").selectedIndex==0)
+	if(document.getElementById("discount").selectedIndex==0&&$('#coupon').val()!='')
 	{
-		if($('#coupon').val()!='')
-		{
-			$('#total').val($('#Sub-total').val());
-		}else
-		{
-			$('#total').val('');
-		}
+		//ToDo 检查优惠劵
+		//$('#total').val($('#Sub-total').val());
+		var total=null;
 	}
 }
 function personalOrCompany()

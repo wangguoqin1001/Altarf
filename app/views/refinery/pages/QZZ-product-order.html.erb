@@ -135,7 +135,7 @@ $(window).load (function() {
                       <tr>
                               <td class="order_txt01">会员折扣：</td>
                               <td class="order_input01">
-									<input id="memberDiscountTxt" type="text" class="content_input02" disabled="disabled">
+									<input id="memberDiscountTxt" type="text" class="content_input02" disabled="disabled"/>
                               </td>
                      </tr>
               </table>
@@ -145,10 +145,10 @@ $(window).load (function() {
 							  <td style="width:50px">
                               <select class="order_select" id="discount" name="discount" style="width:40px" onchange="whetherUseDiscount()">
                               <option value="1">是</option>
-                              <option value="0">否</option>
+                              <option value="0" selected="selected">否</option>
                               </select>
                               </td>
-                              <td class="order_input01" style="width:200px"><input id="coupon" type="text" class="content_input02" onblur="checkDiscount()"></td>
+                              <td class="order_input01" style="width:190px"><input id="coupon" type="text" class="content_input02" disabled="disabled" onblur="checkDiscount()"></td>
 								<td><div id="waitingImgDiv" style="margin-left:10px;margin-top:3px;display:none;"><img src="/assets/spinner.gif"></div></td>
 					 </tr>
                </table>
@@ -159,7 +159,7 @@ $(window).load (function() {
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td  class="content_txt01">总    计：</td>
-                              <td class="order_input02"><input id="total" type="text" class="content_input02" style="margin-left:7px;"></td>
+                              <td class="order_input02"><input id="total" type="text" class="content_input02" style="margin-left: 10px;width: 120px;"></td>
                               <td  class="order_txt03">（产品单价X数量X折扣或优惠=总价）</td>
                      </tr>     
                </table>                
@@ -167,7 +167,7 @@ $(window).load (function() {
                       <tr>
                               <td class="content_txt01" >支付方式：</td>
                               <td >
-                              <select class="order_select02" id="payment" name="payment"  >
+                              <select class="order_select02" id="payment" name="payment" style="margin-left:10px;" >
                               <option value="1">货到付款</option>
                               <option value="2">支付宝</option>
                               <option value="3">银行卡</option>
@@ -246,7 +246,7 @@ $(window).load (function() {
 				<th id="districtTh">所在地区</th>
 				<th id="detailAddrTh">具体地址</th>
 				<th id="postalTh">邮编</th>
-				<th id="phoneTh">电话/手机</th>
+				<th id="phoneTh">手机</th>
 				<th id="chooseTh">操作</th>
 			</tr>
 		</thead>
