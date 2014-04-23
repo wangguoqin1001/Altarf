@@ -84,12 +84,26 @@ class MembershipsController < ApplicationController
 		@membership.password = pswd.to_s
 		@membership.save
 
+		address = {
+			:addr => params[:membership][:addr],
+			:city => params[:membership][:city],
+			:district => params[:membership][:district],
+			:mobile => params[:membership][:mobile],
+			:phone => params[:membership][:phone],
+			:postal => params[:membership][:postal],
+			:province => params[:membership][:province],
+			:username => params[:membership][:username]
+		}
+		@address = @membership.addresses.new address
+		@address.save
+
 		ret = OfficialService.addmemberinfo @membership
 		if not ret["item"]["is_success"] == "True"
 			Rails.logger.info ret.to_json
 		end
 
 		@membership[:status] = 1
+		session[:nickname] = params[:nickname]
 		respond_with @membership
 	end
 
