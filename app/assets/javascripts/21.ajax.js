@@ -210,8 +210,66 @@ function getProductData(){
 		alert ("产品信息获取失败，请稍候再试");
 	});
 }
+function saveChangesInfo(){
+	//TODO
+	var membership = { 
+		"addr" : $('#address').val(),
+		"city" : $('#city').val(),
+		"district" : $('#district').val(),
+		"email" : $('#email').val(),
+		"gender" : $('#sex option:selected').val(),
+		"mobile" : $('#mobile').val(),
+		//"nickname" : $('#username').val(),
+		//"password" : $.sha256 ($('#username').val() + $('#password').val()),
+		"phone" : $('#telephone01').val() + '-' + $('#telephone02').val() + '-' + $('#telephone03').val(),
+		"postal" : $('#postalcode').val(),
+		"province" : $('#province').val(),
+		"username" : $('#name').val()
+	};
+	$.ajax ({
+			url: "/memberships/1.json",
+			type: "PUT",
+			dataType: "json",
+			data:		{
+			membership : membership,
+			captcha:		$('#captcha').val(),
+			captcha_key:	$('#captcha_key').val()
+		}
+		}).done (function (resp) {
+			alert("保存成功");
+		}).fail (function() {
+			alert ("保存用户信息失败，请稍候再试");
+		});
+}
+function memberCenterLoad(){
+	$.ajax ({
+			url: "/memberships/1.json",
+			type: "GET",
+			dataType: "json",
+		}).done (function (resp) {
+			$('#password').val("0000000000");
+			$('#identification').val("0000000000");
+			$('#username').val(resp.nickname);
+			$('#name').val(resp.username);
+			$('#address').val(resp.addr);
+			$('#city').val(resp.city);
+			$('#district').val(resp.district);
+			$('#mobile').val(resp.mobile);
+			$('#member_id').val(resp.id);
+			$('#email').val(resp.email);
+			var telephone = resp.phone.split("-");
+			$('#telephone01').val(telephone[0]);
+			$('#telephone02').val(telephone[1]);
+			$('#telephone03').val(telephone[2]);
+			$('#postalcode').val(resp.postal);
+			$('#province').val(resp.province);
+			$("#invoice_address").val(resp.addr);
+			$('#sex option:selected').val(resp.gender);
+			}).fail (function() {
+			alert ("用户信息获取失败，请稍候再试");
+		});
+}
 function loadUserData(){
-	
 	$.ajax ({
 			url: "/memberships/1.json",
 			type: "GET",
@@ -401,6 +459,48 @@ function order() {
 		$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E9%A2%84%E8%AE%A2%E5%8D%95 .simple_captcha');
 	});
 }
+function loadOrderInfo()
+{
+	$.when (
+		$.ajax ({
+			url: "/products.json",
+			type: "GET",
+			dataType: "json",
+		}),
+		$.ajax ({
+			url: "/orders.json",
+			type: "GET",
+			dataType: "json",
+		})
+	).done (function (resp1, resp2) {
+		products = resp1[0];
+		orders = resp2[0];
+		//alert(window.location.search.split('=')[1]);
+		var orderId = window.location.search.split('=')[1];
+		var targetOrder = null;
+		var targetProduct = null;
+		for(var i=0;i<orders.length;i++)
+		{
+			if(orders[i].id == orderId)
+			{
+				targetOrder = orders[i];
+				for(var j=0;j<products.length;j++)
+				{
+					if(orders[i].productid == products[j].sku)
+					{
+						targetProduct = products[j];
+						break;
+					}
+				}
+				break;
+			}
+		}
+		
+	}).fail (function() {
+		alert ("请求发送失败，请稍候再试");
+	});
+}
+
 function getOrderHistory()
 {
 	$.when (

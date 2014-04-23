@@ -1,6 +1,6 @@
 <!DOCTYPE html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>QZZ website sign up</title>
+<title>MY QZZ website</title>
 </head>
 
 <% content_for :stylesheets do %>
@@ -23,7 +23,7 @@
 
 <body>
 <div class="contentbox">
-<div class="content_top">注册气之站QZZSTORE</div>
+<div class="content_top">我的之站MY QZZSTORE</div>
 <div class="content-info">                             
                 <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
@@ -35,14 +35,14 @@
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td class="content_txt01">设置密码：</td>
-                              <td class="content_input01"><input id="password" type="password" class="content_input02"></td>
+                              <td class="content_input01"><input id="password" type="password" onclick="value=''" class="content_input02"></td>
                               <td class="content_txt02" >（6-12个字母或数字，不区分大小写）</td>
                      </tr>
                </table>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td class="content_txt01">确认密码：</td>
-                              <td class="content_input01"><input id="identification" type="password" class="content_input02"></td>
+                              <td class="content_input01"><input id="identification" type="password" onclick="value=''" class="content_input02"></td>
                               <td class="content_txt02"></td>
                      </tr>
                </table>
@@ -122,20 +122,28 @@
 							   <td class="authenticationtd"><%= show_simple_captcha(:label => "human authentication", :placeholder => "input the characters") %></td>  
                      </tr>
                </table>
-               <div class="content_tab"><input  type="button" value="注册" id="sign up" class="content_txt09" onclick="register();"></div>         
+               <div class="content_tab">
+					<input  type="button" value="保存" id="saveChanges" class="content_txt09" onclick="saveChangesInfo();">
+					<a href="/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E5%8E%86%E5%8F%B2%E8%AE%A2%E5%8D%95">查看历史订单</a>
+				</div>         
 </div>
 </div>
 
 <% content_for :javascripts do %>
-<script>
-/*    (function($){
+	<script type="text/javascript">
+	$(document).ready(function(){
+		memberCenterLoad();
+		});
+	</script>
+	<script>
+	/* 	(function($){
 		function pageset() {
             $(".content-info").mCustomScrollbar();
         }
         window.onload = pageset();
     })(jQuery);
 	*/
-</script>
+	</script>
 <% end %>
 
 </body>
