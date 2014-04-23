@@ -116,7 +116,7 @@ refinery_pages:
     - false
     - false
     - 51
-    - 62
+    - 64
     - 0
     - 
     - 
@@ -132,8 +132,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 63
-    - 78
+    - 65
+    - 82
     - 0
     - 
     - 
@@ -149,8 +149,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 79
-    - 88
+    - 83
+    - 92
     - 0
     - 
     - 
@@ -166,8 +166,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 89
-    - 96
+    - 93
+    - 100
     - 0
     - home
     - application
@@ -302,8 +302,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 64
-    - 65
+    - 66
+    - 67
     - 1
     - home
     - application
@@ -353,8 +353,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 68
-    - 69
+    - 70
+    - 71
     - 1
     - product2-qzz
     - application
@@ -370,8 +370,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 70
-    - 71
+    - 72
+    - 73
     - 1
     - plzregister
     - application
@@ -387,8 +387,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 72
-    - 73
+    - 74
+    - 75
     - 1
     - mdorder
     - application
@@ -421,8 +421,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 74
-    - 75
+    - 76
+    - 77
     - 1
     - QZZ-product-order
     - application
@@ -438,8 +438,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 66
-    - 67
+    - 68
+    - 69
     - 1
     - product1-qzz
     - application
@@ -455,8 +455,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 82
-    - 83
+    - 86
+    - 87
     - 1
     - life-better
     - application
@@ -472,8 +472,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 84
-    - 85
+    - 88
+    - 89
     - 1
     - life-better-now
     - application
@@ -489,8 +489,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 80
-    - 81
+    - 84
+    - 85
     - 1
     - home
     - application
@@ -506,8 +506,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 92
-    - 93
+    - 96
+    - 97
     - 1
     - company-info
     - application
@@ -523,8 +523,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 94
-    - 95
+    - 98
+    - 99
     - 1
     - company-info-people
     - application
@@ -540,8 +540,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 90
-    - 91
+    - 94
+    - 95
     - 1
     - home
     - application
@@ -744,8 +744,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 86
-    - 87
+    - 90
+    - 91
     - 1
     - tips
     - application
@@ -812,8 +812,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 76
-    - 77
+    - 78
+    - 79
     - 1
     - QZZ-history
     - application
@@ -836,3 +836,37 @@ refinery_pages:
     - application
     - 2014-04-21 14:47:24.000000000 Z
     - 2014-04-21 15:46:33.000000000 Z
+  - - 51
+    - 7
+    - 
+    - "订单详情"
+    - false
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 80
+    - 81
+    - 1
+    - QZZ-order-history
+    - application
+    - 2014-04-23 02:56:38.000000000 Z
+    - 2014-04-23 02:56:38.000000000 Z
+  - - 52
+    - 6
+    - 
+    - "会员中心"
+    - false
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 62
+    - 63
+    - 1
+    - QZZ-member-info
+    - application
+    - 2014-04-23 03:00:05.000000000 Z
+    - 2014-04-23 03:00:05.000000000 Z
