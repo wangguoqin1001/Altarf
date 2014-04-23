@@ -85,7 +85,7 @@ $(window).load (function(){
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td class="order_txt01">订购数量：</td>
-                              <td class="order_input01"><input id="num" type="number" class="content_input02" onblur="displayTotalPrice()"></td>
+                              <td class="order_input01"><input id="num" type="number" value="1" class="content_input02" disabled="disabled"></td>
                      </tr>
                </table>
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
@@ -104,7 +104,7 @@ $(window).load (function(){
                       <tr>
                               <td class="order_txt01">是否有折扣：</td>
                               <td >
-                              <select class="order_select" id="discount" name="discount" onchange="whetherUseDiscount()">
+                              <select class="order_select" id="discount" name="discount" disabled="disabled">
                               <option value="1">是</option>
                               <option value="0">否</option>
                               </select>
@@ -114,7 +114,7 @@ $(window).load (function(){
               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td class="order_txt01">使用优惠券：</td>
-                              <td class="order_input01"><input id="coupon" type="text" class="content_input02" onblur="checkDiscount()"></td>
+                              <td class="order_input01"><input id="coupon" type="text" class="content_input02" disabled="disabled"></td>
 								<td><div id="waitingImgDiv" style="margin-left:10px;margin-top:3px;display:none;"><img src="/assets/spinner.gif"></div></td>
 					 </tr>
                </table>
@@ -196,15 +196,15 @@ $(window).load (function(){
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td  class="content_txt01">具体地址:</td>
-                              <td  class="content_input01"><input id="address" type="text" class="content_input02"></td> 
-                              <td class="content_txt02"><input type="checkbox" id="useNewAddrChk" name="useNewAddrChk" onclick="enableAddrInput()"></input><label for="useNewAddrChk">创建新地址</label></td>                            
+                              <td  class="content_input01" style="width:0px;"><input id="address" type="text" class="content_input02" style="margin-left:5px;width:290px;"></td> 
+                              <!--<td class="content_txt02"><input type="checkbox" id="useNewAddrChk" name="useNewAddrChk" onclick="enableAddrInput()"></input><label for="useNewAddrChk">创建新地址</label></td>-->                            
 							
 					 </tr>
 					 <tr>
 						<td><div id="saveNewAddressDiv" style="display:none"><input type="button" id='saveNewAddressBtn' class="order_txt05" onclick="createNewAddress()" value="保存地址"/></div></td>
 					 </tr>
                </table>
-		<p style="padding-left:3%">已保存的有效地址:</p>
+		<!--<p style="padding-left:3%">已保存的有效地址:</p>
 		   <table id="existedAddressTab">
 		<thead>
 			<tr>
@@ -228,7 +228,7 @@ $(window).load (function(){
 				<td id="chooseTd"><label class="selectLabel" style="cursor:pointer;">选择</label></td>
 			</tr>
 		</tbody>
-		</table>
+		</table>-->
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td  class="content_txt01">是否需要发票:</td>
