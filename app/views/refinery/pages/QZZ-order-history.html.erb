@@ -100,21 +100,25 @@ $(window).load (function(){
                               <td class="order_input01"><input id="Sub-total" type="text" class="content_input02"></td>
                      </tr>
                </table>
+			   
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="order_txt01">是否有折扣：</td>
-                              <td >
-                              <select class="order_select" id="discount" name="discount" disabled="disabled">
-                              <option value="1">是</option>
-                              <option value="0">否</option>
-                              </select>
+                              <td class="order_txt01">会员折扣：</td>
+                              <td class="order_input01">
+									<input id="memberDiscountTxt" type="text" class="content_input02" disabled="disabled"/>
                               </td>
                      </tr>
               </table>
               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="order_txt01">使用优惠券：</td>
-                              <td class="order_input01"><input id="coupon" type="text" class="content_input02" disabled="disabled"></td>
+                              <td class="order_txt01" style="width: 100px;">使用优惠券：</td>
+							  <td style="width:50px">
+                              <select class="order_select" id="discount" name="discount" disabled="disabled" style="width:40px" onchange="whetherUseDiscount()">
+                              <option value="1">是</option>
+                              <option value="0" selected="selected">否</option>
+                              </select>
+                              </td>
+                              <td class="order_input01" style="width:190px"><input id="coupon" type="text" class="content_input02" disabled="disabled"></td>
 								<td><div id="waitingImgDiv" style="margin-left:10px;margin-top:3px;display:none;"><img src="/assets/spinner.gif"></div></td>
 					 </tr>
                </table>
@@ -125,7 +129,7 @@ $(window).load (function(){
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td  class="content_txt01">总    计：</td>
-                              <td class="order_input02"><input id="total" type="text" class="content_input02"></td>
+                              <td class="order_input02"><input id="total" type="text" class="content_input02" style="margin-left: 10px;width: 120px;"></td>
                               <td  class="order_txt03">（产品单价X数量X折扣或优惠=总价）</td>
                      </tr>     
                </table>                
@@ -133,7 +137,7 @@ $(window).load (function(){
                       <tr>
                               <td class="content_txt01" >支付方式：</td>
                               <td >
-                              <select class="order_select02" id="payment" name="payment"  >
+                              <select class="order_select02" id="payment" name="payment" disabled="disabled">
                               <option value="1">货到付款</option>
                               <option value="2">支付宝</option>
                               <option value="3">银行卡</option>
@@ -232,7 +236,7 @@ $(window).load (function(){
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td  class="content_txt01">是否需要发票:</td>
-                              <td><select class="order_select" id="invoice" name="invoice" onchange="whetherNeedInvoice()">
+                              <td><select class="order_select" id="invoice" name="invoice" disabled="disabled">
                               <option value="1">是</option>
                               <option value="0">否</option></select></td> 
                               <td  class="order_txt03"></td>                            
@@ -242,7 +246,7 @@ $(window).load (function(){
                       <tr>
                               <td class="content_txt01">发票类型：</td>
                               <td >
-                              <select class="order_select02" id="invoice_type" name="invoice_type" onchange="personalOrCompany()">
+                              <select class="order_select02" id="invoice_type" name="invoice_type" disabled="disabled">
                               <option value="1">个人</option>
                               <option value="2">单位</option>
                               </select>
@@ -260,7 +264,7 @@ $(window).load (function(){
                <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                               <td  class="content_txt01">寄票地址:</td>
-                              <td  class="content_input01"><input id="invoice_address" type="text" class="content_input02"></td> 
+                              <td  class="content_input01"><input id="invoice_address" type="text" class="content_input02" disabled="disabled"></td> 
                               <td class="content_txt02"></td>                           
                      </tr>
                </table> 

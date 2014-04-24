@@ -180,7 +180,8 @@ function getProductData(){
 				url: "/memberships/memberdiscount.json",
 				type: "GET",
 				dataType: "Text",
-		})).done (function (resp1,resp2) {
+		})
+		).done (function (resp1,resp2) {
 			memberDiscount=resp2[0];
 			$('#memberDiscountTxt').val(resp1[0]+" "+resp2[0]*100+"%");
 		}).fail (function() {
@@ -507,7 +508,17 @@ function loadOrderInfo()
 		displayUserInfo(targetOrder);
 		displayProductData(targetProduct);
 		$('#num').val(targetOrder.quantity.toString());
-		displayTotalPrice();
+		$('#memberDiscountTxt').val(targetOrder.discount*100+"%");
+		$("#Sub-total").val(productPrice*$("#num").val());
+		$('#total').val(targetOrder.total);
+		$('#payment').val(targetOrder.payment);
+		$('#invoice').val(targetOrder.need_invoice);
+		$('#invoice_address').val(targetOrder.billing);
+		$('#invoice_head').val(targetOrder.invoice_title);
+		if(targetOrder.invoice_title!="")
+		{
+			$('#invoice_type').val("2");
+		}
 	}).fail (function() {
 		alert ("请求发送失败，请稍候再试");
 	});
@@ -661,7 +672,7 @@ function displayTotalPrice()
 	if($("#num").val()!=""){
 		$("#Sub-total").val(productPrice*$("#num").val());
 		if(memberDiscount!=null)
-			$('#total').val(totalPrice*memberDiscount);
+			$('#total').val(productPrice*$("#num").val()*memberDiscount);
 	}
 }
 
@@ -674,7 +685,7 @@ var index = discountSelecter.selectedIndex; // 选中索引
 		$('#coupon').prop('disabled', true);
 		if($("#Sub-total").val()!=""&&memberDiscount!=null)
 		{
-			$("#total").val(productPrice*$("#num").val()*memberDiscount);////
+			$("#total").val(productPrice*$("#num").val()*memberDiscount);
 		}
 		else
 		{
