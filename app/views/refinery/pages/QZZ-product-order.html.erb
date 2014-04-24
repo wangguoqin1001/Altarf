@@ -141,14 +141,13 @@ $(window).load (function() {
               </table>
               <table class="content_tab" border="0" cellspacing="0" cellpadding="0">
                       <tr>
-                              <td class="order_txt01" style="width: 100px;">使用优惠券：</td>
-							  <td style="width:50px">
-                              <select class="order_select" id="discount" name="discount" style="width:40px" onchange="whetherUseDiscount()">
+                              <td class="order_txt01">使用优惠券：</td>
+							  <td class="order_input01" style="width:230px">
+                              <select class="order_select" id="discount" name="discount" style="width:40px;float:left;margin-left:10px;" onchange="whetherUseDiscount()">
                               <option value="1">是</option>
                               <option value="0" selected="selected">否</option>
                               </select>
-                              </td>
-                              <td class="order_input01" style="width:190px"><input id="coupon" type="text" class="content_input02" disabled="disabled" onblur="checkDiscount()"></td>
+                              <input id="coupon" type="text" class="content_input02" disabled="disabled" style="width:170px;float:right;" onblur="checkDiscount()"></td>
 								<td><div id="waitingImgDiv" style="margin-left:10px;margin-top:3px;display:none;"><img src="/assets/spinner.gif"></div></td>
 					 </tr>
                </table>
@@ -167,7 +166,7 @@ $(window).load (function() {
                       <tr>
                               <td class="content_txt01" >支付方式：</td>
                               <td >
-                              <select class="order_select02" id="payment" name="payment" style="margin-left:10px;" >
+                              <select class="order_select02" id="payment" name="payment" style="margin-left:13px;" >
                               <option value="1">货到付款</option>
                               <option value="2">支付宝</option>
                               <option value="3">银行卡</option>
