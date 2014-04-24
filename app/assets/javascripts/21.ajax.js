@@ -32,7 +32,7 @@ function login() {
 		else if (parseInt (resp.status) == 2) {
 			$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E6%88%91%E7%9A%84%E5%B8%90%E6%88%B7 .simple_captcha');
 			$('#loginerr').html ("验证码错误");
-		} else {
+		} else if(resp.status!=1&&resp.status!=2){
 			$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E6%88%91%E7%9A%84%E5%B8%90%E6%88%B7 .simple_captcha');
 			$('#loginerr').html ("登录信息错误");
 		}
@@ -120,11 +120,13 @@ function register() {
 		else {
 			if (resp.description != null)
 				alert (resp.description);
-			else
+			else 
 				alert ("请求失败，请再检查一遍您的输入并稍候再试");
+			$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E5%88%9D%E6%AC%A1%E7%99%BB%E5%BD%95 .simple_captcha');
 		}
 	}).fail (function() {
 		alert ("请求发送失败，请稍候再试");
+		$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E5%88%9D%E6%AC%A1%E7%99%BB%E5%BD%95 .simple_captcha');
 	});
 }
 
@@ -215,21 +217,79 @@ function displayProductData(product)
 }
 
 function saveChangesInfo(){
-	//TODO
-	var membership = { 
-		"addr" : $('#address').val(),
-		"city" : $('#city').val(),
-		"district" : $('#district').val(),
-		"email" : $('#email').val(),
-		"gender" : $('#sex option:selected').val(),
-		"mobile" : $('#mobile').val(),
-		//"nickname" : $('#username').val(),
-		//"password" : $.sha256 ($('#username').val() + $('#password').val()),
-		"phone" : $('#telephone01').val() + '-' + $('#telephone02').val() + '-' + $('#telephone03').val(),
-		"postal" : $('#postalcode').val(),
-		"province" : $('#province').val(),
-		"username" : $('#name').val()
-	};
+	 if ($('#password').val().length <6 || $('#password').val().length >12) {
+		alert ("请输入6-12位的密码");
+		return;
+	 } else if ($('#identification').val().length == 0) {
+		alert ("请再次输入您的密码");
+		return;
+	 } else if ($('#identification').val() != $('#password').val()) {
+		alert ("两次输入的密码不同");
+		return;
+	 } else if ($('#name').val().length == 0){
+	 	alert ("请输入您的姓名");
+		return;
+	 } else if ($('#mobile').val().length == 0){
+	 	alert ("请输入您的手机号码");
+		return;
+	 }else if ($('#mobile').val().length != 11){
+	 	alert ("请输入您的手机号码");
+		return;
+	 }else if ($('#telephone03').val().length == 0){
+	 	alert ("请输入您的电话号码");
+		return;
+	 } else if ($('#email').val().length == 0){
+	 	alert ("请输入您的邮箱");
+		return;
+	 } else if ($('#province').val().length == 0){
+	 	alert ("请输入收件人的省");
+		return;
+	 } else if ($('#city').val().length == 0){
+	 	alert ("请输入收件人的市");
+		return;
+	 } else if ($('#district').val().length == 0){
+	 	alert ("请输入收件人的县/区");
+		return;
+	 } else if ($('#postalcode').val().length == 0){
+	 	alert ("请输入收件人的邮编");
+		return;
+	 } else if ($('#address').val().length == 0){
+	 	alert ("请输入收件人的具体地址");
+		return;
+	 } else if ($('#captcha').val().length == 0){
+	 	alert ("请输入您的验证码");
+		return;
+	 } 
+	if ($('#identification').val() != "0000000000") {
+		var membership = { 
+			"addr" : $('#address').val(),
+			"city" : $('#city').val(),
+			"district" : $('#district').val(),
+			"email" : $('#email').val(),
+			"gender" : $('#sex option:selected').val(),
+			"mobile" : $('#mobile').val(),
+			"password" : $.sha256 ($('#username').val() + $('#password').val()),
+			"phone" : $('#telephone01').val() + '-' + $('#telephone02').val() + '-' + $('#telephone03').val(),
+			"postal" : $('#postalcode').val(),
+			"province" : $('#province').val(),
+			"username" : $('#name').val()
+		};
+	 }
+	 else{
+		var membership = { 
+			"addr" : $('#address').val(),
+			"city" : $('#city').val(),
+			"district" : $('#district').val(),
+			"email" : $('#email').val(),
+			"gender" : $('#sex option:selected').val(),
+			"mobile" : $('#mobile').val(),
+			//"password" : $.sha256 ($('#username').val() + $('#password').val()),
+			"phone" : $('#telephone01').val() + '-' + $('#telephone02').val() + '-' + $('#telephone03').val(),
+			"postal" : $('#postalcode').val(),
+			"province" : $('#province').val(),
+			"username" : $('#name').val()
+		};
+	}
 	$.ajax ({
 			url: "/memberships/1.json",
 			type: "PUT",
@@ -243,6 +303,7 @@ function saveChangesInfo(){
 			alert("保存成功");
 		}).fail (function() {
 			alert ("保存用户信息失败，请稍候再试");
+			$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E4%BC%9A%E5%91%98%E4%B8%AD%E5%BF%83 .simple_captcha');
 		});
 }
 function memberCenterLoad(){
