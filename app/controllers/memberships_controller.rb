@@ -152,10 +152,10 @@ class MembershipsController < ApplicationController
 		@address = @membership.addresses.first!
 		@address.update_attributes address
 
-#		ret = OfficialService.updatememberinfo params[:membership]
-#		if not ret["item"]["is_success"] == "True"
-#			Rails.logger.info ret.to_json
-#		end
+		ret = OfficialService.updatememberinfo @membership
+		if not ret["item"]["is_success"] == "True"
+			Rails.logger.info ret.to_json
+		end
 
 		respond_with @membership
 	end
