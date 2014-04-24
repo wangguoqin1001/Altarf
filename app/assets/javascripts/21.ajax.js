@@ -211,7 +211,6 @@ function displayProductData(product)
 		$('#price').prop('disabled', true);
 		$('#Sub-total').prop('disabled', true);
 		$('#total').prop('disabled', true);
-		$("#num").val('1');
 }
 
 function saveChangesInfo(){
@@ -268,7 +267,7 @@ function memberCenterLoad(){
 			$('#postalcode').val(resp.postal);
 			$('#province').val(resp.province);
 			$("#invoice_address").val(resp.addr);
-			$('#sex option:selected').val(resp.gender);
+			$('#sex').val(resp.gender);
 			}).fail (function() {
 			alert ("用户信息获取失败，请稍候再试");
 		});
@@ -486,7 +485,6 @@ function loadOrderInfo()
 	).done (function (resp1, resp2) {
 		products = resp1[0];
 		orders = resp2[0];
-		//alert(window.location.search.split('=')[1]);
 		var orderId = window.location.search.split('=')[1];
 		var targetOrder = null;
 		var targetProduct = null;
@@ -508,6 +506,8 @@ function loadOrderInfo()
 		}
 		displayUserInfo(targetOrder);
 		displayProductData(targetProduct);
+		$('#num').val(targetOrder.quantity.toString());
+		displayTotalPrice();
 	}).fail (function() {
 		alert ("请求发送失败，请稍候再试");
 	});
@@ -659,9 +659,7 @@ function createNewAddress(){
 function displayTotalPrice()
 {
 	if($("#num").val()!=""){
-		var totalPrice = productPrice*$("#num").val();
-		//alert(totalPrice);
-		$("#Sub-total").val(totalPrice);
+		$("#Sub-total").val(productPrice*$("#num").val());
 		if(memberDiscount!=null)
 			$('#total').val(totalPrice*memberDiscount);
 	}
