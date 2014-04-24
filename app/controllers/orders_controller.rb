@@ -68,11 +68,17 @@ class OrdersController < ApplicationController
 			end and return
 		end
 
+		@product = Product.find @order[:productid].to_s
+		@discount = MemberDiscount.memberdiscount @order[:nickname], 100
+
+		@order[:discount] = @discount
+		@order[:total] = @product["price"].to_f * @order[:quantity].to_i * @discount.to_f
+
 		@order.save
 
-		@order[:discount] = params[:order][:discount]
+		@order[:isdiscount] = params[:order][:discount]
 
-		ret = OrderService.getsingleorder @order
+		ret = OrderService.getsingleorder @order, @product, @discount
 		if not ret["item"]["is_success"] == "True"
 			Rails.logger.info ret.to_json
 		end
