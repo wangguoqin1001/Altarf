@@ -184,8 +184,10 @@ function getProductData(){
 				dataType: "Text",
 		})
 		).done (function (resp1,resp2) {
-			memberDiscount=resp2[0];
-			$('#memberDiscountTxt').val(resp1[0]+" "+resp2[0]*100+"%");
+			if(!isNaN(resp2[0])){
+				memberDiscount=resp2[0];
+				$('#memberDiscountTxt').val(resp1[0]+" "+resp2[0]*100+"%");
+			}
 		}).fail (function() {
 			alert ("会员等级获取失败，请稍候再试");
 		});
