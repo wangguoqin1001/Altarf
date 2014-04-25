@@ -23,7 +23,12 @@ class ApiMembershipsController < ApplicationController
 
 	# GET /memberships/1
 	def show
-		@membership = Membership.find params[:id]
+		if params[:id] == 0
+			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
+		else
+			@membership = Membership.find params[:id]
+		end
+
 		respond_with @membership
 	end
 
@@ -37,7 +42,12 @@ class ApiMembershipsController < ApplicationController
 
 	# GET /memberships/1/edit
 	def edit
-		@membership = Membership.find params[:id]
+		if params[:id] == 0
+			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
+		else
+			@membership = Membership.find params[:id]
+		end
+
 		respond_with @membership
 	end
 
@@ -59,7 +69,12 @@ class ApiMembershipsController < ApplicationController
 
 	# PUT /memberships/1
 	def update
-		@membership = Membership.find params[:id]
+		if params[:id] == 0
+			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
+		else
+			@membership = Membership.find params[:id]
+		end
+
 		@membership.update_attributes params[:membership]
 
 		session[:nickname] = params[:nickname]
@@ -69,7 +84,12 @@ class ApiMembershipsController < ApplicationController
 
 	# DELETE /memberships/1
 	def destroy
-		@membership = Membership.find params[:id]
+		if params[:id] == 0
+			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
+		else
+			@membership = Membership.find params[:id]
+		end
+
 		@membership.destroy
 		respond_with @membership
 	end
