@@ -267,10 +267,13 @@
 }
 .order_top01{
 	float:left;
+	position:absolute;
 }
 .order_top02{
 	float:right;
 	padding-right:4%;
+	position:absolute;
+	margin-left:500px;
 }
 
 /*搭配购买*/
