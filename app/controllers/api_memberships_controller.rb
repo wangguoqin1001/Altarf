@@ -23,7 +23,7 @@ class ApiMembershipsController < ApplicationController
 
 	# GET /memberships/1
 	def show
-		if params[:id] == 0
+		if params[:id].to_i == 0
 			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
 		else
 			@membership = Membership.find params[:id]
@@ -42,7 +42,7 @@ class ApiMembershipsController < ApplicationController
 
 	# GET /memberships/1/edit
 	def edit
-		if params[:id] == 0
+		if params[:id].to_i == 0
 			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
 		else
 			@membership = Membership.find params[:id]
@@ -61,30 +61,26 @@ class ApiMembershipsController < ApplicationController
 
 		@membership = Membership.new params[:membership]
 		@membership.save
-
-		@membership[:status] = 1
 		respond_with @membership
 	end
 
 
 	# PUT /memberships/1
 	def update
-		if params[:id] == 0
-			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
+		if params[:id].to_i == 0
+			@membership = Membership.find :first, :conditions => { :nickname => params[:membership][:nickname] }
 		else
 			@membership = Membership.find params[:id]
 		end
 
 		@membership.update_attributes params[:membership]
-
-		session[:nickname] = params[:nickname]
 		respond_with @membership
 	end
 
 
 	# DELETE /memberships/1
 	def destroy
-		if params[:id] == 0
+		if params[:id].to_i == 0
 			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
 		else
 			@membership = Membership.find params[:id]
