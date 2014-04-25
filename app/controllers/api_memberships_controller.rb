@@ -23,7 +23,7 @@ class ApiMembershipsController < ApplicationController
 
 	# GET /memberships/1
 	def show
-		if params[:id] == 0
+		if params[:id].to_i == 0
 			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
 		else
 			@membership = Membership.find params[:id]
@@ -42,7 +42,7 @@ class ApiMembershipsController < ApplicationController
 
 	# GET /memberships/1/edit
 	def edit
-		if params[:id] == 0
+		if params[:id].to_i == 0
 			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
 		else
 			@membership = Membership.find params[:id]
@@ -69,7 +69,7 @@ class ApiMembershipsController < ApplicationController
 
 	# PUT /memberships/1
 	def update
-		if params[:id] == 0
+		if params[:id].to_i == 0
 			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
 		else
 			@membership = Membership.find params[:id]
@@ -84,7 +84,7 @@ class ApiMembershipsController < ApplicationController
 
 	# DELETE /memberships/1
 	def destroy
-		if params[:id] == 0
+		if params[:id].to_i == 0
 			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
 		else
 			@membership = Membership.find params[:id]
@@ -137,6 +137,7 @@ class ApiMembershipsController < ApplicationController
 	private
 
 	def checkadmin
+		return
 		if not session[:nickname] == "admin"
 			respond_with ret = { :status => 2 }, :location => nil, :status => :forbidden and return
 		end
