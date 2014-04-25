@@ -61,8 +61,6 @@ class ApiMembershipsController < ApplicationController
 
 		@membership = Membership.new params[:membership]
 		@membership.save
-
-		@membership[:status] = 1
 		respond_with @membership
 	end
 
@@ -70,14 +68,12 @@ class ApiMembershipsController < ApplicationController
 	# PUT /memberships/1
 	def update
 		if params[:id].to_i == 0
-			@membership = Membership.find :first, :conditions => { :nickname => params[:nickname] }
+			@membership = Membership.find :first, :conditions => { :nickname => params[:membership][:nickname] }
 		else
 			@membership = Membership.find params[:id]
 		end
 
 		@membership.update_attributes params[:membership]
-
-		session[:nickname] = params[:nickname]
 		respond_with @membership
 	end
 
@@ -137,7 +133,6 @@ class ApiMembershipsController < ApplicationController
 	private
 
 	def checkadmin
-		return
 		if not session[:nickname] == "admin"
 			respond_with ret = { :status => 2 }, :location => nil, :status => :forbidden and return
 		end
