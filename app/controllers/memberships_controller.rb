@@ -122,7 +122,7 @@ class MembershipsController < ApplicationController
 			cipher.key = Altarf::Application.config.membership_secret_token
 
 			iv = Digest::SHA256.new
-			iv.update params[:membership][:nickname]
+			iv.update session[:nickname]
 			cipher.iv = iv.hexdigest
 
 			result = cipher.update params[:membership][:password]
