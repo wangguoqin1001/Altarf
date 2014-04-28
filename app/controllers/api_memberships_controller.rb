@@ -73,6 +73,10 @@ class ApiMembershipsController < ApplicationController
 			@membership = Membership.find params[:id]
 		end
 
+		params[:membership].delete :id
+		params[:membership].delete :nickname
+		params[:membership].delete :password
+
 		@membership.update_attributes params[:membership]
 		respond_with @membership
 	end
