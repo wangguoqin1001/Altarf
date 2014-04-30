@@ -632,10 +632,9 @@ background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	width:204px;
-	height:160px;
-	/*width:65%;
-	margin-top:-2%;
-	margin-left:15%;*/
+	height:130px;
+	margin-top:20px;
+	margin-left:-15px;
 }
 
 .number-text-1{
