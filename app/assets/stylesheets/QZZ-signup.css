@@ -51,6 +51,7 @@
 .content_tab{
 	padding-top:15px;
 	width:100%;
+	margin-left:25px;
 }
 .content_txt01{
 	width:16%;
@@ -273,7 +274,7 @@
 	float:right;
 	padding-right:4%;
 	position:absolute;
-	margin-left:500px;
+	margin-left:580px;
 }
 
 /*搭配购买*/
