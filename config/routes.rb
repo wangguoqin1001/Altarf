@@ -1,5 +1,12 @@
 Altarf::Application.routes.draw do
 
+  resources :coupons do
+    collection do
+      get :checkcoupon
+    end
+  end
+
+
   resources :orders
 
 
