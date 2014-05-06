@@ -100,6 +100,7 @@ db/schema.rb
 
 # test data
 db/datadump/addresses.yml
+db/datadump/coupons.yml
 db/datadump/memberships.yml
 db/datadump/orders.yml
 db/datadump/refinery_inquiries_inquiries.yml
