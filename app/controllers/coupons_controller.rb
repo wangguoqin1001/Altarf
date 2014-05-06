@@ -58,7 +58,7 @@ class CouponsController < ApplicationController
 
 	# GET /coupons/checkcoupon
 	def checkcoupon
-		@coupon = Coupon.find :all, :conditions => { :coupon => params[:coupon], :sku => params[:sku] }
+		@coupon = Coupon.find :first, :conditions => { :coupon => params[:coupon], :sku => params[:sku] }
 		respond_with @coupon
 	end
 
