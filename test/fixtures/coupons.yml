@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sku: MyString
+  coupon: MyString
+  discount: 1.5
+  percentage_off: 1.5
+
+two:
+  sku: MyString
+  coupon: MyString
+  discount: 1.5
+  percentage_off: 1.5
