@@ -1,6 +1,5 @@
 // JavaScript Document
 var memberDiscount=null;
-var couponDiscount=null;
 var productPrice=null;
 function login() {
 	if ($('#account').val().length == 0) {
@@ -780,11 +779,45 @@ function whetherNeedInvoice()
 }
 function checkDiscount()
 {
-	if(document.getElementById("discount").selectedIndex==0&&$('#coupon').val()!='')
-	{
-		//ToDo 检查优惠劵
-		//$('#total').val($('#Sub-total').val());
-		var total=null;
+	if($("#discount").val()==1&&$('#coupon').val()!=''&&$("#num").val()!=null)
+	{		
+		$('#waitingImgDiv').css("display","block");
+		$.ajax ({
+		url:		"/coupons/checkcoupon.json",
+		type:		"GET",
+		dataType:	"json",
+		data:		{
+			 coupon: $('#coupon').val(),
+			 sku:window.location.search.split('=')[1]
+		}
+		}).done (function (resp) {
+			if(resp!=null)
+			{
+				var discount=resp.discount;
+				var percentage_off=resp.percentage_off;
+				var totalPrice = productPrice*$("#num").val();
+				if (memberDiscount!=null)
+				{
+					totalPrice=totalPrice*memberDiscount;
+				}
+				if (discount!=null)
+				{
+					totalPrice = totalPrice - discount;
+				}
+				if(percentage_off!=null)
+				{
+					totalPrice = totalPrice*percentage_off;
+				}
+				$("#total").val(totalPrice);
+			}
+			else
+			{
+				alert('验证码错误！');
+			}
+		}).fail(function (resp){
+			alert ("优惠券查询失败，请稍候再试");
+		});
+		$('#waitingImgDiv').css("display","none");
 	}
 }
 function personalOrCompany()
