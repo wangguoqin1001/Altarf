@@ -22,7 +22,7 @@ class OrderService
 	end
 
 
-	def self.getsingleorder(order, product, discount)
+	def self.getsingleorder(order, product)
 		self.query_order_service :get_singe_order, {
 			"orderStr" => {
 				"OrderID" => order[:id].to_s,
@@ -46,9 +46,9 @@ class OrderService
 				"ProductName" => product["name"],
 				"ProductPrice" => product["price"],
 				"ProductNumbers" => order[:quantity].to_s,
-				"Discount" => "0", #order[:coupon].to_s,
+				"Discount" => order[:coupon][:coupon].to_s,
 				"Subtotal" => product["price"].to_f * order[:quantity].to_i,
-				"Total" => product["price"].to_f * order[:quantity].to_i * discount.to_f
+				"Total" => product["price"].to_f * order[:quantity].to_i * order[:discount].to_f * order[:coupon][:percentage_off].to_f - order[:coupon][:discount].to_f
 #				"OrderFrom" => nil,
 #				"OrderWay" => nil,
 #				"TransCompany" => nil,
