@@ -70,15 +70,24 @@ class OrdersController < ApplicationController
 
 		@product = Product.find @order[:productid].to_s
 		@discount = MemberDiscount.memberdiscount @order[:nickname], 100
+		@coupon = Coupon.find :first, :conditions => { :coupon => @order[:coupon], :sku => @order[:productid] }, :select => "discount, percentage_off"
+
+		if not @coupon
+			@coupon = { :discount => 0, :percentage_off => 1 }
+		else
+			@coupon[:discount] = 0 if not @coupon[:discount]
+			@coupon[:percentage_off] = 1 if not @coupon[:percentage_off]
+		end
 
 		@order[:discount] = @discount
-		@order[:total] = @product["price"].to_f * @order[:quantity].to_i * @discount.to_f
+		@order[:total] = @product["price"].to_f * @order[:quantity].to_i * @discount.to_f * @coupon[:percentage_off].to_f - @coupon[:discount].to_f
 
 		@order.save
 
+		@order[:coupon] = @coupon
 		@order[:isdiscount] = params[:order][:discount]
 
-		ret = OrderService.getsingleorder @order, @product, @discount
+		ret = OrderService.getsingleorder @order, @product
 		if not ret["item"]["is_success"] == "True"
 			Rails.logger.info ret.to_json
 		end
