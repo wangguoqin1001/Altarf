@@ -13,6 +13,7 @@
 	position:absolute;
 	margin-top:-378px;
 	width:100%;
+	font-size:0.8em;
 }
 .product_top{
 	width:10px;
@@ -53,6 +54,7 @@
 	-moz-transform: skew(-25deg); 
 	-o-transform: skew(-25deg); 
 	transform: skew(-25deg);
+	font-size:0.8em;
 }
 
 
