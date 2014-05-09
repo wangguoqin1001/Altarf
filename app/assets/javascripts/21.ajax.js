@@ -1,6 +1,7 @@
 // JavaScript Document
 var memberDiscount=null;
 var productPrice=null;
+var memberLevel=null;
 function login() {
 	if ($('#account').val().length == 0) {
 		alert ("请输入您的用户名");
@@ -185,6 +186,7 @@ function getProductData(){
 		).done (function (resp1,resp2) {
 			if(!isNaN(resp2[0])){
 				memberDiscount=resp2[0];
+				memberLevel=resp1[0];
 				$('#memberDiscountTxt').val(resp1[0]+" "+resp2[0]*100+"%");
 			}
 		}).fail (function() {
@@ -731,11 +733,16 @@ function createNewAddress(){
 
 function displayTotalPrice()
 {
-	if($("#num").val()!=""){
-		$("#Sub-total").val(productPrice*$("#num").val());
-		if(memberDiscount!=null)
-			$('#total').val(productPrice*$("#num").val()*memberDiscount);
+	if($("#num").val()<=0)
+	{
+		$("#num").val('1');
 	}
+	$("#Sub-total").val(productPrice*$("#num").val());
+	if(memberDiscount!=null)
+	{
+		$('#total').val(productPrice*$("#num").val()*memberDiscount);
+	}
+	checkDiscount();
 }
 
 function whetherUseDiscount()
@@ -745,6 +752,8 @@ var index = discountSelecter.selectedIndex; // 选中索引
 	if(index==1)
 	{
 		$('#coupon').prop('disabled', true);
+		$('#coupon').val('');
+		$('#memberDiscountTxt').val(memberLevel+memberDiscount*100+'%');
 		if($("#Sub-total").val()!=""&&memberDiscount!=null)
 		{
 			$("#total").val(productPrice*$("#num").val()*memberDiscount);
@@ -779,7 +788,7 @@ function whetherNeedInvoice()
 }
 function checkDiscount()
 {
-	if($("#discount").val()==1&&$('#coupon').val()!=''&&$("#num").val()!=null)
+	if($("#discount").val()==1&&$('#coupon').val()!=''&&$("#num").val()!='')
 	{		
 		$('#waitingImgDiv').css("display","block");
 		$.ajax ({
@@ -798,7 +807,7 @@ function checkDiscount()
 				var totalPrice = productPrice*$("#num").val();
 				if (memberDiscount!=null)
 				{
-					totalPrice=totalPrice*memberDiscount;
+					$('#memberDiscountTxt').val('100%');
 				}
 				if (discount!=null)
 				{
