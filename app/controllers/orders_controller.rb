@@ -79,8 +79,19 @@ class OrdersController < ApplicationController
 			@coupon[:percentage_off] = 1 if not @coupon[:percentage_off]
 		end
 
+		@order[:total] = @product["price"].to_f * @order[:quantity].to_i # in case none of the following works
+		begin
+			if @coupon[:discount].to_i == 0 and @coupon[:percentage_off].to_i == 1
+				@order[:total] = @product["price"].to_f * @order[:quantity].to_i * @discount.to_f
+			else
+				@order[:total] = @product["price"].to_f * @order[:quantity].to_i * @coupon[:percentage_off].to_f - @coupon[:discount].to_f
+			end
+		rescue
+			@order[:total] = @product["price"].to_f * @order[:quantity].to_i * @discount.to_f
+		end
+		@order[:total] = @order[:total].round(2)
+
 		@order[:discount] = @discount
-		@order[:total] = @product["price"].to_f * @order[:quantity].to_i * @discount.to_f * @coupon[:percentage_off].to_f - @coupon[:discount].to_f
 
 		@order.save
 

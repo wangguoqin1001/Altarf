@@ -48,7 +48,7 @@ class OrderService
 				"ProductNumbers" => order[:quantity].to_s,
 				"Discount" => order[:coupon][:coupon].to_s,
 				"Subtotal" => product["price"].to_f * order[:quantity].to_i,
-				"Total" => product["price"].to_f * order[:quantity].to_i * order[:discount].to_f * order[:coupon][:percentage_off].to_f - order[:coupon][:discount].to_f
+				"Total" => order[:total]
 #				"OrderFrom" => nil,
 #				"OrderWay" => nil,
 #				"TransCompany" => nil,
