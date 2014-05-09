@@ -147,7 +147,7 @@ $(window).load (function() {
                               <option value="1">是</option>
                               <option value="0" selected="selected">否</option>
                               </select>
-                              <input id="coupon" type="text" class="content_input02" disabled="disabled" style="width:170px;float:right;" onblur="checkDiscount()"></td>
+                              <input id="coupon" type="text" class="content_input02" disabled="disabled" style="width:170px;float:right;" onblur="checkDiscount()" onkeypress='if(event.keyCode==13){checkDiscount()}'></td>
 								<td><div id="waitingImgDiv" style="margin-left:10px;margin-top:3px;display:none;"><img src="/assets/spinner.gif"></div></td>
 					 </tr>
                </table>
