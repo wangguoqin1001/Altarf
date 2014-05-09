@@ -31,7 +31,7 @@
                       <tr>
                               <td class="history_txt02" style="cursor:pointer;"> </td>
                               <td class="history_txt03"> </td>
-                              <td class="history_txt04"> </td>                             
+                              <td class="history_txt04" style="cursor:pointer;"> </td>                             
                      </tr>
                </table>           
 </div>
@@ -48,6 +48,11 @@
 <script>
 	$('.history_txt02').click(function(){
 		location.href="/气之购/订单详情"+$(this).html().replace('订单：','?orderId=');
+	});
+</script>
+<script>
+	$('.history_txt04').click(function(){
+		location.href="/气之购/订单详情"+$(this).parent().find('.history_txt02').html().replace('订单：','?orderId=');
 	});
 </script>
 <!--<script>
