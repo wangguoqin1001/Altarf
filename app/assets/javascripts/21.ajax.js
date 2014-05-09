@@ -583,6 +583,11 @@ function loadOrderInfo()
 		{
 			$('#invoice_type').val("2");
 		}
+		if(targetOrder.coupon!="")
+		{
+			$('#discount').val('1');
+			$('#coupon').val(targetOrder.coupon);
+		}
 	}).fail (function() {
 		alert ("请求发送失败，请稍候再试");
 	});
