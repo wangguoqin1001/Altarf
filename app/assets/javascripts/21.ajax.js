@@ -820,7 +820,7 @@ function checkDiscount()
 				}
 				if(percentage_off!=null)
 				{
-					totalPrice = totalPrice*percentage_off;
+					totalPrice = (totalPrice*percentage_off).toFixed(0);
 				}
 				$("#total").val(totalPrice);
 			}
