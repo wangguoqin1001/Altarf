@@ -583,6 +583,11 @@ function loadOrderInfo()
 		{
 			$('#invoice_type').val("2");
 		}
+		if(targetOrder.coupon!="")
+		{
+			$('#discount').val('1');
+			$('#coupon').val(targetOrder.coupon);
+		}
 	}).fail (function() {
 		alert ("请求发送失败，请稍候再试");
 	});
@@ -815,7 +820,7 @@ function checkDiscount()
 				}
 				if(percentage_off!=null)
 				{
-					totalPrice = totalPrice*percentage_off;
+					totalPrice = (totalPrice*percentage_off).toFixed(0);
 				}
 				$("#total").val(totalPrice);
 			}
