@@ -187,7 +187,7 @@ function getProductData(){
 			if(!isNaN(resp2[0])){
 				memberDiscount=resp2[0];
 				memberLevel=resp1[0];
-				$('#memberDiscountTxt').val(resp1[0]+" "+resp2[0]*100+"%");
+				$('#memberDiscountTxt').val(resp1[0]+" "+(1-resp2[0])*100+"%");
 			}
 		}).fail (function() {
 			alert ("会员等级获取失败，请稍候再试");
@@ -572,7 +572,7 @@ function loadOrderInfo()
 		displayUserInfo(targetOrder);
 		displayProductData(targetProduct);
 		$('#num').val(targetOrder.quantity.toString());
-		$('#memberDiscountTxt').val(targetOrder.discount*100+"%");
+		$('#memberDiscountTxt').val((1-targetOrder.discount)*100+"%");
 		$("#Sub-total").val(productPrice*$("#num").val());
 		$('#total').val(targetOrder.total);
 		$('#payment').val(targetOrder.payment);
@@ -758,7 +758,7 @@ var index = discountSelecter.selectedIndex; // 选中索引
 	{
 		$('#coupon').prop('disabled', true);
 		$('#coupon').val('');
-		$('#memberDiscountTxt').val(memberLevel+memberDiscount*100+'%');
+		$('#memberDiscountTxt').val(memberLevel+(1-memberDiscount)*100+'%');
 		if($("#Sub-total").val()!=""&&memberDiscount!=null)
 		{
 			$("#total").val(productPrice*$("#num").val()*memberDiscount);
@@ -812,7 +812,7 @@ function checkDiscount()
 				var totalPrice = productPrice*$("#num").val();
 				if (memberDiscount!=null)
 				{
-					$('#memberDiscountTxt').val('100%');
+					$('#memberDiscountTxt').val('0%');
 				}
 				if (discount!=null)
 				{
