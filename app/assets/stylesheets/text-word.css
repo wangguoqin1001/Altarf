@@ -22,14 +22,14 @@ a:hover{
 	left:380px;
 	list-style-type: none;
 	float: none;
-	width: 760px;
+	width: 630px;
 	text-align:right;
 }
 
 .first-line{
 	list-style-type:none;
 	font-size:1.2em;
-	text-align:center;
+	text-align:right;
 }
 
 .second-line{
@@ -182,7 +182,7 @@ a:hover{
 	height: 470px;
     width: 800px;
     position: absolute;
-    margin-left: 380px;
+    margin-left: 450px;
     top:1%;
 }
 .para-Y-left{
@@ -451,7 +451,7 @@ a:hover{
 .white-blank-pro1 span{
 	background-color: #fff;
 	background:rgba(0,0,0,0.5) !important; /*实现FF背景透明，文字不透明*/
-background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/ 
+	background:#000; filter:Alpha(opacity=50);/*实现IE背景透明*/ 
 	position: absolute;
 	top: 209px;
 	left: 22%;
