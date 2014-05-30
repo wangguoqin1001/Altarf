@@ -89,6 +89,7 @@ nav{
      -o-transform: skew(-24deg); 
      -moz-transform: skew(-24deg); 
      -webkit-transform: skew(-24deg);
+	 -ms-transform:skew(-24deg); 
 }
 
 #menu ul li:hover ul li {
@@ -101,6 +102,7 @@ nav{
      -o-transform: skew(24deg); 
      -moz-transform: skew(24deg); 
      -webkit-transform: skew(24deg);
+	 -ms-transform:skew(24deg);
 //	 background: -moz-linear-gradient(left, #937145 0%, #937145 88%, #ffffff 100%);
 //	background: -webkit-linear-gradient(left, #937145 0%, #937145 88%, #ffffff 100%);
 //	background: -o-linear-gradient(left, #937145 0%, #937145 88%, #ffffff 100%);

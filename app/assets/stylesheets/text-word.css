@@ -39,12 +39,10 @@ a:hover{
 	padding-top:0.5%;
 }
 
-
-
 .left-over-coffe{
 	font-size:1.5em;
 	position:absolute;
-	top:160px;
+	top:155px;
 	left:240px;
 	color:#a68352;
 	word-spacing:0.5em;
@@ -66,9 +64,9 @@ a:hover{
 	color:#000;
 	transform:scale(1) skew(24deg); 
      -o-transform:scale(1) skew(24deg); 
+     -ms-transform: scale(1)skew(24deg); 
      -moz-transform: scale(1)skew(24deg); 
      -webkit-transform: scale(1)skew(24deg);
-	
 }
 
 
@@ -188,6 +186,7 @@ a:hover{
 .para-Y-left{
 	 transform:scale(1) skew(-24deg); 
      -o-transform:scale(1) skew(-24deg); 
+     -ms-transform: scale(1)skew(-24deg); 
      -moz-transform: scale(1)skew(-24deg); 
      -webkit-transform: scale(1)skew(-24deg);
 	 width:66px;
@@ -202,6 +201,7 @@ a:hover{
 .para-Y-left-bc{
 	 transform:scale(1) skew(-24deg); 
      -o-transform:scale(1) skew(-24deg); 
+     -ms-transform: scale(1)skew(-24deg); 
      -moz-transform: scale(1)skew(-24deg); 
      -webkit-transform: scale(1)skew(-24deg);
 	 width:66px;
@@ -216,6 +216,7 @@ a:hover{
 .para-Y-left-1{
 	 transform:scale(1) skew(-24deg); 
      -o-transform:scale(1) skew(-24deg); 
+     -ms-transform: scale(1)skew(-24deg); 
      -moz-transform: scale(1)skew(-24deg); 
      -webkit-transform: scale(1)skew(-24deg);
 	 width:66px;
@@ -230,6 +231,7 @@ a:hover{
 .para-Y-left-1-bc{
 	 transform:scale(1) skew(-24deg); 
      -o-transform:scale(1) skew(-24deg); 
+     -ms-transform: scale(1)skew(-24deg); 
      -moz-transform: scale(1)skew(-24deg); 
      -webkit-transform: scale(1)skew(-24deg);
 	 width:66px;
@@ -244,6 +246,7 @@ a:hover{
 .para-Y-left-2{
 	 transform:scale(1) skew(-24deg); 
      -o-transform:scale(1) skew(-24deg); 
+     -ms-transform: scale(1)skew(-24deg); 
      -moz-transform: scale(1)skew(-24deg); 
      -webkit-transform: scale(1)skew(-24deg);
 	 width:66px;
@@ -258,6 +261,7 @@ a:hover{
 .para-Y-left-2-bc{
 	 transform:scale(1) skew(-24deg); 
      -o-transform:scale(1) skew(-24deg); 
+     -ms-transform: scale(1)skew(-24deg); 
      -moz-transform: scale(1)skew(-24deg); 
      -webkit-transform: scale(1)skew(-24deg);
 	 width:66px;
@@ -272,6 +276,7 @@ a:hover{
 .para-Y-left-3{
 	 transform:scale(1) skew(-24deg); 
      -o-transform:scale(1) skew(-24deg); 
+     -ms-transform: scale(1)skew(-24deg); 
      -moz-transform: scale(1)skew(-24deg); 
      -webkit-transform: scale(1)skew(-24deg);
 	 width:66px;
@@ -286,6 +291,7 @@ a:hover{
 .para-Y-left-3-bc{
 	 transform:scale(1) skew(-24deg); 
      -o-transform:scale(1) skew(-24deg); 
+     -ms-transform: scale(1)skew(-24deg); 
      -moz-transform: scale(1)skew(-24deg); 
      -webkit-transform: scale(1)skew(-24deg);
 	 width:66px;
@@ -300,6 +306,7 @@ a:hover{
 .text-para-Y{
 	transform:scale(1) skew(24deg); 
      -o-transform:scale(1) skew(24deg); 
+     -ms-transform: scale(1)skew(24deg);
      -moz-transform: scale(1)skew(24deg); 
      -webkit-transform: scale(1)skew(24deg);
 	font-size:0.8em;
@@ -314,6 +321,7 @@ a:hover{
 .para-W-right{
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
+	-ms-transform: scale(1)skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
 	width: 400px;
@@ -333,6 +341,7 @@ a:hover{
 .para-W-right-1{
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
+	-ms-transform: scale(1)skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
 	width: 400px;
@@ -353,6 +362,7 @@ a:hover{
 .para-W-right-2{
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
+	-ms-transform: scale(1)skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
 	width: 400px;
@@ -374,6 +384,7 @@ a:hover{
 .para-W-right-3{
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
+	-ms-transform: scale(1)skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
 	width: 400px;
@@ -394,6 +405,7 @@ a:hover{
 .para-W-right-text{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	font-size:12px;
@@ -402,6 +414,7 @@ a:hover{
 .para-W-right-text-1{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	font-size:12px;
@@ -410,6 +423,7 @@ a:hover{
 .outside-para{
 	transform: scale(1.2) skew(-24deg);
 	-o-transform: scale(1.2) skew(-24deg);
+	-ms-transform: scale(1.2)skew(-24deg);
 	-moz-transform: scale(1.2)skew(-24deg);
 	-webkit-transform: scale(1.2)skew(-24deg);
 	border:solid #000 1px;
@@ -427,6 +441,7 @@ a:hover{
 	background-color: #FFF;
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
+	-ms-transform: scale(1)skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
 	position: absolute;
@@ -439,6 +454,7 @@ a:hover{
 	background-color: #937145;
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
+	-ms-transform: scale(1)skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
 	position: absolute;
@@ -464,6 +480,7 @@ a:hover{
 	background-color: #FFF;
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
+	-ms-transform: scale(1)skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
 	
@@ -477,6 +494,7 @@ a:hover{
 	background-color: #937145;
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
+	-ms-transform: scale(1)skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
 	position: absolute;
@@ -489,6 +507,7 @@ a:hover{
 .coffe-blank-pro1-top{
 	transform: scale(1) skew(0deg);
 	-o-transform: scale(1) skew(0deg);
+	-ms-transform: scale(1)skew(0deg);
 	-moz-transform: scale(1)skew(0deg);
 	-webkit-transform: scale(1)skew(0deg);
 	background-color:#937145;
@@ -508,6 +527,7 @@ a:hover{
 .coffe-blank-pro1-top-2{
 	transform: scale(1) skew(0deg);
 	-o-transform: scale(1) skew(0deg);
+	-ms-transform: scale(1)skew(0deg);
 	-moz-transform: scale(1)skew(0deg);
 	-webkit-transform: scale(1)skew(0deg);
 	background-color:#937145;
@@ -522,6 +542,7 @@ a:hover{
 .img-blank-pro1-inside{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	width:58%;
@@ -553,6 +574,7 @@ a:hover{
 	line-height:1.2em;
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 }
@@ -585,6 +607,7 @@ a:hover{
 	line-height:1.2em;
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 }
@@ -597,6 +620,7 @@ a:hover{
 .img-blank-pro1-inside-2{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	width:52%;
@@ -608,6 +632,7 @@ a:hover{
 .coffe-blank-pro1-over{
 	transform: scale(1) skew(0deg);
 	-o-transform: scale(1) skew(0deg);
+	-ms-transform: scale(1)skew(0deg);
 	-moz-transform: scale(1)skew(0deg);
 	-webkit-transform: scale(1)skew(0deg);
 	background-color:#937145;
@@ -637,12 +662,14 @@ a:hover{
 	margin-left:-23%;
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	}
 .img-blank-pro1-inside-1{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	width:204px;
@@ -658,6 +685,7 @@ a:hover{
 .number-text-1 ul li:first-child{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	list-style-type:none;
@@ -667,6 +695,7 @@ a:hover{
 .number-text-1 ul li:last-child{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	list-style-type:none;
@@ -682,6 +711,7 @@ a:hover{
 .number-text-2 ul li:first-child{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	list-style-type:none;
@@ -691,6 +721,7 @@ a:hover{
 .number-text-2 ul li:last-child{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	list-style-type:none;
@@ -701,6 +732,7 @@ a:hover{
 .img-blank-pro1-inside-3{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	width:160px;
@@ -712,6 +744,7 @@ a:hover{
 .button-product2 input{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	background-color:#937145;
@@ -731,6 +764,7 @@ a:hover{
 	background-color: #FFF;
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
+	-ms-transform: scale(1)skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
 	background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
@@ -740,17 +774,16 @@ a:hover{
 	background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
 	z-index:-99;	
-	width:750px;
+	width:650px;
 	height:100%;
 	position:absolute;
 	left:400px;
 	top:0%;
 }
 .large-inside-text{	
-	width:78%;
+	width:90%;
 	height:50%;
 	margin-top:150px;
-	margin-left:5%;
 }
 
 .large-inside-text ul{	
@@ -760,6 +793,7 @@ a:hover{
 //	background-color: #FFF;
 	transform: scale(1) skew(0deg);
 	-o-transform: scale(1) skew(0deg);
+	-ms-transform: scale(1)skew(0deg);
 	-moz-transform: scale(1)skew(0deg);
 	-webkit-transform: scale(1)skew(0deg);
 }
@@ -775,6 +809,7 @@ a:hover{
 	font-style:normal;
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 }
@@ -782,24 +817,26 @@ a:hover{
 .large-inside-img{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	position:absolute;
-	left:-23%;
-	top:30%;
-	width:38%;
+	left:-165px;
+	top:170px;
+	width:45%;
 }
 .little-text-double{
 
 	transform: scale(0.8) skew(0deg);
 	-o-transform: scale(0.8) skew(0deg);
+	-ms-transform: scale(0.8)skew(0deg);
 	-moz-transform: scale(0.8)skew(0deg);
 	-webkit-transform: scale(0.8)skew(0deg);	
 	position:absolute;
 	width:200px;
 	height:30px;
-	left:84%;
-	top:24%;
+	left:82%;
+	top:130px;
 	background: -moz-linear-gradient(left, #a1753f 1%, #c59a47 100%);
 	background: -webkit-linear-gradient(left, #a1753f 1%, #c59a47 100%);
 	background: -o-linear-gradient(left, #a1753f 1%, #c59a47 100%);
@@ -810,6 +847,7 @@ a:hover{
 .little-text-double ul li{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	list-style-type:none;
@@ -822,6 +860,7 @@ a:hover{
 .little-text-double-2{
 	transform: scale(0.8) skew(0deg);
 	-o-transform: scale(0.8) skew(0deg);
+	-ms-transform: scale(0.8)skew(0deg);
 	-moz-transform: scale(0.8)skew(0deg);
 	-webkit-transform: scale(0.8)skew(0deg);
 	
@@ -840,6 +879,7 @@ a:hover{
 .little-text-double-2 ul li{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	list-style-type:none;
@@ -854,6 +894,7 @@ a:hover{
 	background-color: #FFF;
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
+	-ms-transform: scale(1)skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
 	z-index:-99;
@@ -865,7 +906,7 @@ a:hover{
 	background: linear-gradient(to right, #a1753f 1%, #c59a47 100%);
 	background: -webkit-gradient(linear,  top left, top right, color-stop(0%, #a1753f), color-stop(100%, #c59a47));
 	
-	width:700px;
+	width:650px;
 	height:100%;
 	position:absolute;
 	left:400px;
@@ -883,6 +924,7 @@ a:hover{
 	padding-left:16.7%;
 	transform: scale(1) skew(0deg);
 	-o-transform: scale(1) skew(0deg);
+	-ms-transform: scale(1)skew(0deg);
 	-moz-transform: scale(1)skew(0deg);
 	-webkit-transform: scale(1)skew(0deg);
 }
@@ -898,6 +940,7 @@ a:hover{
 	font-style:normal;
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 }
@@ -906,6 +949,7 @@ a:hover{
 	background-color: #FFF;
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
+	-ms-transform: scale(1)skew(-24deg);
 	-moz-transform: scale(1)skew(-24deg);
 	-webkit-transform: scale(1)skew(-24deg);
 	background: -moz-linear-gradient(left, #d2a93b 1%, #966532 100%);
@@ -932,6 +976,7 @@ a:hover{
 .large-img-inside-2{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	height:40%;
@@ -943,6 +988,7 @@ a:hover{
 .large-inside-text-3{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	position:absolute;
@@ -956,6 +1002,7 @@ a:hover{
 .large-inside-text-small{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	font-size:12px;
@@ -967,6 +1014,7 @@ a:hover{
 .large-inside-text-small-2{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	font-size: 12px;
@@ -980,6 +1028,7 @@ a:hover{
 .large-img-inside-map{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
+	-ms-transform: scale(1)skew(24deg);
 	-moz-transform: scale(1)skew(24deg);
 	-webkit-transform: scale(1)skew(24deg);
 	height:40%;
@@ -998,6 +1047,7 @@ a:hover{
 	margin-left:300px;
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
+	-ms-transform: skew(-25deg); 
 	-moz-transform: skew(-25deg); 
 	-o-transform: skew(-25deg); 
 	transform: skew(-25deg);
@@ -1013,6 +1063,7 @@ a:hover{
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
 	-moz-transform: skew(-25deg); 
+	-ms-transform: skew(-25deg); 
 	-o-transform: skew(-25deg); 
 	transform: skew(-25deg);
 }
@@ -1025,6 +1076,7 @@ a:hover{
     background-color: #937145;
     -webkit-transform: skew(-25deg);
     -moz-transform: skew(-25deg);
+    -ms-transform: skew(-25deg);
     -o-transform: skew(-25deg);
     transform: skew(-25deg);
 }
@@ -1039,8 +1091,18 @@ a:hover{
     background-color: #937145;
     -webkit-transform: skew(-25deg);
     -moz-transform: skew(-25deg);
+    -ms-transform: skew(-25deg);
     -o-transform: skew(-25deg);
     transform: skew(-25deg);
+}
+.lifeBetterInclineDiv{
+    width: 10px;
+    height: 100%;
+    position:absolute;
+	top:1px;
+	left:-40px;
+	z-index:-100;
+    background-color: #A1753F;
 }
 /*新闻站*/
 .news-bottombar{
@@ -1050,34 +1112,41 @@ a:hover{
 	height: 435px;
 	position:absolute;
 	z-index:-99;
-       	margin-left: 200px;
-        background-color: #937145;
+    margin-left: 200px;
+    background-color: #937145;
 	-webkit-transform: skew(-25deg);
-        -moz-transform: skew(-25deg);
-        -o-transform: skew(-25deg);
+    -moz-transform: skew(-25deg);
+    -ms-transform: skew(-25deg);
+    -o-transform: skew(-25deg);
 	transform: skew(-25deg);
 }
 .left-2{
 	transform:scale(1) skew(-24deg);
 	-o-transform:scale(1) skew(-24deg);
-        -moz-transform: scale(1)skew(-24deg);
-    	-webkit-transform: scale(1)skew(-24deg);
-        width:10px;
-       	height:45px;
-        color:#FFF;
-        background-color:#937145;
-        position:absolute;							        top:44%;								        left:8.5%;
+	-ms-transform: scale(1)skew(-24deg);
+	-moz-transform: scale(1)skew(-24deg);
+	-webkit-transform: scale(1)skew(-24deg);
+	width:10px;
+	height:45px;
+	color:#FFF;
+	background-color:#937145;
+	position:absolute;							        
+	top:44%;								        
+	left:8.5%;
 	float:left;
-
 }
 .left-4{
-        transform:scale(1) skew(-24deg);
-        -o-transform:scale(1) skew(-24deg);
-        -moz-transform: scale(1)skew(-24deg);
-        -webkit-transform: scale(1)skew(-24deg);
-        width:10px;
-        height:47px;
-        color:#FFF;
-        background-color:#937145;						        position:absolute; top:67.5%;						        left:2.7%;
+	transform:scale(1) skew(-24deg);
+	-o-transform:scale(1) skew(-24deg);
+	-ms-transform: scale(1)skew(-24deg);
+	-moz-transform: scale(1)skew(-24deg);
+	-webkit-transform: scale(1)skew(-24deg);
+	width:10px;
+	height:47px;
+	color:#FFF;
+	background-color:#937145;						       
+	position:absolute;
+	top:67.5%;						        
+	left:2.7%;
 	float:left;			
 }
