@@ -681,6 +681,7 @@ a:hover{
 .number-text-1{
 	margin-top:-10%;
 	margin-left:5%;
+	text-align:left;
 }
 .number-text-1 ul li:first-child{
 	transform: scale(1) skew(24deg);
@@ -707,7 +708,8 @@ a:hover{
 .number-text-2{
 	margin-top:-10%;
 	margin-left:5%;
-}
+	text-align:left;
+	}
 .number-text-2 ul li:first-child{
 	transform: scale(1) skew(24deg);
 	-o-transform: scale(1) skew(24deg);
@@ -1069,7 +1071,8 @@ a:hover{
 }
 /*品牌故事*/
 .story-topbar{
-	margin-top: -500px;
+	position:absolute;
+	top: 0px;
     width: 10px;
     height: 180px;
     margin-left: 280px;
@@ -1081,8 +1084,7 @@ a:hover{
     transform: skew(-25deg);
 }
 .story-bottombar{
-    margin-top: 128px;
-    float: left;
+    top: 292px;
     width: 10px;
     height: 435px;
     position:absolute;
