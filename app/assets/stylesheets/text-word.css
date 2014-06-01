@@ -763,7 +763,7 @@ a:hover{
 	}
 /*现代养生*/
 .large-background{
-	background-color: #FFF;
+	background-color: #b88c37;
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
 	-ms-transform: scale(1)skew(-24deg);
@@ -789,8 +789,8 @@ a:hover{
 }
 
 .large-inside-text ul{	
+	text-align:left;
 	list-style-type:none;
-	color:#fff;	
 	padding-left:16.7%;
 //	background-color: #FFF;
 	transform: scale(1) skew(0deg);
@@ -828,7 +828,7 @@ a:hover{
 	width:45%;
 }
 .little-text-double{
-
+	background-color:#B88c37;
 	transform: scale(0.8) skew(0deg);
 	-o-transform: scale(0.8) skew(0deg);
 	-ms-transform: scale(0.8)skew(0deg);
@@ -893,7 +893,7 @@ a:hover{
 }
 /*现代养生*/
 .large-background-now{
-	background-color: #FFF;
+	background-color: #b88c37;
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
 	-ms-transform: scale(1)skew(-24deg);
@@ -921,6 +921,7 @@ a:hover{
 	margin-left:0%;
 }
 .large-inside-text-1 ul{	
+	text-align:left;
 	list-style-type:none;
 	color:#fff;	
 	padding-left:16.7%;
@@ -948,7 +949,7 @@ a:hover{
 }
 /*公司信息*/
 .large-background-now-com{
-	background-color: #FFF;
+	background-color: #b88c37;
 	transform: scale(1) skew(-24deg);
 	-o-transform: scale(1) skew(-24deg);
 	-ms-transform: scale(1)skew(-24deg);
@@ -1043,9 +1044,10 @@ a:hover{
 
 /*气之站介绍*/
 .top-brown-bar{
-	margin-top:-500px;
+	position:absolute;
+	top: 0px;
 	width:10px;
-	height:180px;
+	height:170px;
 	margin-left:300px;
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
@@ -1055,8 +1057,7 @@ a:hover{
 	transform: skew(-25deg);
 }
 .bottom-brown-bar{
-	margin-top:120px;
-	float:left;
+	top:290px;
 	width:10px;
 	height:435px;
 	position:absolute;
@@ -1108,8 +1109,7 @@ a:hover{
 }
 /*新闻站*/
 .news-bottombar{
-	margin-top:-95px;
-	float: left;
+	top:290px;
 	width: 10px;
 	height: 435px;
 	position:absolute;
