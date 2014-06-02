@@ -16,17 +16,22 @@
 	font-size:0.8em;
 }
 .product_top{
+	position:absolute;
+	top:0px;
 	width:10px;
 	height:160px;
 	margin-left:785px;
 	background-color:#937145;
+	transform: skew(-25deg); 
+	-ms-transform: skew(-25deg); 
 	-webkit-transform: skew(-25deg); 
 	-moz-transform: skew(-25deg); 
 	-o-transform: skew(-25deg); 
-	transform: skew(-25deg);
 }
 .product-txt01{
 	margin-left:664px;
+	position:absolute;
+	top:160px;
 }
 .product-txt01 ul{
 	list-style:none;
@@ -38,19 +43,24 @@
 	margin-left:50px;
 }
 .product_bottom{
-	float:left;
+	position:absolute;
+	top:230px;
 	width:10px;
 	height:380px;
 	margin-left:670px;
 	background-color:#937145;
 	-webkit-transform: skew(-25deg); 
+	-ms-transform: skew(-25deg); 
 	-moz-transform: skew(-25deg); 
 	-o-transform: skew(-25deg); 
 	transform: skew(-25deg);
 }
 .product-txt03{
+	position:absolute;
+	top:230px;
 	margin-left:770px;
 	-webkit-transform: skew(-25deg); 
+	-ms-transform: skew(-25deg); 
 	-moz-transform: skew(-25deg); 
 	-o-transform: skew(-25deg); 
 	transform: skew(-25deg);
@@ -64,8 +74,10 @@
 }
 
 .product-txt03 ul{
+	text-align:left;
 	-webkit-transform: skew(0deg); 
-	-moz-transform: skew(0deg); 
+	-moz-transform: skew(0deg);  
+	-ms-transform: skew(0deg); 
 	-o-transform: skew(0deg); 
 	transform: skew(0deg);
 	list-style-image:url(/assets/small-paradize2.png);
@@ -73,6 +85,7 @@
 
 .product-txt03 ul li{
 	-webkit-transform: skew(25deg); 
+	-ms-transform: skew(25deg); 
 	-moz-transform: skew(25deg); 
 	-o-transform: skew(25deg); 
 	transform: skew(25deg);
