@@ -22,7 +22,7 @@
 					if ($('#product0001_pic').length)
 					{
 						$('#product0001_pic').prop ('src',product_url.replace('/spree/products/','/products/picture/'));
-						$('#product1Price').html(resp[j].price);
+						$('#product1Price').html(resp[j].price+'元');
 					}
 					continue;
 				}
@@ -32,7 +32,7 @@
 					if ($('#product0002_pic').length)
 					{
 						$('#product0002_pic').prop ('src',product_url.replace('/spree/products/','/products/picture/'));
-						$('#product2Price').html(resp[j].price);
+						$('#product2Price').html(resp[j].price+'元');
 					}
 					continue;
 				}
@@ -147,7 +147,7 @@ $(window).load(function() {
     <div class="number-text-1">
     	<ul>
    			 <li>60袋/120片</li>
-             <li id='product1Price'>2,580.00元</li>
+             <li id='product1Price'></li>
     	</ul> 
     </div>
     <div class="button-product2">
@@ -207,7 +207,7 @@ $(window).load(function() {
     <div class="number-text-2">
     	<ul>
    			 <li>2盒装/120袋/240片 </li>
-             <li id='product2Price'>5,260.00元</li>
+             <li id='product2Price'></li>
     	</ul> 
     </div>
     <div class="button-product2">
