@@ -7,31 +7,16 @@
 <body>
 <div class="content2">
      <div class="product01_content_04">
-            <ul>
-                 <li>
-                         <div class="lingzhi_txt08">
-                         原木培植，无农药，无污染，科学精制，安全可靠高品质
-                         </div>
-                         <div class="lingzhi_txt09">
-                         热水抽出法，萃取高浓度赤灵芝精华
-                         </div>
-                         <div class="lingzhi_txt06">
-                         作为健康食品领域的佼佼者，【日纯牌】灵芝片使用最先进的热水抽出法萃取出高浓度的赤灵芝子实体精华，制成独立包装的高品质粒状灵芝丸锭
-                         </div>
-                 </li>
-                 <li class="lingzhi_txt08">
-                         制造过程： 赤灵芝栽培过程→质量检测→萃取工程→包装工程
-                 </li>
-            </ul>
-     
+		<%=raw @page.content_for(:makeProductDiv1)%>
             <div>
-                         <img class="product01-pic01" src="/assets/buy-2-1.png" width="12%" height="12%">
+                         
+						<%=raw @page.content_for(:makeProductImage1)%>
                          <div class="lingzhi-txt10"></div>
-                         <img class="product01-pic02" src="/assets/buy-2-2.png" width="12%" height="12%">
-                         <div class="lingzhi-txt10"></div>                       
-                         <img class="product01-pic03" src="/assets/buy-2-3.png" width="100" height="100">
+						<%=raw @page.content_for(:makeProductImage2)%>
+                         <div class="lingzhi-txt10"></div>     
+						<%=raw @page.content_for(:makeProductImage3)%>                  
                          <div class="lingzhi-txt10"></div>
-                         <img class="product01-pic04" src="/assets/buy-2-4.png" width="25%" height="25%">
+						<%=raw @page.content_for(:makeProductImage4)%> 
             </div>
             
             <a href="/home/QZZvideo" target="_blank" class="lingzhi-txt07">观看灵芝片视频</a>

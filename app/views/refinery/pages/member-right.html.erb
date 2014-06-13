@@ -17,33 +17,7 @@
 	</ul>
 </div>
 <div class="membertable" style='margin-left: 35px;'>
-<table  border="0">
-  <tr class="memberfirstline">
-    <td width="112" height="28">会员等级</td>
-    <td width="225">VIP升级</td>
-    <td width="222">专享折扣</td>
-    <!--<td width="312">次年会籍续期要求（为期一年）</td>-->
-  </tr>
-  <tr>
-    <td  height="28">普通会员</td>
-    <td>购买2盒/1份礼盒装</td>
-    <td>享受5%折扣</td>
-  </tr>
-  <tr>
-    <td  height="28">金卡会员</td>
-    <td>6个月内购买达6盒/3份礼盒装</td>
-    <td>第7盒起享受10%折扣</td>
-  </tr>
-  <tr>
-    <td  height="28" rowspan=2>钻石卡会员</td>
-    <td>6个月内购买达12盒/6份礼盒装</td>
-    <td>第13盒起享受15%折扣</td>
-  </tr>
-  <tr>
-    <td height="28">1年内购买达20盒/10份礼盒装</td>
-    <td>终生享受15%折扣</td>
-  </tr>
-</table>
+<%=raw @page.content_for(:memberRightTable) %>
 </div>
 </div>>
 </body>
