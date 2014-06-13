@@ -709,3 +709,256 @@ refinery_page_part_translations:
     - 2014-05-07 15:08:10.000000000 Z
     - 2014-05-07 15:08:10.000000000 Z
     - ''
+  - - 111
+    - 111
+    - en
+    - 2014-06-12 14:14:07.000000000 Z
+    - 2014-06-12 15:31:56.000000000 Z
+    - "<table border=\"0\">\r\n  <tbody><tr class=\"memberfirstline\">\r\n    <td
+      id=\"memberLevelTd\">会员等级</td>\r\n    <td id=\"vipLevelUpTd\">VIP升级</td>\r\n
+      \   <td id=\"memberDiscountTd\">专享折扣</td>\r\n    <td id=\"renewalNextYearTd\">次年会籍续期</td>\r\n
+      \ </tr>\r\n  <tr>\r\n    <td>普通会员</td>\r\n    <td>购买2盒/1份礼盒装</td>\r\n    <td>享受15%折扣</td>\r\n\t<td>
+      </td>\r\n  </tr>\r\n  <tr>\r\n    <td>金卡会员</td>\r\n    <td>6个月内购买达6盒/3份礼盒装</td>\r\n
+      \   <td>第7盒起享受20%折扣</td>\r\n\t<td> </td>\r\n  </tr>\r\n  <tr>\r\n    <td rowspan=\"2\">钻石卡会员</td>\r\n
+      \   <td>6个月内购买达12盒/6份礼盒装</td>\r\n    <td>第13盒起享受25%折扣</td>\r\n\t<td> </td>\r\n
+      \ </tr>\r\n  <tr>\r\n    <td>1年内购买达20盒/10份礼盒装</td>\r\n    <td>终生享受25%折扣</td>\r\n\t<td>终生钻石卡会员会籍</td>\r\n
+      \ </tr>\r\n</tbody>\r\n</table>"
+  - - 113
+    - 113
+    - en
+    - 2014-06-13 08:10:27.000000000 Z
+    - 2014-06-13 08:15:10.000000000 Z
+    - "<ul>\r\n\t\t<li class=\"first-line\">高品质生活，源自气之站\t\t\t \t\t</li>\r\n\t\t<li
+      class=\"second-line\">“气之站”成立于2010年，是一家由多个专营国际优质健康食品的公司组成的团队。多年运营，积聚了成熟的品牌策划和市场营销经验，旨在为消费者打造最佳的健康食品。</li>\r\n\r\n\t\t</ul>"
+  - - 114
+    - 114
+    - en
+    - 2014-06-13 08:31:20.000000000 Z
+    - 2014-06-13 08:31:20.000000000 Z
+    - "<div class=\"text-story-about-qzz\">\r\n\t<p class=\"text-between-lines\">回首30年，崛起的中国已经成为了世界第二大经济体。而在创造奇迹的过程中，无数人用健康换取成功，不分昼夜，承受巨大的压力。</p>\t\r\n\t<p
+      class=\"text-between-lines\">当富有成为上流社会普遍状态，人们享受美酒美食，享受成功的滋味的同时，也吞噬着健康。</p>\r\n\t<p
+      class=\"text-between-lines\">近年，这样的生活状态面临着被改变的趋势：越来越多人意识到健康适度生活的重要性，希望获得长寿、享受更久的生活。如同第二次世界大战后的日本、香港、台湾、韩国一样，中国正在“寻路”之中：从一笔财富的创造、到对财富的守护和维持，最终融入社会来体现个人价值和发展，从追求物质上的成功转变为赋予生命新的意义和价值。
+      </p>\r\n    <p class=\"text-between-lines\">我们以帮助人们实现更富足、更优越的生活为己任，以建立一种健康产业为信念，倡导现代的、有益身心平衡的生活理念，并为此提供高端健康养生产品，通过各种各样的方式与渠道，注入丰满的精神源动力，让更多人享受到健康带来的无限快乐，沐浴在真善美之中。</p>\r\n
+      \   <p class=\"text-between-lines\">我们将一直着眼于中国，将“气之站”的诚信品牌理念融入人们的生活，惠及下一代。</p>\r\n</div>"
+  - - 115
+    - 115
+    - en
+    - 2014-06-13 08:48:49.000000000 Z
+    - 2014-06-13 08:48:49.000000000 Z
+    - "<div class=\"future-middle\">\r\n<div class=\"para-Y-left-bc\"></div>\r\n\t<div
+      class=\"para-Y-left\">\r\n\t\t<div class=\"text-para-Y\">\r\n\t\t\t<p>元气</p>\r\n\t\t\t<p
+      class=\"p-line-high\">远景</p>\r\n\t\t</div>\r\n\t</div>\r\n    \r\n\t<div class=\"para-W-right\">\r\n
+      \       <div class=\"para-W-right-text\">体验可持续的健康养生之道、品味更丰富的多彩生活之悦。\r\n        </div>\r\n</div>\r\n
+      \      <div class=\"left-2\"></div>\r\n\t<div class=\"para-W-right-1\">\r\n
+      \       <div class=\"para-W-right-text-1\">树立诚信品牌，传递核心理念：为中国市场凝聚世界顶级养生方式、健康产品，提供更安全、更高效、更可靠的服务。\r\n
+      \       </div>\r\n    </div>\r\n    \r\n    \r\n    <div class=\"para-Y-left-1-bc\"></div>\r\n
+      \   <div class=\"para-Y-left-1\">\r\n\t\t<div class=\"text-para-Y\">\r\n\t\t\t<p>元气</p>\r\n\t\t\t<p
+      class=\"p-line-high\">使命</p>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"para-Y-left-2-bc\"></div>\r\n\t<div
+      class=\"para-Y-left-2\">\r\n\t\t<div class=\"text-para-Y\">\r\n\t\t\t<p>元气</p>\r\n\t\t\t<p
+      class=\"p-line-high\">精髓</p>\r\n\t\t</div>\r\n\t</div>\r\n    \r\n\t<div class=\"para-W-right-2\">\r\n
+      \       <div class=\"para-W-right-text\">我们将平衡身心的现代健康生活概念作为宗旨，为此提供世界级品质的全进口高端产品，并以丰富的经验全心全意为客户服务。</div>\r\n
+      \   </div>\r\n    <div class=\"left-4\"></div>\r\n   <div class=\"para-W-right-3\">\r\n
+      \       <div class=\"para-W-right-text\">经验丰富、精益求精；富有创造力和旺盛的生命力；充满时尚正能量！</div>\r\n
+      \  </div>\r\n     <div class=\"para-Y-left-3-bc\"></div>   \r\n    <div class=\"para-Y-left-3\">\r\n\t\t<div
+      class=\"text-para-Y\">\r\n\t\t\t<p>元气</p>\r\n\t\t\t<p class=\"p-line-high\">个性</p>\r\n\t\t</div>\r\n\t</div>\r\n\r\n</div>"
+  - - 116
+    - 116
+    - en
+    - 2014-06-13 09:29:07.000000000 Z
+    - 2014-06-13 09:29:07.000000000 Z
+    - "<div class=\"para-text-1-1\">\r\n \t\t<p class=\"text-between-lines-2-first\">讲座时间：2014年4月18日（周五）
+      14:00    </p>\r\n  \t\t<p class=\"text-between-lines-2\">主办方: 气之站    </p>\r\n\t\t<p
+      class=\"text-between-lines-2\">特邀两位嘉宾讲师与您共同分享健康养生之道!</p>\r\n  \t\t<p class=\"text-between-lines-2\">黄宗瀚医生：
+      &#160;&#160;沪上知名的中医师及医学博士。为了坚持中医人的志业，不忘初衷地将中医生活化及多元化。在家传、西学、中西医汇通的历练后引领了新中医思想及专业、传承、精品、人文的中医新风潮。从他身上，可见对中医的热爱和不遗余力，传承了阴阳家对自然生命的积极负责。
+      \   </p>\r\n \t\t<p class=\"text-between-lines-2\">Suki Chan： &#160;&#160;国际健康及营养品资深顾问。
+      拥有超过15年讲解灵芝及各类营养保健知识的经验。</p>\r\n\t\t<p class=\"text-between-lines-2\"><a href=\"http://www.theorientalclub.com.cn/cn/Notice/201442272.html#title\"
+      style=\"color:black\" target=\"_blank\">举办地点：欧兰特俱乐部林公馆 上海市静安区愚园路469号  </a>\r\n</p>\r\n\t</div>"
+  - - 117
+    - 117
+    - en
+    - 2014-06-13 15:34:54.000000000 Z
+    - 2014-06-13 15:34:54.000000000 Z
+    - "<div class=\"para-text-div\">\r\n  \t\t<p class=\"paragraph-between-lines\">关爱母亲特惠活动—礼盒7折限时不限购</p>\r\n\t\t<p
+      class=\"paragraph-between-lines\">此次活动截止至5月31日，为母亲健康赶快行动吧！</p>\r\n\t\t<p class=\"paragraph-between-lines\">母亲节即将来临，【日纯牌】灵芝片是送给母亲最有爱的真挚礼物。通过传统原生态栽培、\r\n\t\t\t\t精心筛选、科学制剂、严格检测、环保包装精制而成的【日纯牌】灵芝片是在中国唯一获得“国食健字”的进口灵芝产品，\r\n\t\t\t\t长期服食不上火，无副作用，能在整体上双向调节人体机能平衡，促使内脏和器官机能正常化，具有补气安神、止咳平喘、\r\n\t\t\t\t滋阴养心、祛斑去黄气等功效，并可以有效缓解高血压、糖尿病、肺虚咳喘和更年期综合症等众多疾病的困扰。母亲的健康\r\n\t\t\t\t是我们的福报，选择【日纯牌】灵芝片，让母亲更健康更美丽。\r\n\t\t</p>\r\n\t</div>"
+  - - 118
+    - 118
+    - en
+    - 2014-06-13 15:44:59.000000000 Z
+    - 2014-06-13 15:57:48.000000000 Z
+    - "<div class=\"para-text-1\" id=\"promotionRulesDiv\">\r\n\t\t<img src=\"/assets/small-paradize.png\"
+      class=\"before-para\" />\r\n\t\t<span class=\"text-between-lines-3\">1.灵芝礼盒（内附两盒【日纯牌】灵芝片）<span
+      style=\"color:#937145\">限时7折优惠： 3,682元</span>（原价5,260元）</span>\r\n\t</div>\r\n\t<p><img
+      src=\"/assets/small-paradize.png\" class=\"before-para\" />\r\n\t\t<span class=\"text-between-lines-3\">2.购买礼盒即可成为“气之站”</span>\r\n<a
+      href=\"/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E9%A2%84%E8%AE%A2%E5%8D%95?sku=0002\" style=\"background-color:
+      transparent;\"><span style=\"height: 24px; width: 80px; text-align: center;
+      padding-top: 6px; border-top-left-radius: 10px; border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; background-color:
+      rgb(147, 113, 69);\">在线购买</span>\r\n</a>\r\n</p>\r\n<div class=\"para-text-1\"
+      id=\"couponCodeDiv\">\r\n\t\t<p style=\"margin-bottom:5px;\"><a href=\"/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E9%A2%84%E8%AE%A2%E5%8D%95?sku=0002\"><span
+      style=\"display: block;height: 24px;width: 80px;background-color: #937145;text-align:
+      center;padding-top: 6px;border-radius: 10px;\"></span>\r\n</a>\r\n</p>\r\n\t\t<p
+      style=\"margin:0;font-size:12px;\">指定优惠码：<span style=\"background-color: #937145;color:
+      white;\">WX140501</span>\r\n</p>\r\n\t\t\r\n\t</div>"
+  - - 119
+    - 119
+    - en
+    - 2014-06-13 15:56:40.000000000 Z
+    - 2014-06-13 15:57:48.000000000 Z
+    - "<img src=\"/assets/motherGift.png\" class=\"selected_by_wym\" />"
+  - - 120
+    - 120
+    - en
+    - 2014-06-13 16:08:34.000000000 Z
+    - 2014-06-13 16:21:29.000000000 Z
+    - "<div class=\"product01_content_01\">\r\n       <div class=\"lingzhi_txt01\">\r\n
+      \      日纯牌灵芝片介绍\r\n       </div> \r\n       <div class=\"lingzhi_txt02\"> \r\n
+      \      100%安全有效，25年良好口碑，国家食品药品监督管理总局认证！\r\n       </div>\r\n       <div class=\"lingzhi_txt02\">
+      \r\n       全进口日纯牌灵芝片，高品质健康来源！\r\n       </div>\r\n   </div>"
+  - - 121
+    - 121
+    - en
+    - 2014-06-13 16:26:18.000000000 Z
+    - 2014-06-13 16:26:18.000000000 Z
+    - "<div class=\"lingzhi_txt03\"> \r\n                 原料使用日纯牌灵芝片精选出众的赤灵芝-\r\n
+      \           </div>\r\n            <div class=\"lingzhi_txt04\">\r\n                 一盒日纯牌灵芝片内含6600毫克灵芝精粉！\r\n
+      \           </div> "
+  - - 122
+    - 122
+    - en
+    - 2014-06-13 16:30:01.000000000 Z
+    - 2014-06-13 16:30:01.000000000 Z
+    - "<img class=\"lingzhi-pic\" src=\"/assets/Lingzhi-1.png\" style=\"width:35%;
+      height:90%;\" />"
+  - - 123
+    - 123
+    - en
+    - 2014-06-13 16:32:06.000000000 Z
+    - 2014-06-13 16:37:21.000000000 Z
+    - "<div class=\"lingzhi_txt05\">\r\n赤芝，位尊「上药」之首\r\n</div>\r\n<div class=\"lingzhi_txt05\">\r\n中国最古老的医药学典籍《神农本草经》
+      （西元前206年~西元8年）\r\n将365种药材列为上、中、下三等，灵芝则被尊为「上药」之首。\r\n明朝李时珍在《本草纲目》中亦记载\"赤芝，又名丹芝，苦平无毒，\r\n主治胸中结，益心气，补中增智慧，不忘，久食轻身不老，\r\n益寿延年。\"\r\n</div>"
+  - - 124
+    - 124
+    - en
+    - 2014-06-13 16:42:58.000000000 Z
+    - 2014-06-13 16:42:58.000000000 Z
+    - "<ul>\r\n                 <li>\r\n                         <div class=\"lingzhi_txt08\">\r\n
+      \                        原木培植，无农药，无污染，科学精制，安全可靠高品质\r\n                         </div>\r\n
+      \                        <div class=\"lingzhi_txt09\">\r\n                         热水抽出法，萃取高浓度赤灵芝精华\r\n
+      \                        </div>\r\n                         <div class=\"lingzhi_txt06\">\r\n
+      \                        作为健康食品领域的佼佼者，【日纯牌】灵芝片使用最先进的热水抽出法萃取出高浓度的赤灵芝子实体精华，制成独立包装的高品质粒状灵芝丸锭\r\n
+      \                        </div>\r\n                 </li>\r\n                 <li
+      class=\"lingzhi_txt08\">\r\n                         制造过程： 赤灵芝栽培过程→质量检测→萃取工程→包装工程\r\n
+      \                </li>\r\n</ul>"
+  - - 125
+    - 125
+    - en
+    - 2014-06-13 16:44:47.000000000 Z
+    - 2014-06-13 16:44:47.000000000 Z
+    - "<img class=\"product01-pic01\" src=\"/assets/buy-2-1.png\" style=\"width:12%;height:12%\"
+      />"
+  - - 126
+    - 126
+    - en
+    - 2014-06-13 16:48:33.000000000 Z
+    - 2014-06-13 16:48:33.000000000 Z
+    - "<img class=\"product01-pic02\" src=\"/assets/buy-2-2.png\" style=\"width:12%;
+      height:12%;\" />"
+  - - 127
+    - 127
+    - en
+    - 2014-06-13 16:48:33.000000000 Z
+    - 2014-06-13 16:50:08.000000000 Z
+    - "<img class=\"product01-pic03\" src=\"/assets/buy-2-3.png\" style=\"width:100px;
+      height:100px;\" />"
+  - - 128
+    - 128
+    - en
+    - 2014-06-13 16:48:33.000000000 Z
+    - 2014-06-13 16:51:01.000000000 Z
+    - "<img class=\"product01-pic04\" src=\"/assets/buy-2-4.png\" style=\"width:25%;
+      height:25%;\" />"
+  - - 129
+    - 129
+    - en
+    - 2014-06-13 16:59:52.000000000 Z
+    - 2014-06-13 16:59:52.000000000 Z
+    - "<ul>\r\n                         <li>生产商 — 日产化学工业株式会社，享誉全球企业</li>\r\n                         <li>Nissan所有灵芝产品由Nissan监督下在日本种植及培育，并遵循日本最高标准生产
+      \ </li>\r\n                         <li>获得中国国食健字保健食品称号的进口灵芝产品</li>\r\n</ul>"
+  - - 130
+    - 130
+    - en
+    - 2014-06-13 17:04:31.000000000 Z
+    - 2014-06-13 17:04:31.000000000 Z
+    - "<div class=\"lingzhi-txt12\">\r\n            享誉全球120余年的日本名企 — 「日产化学工业株式会社」。20世纪80年代初，日产公司以前瞻性的市场触觉，体察到现代人提升健康的迫切需求，遂不惜巨额投资，寻找到人工培植最佳赤芝的方法，经多年研究与实验，终于成功研制出品质优异、百分百纯天然的【日纯牌】灵芝片。直至今天，【日纯牌】灵芝片已被公认为品质一流的赤灵芝健康食品，全球销量超过一亿盒！\r\n</div>"
+  - - 131
+    - 131
+    - en
+    - 2014-06-13 17:09:03.000000000 Z
+    - 2014-06-13 17:09:03.000000000 Z
+    - "<img src=\"/assets/reputation.png\" />"
+  - - 132
+    - 132
+    - en
+    - 2014-06-13 17:14:07.000000000 Z
+    - 2014-06-13 17:14:07.000000000 Z
+    - "<img src=\"/assets/product2.png\" class=\"img-blank-pro1-inside-2\" />"
+  - - 133
+    - 133
+    - en
+    - 2014-06-13 17:23:03.000000000 Z
+    - 2014-06-13 17:23:03.000000000 Z
+    - "<ul>\r\n       <li>什么是现代养生</li>\r\n       <li>人生于世，健康长寿是所有人梦寐以求的目标。善养方能长寿。我国传统养生文化源远流</li>\r\n\t
+      \  <li>长，博大精深，古往今来已为人们反复精研、挖掘和阐释，也被一代又一代的人深切感知</li>\r\n\t   <li>和身体力行。现代养生的概念，除了吸取中国传统养生精髓外，更是随着科技和医学的不</li>\r\n\t
+      \  <li>断进步，结合现代生活方式技术理念于一体， 注重精神层面的提升与研修。健康是一种在</li>\r\n\t   <li>身体上、精神上和社会上的完好状态。这便要求人们用一种健康的生活方式来实现“身心平</li>\r\n\t
+      \  <li>衡”。心态平和、恬淡乐生、荣辱不惊、拒贪清欲、文武兼修、动静结合、合理膳食，都是</li>\r\n\t   <li>现代生活方式的精髓所在。人生于世，健康长寿是所有人梦寐以求的目标。善养方能长寿。</li>\r\n\t
+      \  <li>我国传统养生文化源远流长，博大精深，古往今来已为人们反复精研、挖掘和阐释，也被一</li>\r\n\t   <li>代又一代的人深切感知和身体力行。现代养生的概念，除了吸取中国传统养生精髓外，更是</li>\r\n\t
+      \  <li>随着科技和医学的不断进步，结合现代生活方式技术理念于一体， 注重精神层面的提升与研</li>\r\n\t   <li>修。健康是一种在身体上、精神上和社会上的完好状态。这便要求人们用一种健康的生活方</li>\r\n\t
+      \  <li>式来实现“身心平衡”。心态平和、恬淡乐生、荣辱不惊、拒贪清欲、文武兼修、动静结合、</li>\r\n\t   <li>合理膳食，都是现代健康生活方式的精髓所在。
+      </li>\r\n</ul>"
+  - - 134
+    - 134
+    - en
+    - 2014-06-13 17:24:48.000000000 Z
+    - 2014-06-13 17:24:48.000000000 Z
+    - "<img src=\"/assets/life-better-5-1.png\" class=\"large-inside-img\" style=\"height:300px;\"
+      />"
+  - - 135
+    - 135
+    - en
+    - 2014-06-13 17:29:23.000000000 Z
+    - 2014-06-13 17:29:23.000000000 Z
+    - "<ul>\r\n\t\t<li>现代养生新趋势</li>\r\n\t\t<li>Health源于1000年英国盎格鲁撒克逊族，词义为:安全,完美,结实的。健康是具有强烈</li>\r\n<li>时代感的综合概念。</li>\r\n\t\t<li>如今，追求健康也附上了时代的标签，养生的方法正往一个更现代、更便捷、更实用</li>\r\n<li>的方向发展。</li>\r\n\t\t<li>越来越多的人将养生“休闲化”，在愉快放松的心境下达到养生的目的。</li>\r\n\t\t<li>比如利用森林生态资源优势，创造生态氧吧；定期健身、参与瑜伽训练；</li>\r\n\t\t<li>有人将进行社交活动视为养生的新办法，在人与人的健康交流中获得心灵的满足；</li>\r\n\t\t<li>更有众多机构开设有趣的减压心理课程，帮助现代人释放压力，达到身心的平衡。
+      </li>\r\n</ul>"
+  - - 136
+    - 136
+    - en
+    - 2014-06-13 17:31:04.000000000 Z
+    - 2014-06-13 17:31:04.000000000 Z
+    - "<img src=\"/assets/life-better-5-3.png\" class=\"large-inside-img\" style=\"height:300px\"
+      />"
+  - - 137
+    - 137
+    - en
+    - 2014-06-13 17:34:23.000000000 Z
+    - 2014-06-13 17:34:23.000000000 Z
+    - "<img src=\"/assets/map-1.png\" class=\"large-img-inside-map\" /> "
+  - - 138
+    - 138
+    - en
+    - 2014-06-13 17:36:36.000000000 Z
+    - 2014-06-13 17:36:36.000000000 Z
+    - "<div class=\"large-inside-text-small\">\r\n    气之站咨询热线：4001－857－517   地址：上海黄浦区蒙自路207号12号楼603室
+      \  Email:qzzcare@qzzstore.com\r\n</div>"
+  - - 139
+    - 139
+    - en
+    - 2014-06-13 17:38:54.000000000 Z
+    - 2014-06-13 17:38:54.000000000 Z
+    - "<img src=\"/assets/company-info-peo.png\" class=\"large-img-inside-2\" /> "
+  - - 140
+    - 140
+    - en
+    - 2014-06-13 17:39:47.000000000 Z
+    - 2014-06-13 17:39:47.000000000 Z
+    - "<div class=\"large-inside-text-small-2\">\r\n    自2010年，我们就一直为中国市场推出高端健康产品。我们是中国现代健康养生生活方式提供者中的创新一派。期待有识之士的加盟，成就元气事业！
+      \ \r\n    </div>"
