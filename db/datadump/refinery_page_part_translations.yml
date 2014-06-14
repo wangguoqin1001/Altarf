@@ -727,9 +727,8 @@ refinery_page_part_translations:
     - 113
     - en
     - 2014-06-13 08:10:27.000000000 Z
-    - 2014-06-13 08:15:10.000000000 Z
-    - "<ul>\r\n\t\t<li class=\"first-line\">高品质生活，源自气之站\t\t\t \t\t</li>\r\n\t\t<li
-      class=\"second-line\">“气之站”成立于2010年，是一家由多个专营国际优质健康食品的公司组成的团队。多年运营，积聚了成熟的品牌策划和市场营销经验，旨在为消费者打造最佳的健康食品。</li>\r\n\r\n\t\t</ul>"
+    - 2014-06-14 06:17:34.000000000 Z
+    - "<li class=\"second-line\">“气之站”成立于2010年，是一家由多个专营国际优质健康食品的公司组成的团队。多年运营，积聚了成熟的品牌策划和市场营销经验，旨在为消费者打造最佳的健康食品。</li>"
   - - 114
     - 114
     - en
@@ -740,27 +739,6 @@ refinery_page_part_translations:
       class=\"text-between-lines\">近年，这样的生活状态面临着被改变的趋势：越来越多人意识到健康适度生活的重要性，希望获得长寿、享受更久的生活。如同第二次世界大战后的日本、香港、台湾、韩国一样，中国正在“寻路”之中：从一笔财富的创造、到对财富的守护和维持，最终融入社会来体现个人价值和发展，从追求物质上的成功转变为赋予生命新的意义和价值。
       </p>\r\n    <p class=\"text-between-lines\">我们以帮助人们实现更富足、更优越的生活为己任，以建立一种健康产业为信念，倡导现代的、有益身心平衡的生活理念，并为此提供高端健康养生产品，通过各种各样的方式与渠道，注入丰满的精神源动力，让更多人享受到健康带来的无限快乐，沐浴在真善美之中。</p>\r\n
       \   <p class=\"text-between-lines\">我们将一直着眼于中国，将“气之站”的诚信品牌理念融入人们的生活，惠及下一代。</p>\r\n</div>"
-  - - 115
-    - 115
-    - en
-    - 2014-06-13 08:48:49.000000000 Z
-    - 2014-06-13 08:48:49.000000000 Z
-    - "<div class=\"future-middle\">\r\n<div class=\"para-Y-left-bc\"></div>\r\n\t<div
-      class=\"para-Y-left\">\r\n\t\t<div class=\"text-para-Y\">\r\n\t\t\t<p>元气</p>\r\n\t\t\t<p
-      class=\"p-line-high\">远景</p>\r\n\t\t</div>\r\n\t</div>\r\n    \r\n\t<div class=\"para-W-right\">\r\n
-      \       <div class=\"para-W-right-text\">体验可持续的健康养生之道、品味更丰富的多彩生活之悦。\r\n        </div>\r\n</div>\r\n
-      \      <div class=\"left-2\"></div>\r\n\t<div class=\"para-W-right-1\">\r\n
-      \       <div class=\"para-W-right-text-1\">树立诚信品牌，传递核心理念：为中国市场凝聚世界顶级养生方式、健康产品，提供更安全、更高效、更可靠的服务。\r\n
-      \       </div>\r\n    </div>\r\n    \r\n    \r\n    <div class=\"para-Y-left-1-bc\"></div>\r\n
-      \   <div class=\"para-Y-left-1\">\r\n\t\t<div class=\"text-para-Y\">\r\n\t\t\t<p>元气</p>\r\n\t\t\t<p
-      class=\"p-line-high\">使命</p>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"para-Y-left-2-bc\"></div>\r\n\t<div
-      class=\"para-Y-left-2\">\r\n\t\t<div class=\"text-para-Y\">\r\n\t\t\t<p>元气</p>\r\n\t\t\t<p
-      class=\"p-line-high\">精髓</p>\r\n\t\t</div>\r\n\t</div>\r\n    \r\n\t<div class=\"para-W-right-2\">\r\n
-      \       <div class=\"para-W-right-text\">我们将平衡身心的现代健康生活概念作为宗旨，为此提供世界级品质的全进口高端产品，并以丰富的经验全心全意为客户服务。</div>\r\n
-      \   </div>\r\n    <div class=\"left-4\"></div>\r\n   <div class=\"para-W-right-3\">\r\n
-      \       <div class=\"para-W-right-text\">经验丰富、精益求精；富有创造力和旺盛的生命力；充满时尚正能量！</div>\r\n
-      \  </div>\r\n     <div class=\"para-Y-left-3-bc\"></div>   \r\n    <div class=\"para-Y-left-3\">\r\n\t\t<div
-      class=\"text-para-Y\">\r\n\t\t\t<p>元气</p>\r\n\t\t\t<p class=\"p-line-high\">个性</p>\r\n\t\t</div>\r\n\t</div>\r\n\r\n</div>"
   - - 116
     - 116
     - en
@@ -784,21 +762,21 @@ refinery_page_part_translations:
     - 118
     - en
     - 2014-06-13 15:44:59.000000000 Z
-    - 2014-06-13 15:57:48.000000000 Z
-    - "<div class=\"para-text-1\" id=\"promotionRulesDiv\">\r\n\t\t<img src=\"/assets/small-paradize.png\"
-      class=\"before-para\" />\r\n\t\t<span class=\"text-between-lines-3\">1.灵芝礼盒（内附两盒【日纯牌】灵芝片）<span
-      style=\"color:#937145\">限时7折优惠： 3,682元</span>（原价5,260元）</span>\r\n\t</div>\r\n\t<p><img
-      src=\"/assets/small-paradize.png\" class=\"before-para\" />\r\n\t\t<span class=\"text-between-lines-3\">2.购买礼盒即可成为“气之站”</span>\r\n<a
-      href=\"/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E9%A2%84%E8%AE%A2%E5%8D%95?sku=0002\" style=\"background-color:
-      transparent;\"><span style=\"height: 24px; width: 80px; text-align: center;
-      padding-top: 6px; border-top-left-radius: 10px; border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; background-color:
-      rgb(147, 113, 69);\">在线购买</span>\r\n</a>\r\n</p>\r\n<div class=\"para-text-1\"
-      id=\"couponCodeDiv\">\r\n\t\t<p style=\"margin-bottom:5px;\"><a href=\"/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E9%A2%84%E8%AE%A2%E5%8D%95?sku=0002\"><span
+    - 2014-06-14 08:04:28.000000000 Z
+    - "<div id=\"motherHeadlineDiv\">\r\n<img src=\"/assets/small-paradize.png\" class=\"before-para\"
+      />\r\n<span class=\"text-between-lines-3\">“气之站”现推出为母亲送爱心特惠活动</span>\r\n</div>\r\n<div
+      class=\"para-text-1\" style=\" top: 46%;\">\r\n<img src=\"/assets/small-paradize.png\"
+      class=\"before-para\" />\r\n<span class=\"text-between-lines-3\">1.灵芝礼盒（内附两盒【日纯牌】灵芝片）<span
+      style=\"color:#937145\">限时7折优惠： 3,682元</span>（原价5,260元）</span>\r\n</div>\r\n<div
+      class=\"para-text-1\" style=\" top: 49%;\">\r\n<img src=\"/assets/small-paradize.png\"
+      class=\"before-para\" />\r\n<span class=\"text-between-lines-3\">2.购买礼盒即可成为“气之站”<span
+      style=\"color:#937145\">尊贵钻石会员</span>，以后购买本站任意产品可享受8.5折优惠。</span>\r\n</div>\r\n<div
+      class=\"para-text-1\" style=\" left:35%;top: 53%;font-size:0.9em;\">\r\n<p style=\"margin-bottom:5px;\"><a
+      href=\"/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E9%A2%84%E8%AE%A2%E5%8D%95?sku=0002\"><span
       style=\"display: block;height: 24px;width: 80px;background-color: #937145;text-align:
-      center;padding-top: 6px;border-radius: 10px;\"></span>\r\n</a>\r\n</p>\r\n\t\t<p
+      center;padding-top: 6px;border-radius: 10px;\">在线购买</span>\r\n</a>\r\n</p>\r\n<p
       style=\"margin:0;font-size:12px;\">指定优惠码：<span style=\"background-color: #937145;color:
-      white;\">WX140501</span>\r\n</p>\r\n\t\t\r\n\t</div>"
+      white;\">WX140501</span>\r\n</p>\r\n</div>"
   - - 119
     - 119
     - en
@@ -900,8 +878,8 @@ refinery_page_part_translations:
     - 132
     - en
     - 2014-06-13 17:14:07.000000000 Z
-    - 2014-06-13 17:14:07.000000000 Z
-    - "<img src=\"/assets/product2.png\" class=\"img-blank-pro1-inside-2\" />"
+    - 2014-06-14 05:57:24.000000000 Z
+    - "<img src=\"/assets/product1.png\" class=\"img-blank-pro1-inside\" />"
   - - 133
     - 133
     - en
@@ -962,3 +940,80 @@ refinery_page_part_translations:
     - 2014-06-13 17:39:47.000000000 Z
     - "<div class=\"large-inside-text-small-2\">\r\n    自2010年，我们就一直为中国市场推出高端健康产品。我们是中国现代健康养生生活方式提供者中的创新一派。期待有识之士的加盟，成就元气事业！
       \ \r\n    </div>"
+  - - 141
+    - 141
+    - en
+    - 2014-06-14 06:17:35.000000000 Z
+    - 2014-06-14 06:17:35.000000000 Z
+    - "<li class=\"first-line\">高品质生活，源自气之站</li>"
+  - - 142
+    - 142
+    - en
+    - 2014-06-14 06:48:54.000000000 Z
+    - 2014-06-14 06:48:54.000000000 Z
+    - "<div class=\"text-para-Y\">\r\n\t\t\t<p>元气</p>\r\n\t\t\t<p class=\"p-line-high\">愿景</p>\r\n</div>"
+  - - 143
+    - 143
+    - en
+    - 2014-06-14 06:48:54.000000000 Z
+    - 2014-06-14 06:48:54.000000000 Z
+    - "<div class=\"text-para-Y\">\r\n\t\t\t<p>元气</p>\r\n\t\t\t<p class=\"p-line-high\">使命</p>\r\n</div>"
+  - - 144
+    - 144
+    - en
+    - 2014-06-14 06:48:54.000000000 Z
+    - 2014-06-14 06:48:54.000000000 Z
+    - "<div class=\"text-para-Y\">\r\n\t\t\t<p>元气</p>\r\n\t\t\t<p class=\"p-line-high\">精髓</p>\r\n</div>"
+  - - 145
+    - 145
+    - en
+    - 2014-06-14 06:48:54.000000000 Z
+    - 2014-06-14 06:48:54.000000000 Z
+    - "<div class=\"text-para-Y\">\r\n\t<p>元气</p>\r\n\t<p class=\"p-line-high\">个性</p>\r\n</div>"
+  - - 146
+    - 146
+    - en
+    - 2014-06-14 06:48:54.000000000 Z
+    - 2014-06-14 06:48:54.000000000 Z
+    - "<div class=\"para-W-right-text\">体验可持续的健康养生之道、品味更丰富的多彩生活之悦。 </div>"
+  - - 147
+    - 147
+    - en
+    - 2014-06-14 06:48:54.000000000 Z
+    - 2014-06-14 06:48:54.000000000 Z
+    - "<div class=\"para-W-right-text-1\">树立诚信品牌，传递核心理念：为中国市场凝聚世界顶级养生方式、健康产品，提供更安全、更高效、更可靠的服务。
+      </div>"
+  - - 148
+    - 148
+    - en
+    - 2014-06-14 06:48:54.000000000 Z
+    - 2014-06-14 06:48:54.000000000 Z
+    - "<div class=\"para-W-right-text\">我们将平衡身心的现代健康生活概念作为宗旨，为此提供世界级品质的全进口高端产品，并以丰富的经验全心全意为客户服务。</div>"
+  - - 149
+    - 149
+    - en
+    - 2014-06-14 06:48:54.000000000 Z
+    - 2014-06-14 06:48:54.000000000 Z
+    - "<div class=\"para-W-right-text\">经验丰富、精益求精；富有创造力和旺盛的生命力；充满时尚正能量！</div>"
+  - - 151
+    - 151
+    - en
+    - 2014-06-14 07:16:37.000000000 Z
+    - 2014-06-14 07:16:37.000000000 Z
+    - "<span class=\"text-between-lines-3\"><a href=\"/%E6%B0%94%E4%B9%8B%E6%BA%90/%E6%96%B0%E9%97%BB%E6%96%87%E6%A1%88\"
+      style=\"color:black;\">元气第一站&#160;&#160;|&#160;&#160;“气之站”健康食品中国市场首发养生茶会</a>\r\n</span>\t\r\n"
+  - - 152
+    - 152
+    - en
+    - 2014-06-14 07:16:38.000000000 Z
+    - 2014-06-14 07:16:38.000000000 Z
+    - "<span class=\"text-between-lines-3\"><a href=\"/%E6%B0%94%E4%B9%8B%E6%BA%90/%E6%84%9F%E6%81%A9%E6%AF%8D%E4%BA%B2%E8%8A%82\"
+      style=\"color:black;\">元气第二站&#160;&#160;|&#160;&#160;感恩母亲，健康回馈 – 关爱母亲特惠活动</a>\r\n</span>"
+  - - 153
+    - 153
+    - en
+    - 2014-06-14 08:08:06.000000000 Z
+    - 2014-06-14 08:08:06.000000000 Z
+    - "<ul>\r\n               <li><a href=\"/%E6%B0%94%E4%B9%8B%E5%93%81/lingzhi-buy-1\">日纯牌灵芝片介绍</a>\r\n</li>\r\n
+      \              <li class=\"product-txt04\"><a href=\"/%E6%B0%94%E4%B9%8B%E5%93%81/reputation\">日产化学工业株式会社
+      — 享誉全球</a>\r\n</li>\r\n               <li class=\"product-txt05\"><a href=\"http://www.richunlingzhi.com\">www.richunlingzhi.com</a>\r\n</li>\r\n</ul>"
