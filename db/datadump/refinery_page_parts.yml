@@ -865,23 +865,23 @@ refinery_page_parts:
   - - 117
     - 53
     - careForMotherDiv
-    - "<div class=\"para-text-div\">\r\n  \t\t<p class=\"paragraph-between-lines\">关爱母亲特惠活动—礼盒7折限时不限购</p>\r\n\t\t<p
+    - "<div class=\"para-text-div\" id=\"textArea1\">\r\n  \t\t<p class=\"paragraph-between-lines\">关爱母亲特惠活动—礼盒7折限时不限购</p>\r\n\t\t<p
       class=\"paragraph-between-lines\">此次活动截止至5月31日，为母亲健康赶快行动吧！</p>\r\n\t\t<p class=\"paragraph-between-lines\">母亲节即将来临，【日纯牌】灵芝片是送给母亲最有爱的真挚礼物。通过传统原生态栽培、\r\n\t\t\t\t精心筛选、科学制剂、严格检测、环保包装精制而成的【日纯牌】灵芝片是在中国唯一获得“国食健字”的进口灵芝产品，\r\n\t\t\t\t长期服食不上火，无副作用，能在整体上双向调节人体机能平衡，促使内脏和器官机能正常化，具有补气安神、止咳平喘、\r\n\t\t\t\t滋阴养心、祛斑去黄气等功效，并可以有效缓解高血压、糖尿病、肺虚咳喘和更年期综合症等众多疾病的困扰。母亲的健康\r\n\t\t\t\t是我们的福报，选择【日纯牌】灵芝片，让母亲更健康更美丽。\r\n\t\t</p>\r\n\t</div>"
     - 2
     - 2014-06-13 15:34:54.000000000 Z
-    - 2014-06-13 15:34:54.000000000 Z
+    - 2014-06-15 16:00:49.000000000 Z
   - - 118
     - 53
     - couponRuleDiv
     - "<div id=\"motherHeadlineDiv\">\r\n<img src=\"/assets/small-paradize.png\" class=\"before-para\"
       />\r\n<span class=\"text-between-lines-3\">“气之站”现推出为母亲送爱心特惠活动</span>\r\n</div>\r\n<div
-      class=\"para-text-1\" style=\" top: 46%;\">\r\n<img src=\"/assets/small-paradize.png\"
+      class=\"para-text-1\" id=\"textArea2\">\r\n<img src=\"/assets/small-paradize.png\"
       class=\"before-para\" />\r\n<span class=\"text-between-lines-3\">1.灵芝礼盒（内附两盒【日纯牌】灵芝片）<span
       style=\"color:#937145\">限时7折优惠： 3,682元</span>（原价5,260元）</span>\r\n</div>\r\n<div
-      class=\"para-text-1\" style=\" top: 49%;\">\r\n<img src=\"/assets/small-paradize.png\"
+      class=\"para-text-1\" id=\"textArea3\">\r\n<img src=\"/assets/small-paradize.png\"
       class=\"before-para\" />\r\n<span class=\"text-between-lines-3\">2.购买礼盒即可成为“气之站”<span
       style=\"color:#937145\">尊贵钻石会员</span>，以后购买本站任意产品可享受8.5折优惠。</span>\r\n</div>\r\n<div
-      class=\"para-text-1\" style=\" left:35%;top: 53%;font-size:0.9em;\">\r\n<p style=\"margin-bottom:5px;\"><a
+      class=\"para-text-1\" id=\"textArea4\">\r\n<p style=\"margin-bottom:5px;\"><a
       href=\"/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E9%A2%84%E8%AE%A2%E5%8D%95?sku=0002\"><span
       style=\"display: block;height: 24px;width: 80px;background-color: #937145;text-align:
       center;padding-top: 6px;border-radius: 10px;\">在线购买</span>\r\n</a>\r\n</p>\r\n<p
@@ -889,7 +889,7 @@ refinery_page_parts:
       white;\">WX140501</span>\r\n</p>\r\n</div>"
     - 3
     - 2014-06-13 15:44:59.000000000 Z
-    - 2014-06-14 08:04:28.000000000 Z
+    - 2014-06-15 16:03:59.000000000 Z
   - - 119
     - 53
     - thanksMotherImageDiv
@@ -1164,3 +1164,10 @@ refinery_page_parts:
     - 2
     - 2014-06-14 08:08:06.000000000 Z
     - 2014-06-14 08:08:06.000000000 Z
+  - - 154
+    - 11
+    - memberRightList
+    - "<ul>\r\n\t\t<li>凡购买【日纯牌】灵芝片产品的客户即刻成为气之站尊贵会员。</li>\r\n\t\t<li>气之站会员均可享受到相关产品折扣，获得气之站最新动向和优惠信息，收到不定期刊物，健康、保健、\r\n养生知识和关怀小贴士。</li>\r\n\t\t<li>气之站会员将受邀（现阶段暂限定上海地区会员）参与定期的健康、保健、养生讲座活动。</li>\r\n\t</ul>"
+    - 3
+    - 2014-06-15 15:26:19.000000000 Z
+    - 2014-06-15 15:26:19.000000000 Z
