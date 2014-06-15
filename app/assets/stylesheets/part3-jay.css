@@ -21,10 +21,23 @@
 .membertable table tr:first-child{
 	background:rgba(147,113,69,1);
 	color:#ffffff;
+	height:28px;
 }
-
+#memberLevelTd{
+	width:112px;
+}
+#vipLevelUpTd{
+	width:225px;
+}
+#memberDiscountTd{
+	width:222px;
+}
+#renewalNextYearTd{
+	width:230px;
+}
 .membertable table tr{
 	background:rgba(255,255,255,0.5);
+	height:28px;
 }
 
 .membertable table tr td{
