@@ -1,0 +1,23 @@
+
+---
+refinery_images:
+  columns:
+  - id
+  - image_mime_type
+  - image_name
+  - image_size
+  - image_width
+  - image_height
+  - image_uid
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - image/png
+    - u14.png
+    - 2034
+    - 110
+    - 110
+    - 2014/06/13/15_53_02_563_u14.png
+    - 2014-06-13 15:53:02.000000000 Z
+    - 2014-06-13 15:53:02.000000000 Z
