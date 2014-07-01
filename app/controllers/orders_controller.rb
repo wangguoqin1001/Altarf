@@ -89,7 +89,7 @@ class OrdersController < ApplicationController
 		rescue
 			@order[:total] = @product["price"].to_f * @order[:quantity].to_i * @discount.to_f
 		end
-		@order[:total] = @order[:total].round(2)
+		@order[:total] = @order[:total].round(-1)
 
 		@order[:discount] = @discount
 
