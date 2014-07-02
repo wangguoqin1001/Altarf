@@ -79,17 +79,17 @@ class OrdersController < ApplicationController
 			@coupon[:percentage_off] = 1 if not @coupon[:percentage_off]
 		end
 
-		@order[:total] = @product["price"].to_f * @order[:quantity].to_i # in case none of the following works
+		@order[:total] = ( @product["price"].to_f * @order[:quantity].to_i ).round(-1) # in case none of the following works
 		begin
 			if @coupon[:discount].to_i == 0 and @coupon[:percentage_off].to_i == 1
-				@order[:total] = @product["price"].to_f * @order[:quantity].to_i * @discount.to_f
+				@order[:total] = ( @product["price"].to_f * @discount.to_f ).round(-1) * @order[:quantity].to_i
 			else
-				@order[:total] = ( @product["price"].to_f * @order[:quantity].to_i - @coupon[:discount].to_f ) * @coupon[:percentage_off].to_f
+				@order[:total] = (( @product["price"].to_f - @coupon[:discount].to_f ) * @coupon[:percentage_off].to_f ).round(-1) * @order[:quantity].to_i
 			end
 		rescue
-			@order[:total] = @product["price"].to_f * @order[:quantity].to_i * @discount.to_f
+			@order[:total] = ( @product["price"].to_f * @discount.to_f ).round(-1) * @order[:quantity].to_i
 		end
-		@order[:total] = @order[:total].round(-1)
+		@order[:total] = @order[:total]
 
 		@order[:discount] = @discount
 
