@@ -745,11 +745,15 @@ function displayTotalPrice()
 	$("#Sub-total").val(productPrice*$("#num").val());
 	if(memberDiscount!=null)
 	{
-		$('#total').val(productPrice*$("#num").val()*memberDiscount);
+		$('#total').val(cleanLast(productPrice*$("#num").val()*memberDiscount));
 	}
 	checkDiscount();
 }
-
+function cleanLast(orignPrice){
+	var outPrice = orignPrice;
+	outPrice = outPrice-orignPrice%10 ;
+	return outPrice;
+}
 function whetherUseDiscount()
 {
 var discountSelecter = document.getElementById("discount"); //selectid
@@ -809,7 +813,7 @@ function checkDiscount()
 			{
 				var discount=resp.discount;
 				var percentage_off=resp.percentage_off;
-				var totalPrice = productPrice*$("#num").val();
+				var totalPrice = productPrice;
 				if (memberDiscount!=null)
 				{
 					$('#memberDiscountTxt').val('0%');
@@ -822,7 +826,8 @@ function checkDiscount()
 				{
 					totalPrice = (totalPrice*percentage_off).toFixed(0);
 				}
-				$("#total").val(totalPrice);
+				totalPrice=totalPrice*$("#num").val()
+				$("#total").val(cleanLast(totalPrice));
 			}
 			else
 			{
