@@ -54,3 +54,5 @@ gem 'yaml_db'
 gem 'savon'
 gem 'galetahub-simple_captcha', :require => 'simple_captcha'
 gem 'httparty'
+
+gem 'thin'
