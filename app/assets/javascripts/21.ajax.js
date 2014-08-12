@@ -35,9 +35,11 @@ function login() {
 		}
 	}).fail (function(resp) {
 		$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E6%88%91%E7%9A%84%E5%B8%90%E6%88%B7 .simple_captcha');
-		if(resp.status==0){
-			$('#loginerr').html(resp.description);
-		}else if(resp.status==2){
+		//JSON.stringify(resp)
+		if(resp.responseJSON.status==0){
+			$('#loginerr').html('提交错误：'+resp.responseJSON.description);
+			alert(resp.description);
+		}else if(resp.responseJSON.status==2){
 			$('#loginerr').html("验证码错误");
 		}else{
 			$('#loginerr').html ("请求发送失败，请稍候再试");
@@ -127,10 +129,16 @@ function register() {
 				alert ("请求失败，请再检查一遍您的输入并稍候再试");
 			$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E5%88%9D%E6%AC%A1%E7%99%BB%E5%BD%95 .simple_captcha');
 		}
-	}).fail (function() {
-		alert ("请求发送失败，请稍候再试");
+	}).fail (function(resp) {
 		$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E5%88%9D%E6%AC%A1%E7%99%BB%E5%BD%95 .simple_captcha');
-	});
+		if(resp.responseJSON.status==0){
+				alert('提交错误：'+resp.responseJSON.description);
+			}else if(resp.responseJSON.status==2){
+				alert("验证码错误");
+			}else{
+				alert("请求发送失败，请稍候再试");
+			}
+		});
 }
 
 function disableAddrInput(){
@@ -532,9 +540,15 @@ function order() {
 				alert ("请求失败，请再检查一遍您的输入并稍候再试");
 			$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E9%A2%84%E8%AE%A2%E5%8D%95 .simple_captcha');
 		}
-	}).fail (function() {
-		alert ("请求发送失败，请稍候再试");
+	}).fail (function(resp) {
 		$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E8%B4%AD/%E9%A2%84%E8%AE%A2%E5%8D%95 .simple_captcha');
+		if(resp.responseJSON.status==0){
+				alert('提交错误：'+resp.responseJSON.description);
+			}else if(resp.responseJSON.status==2){
+				alert("验证码错误");
+			}else{
+				alert("请求发送失败，请稍候再试");
+			}
 	});
 }
 function loadOrderInfo()
