@@ -45,9 +45,11 @@ $(document).ready (function() {
 				if (status == "error") {
 					document.location.href = url;
 				} else {
-					var $html = $(String (resp))
+					var $html = $(String (resp));
 					$(contentSelector).animate ({opacity: 1, visibility: "visible"});
 					document.title = $html.filter ('title').text();
+					$html.find ('script').appendTo (contentSelector);
+					jQuery.ready();
 				}
 
 			});
