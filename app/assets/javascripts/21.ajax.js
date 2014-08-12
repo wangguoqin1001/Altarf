@@ -33,7 +33,7 @@ function login() {
 			$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E6%88%91%E7%9A%84%E5%B8%90%E6%88%B7 .simple_captcha');
 			$('#loginerr').html ("未知错误，请刷新再试");
 		}
-	}).fail (function() {
+	}).fail (function(resp) {
 		$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E6%88%91%E7%9A%84%E5%B8%90%E6%88%B7 .simple_captcha');
 		if(resp.status==0){
 			$('#loginerr').html(resp.description);
