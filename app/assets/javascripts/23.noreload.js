@@ -49,7 +49,6 @@ $(document).ready (function() {
 					$(contentSelector).animate ({opacity: 1, visibility: "visible"});
 					document.title = $html.filter ('title').text();
 					$html.find ('script').appendTo (contentSelector);
-					jQuery.ready();
 				}
 
 			});
