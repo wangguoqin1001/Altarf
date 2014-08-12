@@ -35,12 +35,15 @@ function login() {
 		}
 	}).fail (function(resp) {
 		$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E6%88%91%E7%9A%84%E5%B8%90%E6%88%B7 .simple_captcha');
-		if(resp.status==0){
-			$('#loginerr').html(resp.description);
-		}else if(resp.status==2){
+		alert("status "+resp.responseJSON.status);//JSON.stringify(resp)
+		if(resp.responseJSON.status==0){
+			$('#loginerr').html('提交错误：'+resp.responseJSON.description);
+			alert(resp.description);
+		}else if(resp.responseJSON.status==2){
 			$('#loginerr').html("验证码错误");
 		}else{
 			$('#loginerr').html ("请求发送失败，请稍候再试");
+			alert('enter else');
 		}
 	});
 }
