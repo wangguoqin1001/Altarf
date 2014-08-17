@@ -1,101 +1,23 @@
 <!DOCTYPE html>
 <% content_for :javascripts do %>
-	<script>
-		<% if not session[:nickname] %>
-			location.href = "/气之家/我的帐户";
-		<% end %>
-	</script>
-	<!--<script type="text/javascript">
-	function spreeproduct(data){
-		var ret = JSON.parse(data);
-		var sku = window.location.search.split('=');
-		n=ret.products.length;
-		for(var i=0;i<n;i++)
-		{
-			if( sku[1] == ret.products[i].variants[0].sku)
-			{
-				var product_url = ret.products[i].variants[0].images[0] == null? "" :ret.products[i].variants[0].images[0].product_url
-				if ($('#product_pic').length)
-					$('#product_pic').prop ('src',product_url.replace('/spree/products/','/products/picture/'));
-				var name = ret.products[i].name == null ? "" : ret.products[i].name;
-				//alert(name);
-				$('#product_name').val(name);
-				$('#product_name').prop('disabled', true);
-				var price = ret.products[i].variants[0].price == null ? "" : ret.products[i].variants[0].price;
-				$('#price').val(price);
-				$('#price').prop('disabled', true);
-				$('#Sub-total').prop('disabled', true);
-				$('#total').prop('disabled', true);
-				return;
-			}
-		}
-	}
-	</script>-->
-	<!--<script type="text/javascript" src="https://libra.qzzstore.com/api/products.json?token=82d3b3abd87deefaa99f2dbd8d46df7f5d2cc5a01bde47d0&callback=spreeproduct"></script>-->
 	<script type="text/javascript">
 	$(document).ready(function(){
+		<% if not session[:nickname] %>
+			History.pushState (null, null, "/气之家/我的帐户");
+		<% end %>
 		loadUserData();
 		getProductData();});
 	</script>
 <% end %>
-<head>
-<!--<script type="text/javascript">
-$(window).load (function() {
-  $('.flexslider').flexslider({
-    animation: "fade",
-    controlNav: false,
-    animationLoop: true, 
-    slideshowSpeed: 4000,
-  });
-});
-</script>-->
+<body>
 
-
-</head>
-
-<% content_for :stylesheets do %>
-<style>
-.mCSB_scrollTools{
-	margin-top:100px;
-}
-.mCSB_scrollTools .mCSB_draggerContainer .mCSB_draggerRail{
-	background-color:#937145;
-	width:10px;
-	height:254px;
-}
-.mCSB_scrollTools .mCSB_draggerContainer .mCSB_dragger .mCSB_dragger_bar{
-	background-color:#e2c675;
-	width:10px;
-	height:50px;
-}
-#existedAddressTab th{
-	font-weight:100;
-}
-#existedAddressTab td{
-	text-align:center;
-}
-#receiverTh{
-	width:80px;
-}
-#districtTh{
-	width:160px;
-}
-#detailAddrTh{
-	width:160px;
-}
-#postalTh{
-	width:70px;
-}
-#phoneTh{
-	width:80px;
-}
-#chooseTh{
-	width:40px;
-}
-</style>
+<input type="hidden" id="class_load" value="scrolltools4"></input>
+<input type="hidden" class="func_document_ready" value="loadUserData"></input>
+<input type="hidden" class="func_document_ready" value="getProductData"></input>
+<% if not session[:nickname] %>
+	<input type="hidden" id="partial_load" value="/气之家/我的帐户"></input>
 <% end %>
 
-<body>
 <div class="contentbox">
 <div class="order_top">
      <div class="order_top01">
@@ -335,16 +257,5 @@ $(window).load (function() {
   </div>
 -->
 
-<% content_for :javascripts do %>
-<script>
-/*    (function($){
-		function pageset() {
-            $(".content-info").mCustomScrollbar();
-        }
-        window.onload = pageset();
-    })(jQuery);
-	*/
-</script>
-<% end %> 
 </body>
 </html>

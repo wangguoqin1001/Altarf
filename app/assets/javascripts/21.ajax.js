@@ -28,7 +28,7 @@ function login() {
 	}).done (function (resp) {
 		if (parseInt (resp.status) == 1)
 			//location.reload();
-			location.href = "/气之购/在线订购";
+			History.pushState (null, null, "/气之购/在线订购");
 		else{
 			$(".authenticationtd").load ('/%E6%B0%94%E4%B9%8B%E5%AE%B6/%E6%88%91%E7%9A%84%E5%B8%90%E6%88%B7 .simple_captcha');
 			$('#loginerr').html ("未知错误，请刷新再试");
@@ -38,7 +38,6 @@ function login() {
 		//JSON.stringify(resp)
 		if(resp.responseJSON.status==0){
 			$('#loginerr').html('提交错误：'+resp.responseJSON.description);
-			alert(resp.description);
 		}else if(resp.responseJSON.status==2){
 			$('#loginerr').html("验证码错误");
 		}else{
@@ -121,7 +120,7 @@ function register() {
 		}
 	}).done (function (resp) {
 		if (parseInt (resp.status) == 1)
-			location.href = "/气之家/注册成功";
+			History.pushState (null, null, "/气之家/注册成功");
 		else {
 			if (resp.description != null)
 				alert (resp.description);
@@ -532,7 +531,7 @@ function order() {
 		}
 	}).done (function (resp) {
 		if (parseInt (resp.status) == 1)
-			location.href = "/气之购/订单生成";
+			History.pushState (null, null, "/气之购/订单生成");
 		else {
 			if (resp.description != null)
 				alert (resp.description);
@@ -745,13 +744,6 @@ function createNewAddress(){
 		});
 		
 }
-
-//function gotoby(){
-	$(".saveinformation").click (function(){
-		var sku = $(this).parent().find ('#productid').val();
-		location.href = "/气之购/预订单?sku="+sku;
-	});
-//}
 
 function displayTotalPrice()
 {

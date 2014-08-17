@@ -7,8 +7,6 @@ $(document).ajaxStart(function() {
         $("#spinner").show();
 }).ajaxStop(function() {
         $("#spinner").hide();
-	jQuery.ready();
 }).ajaxError(function() {
         $("#spinner").hide();
-	jQuery.ready();
 });
