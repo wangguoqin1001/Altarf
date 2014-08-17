@@ -1,13 +1,20 @@
 <!DOCTYPE html><head>
+<% content_for :javascripts do %>
 	<script>
 		<% if session[:nickname] %>
-			location.href = "/气之家/会员中心";
+			$(document).ready(function(){
+				History.pushState (null, null, "/气之家/会员中心");
+			});
 		<% end %>
 	</script>
+<% end %>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>QZZ website sign up</title>
 </head>
 <body>
+<% if session[:nickname] %>
+	<input type="hidden" id="partial_load", value="/气之家/会员中心"></input>
+<% end %>
 <div class="loginbox">
 <div class="content_top">欢迎光临气之站QZZSTORE 网络旗舰店！</div>
 <div class="login_content">                             

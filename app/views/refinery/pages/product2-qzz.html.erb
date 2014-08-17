@@ -6,82 +6,16 @@
 <title>气之站</title>
 
 <% content_for :javascripts do %>
-	<script type="text/javascript">
-	$(document).ready(function(){
-		$.ajax ({
-				url: "/products.json",
-				type: "GET",
-				dataType: "json",
-		}).done (function (resp)
-		{
-			for(var j=0;j<resp.length;j++)
-			{
-				if('0001' == resp[j].sku)
-				{
-					var product_url = resp[j].images[0] == null? "" :resp[j].images[0].urls.product;
-					if ($('#product0001_pic').length)
-					{
-						$('#product0001_pic').prop ('src',product_url.replace('/spree/products/','/products/picture/'));
-						$('#product1Price').html(resp[j].price+'元');
-					}
-					continue;
-				}
-				if('0002' == resp[j].sku)
-				{
-					var product_url = resp[j].images[0] == null? "" :resp[j].images[0].urls.product;
-					if ($('#product0002_pic').length)
-					{
-						$('#product0002_pic').prop ('src',product_url.replace('/spree/products/','/products/picture/'));
-						$('#product2Price').html(resp[j].price+'元');
-					}
-					continue;
-				}
-			}
-		}).fail (function() {
-			alert ("产品信息获取失败，请稍候再试");
-		});
-	});
+	<script>
+		$(document).ready (function() { product2_ready() });
 	</script>
-<script type="text/javascript">
-$(function(){
-	$(".img-blank-pro1-inside-1").mouseover(function(){		
-		$(".pop").fadeToggle('fast');
-	})
-	$(".pop").mouseout(function(){
-		$(".pop").hide();
-	})
-})
-$(function(){
-	$(".img-blank-pro1-inside-3").mouseover(function(){		
-		$(".pop2").fadeToggle('fast');
-	})
-	$(".pop2").mouseout(function(){
-		$(".pop2").hide();
-	})
-})
-
-$(window).load(function() {
-  $('.flexslider1').flexslider({
-    animation: "fade",
-    controlNav: false,
-    animationLoop: true, 
-    slideshowSpeed: 4000,
-  });
-});
-$(window).load(function() {
-  $('.flexslider2').flexslider({
-    animation: "fade",
-    controlNav: false,
-    animationLoop: true,
-    slideshowSpeed: 5003, 
-  });
-});
-
-</script>
 <% end %>
+
 </head>
 
 <body>
+
+<input type="hidden" class="func_document_ready" value="product2_ready"></input>
 
 <div id="index">
 

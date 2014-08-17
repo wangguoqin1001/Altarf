@@ -18,6 +18,9 @@
 }
 </style>
 <body>
+
+<input type="hidden" class="func_document_ready" value="getOrderHistory"></input>
+
 <div class="contentbox">
 <div class="content_top">我的气之站MY QZZSTORE</div>
 <div class="content" style="margin-top:-25px;width:760px;height:350px;z-index:1;border-radius: 25px 0 0 0;background-image:-webkit-gradient( linear,left top,left bottom, from(rgba(255, 255, 255, 1.0)), to(rgba(255, 255, 255, 0)) );background-image:-moz-linear-gradient(center top , #FFF 20%, rgba(255, 255, 255, 0) 95%);">
@@ -38,21 +41,9 @@
 </div>
 
 <% content_for :javascripts do %>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" ></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 <script>
 	$(document).ready(function(){
 		getOrderHistory();
-	});
-</script>
-<script>
-	$('.history_txt02').click(function(){
-		location.href="/气之购/订单详情"+$(this).html().replace('订单：','?orderId=');
-	});
-</script>
-<script>
-	$('.history_txt04').click(function(){
-		location.href="/气之购/订单详情"+$(this).parent().find('.history_txt02').html().replace('订单：','?orderId=');
 	});
 </script>
 <!--<script>
