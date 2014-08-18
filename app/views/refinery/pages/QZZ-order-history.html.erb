@@ -6,26 +6,17 @@
 	$(document).ready(function(){
 		loadOrderInfo();
 		//getProductData();
-		});
+		pageset();
+	});
 	</script>
 <% end %>
 <head>
-<!--<script type="text/javascript">
-$(window).load (function(){
-  $('.flexslider').flexslider({
-    animation: "fade",
-    controlNav: false,
-    animationLoop: true, 
-    slideshowSpeed: 4000,
-  });
-});
-</script>-->
-
 </head>
 <body>
 
 <input type="hidden" id="class_load" value="scrolltools3"></input>
 <input type="hidden" class="func_document_ready" value="loadOrderInfo"></input>
+<input type="hidden" class="func_document_ready" value="pageset"></input>
 
 <div class="contentbox">
 <div class="order_top">
@@ -266,17 +257,5 @@ $(window).load (function(){
         </div>
   </div>
 -->
-
-<% content_for :javascripts do %>
-<script>
-/*    (function($){
-		function pageset() {
-            $(".content-info").mCustomScrollbar();
-        }
-        window.onload = pageset();
-    })(jQuery);
-	*/
-</script>
-<% end %> 
 </body>
 </html>

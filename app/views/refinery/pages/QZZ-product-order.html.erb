@@ -7,7 +7,9 @@
 			History.pushState (null, null, "/气之家/我的帐户");
 		<% end %>
 		loadUserData();
-		getProductData();});
+		getProductData();
+		pageset();
+	});
 	</script>
 <% end %>
 <body>
@@ -15,6 +17,7 @@
 <input type="hidden" id="class_load" value="scrolltools4"></input>
 <input type="hidden" class="func_document_ready" value="loadUserData"></input>
 <input type="hidden" class="func_document_ready" value="getProductData"></input>
+<input type="hidden" class="func_document_ready" value="pageset"></input>
 <% if not session[:nickname] %>
 	<input type="hidden" id="partial_load" value="/气之家/我的帐户"></input>
 <% end %>
