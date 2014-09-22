@@ -1,7 +1,7 @@
 class OfficialService
 	extend Savon::Model
 
-	client wsdl: "http://210.13.83.247/ECLQzzWSTest/QZZOfficialService.asmx?WSDL",
+	client wsdl: "http://210.13.83.247/ECLQzzWS/QZZOfficialService.asmx?WSDL",
 #	client wsdl: "http://eclinkapi.800ts.com.cn/QZZOfficialService.asmx?WSDL",
 		namespace: "http://tempuri.org/",
 		convert_request_keys_to: :camelcase,
