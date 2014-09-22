@@ -34,8 +34,10 @@ $(document).ready (function() {
 					$(contentSelector).animate ({opacity: 1, visibility: "visible"});
 					$('#partial_load').each (function() {
 						History.pushState (null, null, $(this).val());
-						return false;
 					});
+					if ($('#partial_load').length) {
+						return false;
+					}
 					$('.func_document_ready').each (function() {
 						window[$(this).val()]();
 					});

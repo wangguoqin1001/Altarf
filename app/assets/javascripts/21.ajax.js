@@ -206,10 +206,11 @@ function getProductData(){
 			url: "/products/"+window.location.search.split('=')[1]+".json",
 			type: "GET",
 			dataType: "json",
-	}).done (function (resp)
-	{
-		displayProductData(resp);
-		displayTotalPrice();
+	}).done (function (resp) {
+		if (resp) {
+			displayProductData(resp);
+			displayTotalPrice();
+		}
 	}).fail (function() {
 		alert ("产品信息获取失败，请稍候再试");
 	});
@@ -445,8 +446,10 @@ function loadUserData(){
 			type: "GET",
 			dataType: "json",
 		}).done (function (resp) {
-			displayUserInfo(resp);
-			displayAddressesData(resp.addresses);
+			if (resp) {
+				displayUserInfo(resp);
+				displayAddressesData(resp.addresses);
+			}
 		}).fail (function() {
 		alert ("用户信息获取失败，请稍候再试");
 	});
