@@ -133,7 +133,7 @@ refinery_pages:
     - false
     - false
     - 67
-    - 84
+    - 86
     - 0
     - 
     - 
@@ -149,8 +149,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 85
-    - 94
+    - 87
+    - 96
     - 0
     - 
     - 
@@ -166,8 +166,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 95
-    - 102
+    - 97
+    - 104
     - 0
     - home
     - application
@@ -347,7 +347,7 @@ refinery_pages:
     - 7
     - 
     - "日纯牌灵芝片"
-    - true
+    - false
     - ''
     - 
     - true
@@ -359,7 +359,7 @@ refinery_pages:
     - product2-qzz
     - application
     - 2013-08-25 16:33:58.000000000 Z
-    - 2013-11-21 07:04:16.000000000 Z
+    - 2014-09-26 17:13:22.000000000 Z
   - - 22
     - 7
     - 
@@ -455,8 +455,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 88
-    - 89
+    - 90
+    - 91
     - 1
     - life-better
     - application
@@ -472,8 +472,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 90
-    - 91
+    - 92
+    - 93
     - 1
     - life-better-now
     - application
@@ -489,8 +489,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 86
-    - 87
+    - 88
+    - 89
     - 1
     - home
     - application
@@ -506,8 +506,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 98
-    - 99
+    - 100
+    - 101
     - 1
     - company-info
     - application
@@ -523,8 +523,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 100
-    - 101
+    - 102
+    - 103
     - 1
     - company-info-people
     - application
@@ -540,8 +540,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 96
-    - 97
+    - 98
+    - 99
     - 1
     - home
     - application
@@ -744,8 +744,8 @@ refinery_pages:
     - true
     - false
     - false
-    - 92
-    - 93
+    - 94
+    - 95
     - 1
     - tips
     - application
@@ -887,3 +887,20 @@ refinery_pages:
     - application
     - 2014-05-07 15:08:10.000000000 Z
     - 2014-05-07 15:08:10.000000000 Z
+  - - 54
+    - 7
+    - 
+    - "销售网点"
+    - true
+    - ''
+    - 
+    - true
+    - false
+    - false
+    - 84
+    - 85
+    - 1
+    - QZZ-sales-outlets
+    - application
+    - 2014-09-26 17:29:23.000000000 Z
+    - 2014-09-26 17:29:23.000000000 Z
