@@ -32,4 +32,10 @@ $(function() {
 		History.pushState (null, null, "/气之购/预订单?sku="+sku);
 	});
 
+	$("body").delegate (".salesPlaceText", "mouseover", function(){
+		var showDiv='rightImageDiv'+$(this).attr('id').substring(9,10);
+		$('.rightImgDiv').hide();
+		$('#'+showDiv).show();
+	});
+
 })

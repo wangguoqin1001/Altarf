@@ -77,17 +77,6 @@
 	}
 </style>
 
-<% content_for :javascripts do %>
-<script type='text/javascript'>
-	jQuery(document).ready(function() {
-		$('.salesPlaceText').mouseover(function(){
-			var showDiv='rightImageDiv'+$(this).attr('id').substring(9,10);
-			$('.rightImgDiv').hide();
-			$('#'+showDiv).show();
-		});
-	});
-</script>
-<% end %>
 <div id='leftTextDiv'>
 	<%=raw @page.content_for(:salesPlaceText)%>
 </div>
