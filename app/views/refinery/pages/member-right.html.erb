@@ -7,18 +7,13 @@
 
 <body>
 <div style="margin-left:20%;margin-top:-400px;font-size:0.8em;text-align:left;">
-<div class="memberight">
-	<div style="font-size: 16px;">会员权益</div>
-	<ul>
-		<li>凡购买【日纯牌】灵芝片产品的客户即刻成为气之站尊贵会员。</li>
-		<li>气之站会员均可享受到相关产品折扣，获得气之站最新动向和优惠信息，收到不定期刊物，健康、保健、
-养生知识和关怀小贴士。</li>
-		<li>气之站会员将受邀（现阶段暂限定上海地区会员）参与定期的健康、保健、养生讲座活动。</li>
-	</ul>
+	<div class="memberight">
+	<%=raw @page.content_for(:memberRightList) %>
+	</div>
+	<div class="membertable" style='margin-left: 35px;'>
+		<%=raw @page.content_for(:memberRightTable) %>
+	</div>
 </div>
-<div class="membertable" style='margin-left: 35px;'>
-<%=raw @page.content_for(:memberRightTable) %>
-</div>
-</div>>
 </body>
 </html>
+ 

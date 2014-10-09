@@ -713,15 +713,15 @@ refinery_page_part_translations:
     - 111
     - en
     - 2014-06-12 14:14:07.000000000 Z
-    - 2014-06-12 15:31:56.000000000 Z
+    - 2014-10-09 01:49:54.000000000 Z
     - "<table border=\"0\">\r\n  <tbody><tr class=\"memberfirstline\">\r\n    <td
       id=\"memberLevelTd\">会员等级</td>\r\n    <td id=\"vipLevelUpTd\">VIP升级</td>\r\n
       \   <td id=\"memberDiscountTd\">专享折扣</td>\r\n    <td id=\"renewalNextYearTd\">次年会籍续期</td>\r\n
       \ </tr>\r\n  <tr>\r\n    <td>普通会员</td>\r\n    <td>购买2盒/1份礼盒装</td>\r\n    <td>享受15%折扣</td>\r\n\t<td>
       </td>\r\n  </tr>\r\n  <tr>\r\n    <td>金卡会员</td>\r\n    <td>6个月内购买达6盒/3份礼盒装</td>\r\n
       \   <td>第7盒起享受20%折扣</td>\r\n\t<td> </td>\r\n  </tr>\r\n  <tr>\r\n    <td rowspan=\"2\">钻石卡会员</td>\r\n
-      \   <td>6个月内购买达12盒/6份礼盒装</td>\r\n    <td>第13盒起享受25%折扣</td>\r\n\t<td> </td>\r\n
-      \ </tr>\r\n  <tr>\r\n    <td>1年内购买达20盒/10份礼盒装</td>\r\n    <td>终生享受25%折扣</td>\r\n\t<td>终生钻石卡会员会籍</td>\r\n
+      \   <td>6个月内购买达12盒/6份礼盒装</td>\r\n    <td>第13盒起享受75折</td>\r\n\t<td> </td>\r\n
+      \ </tr>\r\n  <tr>\r\n    <td>1年内购买达20盒/10份礼盒装</td>\r\n    <td>享受75折</td>\r\n\t<td>终生享受钻石卡会员会籍</td>\r\n
       \ </tr>\r\n</tbody>\r\n</table>"
   - - 113
     - 113
@@ -1023,8 +1023,10 @@ refinery_page_part_translations:
     - 154
     - en
     - 2014-06-15 15:26:19.000000000 Z
-    - 2014-06-15 15:26:19.000000000 Z
-    - "<ul>\r\n\t\t<li>凡购买【日纯牌】灵芝片产品的客户即刻成为气之站尊贵会员。</li>\r\n\t\t<li>气之站会员均可享受到相关产品折扣，获得气之站最新动向和优惠信息，收到不定期刊物，健康、保健、\r\n养生知识和关怀小贴士。</li>\r\n\t\t<li>气之站会员将受邀（现阶段暂限定上海地区会员）参与定期的健康、保健、养生讲座活动。</li>\r\n\t</ul>"
+    - 2014-10-09 02:15:44.000000000 Z
+    - "<p style=\"font-size: 16px;\">凡购买【日纯牌】灵芝片产品的客户，均可享受气之站以下服务：</p>\r\n<ul>\r\n\t\t<li>免费参加气之站举办的不定期讲座/健康养生茶会</li>\r\n
+      \               <li>气之站最新产品折扣及优惠信息</li>\r\n\t\t<li>生日礼物赠送</li>\r\n\t\t<li>积分换购</li>\r\n</ul>\r\n<p
+      style=\"margin-left: 35px;\">成为气之站尊贵钻石卡会员，享受更多优惠：</p>"
   - - 155
     - 155
     - en
