@@ -1214,10 +1214,10 @@ refinery_page_parts:
   - - 160
     - 54
     - salesPlaceImg1_1
-    - "<img src=\"/assets/salePlace1_1.jpg\" class=\"topLogoImg\" />"
+    - "<img src=\"/assets/salePlace1_1.png\" class=\"topLogoImg\" />"
     - 3
     - 2014-10-02 04:47:38.000000000 Z
-    - 2014-10-02 04:49:43.000000000 Z
+    - 2014-12-10 05:27:34.000000000 Z
   - - 161
     - 54
     - salesPlace1_2
@@ -1228,10 +1228,10 @@ refinery_page_parts:
   - - 164
     - 54
     - salesPlaceImg2_1
-    - "<img src=\"/assets/salePlace2_1.jpg\" class=\"topLogoImg\" />"
+    - "<img src=\"/assets/salePlace2_1.png\" class=\"topLogoImg\" />"
     - 5
     - 2014-10-02 04:47:38.000000000 Z
-    - 2014-10-02 04:52:42.000000000 Z
+    - 2014-12-10 05:27:54.000000000 Z
   - - 165
     - 54
     - salesPlaceImg2_2
@@ -1242,10 +1242,10 @@ refinery_page_parts:
   - - 166
     - 54
     - salesPlaceImg3_1
-    - "<img src=\"/assets/salePlace3_1.jpg\" class=\"topLogoImg\" />"
+    - "<img src=\"/assets/salePlace3_1.png\" class=\"topLogoImg\" />"
     - 7
     - 2014-10-02 04:47:38.000000000 Z
-    - 2014-10-02 04:55:20.000000000 Z
+    - 2014-12-10 05:28:09.000000000 Z
   - - 167
     - 54
     - salesPlaceImg3_2
@@ -1270,10 +1270,10 @@ refinery_page_parts:
   - - 170
     - 54
     - salesPlaceImg5_1
-    - "<img src=\"/assets/salePlace5_1.jpg\" class=\"topLogoImg\" />"
+    - "<img src=\"/assets/salePlace5_1.png\" class=\"topLogoImg\" />"
     - 11
     - 2014-10-02 04:47:38.000000000 Z
-    - 2014-10-02 04:55:20.000000000 Z
+    - 2014-12-10 05:28:22.000000000 Z
   - - 171
     - 54
     - salesPlaceImg5_2
