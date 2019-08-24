@@ -49,10 +49,12 @@ gem 'refinerycms-i18n', '~> 4.0.2'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
+gem 'refinerycms-authentication-devise'
+gem 'activerecord-session_store'
 
 gem 'yaml_db'
 gem 'savon'
-gem 'galetahub-simple_captcha', :require => 'simple_captcha'
+gem 'simple_captcha', :git => 'git://github.com/pludoni/simple-captcha.git'
 gem 'httparty'
 
 gem 'puma'
