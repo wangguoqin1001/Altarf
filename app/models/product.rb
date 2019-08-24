@@ -1,7 +1,8 @@
 class Product
 	include HTTParty
-	base_uri 'https://libra.qzzstore.com'
+	base_uri 'https://libra.qzzstore.scs.im'
 	default_params :token => Altarf::Application.config.libra_api_token
+	ssl_version :TLSv1
 
 
 	def self.all

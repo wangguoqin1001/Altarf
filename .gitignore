@@ -10,6 +10,7 @@ db/*.sqlite3
 db/*.sqlite3-journal
 *.log
 log/production.log.*
+log/std*
 tmp
 tmp/**/*
 
@@ -21,8 +22,8 @@ doc/app
 coverage
 
 # Public Uploads
-#public/system/*
-#public/themes/*
+public/system/*
+public/themes/*
 
 # Don't upload precompiled assets
 public/assets/*
@@ -117,9 +118,6 @@ db/datadump/simple_captcha_data.yml
 .ruby-gemset
 .ruby-version
 db/datadump/sessions.yml
-
-# bundle cache
-Gemfile.lock
 
 # jQuery map file
 jquery*.map
