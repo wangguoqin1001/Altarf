@@ -7,7 +7,7 @@ class MembershipsController < ApplicationController
 
 	respond_to :json, :xml, :html
 
-	before_filter :checkcaptcha, :only => [:create, :login, :update]
+	before_action :checkcaptcha, :only => [:create, :login, :update]
 
 
 	# GET /memberships

@@ -2,7 +2,7 @@ class AddressesController < ApplicationController
 
 	respond_to :json, :xml, :html
 
-	before_filter :load_membership
+	before_action :load_membership
 
 
 	# GET /addresses

@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
 
 	respond_to :json, :xml, :html
 
-	before_filter :checkcaptcha, :only => [:create]
+	before_action :checkcaptcha, :only => [:create]
 
 
 	# GET /orders

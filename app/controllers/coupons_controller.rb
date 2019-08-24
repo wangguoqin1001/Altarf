@@ -2,7 +2,7 @@ class CouponsController < ApplicationController
 
 	respond_to :json, :xml, :html
 
-	before_filter :checkadmin, :except => [:checkcoupon]
+	before_action :checkadmin, :except => [:checkcoupon]
 
 
 	# GET /coupons

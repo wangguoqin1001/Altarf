@@ -2,9 +2,9 @@ class ApiOrdersController < ApplicationController
 
 	respond_to :json, :xml, :html
 
-	before_filter :checkadmin
+	before_action :checkadmin
 
-	skip_before_filter :verify_authenticity_token
+	skip_before_action :verify_authenticity_token
 
 
 	# GET /orders

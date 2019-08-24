@@ -7,9 +7,9 @@ class ApiMembershipsController < ApplicationController
 
 	respond_to :json, :xml, :html
 
-	before_filter :checkadmin, :except => [:login]
+	before_action :checkadmin, :except => [:login]
 
-	skip_before_filter :verify_authenticity_token
+	skip_before_action :verify_authenticity_token
 
 	Admins = ["admin", "zombiesir"]
 
