@@ -1,12 +1,12 @@
 class Product
 	include HTTParty
-	base_uri 'https://libra.qzzstore.scs.im'
+	base_uri 'https://qzzstore-libra.scs.im'
 	default_params :token => Altarf::Application.config.libra_api_token
-	ssl_version :TLSv1
+	ssl_version :TLSv1_2
 
 
 	def self.all
-		get("/api/variants", { :verify => false })["variants"]
+		get("/api/variants")["variants"]
 	end
 
 
@@ -23,6 +23,6 @@ class Product
 
 
 	def self.picture(uri)
-		get("/spree/products/" + uri, { :verify => false})
+		get("/spree/products/" + uri)
 	end
 end
