@@ -156,6 +156,7 @@ GEM
     multi_json (1.13.1)
     multi_xml (0.6.0)
     mysql2 (0.3.21)
+    newrelic_rpm (6.5.0.357)
     nio4r (2.4.0)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
@@ -325,6 +326,7 @@ DEPENDENCIES
   httparty
   jquery-rails (~> 4.3.5)
   mysql2 (~> 0.3.10)
+  newrelic_rpm
   puma
   rails (~> 5.1.7)
   refinerycms (~> 4.0.3)

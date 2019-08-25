@@ -58,3 +58,5 @@ gem 'simple_captcha', :git => 'git://github.com/pludoni/simple-captcha.git'
 gem 'httparty'
 
 gem 'puma'
+
+gem 'newrelic_rpm'
