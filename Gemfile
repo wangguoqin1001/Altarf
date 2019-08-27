@@ -54,7 +54,7 @@ gem 'activerecord-session_store'
 
 gem 'yaml_db'
 gem 'savon'
-gem 'simple_captcha', :git => 'git://github.com/pludoni/simple-captcha.git'
+gem 'simple_captcha', :github => 'pludoni/simple-captcha'
 gem 'httparty'
 
 gem 'puma'
