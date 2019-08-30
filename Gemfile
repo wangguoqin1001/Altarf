@@ -50,12 +50,14 @@ gem 'refinerycms-i18n', '~> 4.0.2'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
 gem 'refinerycms-authentication-devise'
-gem 'activerecord-session_store'
+# gem 'activerecord-session_store'
 
 gem 'yaml_db'
 gem 'savon'
 gem 'simple_captcha', :github => 'pludoni/simple-captcha'
 gem 'httparty'
+gem 'redis-rails'
+gem 'redis-rack-cache'
 
 gem 'puma'
 
